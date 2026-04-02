@@ -14,10 +14,10 @@ import com.png.GridWaveCore.SeedNodes.*;
 import com.png.GridWaveCore.TileNodes.*;
 import com.png.GridWaveCore.UnusedNodes.*;
 
-public class GridWaveCorePlugin extends JavaPlugin {
+public class CorePlugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
-    public GridWaveCorePlugin(JavaPluginInit init) {
+    public CorePlugin(JavaPluginInit init) {
         super(init);
         LOGGER.atInfo().log("Hello from %s version %s", this.getName(), this.getManifest().getVersion().toString());
     }

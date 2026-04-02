@@ -1,0 +1,64 @@
+{
+  "Id": "Fixed.TileSet.WFC",
+  "Title": "WFC Fixed TileSet",
+  "Color": "10,80,50",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    },
+    {
+      "Id": "Rot",
+      "Type": "Enum",
+      "Options": {
+        "Label": "Rotation",
+        "Default" : "None",
+        "Values": [
+          "None",
+          "Ninety",
+          "OneEighty",
+          "TwoSeventy"
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "TileSet",
+      "Type": "TileSet.WFC.Connection",
+      "Color": "10,80,50",
+      "Label" : "TileSet"
+    },
+    {
+      "Id": "PositionConnection",
+      "Type": "Point3D.Connection",
+      "Color": "Orange",
+      "Label" : "Position"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Fixed.TileSet.WFC.Connection",
+      "Color": "10,80,50"
+    }
+  ],
+  "Schema": {
+    "Type" : "Fixed",
+    "ExportAs" : "ExportAs",
+    "TileSet" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "TileSet"
+    },
+    "Pos" : {
+      "Node" : "Point3D",
+      "Pin" : "PositionConnection"
+    },
+    "Rot" : "Rot"
+  }
+}

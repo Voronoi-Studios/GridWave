@@ -1,0 +1,29 @@
+{
+  "Id": "Random.Seed.WFC",
+  "Title": "WFC Random Seed",
+  "Color": "152,152,129",
+  "Content" : [
+     {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Seed",
+      "Type": "Seed.WFC.Connection",
+      "Color": "152,152,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Random",
+    "ExportAs" : "ExportAs"
+  }
+}

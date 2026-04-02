@@ -1,0 +1,54 @@
+{
+  "Id": "Time.Seed.WFC",
+  "Title": "WFC Time Seed",
+  "Color": "152,152,129",
+  "Content" : [
+     {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Interval",
+      "Type": "Int",
+      "Options": {
+        "Label": "Interval",
+        "Default" : 1
+      }
+    },
+    {
+      "Id": "Unit",
+      "Type": "Enum",
+      "Options": {
+        "Label": "Time Unit",
+        "Default" : "Days",
+        "Values" : [
+          "Milliseconds",
+          "Seconds",
+          "Minutes",
+          "Hours",
+          "Days"
+          ]
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Seed",
+      "Type": "Seed.WFC.Connection",
+      "Color": "152,152,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Time",
+    "ExportAs" : "ExportAs",
+    "Interval" : "Interval",
+    "Unit" : "Unit"
+  }
+}

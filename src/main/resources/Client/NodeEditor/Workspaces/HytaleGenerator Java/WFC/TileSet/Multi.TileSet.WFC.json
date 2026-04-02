@@ -1,0 +1,78 @@
+{
+  "Id": "Multi.TileSet.WFC",
+  "Title": "WFC Multi TileSet",
+  "Color": "10,80,50",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    },
+    {
+      "Id": "SizeZ",
+      "Type": "Int",
+      "Options": {
+        "Label": "Z Size",
+        "Default" : 1
+      }
+    }, 
+    {
+      "Id": "Weight",
+      "Type": "Float",
+      "Options": {
+        "Label": "Weight",
+        "Default" : 1.0
+      }
+    }, 
+    {
+      "Id": "AutoRot",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "AutoRotate",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "RuleSets",
+      "Type": "RuleSet.WFC.Connection",
+      "Color": "60,100,80",
+      "Label" : "RuleSets",
+      "Multiple" : true
+    },
+    {
+      "Id": "WeightedPrefabPaths",
+      "Type": "CWeightedPath.CPrefab.Prop.Connection",
+      "Color": "Orange",
+      "Multiple" : true,
+      "Label" : "WeightedPrefabPaths"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSet.WFC.Connection",
+      "Color": "10,80,50"
+    }
+  ],
+  "Schema": {
+    "Type" : "Multi",
+    "ExportAs" : "ExportAs",
+    "RuleSets" : {
+      "Node" : "RuleSet.WFC",
+      "Pin" : "RuleSets"
+    },
+    "WeightedPrefabPaths" : {
+      "Node" : "CWeightedPath.CPrefab.Prop",
+      "Pin" : "WeightedPrefabPaths"
+    },
+    "SizeZ" : "SizeZ",
+    "Weight" : "Weight",
+    "AutoRot" : "AutoRot"
+  }
+}

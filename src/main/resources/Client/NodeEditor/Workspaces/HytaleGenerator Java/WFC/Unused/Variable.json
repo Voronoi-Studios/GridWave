@@ -1,0 +1,29 @@
+{
+  "Id": "Variable",
+  "Title": "Variable",
+  "Color": "Gray",
+  "Content" : [
+    {
+      "Id" : "Var",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "Var",
+        "Default" : "",
+        "Width" : 200
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Float",
+      "Color": "Gray",
+      "Multiple": true
+    }
+  ],
+  "Schema": {
+    "Var" : "Var"
+  }
+}

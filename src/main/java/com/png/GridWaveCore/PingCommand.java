@@ -15,7 +15,7 @@ public class PingCommand extends CommandBase {
     private final String pluginVersion;
 
     public PingCommand(String pluginName, String pluginVersion) {
-        super("test", "Prints a test message from the " + pluginName + " plugin.");
+        super("pingCore", "Prints a test message from the " + pluginName + " plugin.");
         this.setPermissionGroup(GameMode.Adventure); // Allows the command to be used by anyone, not just OP
         this.pluginName = pluginName;
         this.pluginVersion = pluginVersion;
