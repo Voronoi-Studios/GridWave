@@ -125,3 +125,6 @@ afterEvaluate {
         logger.warn("⚠️ Could not find 'runServer' or 'server' task to hook auto-sync into.")
     }
 }
+
+apply(from = "copy-jar.gradle.kts")
+
