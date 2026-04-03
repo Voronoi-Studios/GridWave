@@ -11,12 +11,13 @@ GridWave is a Hytale plugin that integrates Wave Function Collapse (WFC) into th
 * Modular design for easy extension
 
 ## Installation
-
+> [!NOTE]
+> Node modding is currently not offically suported by Hytale, thus we need to do some manual work.
 1. Download the latest release
 2. Place the plugin in your `Mods` folder
-> [!NOTE]
-> Node modding is currently not offically suported by Hytale, thus we need to add the files manually.
 3. Copy contents of [`HytaleGenerator Java`](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
+> [!CAUTION]
+> For ease of use, the included _Workspace file is intended as is a replacement for the original, if you have other node mods, you need to manually copy the sections that are different.
 
 ## Usage
 
