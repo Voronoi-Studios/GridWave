@@ -22,6 +22,7 @@
   "NodeCategories": {
     "WFC" : [
 	    "Algo.WFC",
+      "GridGen2D.WFC",
       "RuleSet.WFC"
     ],
     "WFC.TileSet" : [

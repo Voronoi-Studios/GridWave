@@ -94,7 +94,7 @@ public class AlgoAsset extends PropAsset {
     @Override
     public Prop build(@Nonnull PropAsset.Argument argument) {
         int workerId = argument.workerId.id;
-        if (super.skip()) { //I probably dont want that
+        if (super.skip()) {
             return EmptyProp.INSTANCE;
         } else {
             SeedBox seedBox = argument.parentSeed.child(seed.build());
@@ -153,8 +153,8 @@ public class AlgoAsset extends PropAsset {
                 if (gridTile.tileEntry().weightedPathAssets() == null || gridTile.tileEntry().weightedPathAssets().size() == 0) continue;
                 Prop prop = new com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp(gridTile.tileEntry().weightedPathAssets(), argument.materialCache, argument.parentSeed);
                 Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(gridTile.tileEntry().rotation(), Rotation.None, Rotation.None), argument.materialCache);
-                //Add offsets for Multitiles
-                Prop offsetProp = new OffsetProp(gridTile.positionOffset().clone().add(anchorOffsets[gridTile.tileEntry().rot()].clone()), rotatedProp);
+                Vector3i offset = gridTile.positionOffset().clone().add(gridTile.tileEntry().getOffset().add(anchorOffsets[gridTile.tileEntry().rot()].clone()));
+                Prop offsetProp = new OffsetProp(offset, rotatedProp);
                 gridProps.add(offsetProp);
             }
             return new UnionProp(gridProps);

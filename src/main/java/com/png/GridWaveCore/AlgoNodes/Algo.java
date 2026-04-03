@@ -168,7 +168,7 @@ public class Algo {
                     affectedKeys.add(key);
                     if(!fancyWave.containsKey(key)) { fullMatch = false; break;}
                     var chosen= fancyWave.get(key).getChosen();
-                    if (chosen == null || chosen.type == GridTileType.POI) { fullMatch = false; break; }
+                    if (chosen == null || chosen.type != GridTileType.BASIC) { fullMatch = false; break; }
                     if (!match(subRuleSet.getValue(),chosen.tileEntry().getMainRuleSet())) { fullMatch = false; break;}
                 }
                 if(!fullMatch) continue;

@@ -1,5 +1,6 @@
 package com.png.GridWaveCore;
 
+import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.codec.schema.SchemaContext;
 import com.hypixel.hytale.codec.schema.config.Schema;
@@ -30,6 +31,7 @@ public class CorePlugin extends JavaPlugin {
 
         //Algo Nodes
         PropAsset.CODEC.register("Algo", AlgoAsset.class, AlgoAsset.CODEC);
+        PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
         //RuleSetAsset -> AssetBuilderCodec
 
         //Tile Nodes

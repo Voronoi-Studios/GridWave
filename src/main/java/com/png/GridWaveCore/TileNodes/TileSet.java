@@ -62,6 +62,32 @@ public abstract class TileSet {
                 default -> Rotation.None;
             };
         }
+
+        public Vector3i getOffset() {
+            if (ruleSets.isEmpty()) return new Vector3i(0, 0, 0);
+
+            int minX = Integer.MAX_VALUE, minY = Integer.MAX_VALUE, minZ = Integer.MAX_VALUE;
+            int maxX = Integer.MIN_VALUE, maxY = Integer.MIN_VALUE, maxZ = Integer.MIN_VALUE;
+
+            for (Vector3i v : ruleSets.keySet()) {
+                int relX = v.x - identifierKey.x;
+                int relY = v.y - identifierKey.y;
+                int relZ = v.z - identifierKey.z;
+
+                minX = Math.min(minX, relX);
+                maxX = Math.max(maxX, relX);
+                minY = Math.min(minY, relY);
+                maxY = Math.max(maxY, relY);
+                minZ = Math.min(minZ, relZ);
+                maxZ = Math.max(maxZ, relZ);
+            }
+
+            return new Vector3i(
+                    (minX + maxX) / 2,
+                    (minY + maxY) / 2,
+                    (minZ + maxZ) / 2
+            );
+        }
     } //WeightedPaths empty if not corner
 
     protected static TileEntry offsetTileEntry(TileEntry entry, Vector3i offset) {
