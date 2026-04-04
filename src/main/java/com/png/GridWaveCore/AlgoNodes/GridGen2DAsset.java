@@ -41,11 +41,10 @@ public class GridGen2DAsset extends PositionProviderAsset {
 
     @Override
     public PositionProvider build(@Nonnull PositionProviderAsset.Argument argument) {
-        PositionProvider.Context context = new PositionProvider.Context();
         var posProvider1 = new SquareGrid2dPositionProvider();
         var posProvider2 = new ScalerPositionProvider(new Vector3d(),posProvider1);
         Bounds3d bounds3d = new Bounds3d();
         new BoundPositionProvider(posProvider2, bounds3d);
-        return new GridGen(pos.clone(), new Vector3i(offsetX,pos.y, offsetZ), new Vector3i(repeatX, 1,repeatZ), centeredOnPosition);
+        return new GridGen(pos.clone(), new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
     }
 }

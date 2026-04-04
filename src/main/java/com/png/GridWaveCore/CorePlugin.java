@@ -4,6 +4,7 @@ import com.hypixel.hytale.assetstore.AssetRegistry;
 import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.AssetManager;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.codec.schema.SchemaContext;
 import com.hypixel.hytale.codec.schema.config.Schema;
@@ -41,6 +42,7 @@ public class CorePlugin extends JavaPlugin {
         );
 
         //Algo Nodes
+        PropDistributionAsset.CODEC.register("GridWave", GridWaveAsset.class, GridWaveAsset.CODEC);
         PropAsset.CODEC.register("Algo", AlgoAsset.class, AlgoAsset.CODEC);
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
         //RuleSetAsset -> AssetBuilderCodec
@@ -56,18 +58,5 @@ public class CorePlugin extends JavaPlugin {
         SeedAsset.CODEC.register("Random", RandomSeedAsset.class, RandomSeedAsset.CODEC);
         SeedAsset.CODEC.register("Time", TimeSeedAsset.class, TimeSeedAsset.CODEC);
         SeedAsset.CODEC.register("Imported", ImportedSeedAsset.class, ImportedSeedAsset.CODEC);
-    }
-
-    public static class RotationValidator implements Validator<Integer> {
-
-        @Override
-        public void accept(Integer v, ValidationResults r) {
-            if (v != 0 && v != 90 && v != 180 && v != 270) {
-                r.fail("Rotation can only have the values: 0, 90, 180, 270");
-            }
-        }
-
-        @Override
-        public void updateSchema(SchemaContext context, Schema schema) {}
     }
 }

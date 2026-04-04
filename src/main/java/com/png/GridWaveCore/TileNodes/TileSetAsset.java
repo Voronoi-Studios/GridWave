@@ -8,6 +8,7 @@ import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.assetstore.map.JsonAssetWithMap;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.prefabprop.PrefabLoader;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
@@ -82,8 +83,13 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public boolean isSkipped() {
         return this.skip;
     }
+
     @Nonnull
     public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
+    }
+    @Nonnull
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument) {
         return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
     }
 

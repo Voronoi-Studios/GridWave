@@ -36,14 +36,16 @@ public class GridGen extends PositionProvider {
     @Override
     public void generate(@NonNullDecl PositionProvider.Context context) {
         if (!(context.bounds.min.y > 0.0) && !(context.bounds.max.y <= 0.0)) {
-            this.rGridBounds.min.assign(Math.floor(context.bounds.min.x), 0.0, Math.floor(context.bounds.min.z));
-            this.rGridBounds.max.assign(Math.ceil(context.bounds.max.x), 1.0, Math.ceil(context.bounds.max.z));
-            if (this.rGridBounds.min.x < context.bounds.min.x) {
-                this.rGridBounds.min.x++;
+            this.rGridBounds.min.assign(context.bounds.min.x, context.bounds.min.y, context.bounds.min.z);
+            this.rGridBounds.max.assign(context.bounds.max.x, context.bounds.min.y, context.bounds.max.z);
+            if (this.rGridBounds.min.x >= rGridBounds.max.x) {
+                this.rGridBounds.max.x = this.rGridBounds.min.x + 1;
             }
-
-            if (this.rGridBounds.min.z < context.bounds.min.z) {
-                this.rGridBounds.min.z++;
+            if (this.rGridBounds.min.y >= rGridBounds.max.y) {
+                this.rGridBounds.max.y = this.rGridBounds.min.y + 1;
+            }
+            if (this.rGridBounds.min.z >= rGridBounds.max.z) {
+                this.rGridBounds.max.z = this.rGridBounds.min.z + 1;
             }
 
             Vector3i size = new Vector3i(Math.max(1, offset.x * repeat.x), Math.max(1, offset.y * repeat.y), Math.max(1, offset.z * repeat.z));
