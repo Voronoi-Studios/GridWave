@@ -22,6 +22,10 @@
       "RootNodeType": "PropVariants",
       "MenuName" : "HytaleGenerator - Props"
     },
+    "PropDistributions": {
+      "RootNodeType": "PropDistribution.Variants",
+      "MenuName" : "HytaleGenerator - PropDistributions"
+    },
     "TileSets": {
       "RootNodeType": "TileSet.Variants",
       "MenuName" : "HytaleGenerator - TileSets"
@@ -29,6 +33,7 @@
   },
   "NodeCategories": {
     "WFC" : [
+      "GridWave.WFC",
 	    "Algo.WFC",
       "GridGen2D.WFC",
       "RuleSet.WFC"
@@ -438,6 +443,7 @@
     "PropDistribution.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
+        "GridWave" :"GridWave.WFC",
         "Constant" : "Constant.PropDistribution",
         "Positions" : "Positions.PropDistribution",
         "Assigned" : "Assigned.PropDistribution",
