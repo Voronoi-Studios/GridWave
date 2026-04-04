@@ -46,7 +46,7 @@ GridWave applies Wave Function Collapse by:
 
 ## Contributing
 
-Pull requests and issue reports are welcome.
+Pull requests and issue reports will be welcome, as soon as I'm trough the early phase (May)
 
 ## License
 
