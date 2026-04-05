@@ -2,12 +2,8 @@ package com.png.GridWaveCore.AlgoNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.ListPositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
-import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
-import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.NoPropDistribution;
-import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.props.*;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
 import com.hypixel.hytale.codec.Codec;
@@ -24,12 +20,11 @@ import com.png.GridWaveCore.TileNodes.TileSetAsset;
 
 import javax.annotation.Nonnull;
 import java.util.*;
-import java.util.concurrent.*;
 
 
-public class GridWaveAsset extends PropDistributionAsset {
+public class GridWavePropAsset extends PropAsset {
     @Nonnull
-    public static final BuilderCodec<GridWaveAsset> CODEC = BuilderCodec.builder(GridWaveAsset.class, GridWaveAsset::new, PropDistributionAsset.ABSTRACT_CODEC)
+    public static final BuilderCodec<GridWavePropAsset> CODEC = BuilderCodec.builder(GridWavePropAsset.class, GridWavePropAsset::new, PropAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("GridPoints", PositionProviderAsset.CODEC, true), (asset, v) -> asset.positionProviderAsset = v, asset -> asset.positionProviderAsset)
             .add()
             .append(new KeyedCodec<>("POIs", new ArrayCodec<>(FixedTileSetAsset.CODEC, FixedTileSetAsset[]::new), true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
@@ -76,10 +71,10 @@ public class GridWaveAsset extends PropDistributionAsset {
 
     @Nonnull
     @Override
-    public PropDistribution build(@Nonnull Argument argument) {
+    public Prop build(@Nonnull PropAsset.Argument argument) {
         int workerId = argument.workerId.id;
-        if (super.isSkipped()) {
-            return NoPropDistribution.INSTANCE;
+        if (super.skip()) {
+            return EmptyProp.INSTANCE;
         } else {
             SeedBox seedBox = argument.parentSeed.child(seed.build());
 
@@ -105,16 +100,16 @@ public class GridWaveAsset extends PropDistributionAsset {
 
             var baseWave = WFC.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
             var wfcWave = WFC.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
-            var fancyWave = WFC.placeFancyTiles(wfcWave, fancyTileEntries,  seedBox.child("fancy"));
+            var fancyWave = WFC.placeFancyTiles(wfcWave, fancyTileEntries,seedBox.child("fancy"));
             List<WFC.GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WFC.WaveCell::getChosen).toList());
 
             if (workerId == 1) WFC.sendDebugLog(gridTiles,grid, this.pathKey, seedBox);
 
-            if(gridTiles.isEmpty()) return NoPropDistribution.INSTANCE;
+            if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = WFC.loadPrefabProps(argument, grid, gridTiles);
+            List<Prop> gridProps = WFC.loadPrefabProps(WFC.argumentFrom(argument), grid, gridTiles).values().stream().toList();
 
-            return new MapPropDistribution(gridProps);
+            return new UnionProp(gridProps);
         }
     }
 }
