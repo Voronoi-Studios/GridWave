@@ -133,5 +133,5 @@ afterEvaluate {
     }
 }
 
-apply(from = "copy-jar.gradle.kts")
+apply(from = "copy-Jar.gradle.kts")
 

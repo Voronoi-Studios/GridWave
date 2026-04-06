@@ -11,6 +11,11 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.png.GridWaveCore.AlgoNodes.WFC.DebugUtils;
+import com.png.GridWaveCore.AlgoNodes.WFC.GridTile;
+import com.png.GridWaveCore.AlgoNodes.WFC.WaveCell;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.SeedNodes.RandomSeedAsset;
 import com.png.GridWaveCore.SeedNodes.SeedAsset;
 import com.png.GridWaveCore.TileNodes.FixedTileSet;
@@ -55,7 +60,7 @@ public class GridWavePropAsset extends PropAsset {
     private FixedTileSetAsset[] poiTileSetAssets = new FixedTileSetAsset[0];
     private TileSetAsset[] baseTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] fancyTileSetAssets = new TileSetAsset[0];
-    private RuleSetAsset borderRuleSet = new RuleSetAsset();
+    private RuleSetAsset borderRuleSet = new SimpleRuleSetAsset();
     private SeedAsset seed = new RandomSeedAsset();
 
     private int maxPositionsCount = 20;
@@ -79,8 +84,8 @@ public class GridWavePropAsset extends PropAsset {
             SeedBox seedBox = argument.parentSeed.child(seed.build());
 
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
-            List<Vector3d> gridPositions = WFC.getPositions(positionProvider, maxPositionsCount);
-            int grid = WFC.getGrid(gridPositions);
+            List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
+            int grid = GridWave.getGrid(gridPositions);
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
             for(FixedTileSetAsset tileSetAsset : poiTileSetAssets){
@@ -98,16 +103,16 @@ public class GridWavePropAsset extends PropAsset {
                 fancyTileEntries.addAll(result.getTileEntries());
             }
 
-            var baseWave = WFC.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
-            var wfcWave = WFC.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
-            var fancyWave = WFC.placeFancyTiles(wfcWave, fancyTileEntries,seedBox.child("fancy"));
-            List<WFC.GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WFC.WaveCell::getChosen).toList());
+            var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
+            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
+            var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,seedBox.child("fancy"));
+            List<GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 
-            if (workerId == 1) WFC.sendDebugLog(gridTiles,grid, this.pathKey, seedBox);
+            if (workerId == 1) DebugUtils.sendDebugLog(gridTiles,grid, this.pathKey, seedBox);
 
             if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            List<Prop> gridProps = WFC.loadPrefabProps(WFC.argumentFrom(argument), grid, gridTiles).values().stream().toList();
+            List<Prop> gridProps = GridWave.loadPrefabProps(GridWave.argumentFrom(argument), grid, gridTiles).values().stream().toList();
 
             return new UnionProp(gridProps);
         }
