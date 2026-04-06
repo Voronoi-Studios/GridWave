@@ -16,7 +16,7 @@ public class AutoTileSetAsset extends TileSetAsset {
     @Nonnull
     public static final BuilderCodec<AutoTileSetAsset> CODEC = BuilderCodec.builder(AutoTileSetAsset.class, AutoTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("FolderPath", Codec.STRING, true), (t, k) -> t.folderPath = k, k -> k.folderPath)
-            .documentation("Example: `Maze/FancyTiles/1x2/10X0-X010`")
+            .documentation("Uses the folder naming to create the ruleset for the MultiTiles\nExample: `Maze/FancyTiles/1x2/10X0-X010`")
             .add()
             .append(new KeyedCodec<>("Weight", Codec.DOUBLE, true), (t, y) -> t.weight = y, t -> t.weight)
             .addValidator(Validators.greaterThanOrEqual(0.0))

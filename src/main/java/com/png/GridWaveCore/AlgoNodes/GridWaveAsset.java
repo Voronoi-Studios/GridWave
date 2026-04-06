@@ -104,7 +104,6 @@ public class GridWaveAsset extends PropDistributionAsset {
                 TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
                 fancyTileEntries.addAll(result.getTileEntries());
             }
-
             var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
             var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
             var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,  seedBox.child("fancy"));

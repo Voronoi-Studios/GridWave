@@ -133,5 +133,7 @@ afterEvaluate {
     }
 }
 
+//Remove these lines if they cause issues
 apply(from = "copy-Jar.gradle.kts")
+apply(from = "copy-NodeEditor.gradle.kts")
 

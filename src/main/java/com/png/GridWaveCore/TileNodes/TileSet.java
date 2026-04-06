@@ -109,7 +109,7 @@ public abstract class TileSet {
                 identifierKey,
                 entry.weight(),
                 entry.rot(),
-                entry.weightedPathAssets()
+                new WeightedMap<>(entry.weightedPathAssets())
         );
     }
 }

@@ -1,6 +1,6 @@
 {
-  "Id": "Algo.WFC",
-  "Title": "Wave Function Collapse Algorithm",
+  "Id": "GridWaveProp.WFC",
+  "Title": "GridWaveProp Algorithm [WFC]",
   "Color": "Green",
   "Content" : [
     {
@@ -152,7 +152,7 @@
     }
   ],
   "Schema": {
-    "Type" : "Algo",
+    "Type" : "GridWaveProp",
     "ExportAs" : "ExportAs",
     "Skip" : "Skip",
     "GridPoints" : {

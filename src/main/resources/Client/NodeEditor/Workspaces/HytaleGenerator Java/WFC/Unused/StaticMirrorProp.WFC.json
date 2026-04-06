@@ -1,0 +1,63 @@
+{
+  "Id": "StaticMirrorProp.WFC",
+  "Title": "Static Mirror Prop",
+  "Color": "Green",
+  "Content": [
+        {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    },
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default": false
+      }
+    },
+    {
+      "Id": "Axis",
+      "Type": "Enum",
+      "Options": {
+        "Description": "The axis to mirror across",
+        "Label": "Axis",
+        "Width": 150,
+        "Default": "X",
+        "Values": [
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "Prop",
+      "Type": "PropConnection",
+      "Color": "Green"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "PropConnection",
+      "Color": "Green"
+    }
+  ],
+  "Schema": {
+    "Type": "StaticMirror",
+    "ExportAs": "ExportAs",
+    "Skip": "Skip",
+    "Axis": "Axis",
+    "Prop": {
+      "Node": "PropVariants",
+      "Pin": "Prop"
+    }
+  }
+}

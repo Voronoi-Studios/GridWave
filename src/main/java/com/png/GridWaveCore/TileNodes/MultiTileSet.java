@@ -20,7 +20,7 @@ public class MultiTileSet extends TileSet {
                 RuleSet.Combo rotatedValue = rotate(e.getValue(), r);
                 current.put(rotatedKey, rotatedValue);
             }
-            this.tileEntries.add(new TileEntry(current, Vector3i.ZERO.clone(), weight, r, prefabWeightedMap));
+            this.tileEntries.add(new TileEntry(current, Vector3i.ZERO.clone(), weight, r, new WeightedMap<>(prefabWeightedMap)));
         }
     }
     public MultiTileSet(List<TileEntry> tileEntries) { this.tileEntries = tileEntries; }

@@ -24,6 +24,7 @@ import org.jspecify.annotations.NonNull;
 import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -33,6 +34,7 @@ public class GridWave {
 
     private static final ConcurrentHashMap<String, AtomicReference<Map<Vector3i, WaveCell>>> winnerGridTilesMap = new ConcurrentHashMap<>();
     public static final ConcurrentHashMap<String, AtomicReference<Winner>> winnerMap = new ConcurrentHashMap<>();
+    public static final ConcurrentHashMap<String, AtomicInteger> participantTracker = new ConcurrentHashMap<>();
     public record Winner(int workerId, SeedBox seedBox, int backtracks, int attempts) {}
 
     /*===========================================================
@@ -105,6 +107,13 @@ public class GridWave {
         SeedBox attemptSeedBox = null;
         AtomicReference<Map<Vector3i, WaveCell>> winnerGridTiles = winnerGridTilesMap.computeIfAbsent(seedBox.toString(), k -> new AtomicReference<>());
         AtomicReference<Winner> winner = winnerMap.computeIfAbsent(seedBox.toString(), k -> new AtomicReference<>(null));
+        AtomicInteger particepants = participantTracker.computeIfAbsent(seedBox.toString(), k -> new AtomicInteger());
+        particepants.getAndAdd(1);
+
+        if(particepants.get() == 1){ //I'm the first so lets restart the race.
+            winnerGridTiles.set(new HashMap<>());
+            winner.set(null);
+        }
 
         Map<Vector3i, WaveCell> wave = new HashMap<>();
         int backtracksCount = -1;
@@ -122,9 +131,9 @@ public class GridWave {
             backtracksCount = 0;
             int collapsedCount = 0;
             while (collapsedCount < baseWave.size()) {
-                if(winner.get() != null) return new HashMap<>(); //Give up LOOSER!
+                if(winner.get() != null) break; //Give up LOOSER!
 
-                //Find cell with lowest entropy
+                //Find cell with the lowest entropy
                 WaveCell lowestEntropy = null;
                 int minEntropy = Integer.MAX_VALUE;
 
@@ -161,18 +170,17 @@ public class GridWave {
                 //Propagate to neighbors
                 propagate(lowestEntropy, wave, stack, grid);
             }
-            if (!failed){ return wave; }
+            if (!failed){ break; }
         }
 
         if (multithreading) {
             if (winner.get() == null && winnerGridTiles.compareAndSet(null, new HashMap<>(wave))) {
-                winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt));
-            }
-            return new HashMap<>(winnerGridTiles.get());
-        }
+                winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt)); }
+        } else if(workerId == 1) winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt));
 
-        if(workerId == 1) winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt));
-        return wave;
+        particepants.getAndAdd(-1);
+
+        return multithreading ? new HashMap<>(winnerGridTiles.get()) : wave;
     }
     /** Generates a simplified wave for testing purposes, chronologically collapsing all tiles 
      * bottom left to top right and loops through all tile variants (rotations)*/
@@ -278,7 +286,7 @@ public class GridWave {
         for (var gridTile : gridTiles) {
             if (gridTile == null) continue;
             if (gridTile.tileEntry().weightedPathAssets() == null || gridTile.tileEntry().weightedPathAssets().size() == 0) continue;
-            Prop prop = new PrefabProp(gridTile.tileEntry().weightedPathAssets(), argument.materialCache, argument.parentSeed);
+            Prop prop = new PrefabProp(new WeightedMap<>(gridTile.tileEntry().weightedPathAssets()), argument.materialCache, argument.parentSeed);
             Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(gridTile.tileEntry().rotation(), Rotation.None, Rotation.None), argument.materialCache);
             Vector3i offset = gridTile.positionOffset().clone().add(gridTile.tileEntry().getOffset().add(anchorOffsets[gridTile.tileEntry().rot()].clone()));
             gridProps.put(offset.toVector3d(), rotatedProp);

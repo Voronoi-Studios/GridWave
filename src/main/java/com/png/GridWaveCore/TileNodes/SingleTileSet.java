@@ -17,7 +17,7 @@ public class SingleTileSet extends TileSet {
         for (int r = 0; r < (autoRot ? 4 : 1); r++) {
             RuleSet.Combo current = rotate(ruleSet,r);
             String key = Arrays.toString(current.getDebug());
-            if (seen.add(key)) tileEntries.add(new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r,prefabWeightedMap));
+            if (seen.add(key)) tileEntries.add(new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r, new WeightedMap<>(prefabWeightedMap)));
         }
     }
 

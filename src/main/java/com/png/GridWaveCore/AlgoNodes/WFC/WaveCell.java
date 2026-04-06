@@ -11,7 +11,7 @@ public class WaveCell {
     public Vector3i position;
     public LinkedHashSet<TileSet.TileEntry> possible;
     private GridTile chosen;
-    public GridTile getChosen() { return  chosen; }
+    public GridTile getChosen() { return chosen; }
     public boolean isCollapsed() { return chosen != null; }
     public int getEntropy() { return possible == null ? 0 : possible.size(); }
 
@@ -27,13 +27,13 @@ public class WaveCell {
         possible = null;
     }
     public WaveCell(Vector3i pos, TileSet.TileEntry tile, GridTileType type) {
-        this.position = pos;
+        this.position = pos.clone();
         setChosen(tile,type);
     }
 
     public WaveCell(Vector3i pos, LinkedHashSet<TileSet.TileEntry> possible) {
-        this.position = pos;
-        this.possible = possible;
+        this.position = pos.clone();
+        this.possible = new LinkedHashSet<>(possible);
     }
 
     public WaveCell(WaveCell other) {

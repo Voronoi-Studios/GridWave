@@ -5,6 +5,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
 import com.png.GridWaveCore.AlgoNodes.GridWave;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -15,12 +16,12 @@ public class DebugUtils {
         GridWave.Winner winner = GridWave.winnerMap.get(seedBox.toString()).get(); //Maybe need to add checks
         String generatedString = generateString(gridTiles, pathKey);
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        final String message = "Generated " + gridTiles.size() + " tiles based on " + winner.toString() + " with grid: " + grid + " :\n" + generatedString;
-        scheduler.schedule(() -> LoggerUtil.getLogger().info(message), 2, TimeUnit.SECONDS);
+        final String message = generatedString + "\n\nGenerated " + gridTiles.size() + " tiles based on " + winner.toString() + " with grid: " + grid + "\n\n";
+        scheduler.schedule(() -> { LoggerUtil.getLogger().info(message); scheduler.shutdown(); }, 2, TimeUnit.SECONDS);
     }
 
-    public static String generateString(List<GridTile> gridTiles, String pathKey) {
-        if (gridTiles == null) return "null";
+    public static String generateString(@Nonnull List<GridTile> gridTiles, String pathKey) {
+        if (gridTiles.stream().allMatch(Objects::isNull)) return "Failed, everything is empty";
         var list = new ArrayList<>(gridTiles);
         list.removeIf(Objects::isNull);
         list.sort(Comparator.comparingInt((GridTile gt) -> gt.positionOffset().x).thenComparingInt(gt -> gt.positionOffset().z));

@@ -34,9 +34,10 @@
   "NodeCategories": {
     "WFC" : [
       "GridWave.WFC",
-	    "Algo.WFC",
+	    "GridWaveProp.WFC",
       "GridGen2D.WFC",
-      "RuleSet.WFC"
+      "RuleSet.WFC",
+      "Advanced.RuleSet.WFC"
     ],
     "WFC.TileSet" : [
 	    "Single.TileSet.WFC",	    
@@ -57,7 +58,8 @@
       "Variable",
       "CPrefab.Prop",
       "CWeightedPath.CPrefab.Prop",
-      "CDensityDelimitedTintProvider"
+      "CDensityDelimitedTintProvider",
+      "StaticMirrorProp.WFC"
     ],
      "Material" : [
       "Material",
@@ -341,6 +343,13 @@
     ]
   },
   "Variants": {
+    "RuleSet.Variants":{
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Simple": "RuleSet.WFC",
+        "Advanced": "Advanced.RuleSet.WFC"
+      }
+    },
     "TileSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
@@ -569,7 +578,8 @@
     "PropVariants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Algo": "Algo.WFC",
+        "GridWaveProp": "GridWaveProp.WFC",
+        "StaticMirror" : "StaticMirrorProp.WFC",
         "Box": "BoxProp",
         "Union": "Union.Prop",
         "Cluster": "Cluster.Prop",

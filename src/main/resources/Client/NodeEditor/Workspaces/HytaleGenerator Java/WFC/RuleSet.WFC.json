@@ -50,6 +50,7 @@
     }
   ],
   "Schema": {
+    "Type": "Simple",
     "N" : "N",
     "E" : "E",
     "S" : "S",

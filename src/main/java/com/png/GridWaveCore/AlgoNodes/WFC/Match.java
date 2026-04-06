@@ -12,7 +12,7 @@ public class Match {
         return dir(dir, a.providerRuleSet(), b.recieverRuleSet()) && dir(dir, a.recieverRuleSet(),b.providerRuleSet());
     }
     public static boolean dir(int dir, @Nonnull RuleSet a, @Nonnull RuleSet b){
-        return full(a.getRuleSets()[dir],b.getRuleSets()[oppositeDirection[dir]]);
+        return full(a.getRuleSets()[oppositeDirection[dir]],b.getRuleSets()[dir]);
     }
 
     public static boolean full(@Nonnull RuleSet.Combo a, @Nonnull RuleSet.Combo b){
