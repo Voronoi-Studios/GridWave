@@ -34,4 +34,4 @@ build/
 ### Misc ###
 /run/
 /copy-Jar.gradle.kts
-/copy-NodeEditor.gradle2.kts
+/copy-NodeEditor.gradle.kts
