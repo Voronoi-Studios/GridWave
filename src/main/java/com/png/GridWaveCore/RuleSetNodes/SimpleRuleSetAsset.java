@@ -10,20 +10,20 @@ public class SimpleRuleSetAsset extends RuleSetAsset{
 
     @Nonnull
     public static final BuilderCodec<SimpleRuleSetAsset> CODEC = BuilderCodec.builder(SimpleRuleSetAsset.class, SimpleRuleSetAsset::new, RuleSetAsset.ABSTRACT_CODEC)
-            .append(new KeyedCodec<>("N", Codec.STRING, true), (t, n) -> t.n = n, t -> t.n)
+            .append(new KeyedCodec<>("N", Codec.STRING, true), (t, n) -> t.n = n.replace(" ", "").split(","), t -> String.join(",",t.n))
             .add()
-            .append(new KeyedCodec<>("E", Codec.STRING, true), (t, e) -> t.e = e, t -> t.e)
+            .append(new KeyedCodec<>("E", Codec.STRING, true), (t, e) -> t.e = e.replace(" ", "").split(","), t -> String.join(",",t.e))
             .add()
-            .append(new KeyedCodec<>("S", Codec.STRING, true), (t, s) -> t.s = s, t -> t.s)
+            .append(new KeyedCodec<>("S", Codec.STRING, true), (t, s) -> t.s = s.replace(" ", "").split(","), t -> String.join(",",t.s))
             .add()
-            .append(new KeyedCodec<>("W", Codec.STRING, true), (t, w) -> t.w = w, t -> t.w)
+            .append(new KeyedCodec<>("W", Codec.STRING, true), (t, w) -> t.w = w.replace(" ", "").split(","), t -> String.join(",",t.w))
             .add()
             .build();
 
-    private String n = "";
-    private String e = "";
-    private String s = "";
-    private String w = "";
+    private String[] n = new String[]{""};
+    private String[] e = new String[]{""};
+    private String[] s = new String[]{""};
+    private String[] w = new String[]{""};
 
     @Override
     public RuleSet.Combo build() {

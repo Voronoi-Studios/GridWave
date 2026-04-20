@@ -49,7 +49,7 @@ public class GridWave {
     * @param borderRuleSet Border RuleSet
     * @param debug If true, generates a simplified wave for testing purposes, without border propagation.
     * @return BaseWave represented as a map of grid positions to WaveCells*/
-    public static @NonNull Map<Vector3i, WaveCell> getBaseWave(@NonNull List<TileSet.TileEntry> poiTileEntries, @NonNull List<TileSet.TileEntry> baseTileEntries, @NonNull List<Vector3d> gridPositions, int grid, RuleSet.Combo borderRuleSet, boolean debug){
+    public static @NonNull Map<Vector3i, WaveCell> getBaseWave(@NonNull List<TileSet.TileEntry> poiTileEntries, @NonNull List<TileSet.TileEntry> baseTileEntries, @NonNull List<Vector3d> gridPositions, int grid, RuleSet.Combo borderRuleSet, RuleSet.Combo pathRuleSet,  boolean debug){
         Map<Vector3i, WaveCell> baseWave = new HashMap<>();
         gridPositions.forEach(pos -> baseWave.put(pos.toVector3i(), new WaveCell(pos.toVector3i(), new LinkedHashSet<>(baseTileEntries))));
 
@@ -65,22 +65,22 @@ public class GridWave {
             TileSet.TileEntry borderTile = new SingleTileSet(new WeightedMap<>(), borderRuleSet,1,false).getTileEntries().getFirst();
             for(Vector3i borderPos : borderPositions){
                 WaveCell waveCell = new WaveCell(borderPos.clone(),borderTile, GridTileType.BASIC);
-                propagate(waveCell, baseWave, null, grid);
+                propagate(waveCell, baseWave, null, grid, pathRuleSet);
             }
         }
 
 
         //Replace fixed tiles
         for(TileSet.TileEntry tileEntry : poiTileEntries){
-            if(Match.full(tileEntry.getMainRuleSet(), RuleSet.Combo.EMPTY)) continue;
-            if(Match.full(tileEntry.getMainRuleSet(), RuleSet.Combo.NULL)) continue;
-            if(Match.full(tileEntry.getMainRuleSet(), RuleSet.Combo.ALL_N)) continue;
+            if(Match.is(tileEntry.getMainRuleSet(), RuleSet.Combo.EMPTY)) continue;
+            if(Match.is(tileEntry.getMainRuleSet(), RuleSet.Combo.NULL)) continue;
+            if(Match.is(tileEntry.getMainRuleSet(), RuleSet.Combo.ALL_N)) continue;
             //RuleSet.Combo.ALL_X has to go through, so for example a 3x3's middle tile also gets replaced
 
             if(baseWave.containsKey(tileEntry.identifierKey())) { //Maybe if debug add them?
                 WaveCell waveCell = baseWave.get(tileEntry.identifierKey());
                 waveCell.setChosen(tileEntry, GridTileType.POI);
-                propagate(waveCell, baseWave, null, grid);
+                propagate(waveCell, baseWave, null, grid, pathRuleSet);
             }
         }
 
@@ -102,20 +102,20 @@ public class GridWave {
     * @param debug If true, returns a debug wave, {@link GridWave#getDebugWave}
     * @param workerId Identifier for the worker thread (used in multithreading)
     * @return Map of grid positions to WaveCells representing the collapsed wave, or null if no solution found in multithreading mode*/
-    public static @NonNull Map<Vector3i, WaveCell> performWFC(Map<Vector3i, WaveCell> baseWave, int grid, int maxAttempts, int maxBacktracks, SeedBox seedBox, boolean multithreading, boolean debug, int workerId) {
+    public static @NonNull Map<Vector3i, WaveCell> performWFC(Map<Vector3i, WaveCell> baseWave, int grid, int maxAttempts, int maxBacktracks, SeedBox seedBox, RuleSet.Combo pathRuleSet, int POIsCount, boolean multithreading, boolean debug, int workerId) {
         SeedBox childSeedBox = multithreading ? seedBox.child(workerId + "s") : seedBox;
         SeedBox attemptSeedBox = null;
         AtomicReference<Map<Vector3i, WaveCell>> winnerGridTiles = winnerGridTilesMap.computeIfAbsent(seedBox.toString(), k -> new AtomicReference<>());
         AtomicReference<Winner> winner = winnerMap.computeIfAbsent(seedBox.toString(), k -> new AtomicReference<>(null));
-        AtomicInteger particepants = participantTracker.computeIfAbsent(seedBox.toString(), k -> new AtomicInteger());
-        particepants.getAndAdd(1);
+        AtomicInteger participants = participantTracker.computeIfAbsent(seedBox.toString(), k -> new AtomicInteger());
+        participants.getAndAdd(1);
 
-        if(particepants.get() == 1){ //I'm the first so lets restart the race.
-            winnerGridTiles.set(new HashMap<>());
+        if(participants.get() == 1){ //I'm the first so lets restart the race.
+            winnerGridTiles.set(new LinkedHashMap<>());
             winner.set(null);
         }
 
-        Map<Vector3i, WaveCell> wave = new HashMap<>();
+        Map<Vector3i, WaveCell> wave = new LinkedHashMap<>();
         int backtracksCount = -1;
         int attempt = -1;
 
@@ -131,7 +131,7 @@ public class GridWave {
             backtracksCount = 0;
             int collapsedCount = 0;
             while (collapsedCount < baseWave.size()) {
-                if(winner.get() != null) break; //Give up LOOSER!
+                if(multithreading && winner.get() != null) break; //Give up LOOSER!
 
                 //Find cell with the lowest entropy
                 WaveCell lowestEntropy = null;
@@ -157,32 +157,32 @@ public class GridWave {
                     }
                 }
 
-                if (lowestEntropy == null) break; //No collapsible cell found
+                if (lowestEntropy == null) break; //No collapsible cell found, either finished or failed
                 if (failed) { failed = false; continue; }
 
                 //Collapse
-                var bla = new WaveCellChange(lowestEntropy.position, lowestEntropy);
+                var waveCellChange = new WaveCellChange(lowestEntropy.getPosition(), lowestEntropy);
                 lowestEntropy.collapse(randomSupplier);
-                bla.cell().possible.remove(lowestEntropy.getChosen().tileEntry());
-                stack.push(bla);
+                waveCellChange.cell().possible.remove(lowestEntropy.getChosen().tileEntry());
+                stack.push(waveCellChange);
                 collapsedCount++;
 
                 //Propagate to neighbors
-                propagate(lowestEntropy, wave, stack, grid);
+                propagate(lowestEntropy, wave, stack, grid, pathRuleSet);
             }
-            if (!failed){ break; }
+            if (!failed && arePOIsConnected(baseWave, POIsCount)) break; //finished
         }
 
         if (multithreading) {
-            if (winner.get() == null && winnerGridTiles.compareAndSet(null, new HashMap<>(wave))) {
+            if (winner.get() == null && winnerGridTiles.compareAndSet(null, new LinkedHashMap<>(wave))) {
                 winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt)); }
         } else if(workerId == 1) winner.set(new Winner(workerId, attemptSeedBox, backtracksCount, attempt));
 
-        particepants.getAndAdd(-1);
+        participants.getAndAdd(-1);
 
-        return multithreading ? new HashMap<>(winnerGridTiles.get()) : wave;
+        return multithreading ? new LinkedHashMap<>(winnerGridTiles.get()) : wave;
     }
-    /** Generates a simplified wave for testing purposes, chronologically collapsing all tiles 
+    /** Generates a simplified wave for testing purposes, chronologically collapsing all tiles
      * bottom left to top right and loops through all tile variants (rotations)*/
     private static @NonNull Map<Vector3i, WaveCell> getDebugWave(Map<Vector3i, WaveCell> baseWave) {
         Map<Vector3i, WaveCell> wave = sortByXThenZ(baseWave);
@@ -210,6 +210,11 @@ public class GridWave {
     }
 
 
+    private static boolean arePOIsConnected(Map<Vector3i, WaveCell> baseWave, int POIsCount) {
+        return baseWave.values().stream().anyMatch(x -> x.connectedPOIs.size() >= POIsCount);
+    }
+
+
     /*===========================================================
     *                     PROPAGATION & MATCHING
     * =========================================================== */
@@ -219,13 +224,17 @@ public class GridWave {
      * @param stack A stack to keep track of changes for backtracking purposes; can be null if backtracking is not needed
      * @param grid The size of the grid step, used to calculate neighbor positions
      */
-    private static void propagate(WaveCell source, Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, int grid) {
+    private static void propagate(WaveCell source, Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, int grid, RuleSet.Combo pathRuleSet) {
         IntStream.range(0, 4).forEach(rot -> {
-            Vector3i neighborPos = new Vector3i(source.position).add(dirs[rot].clone().scale(grid));
+            Vector3i neighborPos = new Vector3i(source.getPosition()).add(dirs[rot].clone().scale(grid)); //Maybe make it so we have a rounded grid position and an actuall offset position
             WaveCell neighbor = wave.get(neighborPos);
             if(stack != null) stack.push(new WaveCellChange(neighborPos, neighbor));
-            if (neighbor != null && !neighbor.isCollapsed()) {
-                neighbor.possible.removeIf(tileEntry -> !Match.dir(rot, tileEntry.getMainRuleSet(), source.getChosen().tileEntry().getMainRuleSet()));
+            if (neighbor != null){
+                if(!neighbor.isCollapsed()){
+                    neighbor.possible.removeIf(tileEntry -> !Match.dir(rot, tileEntry.getMainRuleSet(), source.getChosen().tileEntry().getMainRuleSet()));
+                } else if(Match.dir(rot, neighbor.getChosen().tileEntry().getMainRuleSet(), pathRuleSet)) {
+                    source.connectedPOIs.addAll(neighbor.connectedPOIs);
+                }
             }
         });
     }
@@ -258,9 +267,9 @@ public class GridWave {
 
                 for(var subTiles : fancyTileEntry.getSubTiles()){
                     Vector3i key = waveCellEntry.getKey().clone().add(subTiles.identifierKey().clone());
-                    if(Match.full(subTiles.getMainRuleSet(), RuleSet.Combo.EMPTY)) continue;
-                    if(Match.full(subTiles.getMainRuleSet(), RuleSet.Combo.NULL)) continue;
-                    if(Match.full(subTiles.getMainRuleSet(), RuleSet.Combo.ALL_N)) continue;
+                    if(Match.is(subTiles.getMainRuleSet(), RuleSet.Combo.EMPTY)) continue;
+                    if(Match.is(subTiles.getMainRuleSet(), RuleSet.Combo.NULL)) continue;
+                    if(Match.is(subTiles.getMainRuleSet(), RuleSet.Combo.ALL_N)) continue;
                     //RuleSet.Combo.ALL_X has to go through, so for example a 3x3's middle tile also gets replaced
                     fancyWave.get(key).setChosen(subTiles, GridTileType.FANCY);
                 }
@@ -293,6 +302,7 @@ public class GridWave {
         }
         return gridProps;
     }
+
     public static @NonNull Vector3i[] getAnchorOffsets(int grid) {
         int evenOffset = (grid % 2 == 0) ? 1 : 0;
         return new Vector3i[] {

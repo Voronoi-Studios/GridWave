@@ -11,14 +11,14 @@ import java.util.*;
 public abstract class TileSet {
 
     protected static RuleSet.Combo rotate(RuleSet.Combo combo, int r) {
-        String[] providerArr = combo.providerRuleSet().getRuleSets();
-        String[] receiverArr = combo.recieverRuleSet().getRuleSets();
+        String[][] providerArr = combo.providerRuleSet().getRuleSetArrays();
+        String[][] receiverArr = combo.recieverRuleSet().getRuleSetArrays();
         return new RuleSet.Combo(new RuleSet(rotate(providerArr, r)), new RuleSet(rotate(receiverArr, r)));
     }
 
-    protected static String[] rotate(String[] arr, int r) {
+    protected static String[][] rotate(String[][] arr, int r) {
         int l = arr.length;
-        String[] rotated = new String[l];
+        String[][] rotated = new String[l][];
         for (int i = 0; i < l; i++) {
             rotated[i] = arr[(i + r) % l];
         }

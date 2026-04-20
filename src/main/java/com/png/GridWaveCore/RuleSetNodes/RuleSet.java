@@ -14,21 +14,24 @@ import java.util.stream.Stream;
 public class RuleSet {
     @Nonnull
     public static final BuilderCodec<RuleSet> CODEC = BuilderCodec.builder(RuleSet.class, RuleSet::new)
-            .append(new KeyedCodec<>("N", Codec.STRING, true), (t, n) -> t.n = n, t -> t.n)
+            .append(new KeyedCodec<>("N", Codec.STRING, true), (t, n) -> t.n = n.replace(" ", "").split(","), t -> String.join(",",t.n))
             .add()
-            .append(new KeyedCodec<>("E", Codec.STRING, true), (t, e) -> t.e = e, t -> t.e)
+            .append(new KeyedCodec<>("E", Codec.STRING, true), (t, e) -> t.e = e.replace(" ", "").split(","), t -> String.join(",",t.e))
             .add()
-            .append(new KeyedCodec<>("S", Codec.STRING, true), (t, s) -> t.s = s, t -> t.s)
+            .append(new KeyedCodec<>("S", Codec.STRING, true), (t, s) -> t.s = s.replace(" ", "").split(","), t -> String.join(",",t.s))
             .add()
-            .append(new KeyedCodec<>("W", Codec.STRING, true), (t, w) -> t.w = w, t -> t.w)
+            .append(new KeyedCodec<>("W", Codec.STRING, true), (t, w) -> t.w = w.replace(" ", "").split(","), t -> String.join(",",t.w))
             .add()
             .build();
-    private String n = "";
-    private String e = "";
-    private String s = "";
-    private String w = "";
 
-    public RuleSet(String[] keys){
+    private String[] n = new String[]{""};
+    private String[] e = new String[]{""};
+    private String[] s = new String[]{""};
+    private String[] w = new String[]{""};
+
+    public RuleSet(){}
+
+    public RuleSet(String[][] keys){
         if (keys.length != 4) return;
         this.n = keys[0];
         this.e = keys[1];
@@ -36,31 +39,26 @@ public class RuleSet {
         this.w = keys[3];
     }
 
-    public RuleSet(String n, String e, String s, String w) {
+    public RuleSet(String[] n, String[] e, String[] s, String[] w) {
         this.n = n;
         this.e = e;
         this.s = s;
         this.w = w;
     }
 
-    public RuleSet(){}
+    public static RuleSet createSimpleFrom(String[] keys){
+        if (keys.length != 4) new RuleSet();
+        return new RuleSet(new String[]{keys[0]},new String[]{keys[1]},new String[]{keys[2]},new String[]{keys[3]});
+    }
 
     public String[][] getRuleSetArrays() {
-        return new String[][]{n.split(","),e.split(","),s.split(","),w.split(",")};
-    }
-    public String[] getRuleSets() {
-        return new String[]{
-                n != null && !n.isEmpty() ? n.split(",", 2)[0] : "",
-                e != null && !e.isEmpty() ? e.split(",", 2)[0] : "",
-                s != null && !s.isEmpty() ? s.split(",", 2)[0] : "",
-                w != null && !w.isEmpty() ? w.split(",", 2)[0] : ""
-        };
+        return new String[][]{n,e,s,w};
     }
 
-    public static final RuleSet EMPTY = new RuleSet("","","","");
-    public static final RuleSet NULL = new RuleSet(null,null,null,null);
-    public static final RuleSet ALL_N = new RuleSet("N","N","N","N");
-    public static final RuleSet ALL_X = new RuleSet("X","X","X","X");
+    public static final RuleSet EMPTY = RuleSet.createSimpleFrom(new String[]{"","","",""});
+    public static final RuleSet NULL = new RuleSet(new String[1],new String[1],new String[1],new String[1]);
+    public static final RuleSet ALL_N = RuleSet.createSimpleFrom(new String[]{"N","N","N","N"});
+    public static final RuleSet ALL_X = RuleSet.createSimpleFrom(new String[]{"X","X","X","X"});
 
 
     public record Combo(RuleSet providerRuleSet, RuleSet recieverRuleSet) {

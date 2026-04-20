@@ -60,7 +60,7 @@ public class MultiTileSetAsset extends TileSetAsset {
             offset.z++;
             if(offset.z >= zSize) {
                 offset.z = 0;
-                offset.x++;
+                offset.x--;
             }
         }
 

@@ -104,7 +104,7 @@ public class GridWavePropAsset extends PropAsset {
             }
 
             var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
-            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
+            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.pathKey, this.multithreading, this.debug, workerId);
             var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,seedBox.child("fancy"));
             List<GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 
@@ -112,9 +112,12 @@ public class GridWavePropAsset extends PropAsset {
 
             if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            List<Prop> gridProps = GridWave.loadPrefabProps(GridWave.argumentFrom(argument), grid, gridTiles).values().stream().toList();
-
-            return new UnionProp(gridProps);
+            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(GridWave.argumentFrom(argument), grid, gridTiles);
+            List<Prop> offsetProps = new ArrayList<>();
+            for(var entry : gridProps.entrySet()){
+                offsetProps.add(new OffsetProp(entry.getKey().toVector3i(), entry.getValue()));
+            }
+            return new UnionProp(offsetProps);
         }
     }
 }

@@ -2,11 +2,18 @@ package com.png.GridWaveCore.AlgoNodes.WFC;
 
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
+import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.NameMatching;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.Universe;
+import com.hypixel.hytale.server.core.util.NotificationUtil;
 import com.png.GridWaveCore.AlgoNodes.GridWave;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 
 import javax.annotation.Nonnull;
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +24,11 @@ public class DebugUtils {
         String generatedString = generateString(gridTiles, pathKey);
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         final String message = generatedString + "\n\nGenerated " + gridTiles.size() + " tiles based on " + winner.toString() + " with grid: " + grid + "\n\n";
-        scheduler.schedule(() -> { LoggerUtil.getLogger().info(message); scheduler.shutdown(); }, 2, TimeUnit.SECONDS);
+        scheduler.schedule(() -> {
+            LoggerUtil.getLogger().info(message); scheduler.shutdown();
+            PlayerRef playerRef = Universe.get().getPlayerByUsername("png", NameMatching.EXACT);
+            NotificationUtil.sendNotification(playerRef.getPacketHandler(), Message.raw("Generated " + gridTiles.size() + " tiles based on " + winner.toString() + " with grid: " + grid).color(Color.GRAY));
+            }, 2, TimeUnit.SECONDS);
     }
 
     public static String generateString(@Nonnull List<GridTile> gridTiles, String pathKey) {

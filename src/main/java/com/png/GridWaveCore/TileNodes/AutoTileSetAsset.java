@@ -41,7 +41,7 @@ public class AutoTileSetAsset extends TileSetAsset {
 
         String folderName = parts.getLast();
         List<String> tiles = Arrays.stream(folderName.split("-")).toList();
-        List<RuleSet> ruleSetAssets = tiles.stream().map(t -> new RuleSet(t.split(""))).toList();
+        List<RuleSet> ruleSetAssets = tiles.stream().map(t -> RuleSet.createSimpleFrom(t.split(""))).toList();
 
         Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
         Vector3i offset = Vector3i.ZERO.clone();
