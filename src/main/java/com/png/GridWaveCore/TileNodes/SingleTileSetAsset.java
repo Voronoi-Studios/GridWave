@@ -7,7 +7,8 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import com.png.GridWaveCore.AlgoNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
 
 import javax.annotation.Nonnull;
@@ -28,7 +29,7 @@ public class SingleTileSetAsset extends TileSetAsset {
             .append(new KeyedCodec<>("AutoRot", Codec.BOOLEAN, true), (asset, value) -> asset.autoRot = value, asset -> asset.autoRot)
             .add()
             .build();
-    private RuleSetAsset ruleSetAsset = new RuleSetAsset();
+    private RuleSetAsset ruleSetAsset = new SimpleRuleSetAsset();
     private CPrefabPropAsset.CWeightedPathAsset[] weightedPrefabPathAssets = new CPrefabPropAsset.CWeightedPathAsset[0];
     private double weight = 1;
     private boolean autoRot = true;

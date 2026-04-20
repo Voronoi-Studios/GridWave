@@ -1,0 +1,111 @@
+{
+  "Id": "Advanced.RuleSet.WFC",
+  "Title": "Advanced RuleSet Asset",
+  "Color": "60,100,80",
+  "Content": [
+    {
+      "Id": "Provider RuleSets",
+      "Type": "Object",
+      "Options": {
+        "Description": "Who am I, defines what each edge's keys are",
+        "Label": "Provider RuleSets",
+        "Fields": [
+          {
+            "Id": "N",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "North [-z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "E",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "East [+x]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "S",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "South [+z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "W",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "West [-x]",
+              "Default": "",
+              "Width": 200
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Id": "Receiver RuleSets",
+      "Type": "Object",
+      "Options": {
+        "Description": "Who do I like, defines to what keys (provider) this tile can connect to",
+        "Label": "Receiver RuleSets",
+        "Fields": [
+          {
+            "Id": "N",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "North [-z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "E",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "East [+x]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "S",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "South [+z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "W",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "West [-x]",
+              "Default": "",
+              "Width": 200
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "RuleSet",
+      "Type": "RuleSet.WFC.Connection",
+      "Color": "60,100,80"
+    }
+  ],
+  "Schema": {
+    "Type": "Advanced",
+    "Provider RuleSets": "Provider RuleSets",
+    "Receiver RuleSets": "Receiver RuleSets"
+  }
+}

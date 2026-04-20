@@ -12,6 +12,9 @@ import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
 import com.png.GridWaveCore.AlgoNodes.*;
 import com.png.GridWaveCore.MirrorNode.StaticMirrorPropAsset;
+import com.png.GridWaveCore.RuleSetNodes.AdvancedRuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.SeedNodes.*;
 import com.png.GridWaveCore.TileNodes.*;
 import com.png.GridWaveCore.UnusedNodes.*;
@@ -42,12 +45,14 @@ public class CorePlugin extends JavaPlugin {
         PropDistributionAsset.CODEC.register("GridWave", GridWaveAsset.class, GridWaveAsset.CODEC);
         PropAsset.CODEC.register("GridWaveProp", GridWavePropAsset.class, GridWavePropAsset.CODEC);
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
-        //RuleSetAsset -> AssetBuilderCodec
+        RuleSetAsset.CODEC.register("Simple",SimpleRuleSetAsset.class, SimpleRuleSetAsset.CODEC);
+        RuleSetAsset.CODEC.register("Advanced", AdvancedRuleSetAsset.class, AdvancedRuleSetAsset.CODEC);
 
         //Tile Nodes
         TileSetAsset.CODEC.register("Single", SingleTileSetAsset.class, SingleTileSetAsset.CODEC);
         TileSetAsset.CODEC.register("Multi", MultiTileSetAsset.class, MultiTileSetAsset.CODEC);
         TileSetAsset.CODEC.register("Fixed", FixedTileSetAsset.class, FixedTileSetAsset.CODEC);
+        TileSetAsset.CODEC.register("Auto", AutoTileSetAsset.class, AutoTileSetAsset.CODEC);
         TileSetAsset.CODEC.register("Imported", ImportedTileSetAsset.class, ImportedTileSetAsset.CODEC);
 
         //Seed Nodes

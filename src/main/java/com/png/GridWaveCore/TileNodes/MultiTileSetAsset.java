@@ -8,7 +8,9 @@ import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import com.png.GridWaveCore.AlgoNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
 
 import javax.annotation.Nonnull;
@@ -33,7 +35,7 @@ public class MultiTileSetAsset extends TileSetAsset {
             .append(new KeyedCodec<>("AutoRot", Codec.BOOLEAN, true), (asset, value) -> asset.autoRot = value, asset -> asset.autoRot)
             .add()
             .build();
-    private RuleSetAsset[] ruleSetAssets = new RuleSetAsset[0];
+    private RuleSetAsset[] ruleSetAssets = new SimpleRuleSetAsset[0];
     private CPrefabPropAsset.CWeightedPathAsset[] weightedPrefabPathAssets = new CPrefabPropAsset.CWeightedPathAsset[0];
     private int zSize;
     private double weight = 1;
@@ -51,14 +53,14 @@ public class MultiTileSetAsset extends TileSetAsset {
             }
         }
 
-        Map<Vector3i, String[]> ruleSets = new HashMap<>();
+        Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
         Vector3i offset = Vector3i.ZERO.clone();
         for(RuleSetAsset ruleSetAsset : ruleSetAssets){
             ruleSets.put(offset.clone().scale(grid), ruleSetAsset.build());
             offset.z++;
             if(offset.z >= zSize) {
                 offset.z = 0;
-                offset.x++;
+                offset.x--;
             }
         }
 

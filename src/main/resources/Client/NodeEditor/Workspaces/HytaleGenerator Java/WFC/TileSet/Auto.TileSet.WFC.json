@@ -1,0 +1,47 @@
+{
+  "Id": "Auto.TileSet.WFC",
+  "Title": "WFC Automatic TileSet",
+  "Color": "10,80,50",
+  "Content" : [
+    {
+      "Id" : "FolderPath",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "Folder Path",
+        "Default" : "",
+        "Width" : 600
+      }
+    },
+    {
+      "Id": "Weight",
+      "Type": "Float",
+      "Options": {
+        "Label": "Weight",
+        "Default" : 1.0
+      }
+    }, 
+    {
+      "Id": "AutoRot",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "AutoRotate",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSet.WFC.Connection",
+      "Color": "10,80,50"
+    }
+  ],
+  "Schema": {
+    "Type" : "Auto",
+    "FolderPath" : "FolderPath",
+    "Weight" : "Weight",
+    "AutoRot" : "AutoRot"
+  }
+}

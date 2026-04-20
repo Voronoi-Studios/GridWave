@@ -11,7 +11,7 @@ buildNumber++
 buildNumberFile.writeText(buildNumber.toString())
 
 group = "com.png"
-version = "0.4.${buildNumber}"
+version = "0.5.${buildNumber}"
 val javaVersion = 25
 
 repositories {
@@ -133,5 +133,7 @@ afterEvaluate {
     }
 }
 
-apply(from = "copy-jar.gradle.kts")
+//Remove these lines if they cause issues
+apply(from = "copy-Jar.gradle.kts")
+apply(from = "copy-NodeEditor.gradle.kts")
 

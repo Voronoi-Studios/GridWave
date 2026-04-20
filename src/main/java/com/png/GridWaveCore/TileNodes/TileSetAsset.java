@@ -121,9 +121,9 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     }
 
     @Nullable
-    protected List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
-        List<IPrefabBuffer> loadedPrefabs = new ArrayList<>();
-        Set<Path> traversedPaths = new HashSet<>();
+    public List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
+        List<IPrefabBuffer> loadedPrefabs = new LinkedList<>();
+        Set<Path> traversedPaths = new LinkedHashSet<>();
         List<AssetPack> packs = AssetModule.get().getAssetPacks();
 
         for (int i = packs.size() - 1; i >= 0; i--) {

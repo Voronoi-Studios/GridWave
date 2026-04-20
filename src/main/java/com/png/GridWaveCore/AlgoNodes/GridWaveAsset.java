@@ -3,8 +3,6 @@ package com.png.GridWaveCore.AlgoNodes;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.ListPositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
-import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.NoPropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
@@ -15,6 +13,12 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.png.GridWaveCore.AlgoNodes.WFC.DebugUtils;
+import com.png.GridWaveCore.AlgoNodes.WFC.GridTile;
+import com.png.GridWaveCore.AlgoNodes.WFC.WaveCell;
+import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.SeedNodes.RandomSeedAsset;
 import com.png.GridWaveCore.SeedNodes.SeedAsset;
 import com.png.GridWaveCore.TileNodes.FixedTileSet;
@@ -24,7 +28,6 @@ import com.png.GridWaveCore.TileNodes.TileSetAsset;
 
 import javax.annotation.Nonnull;
 import java.util.*;
-import java.util.concurrent.*;
 
 
 public class GridWaveAsset extends PropDistributionAsset {
@@ -60,7 +63,7 @@ public class GridWaveAsset extends PropDistributionAsset {
     private FixedTileSetAsset[] poiTileSetAssets = new FixedTileSetAsset[0];
     private TileSetAsset[] baseTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] fancyTileSetAssets = new TileSetAsset[0];
-    private RuleSetAsset borderRuleSet = new RuleSetAsset();
+    private RuleSetAsset borderRuleSet = new SimpleRuleSetAsset();
     private SeedAsset seed = new RandomSeedAsset();
 
     private int maxPositionsCount = 20;
@@ -84,8 +87,8 @@ public class GridWaveAsset extends PropDistributionAsset {
             SeedBox seedBox = argument.parentSeed.child(seed.build());
 
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
-            List<Vector3d> gridPositions = WFC.getPositions(positionProvider, maxPositionsCount);
-            int grid = WFC.getGrid(gridPositions);
+            List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
+            int grid = GridWave.getGrid(gridPositions);
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
             for(FixedTileSetAsset tileSetAsset : poiTileSetAssets){
@@ -103,16 +106,20 @@ public class GridWaveAsset extends PropDistributionAsset {
                 fancyTileEntries.addAll(result.getTileEntries());
             }
 
-            var baseWave = WFC.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
-            var wfcWave = WFC.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.multithreading, this.debug, workerId);
-            var fancyWave = WFC.placeFancyTiles(wfcWave, fancyTileEntries,  seedBox.child("fancy"));
-            List<WFC.GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WFC.WaveCell::getChosen).toList());
+            String[] pathKeys = pathKey.split(",");
+            RuleSet pathRuleSet = new RuleSet(pathKeys,pathKeys,pathKeys,pathKeys);
+            RuleSet.Combo pathRuleSetCombo = new RuleSet.Combo(pathRuleSet,pathRuleSet);
 
-            if (workerId == 1) WFC.sendDebugLog(gridTiles,grid, this.pathKey, seedBox);
+            var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), pathRuleSetCombo, this.debug);
+            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, pathRuleSetCombo, poiTileSetAssets.length , this.multithreading, this.debug, workerId);
+            var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,  seedBox.child("fancy"));
+            List<GridTile> gridTiles = new LinkedList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
+
+            if (workerId == 1) DebugUtils.sendDebugLog(gridTiles,grid, this.pathKey, seedBox);
 
             if(gridTiles.isEmpty()) return NoPropDistribution.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = WFC.loadPrefabProps(argument, grid, gridTiles);
+            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(argument, grid, gridTiles);
 
             return new MapPropDistribution(gridProps);
         }
