@@ -14,6 +14,7 @@ import com.hypixel.hytale.math.vector.Vector3d;
 import com.png.GridWaveCore.AlgoNodes.WFC.DebugUtils;
 import com.png.GridWaveCore.AlgoNodes.WFC.GridTile;
 import com.png.GridWaveCore.AlgoNodes.WFC.WaveCell;
+import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
 import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.SeedNodes.RandomSeedAsset;
@@ -103,8 +104,12 @@ public class GridWavePropAsset extends PropAsset {
                 fancyTileEntries.addAll(result.getTileEntries());
             }
 
-            var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), this.debug);
-            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, this.pathKey, this.multithreading, this.debug, workerId);
+            String[] pathKeys = pathKey.split(",");
+            RuleSet pathRuleSet = new RuleSet(pathKeys,pathKeys,pathKeys,pathKeys);
+            RuleSet.Combo pathRuleSetCombo = new RuleSet.Combo(pathRuleSet,pathRuleSet);
+
+            var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), pathRuleSetCombo, this.debug);
+            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, pathRuleSetCombo, poiTileSetAssets.length, this.multithreading, this.debug, workerId);
             var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,seedBox.child("fancy"));
             List<GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 

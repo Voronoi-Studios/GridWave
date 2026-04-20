@@ -111,7 +111,7 @@ public class GridWaveAsset extends PropDistributionAsset {
             RuleSet.Combo pathRuleSetCombo = new RuleSet.Combo(pathRuleSet,pathRuleSet);
 
             var baseWave = GridWave.getBaseWave(poiTileEntries, baseTileEntries, gridPositions, grid, borderRuleSet.build(), pathRuleSetCombo, this.debug);
-            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, pathRuleSetCombo, poiTileEntries.size() , this.multithreading, this.debug, workerId);
+            var wfcWave = GridWave.performWFC(baseWave, grid, this.maxAttempts, this.maxBacktracks, seedBox, pathRuleSetCombo, poiTileSetAssets.length , this.multithreading, this.debug, workerId);
             var fancyWave = GridWave.placeFancyTiles(wfcWave, fancyTileEntries,  seedBox.child("fancy"));
             List<GridTile> gridTiles = new LinkedList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 

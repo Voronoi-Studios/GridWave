@@ -42,7 +42,8 @@
     "WFC.TileSet" : [
 	    "Single.TileSet.WFC",	    
       "Multi.TileSet.WFC",
-      "Fixed.TileSet.WFC",	    
+      "Fixed.TileSet.WFC",
+      "Auto.TileSet.WFC",	    
       "Imported.TileSet.WFC"
     ],
     "WFC.Seed" : [
@@ -356,6 +357,7 @@
         "Single": "Single.TileSet.WFC",
         "Multi": "Multi.TileSet.WFC",
         "Fixed": "Fixed.TileSet.WFC",
+        "Auto": "Auto.TileSet.WFC",
         "Imported": "Imported.TileSet.WFC"
       }
     },
