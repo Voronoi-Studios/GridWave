@@ -1,12 +1,15 @@
 package com.png.GridWaveCore.TileNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
 
 import java.util.*;
+import java.util.function.Function;
 
 public abstract class TileSet {
 
@@ -39,12 +42,19 @@ public abstract class TileSet {
 
     public abstract List<TileEntry> getTileEntries();
     public abstract List<TileEntry> getAllTileEntries();
+    public abstract List<TileFeatureAsset> getTileFeatureAssets();
+    public abstract Prop getProp(TileSetAsset.Argument argument);
 
     /**
      * @param rot the rotation we need for spawning the prefab later on
      * @param ruleSets size 4: north, east, south, west, string represents connection type, so we can match it
      */
-    public record TileEntry(Map<Vector3i, RuleSet.Combo> ruleSets, Vector3i identifierKey, double weight, int rot, WeightedMap<List<IPrefabBuffer>> weightedPathAssets) {
+    public record TileEntry(
+            Map<Vector3i, RuleSet.Combo> ruleSets,
+            Vector3i identifierKey,
+            double weight, int rot,
+            Function<TileSetAsset.Argument, Prop> propFunction,
+            List<TileFeatureAsset> tileFeatures) {
         public RuleSet.Combo getMainRuleSet() { return ruleSets.get(identifierKey); }
         public List<TileEntry> getSubTiles(){
             var result = new ArrayList<TileEntry>();
@@ -54,8 +64,9 @@ public abstract class TileSet {
                         new Vector3i(subIdentifier),
                         weight,
                         rot,
-                        subIdentifier.equals(identifierKey) ? new WeightedMap<>(weightedPathAssets) : null
-                ));
+                        subIdentifier.equals(identifierKey) ? propFunction : null,
+                        new ArrayList<>(tileFeatures))
+                );
             }
 
             return result;
@@ -109,7 +120,8 @@ public abstract class TileSet {
                 identifierKey,
                 entry.weight(),
                 entry.rot(),
-                new WeightedMap<>(entry.weightedPathAssets())
+                entry.propFunction,
+                new ArrayList<>(entry.tileFeatures)
         );
     }
 }

@@ -19,8 +19,6 @@ import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
 import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
 import com.png.GridWaveCore.SeedNodes.RandomSeedAsset;
 import com.png.GridWaveCore.SeedNodes.SeedAsset;
-import com.png.GridWaveCore.TileNodes.FixedTileSet;
-import com.png.GridWaveCore.TileNodes.FixedTileSetAsset;
 import com.png.GridWaveCore.TileNodes.TileSet;
 import com.png.GridWaveCore.TileNodes.TileSetAsset;
 
@@ -33,7 +31,7 @@ public class GridWavePropAsset extends PropAsset {
     public static final BuilderCodec<GridWavePropAsset> CODEC = BuilderCodec.builder(GridWavePropAsset.class, GridWavePropAsset::new, PropAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("GridPoints", PositionProviderAsset.CODEC, true), (asset, v) -> asset.positionProviderAsset = v, asset -> asset.positionProviderAsset)
             .add()
-            .append(new KeyedCodec<>("POIs", new ArrayCodec<>(FixedTileSetAsset.CODEC, FixedTileSetAsset[]::new), true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
+            .append(new KeyedCodec<>("POIs", new ArrayCodec<>(TileSetAsset.CODEC, TileSetAsset[]::new), true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
             .add()
             .append(new KeyedCodec<>("BaseTiles", new ArrayCodec<>(TileSetAsset.CODEC, TileSetAsset[]::new), true), (asset, v) -> asset.baseTileSetAssets = v, asset -> asset.baseTileSetAssets)
             .add()
@@ -58,7 +56,7 @@ public class GridWavePropAsset extends PropAsset {
             .build();
 
     private PositionProviderAsset positionProviderAsset = new ListPositionProviderAsset();
-    private FixedTileSetAsset[] poiTileSetAssets = new FixedTileSetAsset[0];
+    private TileSetAsset[] poiTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] baseTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] fancyTileSetAssets = new TileSetAsset[0];
     private RuleSetAsset borderRuleSet = new SimpleRuleSetAsset();
@@ -89,8 +87,8 @@ public class GridWavePropAsset extends PropAsset {
             int grid = GridWave.getGrid(gridPositions);
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
-            for(FixedTileSetAsset tileSetAsset : poiTileSetAssets){
-                FixedTileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+            for(TileSetAsset tileSetAsset : poiTileSetAssets){
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
                 poiTileEntries.addAll(result.getAllTileEntries());
             }
             List<TileSet.TileEntry> baseTileEntries = new ArrayList<>();
@@ -117,7 +115,7 @@ public class GridWavePropAsset extends PropAsset {
 
             if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(GridWave.argumentFrom(argument), grid, gridTiles);
+            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument), grid, gridTiles);
             List<Prop> offsetProps = new ArrayList<>();
             for(var entry : gridProps.entrySet()){
                 offsetProps.add(new OffsetProp(entry.getKey().toVector3i(), entry.getValue()));

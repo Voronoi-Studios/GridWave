@@ -23,6 +23,10 @@ import com.hypixel.hytale.common.util.ExceptionUtil;
 import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.server.core.asset.AssetModule;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
+import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
+import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
+import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
+import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -43,8 +47,6 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public static final Codec<String[]> CHILD_ASSET_CODEC_ARRAY = new ArrayCodec<>(CHILD_ASSET_CODEC, String[]::new);
     @Nonnull
     public static final BuilderCodec<TileSetAsset> ABSTRACT_CODEC = BuilderCodec.abstractBuilder(TileSetAsset.class)
-            .append(new KeyedCodec<>("Skip", Codec.BOOLEAN, false), (t, k) -> t.skip = k, t -> t.skip)
-            .add()
             .append(new KeyedCodec<>("ExportAs", Codec.STRING, false), (t, k) -> t.exportName = k, t -> t.exportName)
             .add()
             .afterDecode(asset -> {
@@ -59,11 +61,16 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                     LoggerUtil.getLogger().fine("Registered imported node asset with name '" + asset.exportName + "' with asset id '" + asset.id);
                 }
             })
+            .append(new KeyedCodec<>("Features", new ArrayCodec<>(TileFeatureAsset.CODEC, TileFeatureAsset[]::new), false),
+                    (asset, v) -> asset.tileFeatureAssets = v,
+                    asset -> asset.tileFeatureAssets)
+            .add()
             .build();
+
     private String id;
     private AssetExtraInfo.Data data;
-    private boolean skip;
     private String exportName = "";
+    private @Nonnull TileFeatureAsset[] tileFeatureAssets = new TileFeatureAsset[0];
     private boolean legacyPath = false;
 
     public abstract TileSet build(@Nonnull TileSetAsset.Argument argument, int grid);
@@ -80,9 +87,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         return this.id;
     }
 
-    public boolean isSkipped() {
-        return this.skip;
-    }
+    public @Nonnull List<TileFeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
     public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument) {
@@ -91,6 +96,10 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     @Nonnull
     public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument) {
         return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
+    }
+    @Nonnull
+    public static PropAsset.Argument argumentFrom(@Nonnull TileSetAsset.Argument argument) {
+        return new PropAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
     }
 
     public static class Exported {

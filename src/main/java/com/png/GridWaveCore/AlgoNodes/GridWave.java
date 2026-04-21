@@ -6,6 +6,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
@@ -16,9 +17,11 @@ import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import com.png.GridWaveCore.AlgoNodes.WFC.*;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
 import com.png.GridWaveCore.TileNodes.SingleTileSet;
 import com.png.GridWaveCore.TileNodes.TileSet;
 
+import com.png.GridWaveCore.TileNodes.TileSetAsset;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
@@ -62,7 +65,7 @@ public class GridWave {
                 }
             }
 
-            TileSet.TileEntry borderTile = new SingleTileSet(new WeightedMap<>(), borderRuleSet,1,false).getTileEntries().getFirst();
+            TileSet.TileEntry borderTile = new SingleTileSet(new WeightedMap<>(), borderRuleSet,1,false, new ArrayList<>(0)).getTileEntries().getFirst();
             for(Vector3i borderPos : borderPositions){
                 WaveCell waveCell = new WaveCell(borderPos.clone(),borderTile, GridTileType.BASIC);
                 propagate(waveCell, baseWave, null, grid, pathRuleSet);
@@ -263,7 +266,7 @@ public class GridWave {
                     if (!Match.full(subRuleSet.getValue(),chosen.tileEntry().getMainRuleSet())) { fullMatch = false; break;}
                 }
                 if(!fullMatch) continue;
-                if (randomSupplier.nextDouble(1) > fancyTileEntry.weight()) continue;
+                if (randomSupplier.nextDouble(1) > fancyTileEntry.weight()) continue; //To-DO: Implement WeightedMap
 
                 for(var subTiles : fancyTileEntry.getSubTiles()){
                     Vector3i key = waveCellEntry.getKey().clone().add(subTiles.identifierKey().clone());
@@ -289,13 +292,13 @@ public class GridWave {
      * @param grid The size of the grid step, used to calculate prop offsets
      * @param gridTiles Our list of GridTiles representing the final collapsed wave
      * @return A map of world positions (Vector3d) to Props*/
-    public static @NonNull Map<Vector3d, Prop> loadPrefabProps(PropDistributionAsset.Argument argument, int grid, List<GridTile> gridTiles) {
+    public static @NonNull Map<Vector3d, Prop> loadPrefabProps(TileSetAsset.Argument argument, int grid, List<GridTile> gridTiles) {
         Map<Vector3d, Prop> gridProps = new LinkedHashMap<>();
         Vector3i[] anchorOffsets = getAnchorOffsets(grid);
         for (var gridTile : gridTiles) {
             if (gridTile == null) continue;
-            if (gridTile.tileEntry().weightedPathAssets() == null || gridTile.tileEntry().weightedPathAssets().size() == 0) continue;
-            Prop prop = new PrefabProp(new WeightedMap<>(gridTile.tileEntry().weightedPathAssets()), argument.materialCache, argument.parentSeed);
+            Prop prop = gridTile.tileEntry().propFunction().apply(argument);
+            if(prop.equals(EmptyProp.INSTANCE)) continue;
             Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(gridTile.tileEntry().rotation(), Rotation.None, Rotation.None), argument.materialCache);
             Vector3i offset = gridTile.positionOffset().clone().add(gridTile.tileEntry().getOffset().add(anchorOffsets[gridTile.tileEntry().rot()].clone()));
             gridProps.put(offset.toVector3d(), rotatedProp);
@@ -345,10 +348,5 @@ public class GridWave {
         );
         provider.generate(context);
         return positions;
-    }
-
-    @Nonnull
-    public static PropDistributionAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument) {
-        return new PropDistributionAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
     }
 }

@@ -54,6 +54,6 @@ public class AutoTileSetAsset extends TileSetAsset {
             }
         }
 
-        return new MultiTileSet(prefabWeightedMap, ruleSets, weight, autoRot);
+        return new MultiTileSet(prefabWeightedMap, ruleSets, weight, super.getTileFeatureAssets());
     }
 }

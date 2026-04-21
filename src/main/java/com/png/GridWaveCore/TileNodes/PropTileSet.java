@@ -1,6 +1,7 @@
 package com.png.GridWaveCore.TileNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -11,16 +12,19 @@ import com.png.GridWaveCore.TileFeatures.PositionRestrictionAsset;
 import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class MultiTileSet extends TileSet {
+public class PropTileSet extends TileSet {
     protected final List<TileEntry> tileEntries;
-    protected final WeightedMap<List<IPrefabBuffer>> prefabWeightedMap;
+    protected final PropAsset propAsset;
     protected final List<TileFeatureAsset> tileFeatureAssets;
 
-    public MultiTileSet(@Nonnull WeightedMap<List<IPrefabBuffer>> prefabWeightedMap, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, @Nonnull List<TileFeatureAsset> tileFeatureAssets) {
+    public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, @Nonnull List<TileFeatureAsset> tileFeatureAssets) {
         this.tileEntries = new ArrayList<>();
-        this.prefabWeightedMap = prefabWeightedMap;
+        this.propAsset = propAsset;
         this.tileFeatureAssets = tileFeatureAssets;
         for (int r = 0; r < 4; r++) {
             final Rotation rot = Rotation.ofDegrees(r * 90);
@@ -34,8 +38,7 @@ public class MultiTileSet extends TileSet {
             TileEntry tileEntry = new TileEntry(current, Vector3i.ZERO.clone(), weight, r, this::getProp, new ArrayList<>(tileFeatureAssets));
             tileFeatureAssets.stream().filter(a -> a instanceof PositionRestrictionAsset).findFirst()
                     .ifPresent(asset -> offsetTileEntry(tileEntry, ((PositionRestrictionAsset)asset).pos));
-            this.tileEntries.add(tileEntry);
-        }
+            this.tileEntries.add(tileEntry);}
     }
 
     @Nonnull
@@ -57,7 +60,5 @@ public class MultiTileSet extends TileSet {
     public List<TileFeatureAsset> getTileFeatureAssets() { return tileFeatureAssets; }
 
     @Override
-    public Prop getProp(TileSetAsset.Argument argument) {
-        return new PrefabProp(prefabWeightedMap, argument.materialCache,argument.parentSeed);
-    }
+    public Prop getProp(TileSetAsset.Argument argument) { return propAsset.build(TileSetAsset.argumentFrom(argument)); }
 }

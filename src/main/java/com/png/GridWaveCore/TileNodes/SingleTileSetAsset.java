@@ -19,33 +19,30 @@ public class SingleTileSetAsset extends TileSetAsset {
     public static final BuilderCodec<SingleTileSetAsset> CODEC = BuilderCodec.builder(SingleTileSetAsset.class, SingleTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("RuleSet", RuleSetAsset.CODEC, true), (asset, value) -> asset.ruleSetAsset = value, asset -> asset.ruleSetAsset)
             .add()
-            .append(new KeyedCodec<>("WeightedPrefabPaths", new ArrayCodec<>(CPrefabPropAsset.CWeightedPathAsset.CODEC, CPrefabPropAsset.CWeightedPathAsset[]::new), true),
-                    (asset, v) -> asset.weightedPrefabPathAssets = v,
-                    asset -> asset.weightedPrefabPathAssets
+            .append(new KeyedCodec<>("èrefabPath", Codec.STRING, true),
+                    (asset, v) -> asset.prefabPath = v,
+                    asset -> asset.prefabPath
             ).add()
             .append(new KeyedCodec<>("Weight", Codec.DOUBLE, true), (t, y) -> t.weight = y, t -> t.weight)
             .addValidator(Validators.greaterThanOrEqual(0.0))
             .add()
-            .append(new KeyedCodec<>("AutoRot", Codec.BOOLEAN, true), (asset, value) -> asset.autoRot = value, asset -> asset.autoRot)
+            .append(new KeyedCodec<>("MinimizeVariants", Codec.BOOLEAN, true), (asset, value) -> asset.minimizeVariants = value, asset -> asset.minimizeVariants)
             .add()
             .build();
     private RuleSetAsset ruleSetAsset = new SimpleRuleSetAsset();
-    private CPrefabPropAsset.CWeightedPathAsset[] weightedPrefabPathAssets = new CPrefabPropAsset.CWeightedPathAsset[0];
+    private String prefabPath = "";
     private double weight = 1;
-    private boolean autoRot = true;
+    private boolean minimizeVariants = true;
 
     @Nonnull
     @Override
     public SingleTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
-
-        for (CPrefabPropAsset.CWeightedPathAsset pathAsset : this.weightedPrefabPathAssets) {
-            List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(pathAsset.path);
-            if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
-                prefabWeightedMap.add(pathPrefabs, pathAsset.weight);
-            }
+        List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(prefabPath);
+        if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
+            prefabWeightedMap.add(pathPrefabs, 1);
         }
 
-        return new SingleTileSet(prefabWeightedMap,ruleSetAsset.build(), weight, autoRot);
+        return new SingleTileSet(prefabWeightedMap,ruleSetAsset.build(), weight, minimizeVariants, super.getTileFeatureAssets());
     }
 }

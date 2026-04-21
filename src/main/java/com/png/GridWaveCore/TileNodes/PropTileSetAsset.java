@@ -1,6 +1,9 @@
 package com.png.GridWaveCore.TileNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.props.EmptyPropAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
@@ -18,14 +21,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MultiTileSetAsset extends TileSetAsset {
+public class PropTileSetAsset extends TileSetAsset {
     @Nonnull
-    public static final BuilderCodec<MultiTileSetAsset> CODEC = BuilderCodec.builder(MultiTileSetAsset.class, MultiTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
+    public static final BuilderCodec<PropTileSetAsset> CODEC = BuilderCodec.builder(PropTileSetAsset.class, PropTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("RuleSets", new ArrayCodec<>(RuleSetAsset.CODEC, RuleSetAsset[]::new), true), (asset, value) -> asset.ruleSetAssets = value, asset -> asset.ruleSetAssets)
             .add()
-            .append(new KeyedCodec<>("PrefabPath", Codec.STRING, true),
-                    (asset, v) -> asset.prefabPath = v,
-                    asset -> asset.prefabPath
+            .append(new KeyedCodec<>("Prop", PropAsset.CODEC, true),
+                    (asset, v) -> asset.propAsset = v,
+                    asset -> asset.propAsset
             ).add()
             .append(new KeyedCodec<>("SizeZ", Codec.INTEGER, true), (asset, value) -> asset.zSize = value, asset -> asset.zSize)
             .add()
@@ -34,20 +37,13 @@ public class MultiTileSetAsset extends TileSetAsset {
             .add()
             .build();
     private RuleSetAsset[] ruleSetAssets = new SimpleRuleSetAsset[0];
-    private String prefabPath = "";
+    private PropAsset propAsset = new EmptyPropAsset();
     private int zSize;
     private double weight = 1;
 
     @Nonnull
     @Override
-    public MultiTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
-        WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
-        List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(prefabPath);
-        if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
-            prefabWeightedMap.add(pathPrefabs, 1);
-        }
-
-
+    public PropTileSet build(@Nonnull Argument argument, int grid) {
         Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
         Vector3i offset = Vector3i.ZERO.clone();
         for(RuleSetAsset ruleSetAsset : ruleSetAssets){
@@ -59,6 +55,6 @@ public class MultiTileSetAsset extends TileSetAsset {
             }
         }
 
-        return new MultiTileSet(prefabWeightedMap, ruleSets, weight, super.getTileFeatureAssets());
+        return new PropTileSet(propAsset, ruleSets, weight, super.getTileFeatureAssets());
     }
 }
