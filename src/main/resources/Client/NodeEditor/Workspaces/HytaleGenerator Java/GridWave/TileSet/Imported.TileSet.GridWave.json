@@ -1,0 +1,29 @@
+{
+  "Id": "Imported.TileSet.GridWave",
+  "Title": "Imported TileSet",
+  "Color": "10,80,50",
+  "Content": [
+    {
+      "Id" : "Name",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "Name",
+        "Default" : "",
+        "Width" : 250
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "OutputPin",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50"
+    }
+  ],
+  "Schema": {
+    "Type" : "Imported",
+    "Name" : "Name"
+  }
+}

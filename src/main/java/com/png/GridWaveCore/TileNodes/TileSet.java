@@ -1,12 +1,10 @@
 package com.png.GridWaveCore.TileNodes;
 
-import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
-import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
-import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
+import com.png.GridWaveCore.FeatureNodes.FeatureAsset;
 
 import java.util.*;
 import java.util.function.Function;
@@ -42,7 +40,7 @@ public abstract class TileSet {
 
     public abstract List<TileEntry> getTileEntries();
     public abstract List<TileEntry> getAllTileEntries();
-    public abstract List<TileFeatureAsset> getTileFeatureAssets();
+    public abstract List<FeatureAsset> getTileFeatureAssets();
     public abstract Prop getProp(TileSetAsset.Argument argument);
 
     /**
@@ -54,7 +52,7 @@ public abstract class TileSet {
             Vector3i identifierKey,
             double weight, int rot,
             Function<TileSetAsset.Argument, Prop> propFunction,
-            List<TileFeatureAsset> tileFeatures) {
+            List<FeatureAsset> tileFeatures) {
         public RuleSet.Combo getMainRuleSet() { return ruleSets.get(identifierKey); }
         public List<TileEntry> getSubTiles(){
             var result = new ArrayList<TileEntry>();
@@ -108,7 +106,7 @@ public abstract class TileSet {
         }
     } //WeightedPaths empty if not corner
 
-    protected static TileEntry offsetTileEntry(TileEntry entry, Vector3i offset) {
+    public static TileEntry offsetTileEntry(TileEntry entry, Vector3i offset) {
         Map<Vector3i, RuleSet.Combo> newRuleSets = new LinkedHashMap<>();
         for (Map.Entry<Vector3i, RuleSet.Combo> e : entry.ruleSets().entrySet()) {
             Vector3i newKey = new Vector3i(offset).add(e.getKey());

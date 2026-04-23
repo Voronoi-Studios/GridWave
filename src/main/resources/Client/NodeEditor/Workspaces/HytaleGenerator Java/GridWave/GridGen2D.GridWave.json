@@ -1,0 +1,94 @@
+{
+  "Id": "GridGen2D.GridWave",
+  "Title": "Grid Point Generator 2D",
+  "Color": "Blue",
+  "Description" : "",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "OffsetX",
+      "Type": "Int",
+      "Options": {
+        "Label": "OffsetX",
+        "Default" : 16,
+        "SmallChange": 1,
+        "LargeChange": 50
+      }
+    },   
+    {
+      "Id": "OffsetZ",
+      "Type": "Int",
+      "Options": {
+        "Label": "OffsetZ",
+        "Default" : 16,
+        "SmallChange": 1,
+        "LargeChange": 50
+      }
+    },
+    {
+      "Id": "RepeatX",
+      "Type": "Int",
+      "Options": {
+        "Label": "RepeatX",
+        "Default" : 10,
+        "SmallChange": 1,
+        "LargeChange": 50
+      }
+    },
+    {
+      "Id": "RepeatZ",
+      "Type": "Int",
+      "Options": {
+        "Label": "RepeatZ",
+        "Default" : 10,
+        "SmallChange": 1,
+        "LargeChange": 50
+      }
+    },
+    {
+      "Id": "Centered",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Centered",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "PointConnection",
+      "Type": "Point3D.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Position"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "PositionsConnection",
+      "Color": "Blue"
+    }
+  ],
+  "Schema": {
+    "Type" : "GridGen2D",
+    "ExportAs" : "ExportAs",
+    "Position" : {
+      "Node" : "Point3D",
+      "Pin" : "PointConnection"
+    },
+    "OffsetX" : "OffsetX",
+    "OffsetZ" : "OffsetZ",
+    "RepeatX" : "RepeatX",
+    "RepeatZ" : "RepeatZ",
+    "Centered" : "Centered"
+  }
+}

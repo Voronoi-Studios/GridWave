@@ -11,10 +11,8 @@ public class AdvancedRuleSetAsset extends RuleSetAsset {
     @Nonnull
     public static final BuilderCodec<AdvancedRuleSetAsset> CODEC = AssetBuilderCodec.builder(AdvancedRuleSetAsset.class, AdvancedRuleSetAsset::new, RuleSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("Provider RuleSets", RuleSet.CODEC), (op, val) -> op.providerRuleSet = val, op -> op.providerRuleSet)
-            .documentation("Who am I, defines what each edge's keys are")
             .add()
             .append(new KeyedCodec<>("Receiver RuleSets", RuleSet.CODEC), (op, val) -> op.recieverRuleSet = val, op -> op.recieverRuleSet)
-            .documentation("Who do I like, defines to what keys (provider) this tile can connect to")
             .add()
             .build();
 

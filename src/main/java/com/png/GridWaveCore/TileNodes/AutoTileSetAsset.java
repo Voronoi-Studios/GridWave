@@ -21,19 +21,18 @@ public class AutoTileSetAsset extends TileSetAsset {
             .append(new KeyedCodec<>("Weight", Codec.DOUBLE, true), (t, y) -> t.weight = y, t -> t.weight)
             .addValidator(Validators.greaterThanOrEqual(0.0))
             .add()
-            .append(new KeyedCodec<>("AutoRot", Codec.BOOLEAN, true), (asset, value) -> asset.autoRot = value, asset -> asset.autoRot)
-            .add()
             .build();
     private String folderPath;
     private double weight = 1;
-    private boolean autoRot = true;
 
     @Nonnull
     @Override
     public MultiTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
-        List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(folderPath);
-        if (pathPrefabs != null && !pathPrefabs.isEmpty()) prefabWeightedMap.add(pathPrefabs, 1);
+        if(!folderPath.isEmpty()) {
+            List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(folderPath);
+            if (pathPrefabs != null && !pathPrefabs.isEmpty()) prefabWeightedMap.add(pathPrefabs, 1);
+        }
 
         List<String> parts = Arrays.stream(folderPath.split("/")).toList();
 

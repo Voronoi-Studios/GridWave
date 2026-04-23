@@ -1,0 +1,28 @@
+{
+  "Id": "OverlapTile.Feature.GridWave",
+  "Title": "Overlap Tile Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "OverlapTile",
+    "Skip" : "Skip"
+  }
+}

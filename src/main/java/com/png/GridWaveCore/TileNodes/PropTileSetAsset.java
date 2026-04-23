@@ -1,24 +1,19 @@
 package com.png.GridWaveCore.TileNodes;
 
-import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.EmptyPropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.math.vector.Vector3i;
-import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
 import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
-import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PropTileSetAsset extends TileSetAsset {

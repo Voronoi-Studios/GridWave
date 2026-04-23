@@ -1,0 +1,78 @@
+{
+  "Id": "Single.TileSet.GridWave",
+  "Title": "Single TileSet",
+  "Color": "10,80,50",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    },
+    {
+      "Id" : "PrefabPath",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "Prefab Path",
+        "Default" : "",
+        "Width" : 400
+      }
+    },
+    {
+      "Id": "Weight",
+      "Type": "Float",
+      "Options": {
+        "Label": "Weight",
+        "Default" : 1.0
+      }
+    }, 
+    {
+      "Id": "MinimizeVariants",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Minimize Variants",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "RuleSet",
+      "Type": "RuleSet.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label" : "RuleSet"
+    },
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50"
+    }
+  ],
+  "Schema": {
+    "Type" : "Single",
+    "ExportAs" : "ExportAs",
+    "RuleSet" : {
+      "Node" : "RuleSet.Variants",
+      "Pin" : "RuleSet"
+    },
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    },
+    "PrefabPath" : "PrefabPath",
+    "Weight" : "Weight",
+    "MinimizeVariants" : "MinimizeVariants"
+  }
+}

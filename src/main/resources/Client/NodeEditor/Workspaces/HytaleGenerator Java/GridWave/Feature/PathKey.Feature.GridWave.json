@@ -1,0 +1,38 @@
+{
+  "Id": "PathKey.Feature.GridWave",
+  "Title": "Path Key Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id" : "PathKeyString",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "PathKey",
+        "Default" : "",
+        "Width" : 200
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "PathKey",
+    "Skip" : "Skip",
+    "PathKey" : "PathKeyString"
+  }
+}

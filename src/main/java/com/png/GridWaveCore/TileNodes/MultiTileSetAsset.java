@@ -11,7 +11,6 @@ import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
 import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
-import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -23,10 +22,8 @@ public class MultiTileSetAsset extends TileSetAsset {
     public static final BuilderCodec<MultiTileSetAsset> CODEC = BuilderCodec.builder(MultiTileSetAsset.class, MultiTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("RuleSets", new ArrayCodec<>(RuleSetAsset.CODEC, RuleSetAsset[]::new), true), (asset, value) -> asset.ruleSetAssets = value, asset -> asset.ruleSetAssets)
             .add()
-            .append(new KeyedCodec<>("PrefabPath", Codec.STRING, true),
-                    (asset, v) -> asset.prefabPath = v,
-                    asset -> asset.prefabPath
-            ).add()
+            .append(new KeyedCodec<>("PrefabPath", Codec.STRING, true),(asset, v) -> asset.prefabPath = v,asset -> asset.prefabPath)
+            .add()
             .append(new KeyedCodec<>("SizeZ", Codec.INTEGER, true), (asset, value) -> asset.zSize = value, asset -> asset.zSize)
             .add()
             .append(new KeyedCodec<>("Weight", Codec.DOUBLE, true), (t, y) -> t.weight = y, t -> t.weight)
@@ -42,9 +39,11 @@ public class MultiTileSetAsset extends TileSetAsset {
     @Override
     public MultiTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
-        List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(prefabPath);
-        if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
-            prefabWeightedMap.add(pathPrefabs, 1);
+        if(!prefabPath.isEmpty()) {
+            List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(prefabPath);
+            if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
+                prefabWeightedMap.add(pathPrefabs, 1);
+            }
         }
 
 

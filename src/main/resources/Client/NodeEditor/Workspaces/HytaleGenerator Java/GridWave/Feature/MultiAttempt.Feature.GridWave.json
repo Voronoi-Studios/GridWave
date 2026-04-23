@@ -1,0 +1,72 @@
+{
+  "Id": "MultiAttempt.Feature.GridWave",
+  "Title": "Multi Attempt Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "MaxBacktracks",
+      "Type": "Int",
+      "Options": {
+        "Label": "MaxBacktrackSteps",
+        "Default" : 100,
+        "SmallChange": 10,
+        "LargeChange": 50,
+        "Description" : "The maximum number of backtracking steps the algorithm will take before starting from scratch again (Attempts)."
+
+      }
+    },
+    {
+      "Id": "MaxAttempts",
+      "Type": "Int",
+      "Options": {
+        "Label": "MaxAttempts",
+        "Default" : 200,
+        "SmallChange": 10,
+        "LargeChange": 50,
+        "Description" : "The maximum number of attempts the algorithm will make to generate a valid layout before giving up. If the algorithm fails to generate a valid layout within the maximum number of attempts, it will stop and output whatever it has generated so far."
+      }
+    },
+    {
+      "Id" : "NewAttemptBehavior",
+      "Type" : "Enum",
+      "Options" : {
+        "Label" : "New Attempt Behavior [Coming Soon]",
+        "Default" : "RETRY",
+        "Values" : [
+          "RETRY",
+          "SIMPLIFY_10%",
+          "SIMPLIFY_20%",
+          "SIMPLIFY_30%",
+          "SIMPLIFY_50%",
+          "SIMPLIFY_70%",
+          "SIMPLIFY_INCRIMENTAL"
+        ],
+        "Description" : "Behavior when starting a new attempt after reaching the maximum number of backtracking steps.\n\n- RETRY will simply start over with the same settings until MaxAttempts is reached.\n\n- The SIMPLIFY_X% options will remove a sub percentage of base tiles from the pool after each failed attempt.\n\n- The SIMPLIFY_INCRIMENTAL option will increase the percentage unitl it successfully generates a layout or reaches 90% simplification. This is the recommended option if you want to ensure a layout is generated, but don't care about the quality of the layout."
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "MultiAttempt",
+    "Skip" : "Skip",
+    "MaxBacktracks" : "MaxBacktracks",
+    "MaxAttempts" : "MaxAttempts"
+
+  }
+}

@@ -23,10 +23,7 @@ import com.hypixel.hytale.common.util.ExceptionUtil;
 import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.server.core.asset.AssetModule;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
-import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
-import com.png.GridWaveCore.TileFeatures.TileFeatureAsset;
-import com.png.GridWaveCore.UnusedNodes.CPrefabPropAsset;
+import com.png.GridWaveCore.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -61,7 +58,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                     LoggerUtil.getLogger().fine("Registered imported node asset with name '" + asset.exportName + "' with asset id '" + asset.id);
                 }
             })
-            .append(new KeyedCodec<>("Features", new ArrayCodec<>(TileFeatureAsset.CODEC, TileFeatureAsset[]::new), false),
+            .append(new KeyedCodec<>("Features", new ArrayCodec<>(FeatureAsset.CODEC, FeatureAsset[]::new), false),
                     (asset, v) -> asset.tileFeatureAssets = v,
                     asset -> asset.tileFeatureAssets)
             .add()
@@ -70,7 +67,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     private String id;
     private AssetExtraInfo.Data data;
     private String exportName = "";
-    private @Nonnull TileFeatureAsset[] tileFeatureAssets = new TileFeatureAsset[0];
+    private @Nonnull FeatureAsset[] tileFeatureAssets = new FeatureAsset[0];
     private boolean legacyPath = false;
 
     public abstract TileSet build(@Nonnull TileSetAsset.Argument argument, int grid);
@@ -87,7 +84,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         return this.id;
     }
 
-    public @Nonnull List<TileFeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
+    public @Nonnull List<FeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
     public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument) {

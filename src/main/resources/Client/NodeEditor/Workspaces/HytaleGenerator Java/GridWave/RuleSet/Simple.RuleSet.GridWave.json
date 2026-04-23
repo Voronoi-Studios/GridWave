@@ -1,0 +1,66 @@
+{
+  "Id": "Simple.RuleSet.GridWave",
+  "Title": "Simple RuleSet",
+  "Color": "60,100,80",
+  "Content" : [
+        {
+      "Id": "RuleSet",
+      "Type": "Object",
+      "Options": {
+        "Description": "Defines both am I and who I like",
+        "Label": "RuleSet",
+        "Fields": [
+          {
+            "Id": "N",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "North [-z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "E",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "East [+x]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "S",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "South [+z]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "W",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "West [-x]",
+              "Default": "",
+              "Width": 200
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "RuleSet",
+      "Type": "RuleSet.GridWave.Connection",
+      "Color": "60,100,80"
+    }
+  ],
+  "Schema": {
+    "Type": "Simple",
+    "RuleSet": "RuleSet"
+  }
+}
