@@ -4,6 +4,7 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 
 import javax.annotation.Nonnull;
 
@@ -18,10 +19,10 @@ public class ImportedSeedAsset extends SeedAsset {
     private String name = "";
 
     @Override
-    public String build() {
+    public String build(IAlgoAsset algoAsset) {
         if (this.name != null && !this.name.isEmpty()) {
             SeedAsset exportedAsset = SeedAsset.getExportedAsset(this.name);
-            return exportedAsset == null ? null : exportedAsset.build();
+            return exportedAsset == null ? null : exportedAsset.build(algoAsset);
         } else {
             HytaleLogger.getLogger().atWarning().log("An exported Seed with the name does not exist: " + this.name);
             return null;

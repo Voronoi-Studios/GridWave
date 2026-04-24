@@ -50,6 +50,6 @@ public class PropTileSetAsset extends TileSetAsset {
             }
         }
 
-        return new PropTileSet(propAsset, ruleSets, weight, super.getTileFeatureAssets());
+        return new PropTileSet(propAsset, ruleSets, weight, argument, super.getTileFeatureAssets());
     }
 }

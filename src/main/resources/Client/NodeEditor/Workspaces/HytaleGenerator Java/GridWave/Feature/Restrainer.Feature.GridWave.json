@@ -1,0 +1,53 @@
+{
+  "Id": "Restrainer.Feature.GridWave",
+  "Title": "Restrainer Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "Rot",
+      "Type": "Enum",
+      "Options": {
+        "Label": "Rotation",
+        "Default" : "None",
+        "Values": [
+          "None",
+          "Ninety",
+          "OneEighty",
+          "TwoSeventy"
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "PositionConnection",
+      "Type": "Point3D.Connection",
+      "Color": "Orange",
+      "Label" : "Position"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Restrainer",
+    "Skip" : "Skip",
+    "Pos" : {
+      "Node" : "Point3D",
+      "Pin" : "PositionConnection"
+    },
+    "Rot" : "Rot"
+  }
+}

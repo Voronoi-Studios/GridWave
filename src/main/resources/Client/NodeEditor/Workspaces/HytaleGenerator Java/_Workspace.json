@@ -55,7 +55,8 @@
       "Multithreading.Feature.GridWave",
       "OverlapTile.Feature.GridWave",
       "PathKey.Feature.GridWave",
-      "PositionRestriction.Feature.GridWave"
+      "Restrainer.Feature.GridWave",
+      "RandomRestrainer.Feature.GridWave"
     ],
     "GridWave.Seed" : [
       "Constant.Seed.GridWave",
@@ -374,7 +375,8 @@
         "Multithreading": "Multithreading.Feature.GridWave",
         "OverlapTile": "OverlapTile.Feature.GridWave",
         "PathKey": "PathKey.Feature.GridWave",
-        "PositionRestriction": "PositionRestriction.Feature.GridWave"
+        "Restrainer": "Restrainer.Feature.GridWave",
+        "RandomRestrainer": "RandomRestrainer.Feature.GridWave"
       }
     },
     "Seed.Variants":{

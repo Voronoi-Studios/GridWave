@@ -3,6 +3,7 @@ package com.png.GridWaveCore.SeedNodes;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 
 import javax.annotation.Nonnull;
 import java.time.LocalDateTime;
@@ -23,7 +24,7 @@ public class TimeSeedAsset extends SeedAsset {
     private TimeUnit unit = TimeUnit.DAYS;
 
     @Override
-    public String build() {
+    public String build(IAlgoAsset algoAsset) {
         long now = unit.toChronoUnit().between(LocalDateTime.ofEpochSecond(0, 0, ZoneOffset.UTC), LocalDateTime.now());
         long bucket = now / interval;
 

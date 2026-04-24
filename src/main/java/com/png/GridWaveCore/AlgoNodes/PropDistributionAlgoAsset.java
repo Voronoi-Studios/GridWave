@@ -65,6 +65,25 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     @Override
     public int getPOICount() { return poiTileSetAssets.length; }
 
+    @Override
+    public Vector3d getAnchorPosition(PositionProviderAsset.Argument argument) {
+        if(argument == null) return new Vector3d(0, 0, 0);
+        List<Vector3d> gridPositions = GridWave.getPositions(positionProviderAsset.build(argument), maxPositionsCount);
+
+        if (gridPositions.isEmpty()) return new Vector3d(0, 0, 0);
+
+        double x = 0; double y = 0; double z = 0;
+
+        for (Vector3d v : gridPositions) {
+            x += v.x;
+            y += v.y;
+            z += v.z;
+        }
+
+        int size = gridPositions.size();
+        return new Vector3d(x / size, y / size, z / size);
+    }
+
     @Nonnull
     @Override
     public PropDistribution build(@Nonnull Argument argument) {
@@ -72,7 +91,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
         if (super.isSkipped()) {
             return NoPropDistribution.INSTANCE;
         } else {
-            SeedBox seedBox = argument.parentSeed.child(seed.build());
+            SeedBox seedBox = argument.parentSeed.child(seed.build(this));
 
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
             List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
@@ -80,17 +99,17 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : poiTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
                 poiTileEntries.addAll(result.getAllTileEntries());
             }
             List<TileSet.TileEntry> baseTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : baseTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
-                baseTileEntries.addAll(result.getAllTileEntries());
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
+                baseTileEntries.addAll(result.getTileEntries()); //was .getAllTileEntries() before, think .getTileEntries() is more correct as we never want MultiTiles
             }
             List<TileSet.TileEntry> fancyTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : fancyTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
                 fancyTileEntries.addAll(result.getTileEntries());
             }
 
@@ -103,7 +122,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
 
             if(gridTiles.isEmpty()) return NoPropDistribution.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
+            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument, this), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
 
             return new MapPropDistribution(gridProps);
         }

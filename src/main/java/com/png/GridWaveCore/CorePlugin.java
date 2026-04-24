@@ -62,7 +62,8 @@ public class CorePlugin extends JavaPlugin {
         FeatureAsset.CODEC.register("Multithreading", MultiAttemptAsset.class, MultithreadingAsset.CODEC); //Global
         FeatureAsset.CODEC.register("OverlapTile", OverlapTileAsset.class, OverlapTileAsset.CODEC); //Global and Local
         FeatureAsset.CODEC.register("PathKey", PathKeyAsset.class, PathKeyAsset.CODEC); //Global
-        FeatureAsset.CODEC.register("PositionRestriction", PositionRestrictionAsset.class, PositionRestrictionAsset.CODEC); //Local
+        FeatureAsset.CODEC.register("Restrainer", RestrainerAsset.class, RestrainerAsset.CODEC); //Local
+        FeatureAsset.CODEC.register("RandomRestrainer", RandomRestrainerAsset.class, RandomRestrainerAsset.CODEC); //Local
 
 
         //Seed Nodes

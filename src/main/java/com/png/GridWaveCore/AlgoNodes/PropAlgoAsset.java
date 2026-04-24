@@ -11,6 +11,7 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.math.vector.Vector3i;
 import com.png.GridWaveCore.AlgoNodes.Helper.DebugUtils;
 import com.png.GridWaveCore.AlgoNodes.Helper.GridTile;
 import com.png.GridWaveCore.AlgoNodes.Helper.WaveCell;
@@ -62,6 +63,25 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
     @Override
     public int getPOICount() { return poiTileSetAssets.length; }
 
+    @Override
+    public Vector3d getAnchorPosition(PositionProviderAsset.Argument argument) {
+        if(argument == null) return new Vector3d(0, 0, 0);
+        List<Vector3d> gridPositions = GridWave.getPositions(positionProviderAsset.build(argument), maxPositionsCount);
+
+        if (gridPositions.isEmpty()) return new Vector3d(0, 0, 0);
+
+        double x = 0; double y = 0; double z = 0;
+
+        for (Vector3d v : gridPositions) {
+            x += v.x;
+            y += v.y;
+            z += v.z;
+        }
+
+        int size = gridPositions.size();
+        return new Vector3d(x / size, y / size, z / size);
+    }
+
     @Nonnull
     @Override
     public Prop build(@Nonnull PropAsset.Argument argument) {
@@ -69,7 +89,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
         if (super.skip()) {
             return EmptyProp.INSTANCE;
         } else {
-            SeedBox seedBox = argument.parentSeed.child(seed.build());
+            SeedBox seedBox = argument.parentSeed.child(seed.build(this));
 
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
             List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
@@ -77,17 +97,17 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : poiTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
                 poiTileEntries.addAll(result.getAllTileEntries());
             }
             List<TileSet.TileEntry> baseTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : baseTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
                 baseTileEntries.addAll(result.getAllTileEntries());
             }
             List<TileSet.TileEntry> fancyTileEntries = new ArrayList<>();
             for(TileSetAsset tileSetAsset : fancyTileSetAssets){
-                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument), grid);
+                TileSet result = tileSetAsset.build(TileSetAsset.argumentFrom(argument, this), grid);
                 fancyTileEntries.addAll(result.getTileEntries());
             }
 
@@ -100,7 +120,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
 
             if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
+            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument, this), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
             List<Prop> offsetProps = new ArrayList<>();
             for(var entry : gridProps.entrySet()){
                 offsetProps.add(new OffsetProp(entry.getKey().toVector3i(), entry.getValue()));

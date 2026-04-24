@@ -11,6 +11,7 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
+import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
@@ -49,7 +50,7 @@ public abstract class SeedAsset implements Cleanable, JsonAssetWithMap<String, D
     protected SeedAsset() {
     }
 
-    public abstract String build();
+    public abstract String build(IAlgoAsset algoAsset);
 
     public static SeedAsset getExportedAsset(@Nonnull String name) {
         return exportedNodes.get(name);

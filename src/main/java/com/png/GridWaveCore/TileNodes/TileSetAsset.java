@@ -23,6 +23,7 @@ import com.hypixel.hytale.common.util.ExceptionUtil;
 import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.server.core.asset.AssetModule;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
+import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 import com.png.GridWaveCore.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
@@ -87,12 +88,12 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public @Nonnull List<FeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, algoAsset);
     }
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument, IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, algoAsset);
     }
     @Nonnull
     public static PropAsset.Argument argumentFrom(@Nonnull TileSetAsset.Argument argument) {
@@ -108,14 +109,20 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         public MaterialCache materialCache;
         public ReferenceBundle referenceBundle;
         public WorkerIndexer.Id workerId;
+        public IAlgoAsset algoAsset;
 
         public Argument(
-                @Nonnull SeedBox parentSeed, @Nonnull MaterialCache materialCache, @Nonnull ReferenceBundle referenceBundle, @Nonnull WorkerIndexer.Id workerId
+                @Nonnull SeedBox parentSeed,
+                @Nonnull MaterialCache materialCache,
+                @Nonnull ReferenceBundle referenceBundle,
+                @Nonnull WorkerIndexer.Id workerId,
+                @Nonnull IAlgoAsset algoAsset
         ) {
             this.parentSeed = parentSeed;
             this.materialCache = materialCache;
             this.referenceBundle = referenceBundle;
             this.workerId = workerId;
+            this.algoAsset = algoAsset;
         }
 
         public Argument(@Nonnull TileSetAsset.Argument argument) {
@@ -123,6 +130,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
             this.materialCache = argument.materialCache;
             this.referenceBundle = argument.referenceBundle;
             this.workerId = argument.workerId;
+            this.algoAsset = argument.algoAsset;
         }
     }
 

@@ -40,6 +40,6 @@ public class SingleTileSetAsset extends TileSetAsset {
                 prefabWeightedMap.add(pathPrefabs, 1);
             }
         }
-        return new SingleTileSet(prefabWeightedMap,ruleSetAsset.build(), weight, minimizeVariants, super.getTileFeatureAssets());
+        return new SingleTileSet(prefabWeightedMap,ruleSetAsset.build(), weight, minimizeVariants, argument, super.getTileFeatureAssets());
     }
 }

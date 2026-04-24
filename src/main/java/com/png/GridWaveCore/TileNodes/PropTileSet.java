@@ -3,9 +3,7 @@ package com.png.GridWaveCore.TileNodes;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
-import com.png.GridWaveCore.FeatureNodes.PositionRestrictionAsset;
 import com.png.GridWaveCore.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
@@ -19,7 +17,7 @@ public class PropTileSet extends TileSet {
     protected final PropAsset propAsset;
     protected final List<FeatureAsset> tileFeatureAssets;
 
-    public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, @Nonnull List<FeatureAsset> tileFeatureAssets) {
+    public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
         this.tileEntries = new ArrayList<>();
         this.propAsset = propAsset;
         this.tileFeatureAssets = tileFeatureAssets;
@@ -32,7 +30,7 @@ public class PropTileSet extends TileSet {
             }
             this.tileEntries.add(new TileEntry(current, Vector3i.ZERO.clone(), weight, r, this::getProp, new ArrayList<>(tileFeatureAssets)));
         }
-        tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries));
+        tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
 
     }
 

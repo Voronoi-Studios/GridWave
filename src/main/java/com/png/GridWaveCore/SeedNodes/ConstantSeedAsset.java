@@ -3,6 +3,7 @@ package com.png.GridWaveCore.SeedNodes;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 
 import javax.annotation.Nonnull;
 
@@ -17,5 +18,5 @@ public class ConstantSeedAsset extends SeedAsset {
     private String seed;
 
     @Override
-    public String build() { return this.seed; }
+    public String build(IAlgoAsset algoAsset) { return this.seed; }
 }

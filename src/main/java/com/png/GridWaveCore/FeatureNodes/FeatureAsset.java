@@ -16,6 +16,7 @@ import com.png.GridWaveCore.AlgoNodes.Helper.AttemptBehavior;
 import com.png.GridWaveCore.AlgoNodes.Helper.WaveCell;
 import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 import com.png.GridWaveCore.TileNodes.TileSet;
+import com.png.GridWaveCore.TileNodes.TileSetAsset;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
@@ -55,7 +56,7 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     }
 
     //Implement different methods
-    public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries) { }
+    public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) { }
 
     public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, int grid, Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
 

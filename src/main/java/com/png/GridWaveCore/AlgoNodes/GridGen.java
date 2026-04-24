@@ -1,7 +1,6 @@
 package com.png.GridWaveCore.AlgoNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
 import com.hypixel.hytale.math.vector.Vector3d;
@@ -15,8 +14,6 @@ public class GridGen extends PositionProvider {
     private final Vector3i offset;
     private final Vector3i repeat;
     private final boolean centeredOnPosition;
-    @Nonnull
-    private final Bounds3d rSeccondaryGridBounds = new Bounds3d();
 
     private static final double Y = 0.0;
     @Nonnull
@@ -48,20 +45,13 @@ public class GridGen extends PositionProvider {
                 this.rGridBounds.max.z = this.rGridBounds.min.z + 1;
             }
 
-            Vector3i size = new Vector3i(Math.max(1, offset.x * repeat.x), Math.max(1, offset.y * repeat.y), Math.max(1, offset.z * repeat.z));
-            if (centeredOnPosition) {
-                Vector3i half1 = new Vector3i(size.x / 2, size.y / 2, size.z / 2);
-                Vector3i half2 = new Vector3i(size.x - half1.x, size.y - half1.y, size.z - half1.z);
-                this.rSeccondaryGridBounds.assign(new Bounds3i(pos.clone().subtract(half1), pos.clone().add(half2)));
-            } else {
-                this.rSeccondaryGridBounds.assign(new Bounds3i(pos.clone(), pos.clone().add(size)));
-            }
+            Bounds3d rSeccondaryGridBounds = createBounds(pos, offset, repeat, centeredOnPosition);
 
             this.rControl.reset();
 
-            for (double x = this.rSeccondaryGridBounds.min.x; x < this.rSeccondaryGridBounds.max.x; x += offset.x) {
-                for (double y = this.rSeccondaryGridBounds.min.y; y < this.rSeccondaryGridBounds.max.y; y += offset.y) {
-                    for (double z = this.rSeccondaryGridBounds.min.z; z < this.rSeccondaryGridBounds.max.z; z += offset.z) {
+            for (double x = rSeccondaryGridBounds.min.x; x < rSeccondaryGridBounds.max.x; x += offset.x) {
+                for (double y = rSeccondaryGridBounds.min.y; y < rSeccondaryGridBounds.max.y; y += offset.y) {
+                    for (double z = rSeccondaryGridBounds.min.z; z < rSeccondaryGridBounds.max.z; z += offset.z) {
                         assert context.bounds.contains(x, y, z);
                         assert rSeccondaryGridBounds.contains(x,y,z);
 
@@ -72,6 +62,17 @@ public class GridGen extends PositionProvider {
                     }
                 }
             }
+        }
+    }
+
+    public static Bounds3d createBounds(Vector3i pos, Vector3i offset, Vector3i repeat, boolean centeredOnPosition) {
+        Vector3i size = new Vector3i(Math.max(1, offset.x * repeat.x), Math.max(1, offset.y * repeat.y), Math.max(1, offset.z * repeat.z));
+        if (centeredOnPosition) {
+            Vector3i half1 = new Vector3i(size.x / 2, size.y / 2, size.z / 2);
+            Vector3i half2 = new Vector3i(size.x - half1.x, size.y - half1.y, size.z - half1.z);
+            return new Bounds3d(pos.clone().subtract(half1).toVector3d(), pos.clone().add(half2).toVector3d());
+        } else {
+            return new Bounds3d(pos.clone().toVector3d(), pos.clone().add(size).toVector3d());
         }
     }
 }

@@ -43,7 +43,7 @@ public class BorderAsset extends FeatureAsset {
             }
         }
 
-        TileSet.TileEntry borderTile = new SingleTileSet(new WeightedMap<>(), borderRuleSet.build(),1,false, new ArrayList<>(0)).getTileEntries().getFirst();
+        TileSet.TileEntry borderTile = new SingleTileSet(new WeightedMap<>(), borderRuleSet.build(),1,false, null, featureAssets).getTileEntries().getFirst();
         for(Vector3i borderPos : borderPositions){
             WaveCell waveCell = new WaveCell(borderPos.clone(),borderTile, GridTileType.BASIC);
             GridWave.propagate(waveCell, baseWave, null, grid, featureAssets, algoAsset);

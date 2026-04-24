@@ -4,10 +4,8 @@ import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
-import com.png.GridWaveCore.FeatureNodes.PositionRestrictionAsset;
 import com.png.GridWaveCore.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
@@ -18,7 +16,7 @@ public class SingleTileSet extends TileSet {
     protected final WeightedMap<List<IPrefabBuffer>> prefabWeightedMap;
     protected final List<FeatureAsset> tileFeatureAssets;
 
-    public SingleTileSet(@Nonnull WeightedMap<List<IPrefabBuffer>> prefabWeightedMap, @Nonnull RuleSet.Combo ruleSet, double weight, boolean minimizeVariants, @Nonnull List<FeatureAsset> tileFeatureAssets) {
+    public SingleTileSet(@Nonnull WeightedMap<List<IPrefabBuffer>> prefabWeightedMap, @Nonnull RuleSet.Combo ruleSet, double weight, boolean minimizeVariants, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
         tileEntries = new ArrayList<>();
         this.prefabWeightedMap = prefabWeightedMap;
         this.tileFeatureAssets = tileFeatureAssets;
@@ -29,7 +27,7 @@ public class SingleTileSet extends TileSet {
             TileEntry tileEntry = new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r, this::getProp, new ArrayList<>(tileFeatureAssets));
             if (!minimizeVariants || seen.add(key)) tileEntries.add(tileEntry);
         }
-        tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries));
+        tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
     }
 
     @Nonnull
