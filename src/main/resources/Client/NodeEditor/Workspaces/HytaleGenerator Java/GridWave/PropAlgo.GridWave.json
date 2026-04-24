@@ -86,7 +86,7 @@
     }
   ],
   "Schema": {
-    "Type" : "GridWaveProp",
+    "Type" : "PropAlgo",
     "ExportAs" : "ExportAs",
     "Skip" : "Skip",
     "GridPoints" : {

@@ -1,6 +1,6 @@
 {
-  "Id": "PositionRestriction.Feature.GridWave",
-  "Title": "Position Restriction Feature",
+  "Id": "RandomRestrainer.Feature.GridWave",
+  "Title": "Random Restrainer Feature",
   "Color": "150,180,129",
   "Content" : [
     {
@@ -28,10 +28,17 @@
   ],
   "Outputs": [
     {
-      "Id": "PositionConnection",
-      "Type": "Point3D.Connection",
-      "Color": "Orange",
-      "Label" : "Position"
+      "Id": "Positions",
+      "Type": "PositionsConnection",
+      "Color": "Blue",
+      "Label" : "Positions",
+      "Description" : "Positions to choose a random entry from."
+    },
+    {
+      "Id": "Seed",
+      "Type": "Seed.GridWave.Connection",
+      "Color": "152,152,129",
+      "Label": "Seed"
     }
   ],
   "Inputs": [
@@ -42,11 +49,15 @@
     }
   ],
   "Schema": {
-    "Type" : "PositionRestriction",
+    "Type" : "RandomRestrainer",
     "Skip" : "Skip",
-    "Pos" : {
-      "Node" : "Point3D",
-      "Pin" : "PositionConnection"
+    "Positions" : {
+      "Node" : "PositionsVariants",
+      "Pin" : "Positions"
+    },
+    "Seed" : {
+      "Node" : "Seed.Variants",
+      "Pin" : "Seed"
     },
     "Rot" : "Rot"
   }
