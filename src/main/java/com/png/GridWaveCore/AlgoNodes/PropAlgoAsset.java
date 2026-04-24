@@ -10,7 +10,9 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
-import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3d;
 import com.png.GridWaveCore.AlgoNodes.Helper.DebugUtils;
 import com.png.GridWaveCore.AlgoNodes.Helper.GridTile;
 import com.png.GridWaveCore.AlgoNodes.Helper.WaveCell;
@@ -22,6 +24,7 @@ import com.png.GridWaveCore.SeedNodes.PositionSeedAsset;
 import com.png.GridWaveCore.SeedNodes.SeedAsset;
 import com.png.GridWaveCore.TileNodes.TileSet;
 import com.png.GridWaveCore.TileNodes.TileSetAsset;
+import org.joml.Vector3dc;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -72,7 +75,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
             SeedBox seedBox = argument.parentSeed.child(seed.build());
 
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
-            List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
+            List<Vector3dc> gridPositions = GridWave.getPositions(positionProvider, maxPositionsCount);
             int grid = GridWave.getGrid(gridPositions);
 
             List<TileSet.TileEntry> poiTileEntries = new ArrayList<>();
@@ -100,10 +103,10 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
 
             if(gridTiles.isEmpty()) return EmptyProp.INSTANCE;
 
-            Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
+            Map<Vector3dc, Prop> gridProps = GridWave.loadPrefabProps(TileSetAsset.argumentFrom(argument), grid, gridTiles, Arrays.stream(featureAssets).toList(), this);
             List<Prop> offsetProps = new ArrayList<>();
             for(var entry : gridProps.entrySet()){
-                offsetProps.add(new OffsetProp(entry.getKey().toVector3i(), entry.getValue()));
+                offsetProps.add(new OffsetProp(Vector3dUtil.toVector3i(new Vector3d(entry.getKey())), entry.getValue()));
             }
             return new UnionProp(offsetProps);
         }

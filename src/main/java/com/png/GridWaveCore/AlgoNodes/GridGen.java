@@ -4,16 +4,18 @@ import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
+import org.joml.Vector3d;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 
 public class GridGen extends PositionProvider {
-    private final Vector3i pos;
-    private final Vector3i offset;
-    private final Vector3i repeat;
+    private final Vector3i pos = new Vector3i();
+    private final Vector3i offset = new Vector3i();
+    private final Vector3i repeat = new Vector3i();
     private final boolean centeredOnPosition;
     @Nonnull
     private final Bounds3d rSeccondaryGridBounds = new Bounds3d();
@@ -26,18 +28,18 @@ public class GridGen extends PositionProvider {
     @Nonnull
     private final Control rControl = new Control();
 
-    public GridGen(Vector3i pos, Vector3i offset, Vector3i repeat, boolean centeredOnPosition) {
-        this.pos = pos;
-        this.offset = Vector3i.max(Vector3i.ALL_ONES.clone(),offset);
-        this.repeat = repeat;
+    public GridGen(Vector3ic pos, Vector3ic offset, Vector3ic repeat, boolean centeredOnPosition) {
+        this.pos.set(pos);
+        this.offset.set(Vector3iUtil.max(Vector3iUtil.ALL_ONES,offset));
+        this.repeat.set(repeat);
         this.centeredOnPosition = centeredOnPosition;
     }
 
     @Override
     public void generate(@NonNullDecl PositionProvider.Context context) {
         if (!(context.bounds.min.y > 0.0) && !(context.bounds.max.y <= 0.0)) {
-            this.rGridBounds.min.assign(context.bounds.min.x, context.bounds.min.y, context.bounds.min.z);
-            this.rGridBounds.max.assign(context.bounds.max.x, context.bounds.min.y, context.bounds.max.z);
+            this.rGridBounds.min.set(context.bounds.min.x, context.bounds.min.y, context.bounds.min.z);
+            this.rGridBounds.max.set(context.bounds.max.x, context.bounds.min.y, context.bounds.max.z);
             if (this.rGridBounds.min.x >= rGridBounds.max.x) {
                 this.rGridBounds.max.x = this.rGridBounds.min.x + 1;
             }
@@ -52,9 +54,9 @@ public class GridGen extends PositionProvider {
             if (centeredOnPosition) {
                 Vector3i half1 = new Vector3i(size.x / 2, size.y / 2, size.z / 2);
                 Vector3i half2 = new Vector3i(size.x - half1.x, size.y - half1.y, size.z - half1.z);
-                this.rSeccondaryGridBounds.assign(new Bounds3i(pos.clone().subtract(half1), pos.clone().add(half2)));
+                this.rSeccondaryGridBounds.assign(new Bounds3i(new Vector3i(pos).sub(half1), new Vector3i(pos).add(half2)));
             } else {
-                this.rSeccondaryGridBounds.assign(new Bounds3i(pos.clone(), pos.clone().add(size)));
+                this.rSeccondaryGridBounds.assign(new Bounds3i(new Vector3i(pos), new Vector3i(pos).add(size)));
             }
 
             this.rControl.reset();
@@ -67,7 +69,7 @@ public class GridGen extends PositionProvider {
 
                         if (this.rControl.stop) return;
 
-                        this.rPosition.assign(x, y, z);
+                        this.rPosition.set(x, y, z);
                         context.pipe.accept(this.rPosition, this.rControl);
                     }
                 }

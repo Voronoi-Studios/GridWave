@@ -6,8 +6,8 @@ import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
 import com.hypixel.hytale.builtin.hytalegenerator.voxelspace.NullSpace;
 import com.hypixel.hytale.builtin.hytalegenerator.voxelspace.VoxelSpace;
 import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3i;
-
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
 import javax.annotation.Nonnull;
 
 public class MirrorVoxelSpace implements VoxelSpace<Material> {
@@ -31,12 +31,12 @@ public class MirrorVoxelSpace implements VoxelSpace<Material> {
         this.source = NullSpace.instance();
         this.anchor = new Vector3i();
         this.rPosition = new Vector3i();
-        this.setSource(NullSpace.instance(), Vector3i.ZERO);
+        this.setSource(NullSpace.instance(), new Vector3i(Vector3iUtil.ZERO));
     }
 
     public void setSource(@Nonnull VoxelSpace<Material> source, @Nonnull Vector3i anchor) {
         this.source = source;
-        this.anchor.assign(anchor);
+        this.anchor.set(anchor);
         this.viewBounds.assign(source.getBounds());
         Bounds3iExtension.mirrorBoundsAroundVoxel(this.viewBounds, this.axis, anchor);
     }
@@ -83,7 +83,7 @@ public class MirrorVoxelSpace implements VoxelSpace<Material> {
     }
 
     private void loadPosition(int x, int y, int z) {
-        this.rPosition.assign(x, y, z);
+        this.rPosition.set(x, y, z);
         switch (this.axis) {
             case X:
                 this.rPosition.x = this.anchor.x - (this.rPosition.x - this.anchor.x);

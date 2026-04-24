@@ -127,7 +127,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     }
 
     @Nullable
-    public List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
+    public static List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
         List<IPrefabBuffer> loadedPrefabs = new LinkedList<>();
         Set<Path> traversedPaths = new LinkedHashSet<>();
         List<AssetPack> packs = AssetModule.get().getAssetPacks();
@@ -135,11 +135,9 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         for (int i = packs.size() - 1; i >= 0; i--) {
             Path packRootPath = packs.get(i).getRoot();
             Path prefabsDir = packRootPath.resolve("Server");
-            if (this.legacyPath) {
-                prefabsDir = prefabsDir.resolve("World").resolve("Default").resolve("Prefabs");
-            } else {
-                prefabsDir = prefabsDir.resolve("Prefabs");
-            }
+
+            //We don't support legacy path!
+            prefabsDir = prefabsDir.resolve("Prefabs");
 
             Path fullPath = PathUtil.resolvePathWithinDir(prefabsDir, path);
             if (fullPath != null) {

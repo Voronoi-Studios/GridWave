@@ -4,8 +4,8 @@ import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3i;
-
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
 import javax.annotation.Nonnull;
 
 import com.png.GridWaveCore.Utils.MirrorNode.Helper.Bounds3iExtension;
@@ -36,8 +36,8 @@ public class StaticMirrorProp extends Prop {
         this.mirrorEntityFunnel = new MirrorEntityFunnel(axis);
         this.readBounds = prop.getReadBounds_voxelGrid().clone();
         this.writeBounds = prop.getWriteBounds_voxelGrid().clone();
-        Bounds3iExtension.mirrorBoundsAroundVoxel(this.readBounds, axis, Vector3i.ZERO);
-        Bounds3iExtension.mirrorBoundsAroundVoxel(this.writeBounds, axis, Vector3i.ZERO);
+        Bounds3iExtension.mirrorBoundsAroundVoxel(this.readBounds, axis, new Vector3i(Vector3iUtil.ZERO));
+        Bounds3iExtension.mirrorBoundsAroundVoxel(this.writeBounds, axis, new Vector3i(Vector3iUtil.ZERO));
         this.rChildContext = new Context();
     }
 

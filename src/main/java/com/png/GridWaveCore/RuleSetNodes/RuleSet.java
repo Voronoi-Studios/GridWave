@@ -3,8 +3,7 @@ package com.png.GridWaveCore.RuleSetNodes;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector3i;
-
+import org.joml.Vector3i;
 import javax.annotation.Nonnull;
 import java.util.Arrays;
 import java.util.stream.Collectors;

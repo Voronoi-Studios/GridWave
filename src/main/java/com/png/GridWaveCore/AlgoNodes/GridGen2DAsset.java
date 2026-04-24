@@ -1,21 +1,23 @@
 package com.png.GridWaveCore.AlgoNodes;
 
+import com.hypixel.hytale.builtin.hytalegenerator.VectorUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.*;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector2i;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3d;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 
 public class GridGen2DAsset extends PositionProviderAsset {
     @Nonnull
     public static final BuilderCodec<GridGen2DAsset> CODEC = BuilderCodec.builder(GridGen2DAsset.class, GridGen2DAsset::new, PositionProviderAsset.ABSTRACT_CODEC)
-            .append(new KeyedCodec<>("Position", Vector3i.CODEC, false), (asset, v) -> asset.pos = v, asset -> asset.pos)
+            .append(new KeyedCodec<>("Position", Vector3iUtil.CODEC, false), (asset, v) -> asset.pos = v, asset -> asset.pos)
             .add()
             .append(new KeyedCodec<>("OffsetX", Codec.INTEGER, true), (asset, v) -> asset.offsetX = v, asset -> asset.offsetX)
             .add()
@@ -29,7 +31,7 @@ public class GridGen2DAsset extends PositionProviderAsset {
             .add()
             .build();
 
-    private Vector3i pos = Vector3i.ZERO.clone();
+    private Vector3i pos = new Vector3i(Vector3iUtil.ZERO);
 
     private int offsetX = 1;
     private int offsetZ = 1;
@@ -45,6 +47,6 @@ public class GridGen2DAsset extends PositionProviderAsset {
         var posProvider2 = new ScalerPositionProvider(new Vector3d(),posProvider1);
         Bounds3d bounds3d = new Bounds3d();
         new BoundPositionProvider(posProvider2, bounds3d);
-        return new GridGen(pos.clone(), new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
+        return new GridGen(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
     }
 }

@@ -7,10 +7,11 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.codec.validation.Validators;
-import com.hypixel.hytale.math.vector.Vector3i;
-import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;import com.png.GridWaveCore.RuleSetNodes.RuleSet;
 import com.png.GridWaveCore.RuleSetNodes.RuleSetAsset;
 import com.png.GridWaveCore.RuleSetNodes.SimpleRuleSetAsset;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -39,10 +40,10 @@ public class PropTileSetAsset extends TileSetAsset {
     @Nonnull
     @Override
     public PropTileSet build(@Nonnull Argument argument, int grid) {
-        Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
-        Vector3i offset = Vector3i.ZERO.clone();
+        Map<Vector3ic, RuleSet.Combo> ruleSets = new HashMap<>();
+        Vector3i offset = new Vector3i(Vector3iUtil.ZERO);
         for(RuleSetAsset ruleSetAsset : ruleSetAssets){
-            ruleSets.put(offset.clone().scale(grid), ruleSetAsset.build());
+            ruleSets.put(new Vector3i(offset).mul(grid), ruleSetAsset.build());
             offset.z++;
             if(offset.z >= zSize) {
                 offset.z = 0;

@@ -1,13 +1,13 @@
 package com.png.GridWaveCore.AlgoNodes.Helper;
 
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.png.GridWaveCore.TileNodes.TileSet;
+import org.joml.Vector3ic;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public record GridTile(TileSet.TileEntry tileEntry, Vector3i positionOffset, GridTileType type) {
+public record GridTile(TileSet.TileEntry tileEntry, Vector3ic positionOffset, GridTileType type) {
     public void appendLines(StringBuilder[] builders, List<String> pathKeys, int width) {
         String[] k = Arrays.stream(tileEntry.getMainRuleSet().getDebug())
                 .map(s -> (s == null || s.isEmpty()) ? "?" : s)

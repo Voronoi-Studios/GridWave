@@ -3,11 +3,11 @@ package com.png.GridWaveCore.FeatureNodes;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector3i;
-import com.png.GridWaveCore.AlgoNodes.Helper.Match;
+import org.joml.Vector3i;import com.png.GridWaveCore.AlgoNodes.Helper.Match;
 import com.png.GridWaveCore.AlgoNodes.Helper.WaveCell;
 import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 import com.png.GridWaveCore.RuleSetNodes.RuleSet;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -43,7 +43,7 @@ public class PathKeyAsset extends FeatureAsset {
     }
 
     @Override
-    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) {
+    public boolean FinalCheck(Map<Vector3ic, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) {
         return baseWave.values().stream().anyMatch(x -> x.connectedPOIs.size() >= algoAsset.getPOICount());
     }
 

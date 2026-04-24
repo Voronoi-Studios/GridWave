@@ -2,8 +2,8 @@ package com.png.GridWaveCore.Utils.MirrorNode.Helper;
 
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3i;
-
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
 import javax.annotation.Nonnull;
 
 public class Bounds3iExtension {
@@ -12,9 +12,9 @@ public class Bounds3iExtension {
             return;
         }
 
-        Vector3i min = bounds.min.clone();
-        Vector3i max = bounds.max.clone();
-        max.subtract(Vector3i.ALL_ONES);
+        Vector3i min = new Vector3i(bounds.min);
+        Vector3i max = new Vector3i(bounds.max);
+        max.sub(Vector3iUtil.ALL_ONES);
 
         int mirroredMin;
         int mirroredMax;
@@ -41,9 +41,9 @@ public class Bounds3iExtension {
                 throw new IllegalStateException("Unexpected axis: " + axis);
         }
 
-        bounds.min.assign(min);
-        bounds.max.assign(max);
+        bounds.min.set(min);
+        bounds.max.set(max);
         bounds.correct();
-        bounds.max.add(Vector3i.ALL_ONES);
+        bounds.max.add(Vector3iUtil.ALL_ONES);
     }
 }

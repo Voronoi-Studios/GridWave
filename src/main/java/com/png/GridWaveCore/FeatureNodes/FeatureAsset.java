@@ -10,12 +10,13 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
-import com.png.GridWaveCore.AlgoNodes.Helper.AttemptBehavior;
+import org.joml.Vector3d;
+import org.joml.Vector3dc;
+import org.joml.Vector3i;import com.png.GridWaveCore.AlgoNodes.Helper.AttemptBehavior;
 import com.png.GridWaveCore.AlgoNodes.Helper.WaveCell;
 import com.png.GridWaveCore.AlgoNodes.IAlgoAsset;
 import com.png.GridWaveCore.TileNodes.TileSet;
+import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
@@ -57,13 +58,13 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     //Implement different methods
     public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries) { }
 
-    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, int grid, Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public void BaseWaveProcessor(@NonNull List<Vector3dc> gridPositions, int grid, Map<Vector3ic, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
 
     public void AfterNeighbourPropagation(WaveCell source, int rot, WaveCell neighbor, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
 
-    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return false; }
+    public boolean WFCReplacer(Map<Vector3ic, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return false; }
 
-    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return true; }
+    public boolean FinalCheck(Map<Vector3ic, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return true; }
 
     public void BeforeWFC(AttemptBehavior attemptBehavior, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
 }

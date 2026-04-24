@@ -11,7 +11,7 @@ buildNumber++
 buildNumberFile.writeText(buildNumber.toString())
 
 group = "com.png"
-version = "0.6.${buildNumber}"
+version = "0.6.${buildNumber}-pre"
 val javaVersion = 25
 
 repositories {
@@ -32,9 +32,9 @@ hytale {
     //
     // addAssetsDependency = true
 
-    // uncomment if you want to develop your mod against the pre-release version of the game.
-    //
-    // updateChannel = "pre-release"
+     //uncomment if you want to develop your mod against the pre-release version of the game.
+
+     updateChannel = "pre-release"
 }
 
 java {
