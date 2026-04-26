@@ -19,6 +19,14 @@
         "Default" : "",
         "Width" : 200
       }
+    },
+    {
+      "Id": "CleanIsolated",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "CleanIsolated",
+        "Default" : false
+      }
     }
   ],
   "Outputs": [
@@ -33,6 +41,7 @@
   "Schema": {
     "Type" : "PathKey",
     "Skip" : "Skip",
-    "PathKey" : "PathKeyString"
+    "PathKey" : "PathKeyString",
+    "CleanIsolated" : "CleanIsolated"
   }
 }
