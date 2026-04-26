@@ -1,0 +1,118 @@
+{
+  "Id": "PropAlgo.GridWave",
+  "Title": "GridWave Algorithm (Prop)",
+  "Color": "Green",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "MaxPositionsCount",
+      "Type": "Int",
+      "Options": {
+        "Label": "MaxGridPositionsCount",
+        "Default" : 200,
+        "SmallChange": 10,
+        "LargeChange": 50
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "GridPoints",
+      "Type": "PositionsConnection",
+      "Color": "Blue",
+      "Multiple" : false,
+      "Label" : "Grid Points",
+      "Description" : "These points represent the positions on the grid where the tiles will be placed. The offsets can be different for each direction X and Z (Y is currently unused). They do need to be the same in that same direction though!"
+    },
+    {
+      "Id": "POIs",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50",
+      "Multiple" : true,
+      "Label" : "POIs",
+      "Description" : "Points of Interest. These are fixed tiles that will be placed on the grid before the algorithm starts. This is useful to force certain tiles to be placed on the grid, such as entrances, exits, or special rooms."
+    },
+    {
+      "Id": "BaseTiles",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50",
+      "Multiple" : true,
+      "Label" : "Base Tiles",
+      "Description" : "Main tilesets used for generation. The algorithm will try to place these tiles after the POIs have been placed."
+    },
+    {
+      "Id": "FancyTiles",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50",
+      "Multiple" : true,
+      "Label" : "Fancy Tiles",
+      "Description" : "Additional tilesets that can be used to add variety to the generated layout. The algorithm will pattern match with the fully generated grid to see if any of these tiles can replace some base tiles. This is useful to add details to the generated layout without affecting the overall structure."
+    },
+    {
+      "Id": "Seed",
+      "Type": "Seed.GridWave.Connection",
+      "Color": "152,152,129",
+      "Label": "Seed"
+    },
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "PropConnection",
+      "Color": "Green"
+    }
+  ],
+  "Schema": {
+    "Type" : "PropAlgo",
+    "ExportAs" : "ExportAs",
+    "Skip" : "Skip",
+    "GridPoints" : {
+      "Node" : "PositionsVariants",
+      "Pin" : "GridPoints"
+    },
+    "POIs" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "POIs"
+    },
+    "BaseTiles" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "BaseTiles"
+    },
+    "FancyTiles" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "FancyTiles"
+    },
+    "Seed" : {
+      "Node" : "Seed.Variants",
+      "Pin" : "Seed"
+    },
+    "Features" : {
+      "Node" : "Feature.Variants",
+      "Pin" : "Features"
+    },
+    "MaxPositionsCount" : "MaxPositionsCount"
+  }
+}

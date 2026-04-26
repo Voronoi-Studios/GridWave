@@ -1,0 +1,29 @@
+{
+  "Id": "Imported.Seed.GridWave",
+  "Title": "Imported Seed",
+  "Color": "152,152,129",
+  "Content" : [
+     {
+      "Id" : "Name",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "Name",
+        "Default" : "",
+        "Width" : 200
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "OutputPin",
+      "Type": "Seed.GridWave.Connection",
+      "Color": "152,152,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Imported",
+    "Name" : "Name"
+  }
+}

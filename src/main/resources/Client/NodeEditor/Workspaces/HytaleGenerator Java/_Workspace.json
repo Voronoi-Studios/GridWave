@@ -32,35 +32,40 @@
     }
   },
   "NodeCategories": {
-    "WFC" : [
-      "GridWave.WFC",
-	    "GridWaveProp.WFC",
-      "GridGen2D.WFC",
-      "RuleSet.WFC",
-      "Advanced.RuleSet.WFC"
+    "GridWave" : [
+      "PropDistributionAlgo.GridWave",
+	    "PropAlgo.GridWave",
+      "GridGen2D.GridWave"
     ],
-    "WFC.TileSet" : [
-	    "Single.TileSet.WFC",	    
-      "Multi.TileSet.WFC",
-      "Fixed.TileSet.WFC",
-      "Auto.TileSet.WFC",	    
-      "Imported.TileSet.WFC"
+    "GridWave.RuleSet" : [
+      "Simple.RuleSet.GridWave",
+      "Advanced.RuleSet.GridWave"
     ],
-    "WFC.Seed" : [
-      "Constant.Seed.WFC",
-      "Random.Seed.WFC",
-      "Time.Seed.WFC",
-      "Imported.Seed.WFC"
+    "GridWave.TileSet" : [
+	    "Single.TileSet.GridWave",	    
+      "Multi.TileSet.GridWave",
+      "Auto.TileSet.GridWave",	
+      "Prop.TileSet.GridWave",	       
+      "Imported.TileSet.GridWave"
     ],
-    "WFC.Unused" : [
-      "CustomMaterialProvider",
-      "CustomPoint3D",
-      "CPrefab.Prop",
-      "Variable",
-      "CPrefab.Prop",
-      "CWeightedPath.CPrefab.Prop",
-      "CDensityDelimitedTintProvider",
-      "StaticMirrorProp.WFC"
+    "GridWave.Feature" : [
+      "Border.Feature.GridWave",
+      "Debug.Feature.GridWave",
+      "MultiAttempt.Feature.GridWave",
+      "Multithreading.Feature.GridWave",
+      "OverlapTile.Feature.GridWave",
+      "PathKey.Feature.GridWave",
+      "Restrainer.Feature.GridWave",
+      "RandomRestrainer.Feature.GridWave"
+    ],
+    "GridWave.Seed" : [
+      "Constant.Seed.GridWave",
+      "Position.Seed.GridWave",
+      "Time.Seed.GridWave",
+      "Imported.Seed.GridWave"
+    ],
+    "GridWave.Utils" : [
+      "StaticMirrorProp.GridWave"
     ],
      "Material" : [
       "Material",
@@ -347,27 +352,40 @@
     "RuleSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
-        "Simple": "RuleSet.WFC",
-        "Advanced": "Advanced.RuleSet.WFC"
+        "Simple": "Simple.RuleSet.GridWave",
+        "Advanced": "Advanced.RuleSet.GridWave"
       }
     },
     "TileSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
-        "Single": "Single.TileSet.WFC",
-        "Multi": "Multi.TileSet.WFC",
-        "Fixed": "Fixed.TileSet.WFC",
-        "Auto": "Auto.TileSet.WFC",
-        "Imported": "Imported.TileSet.WFC"
+        "Single": "Single.TileSet.GridWave",
+        "Multi": "Multi.TileSet.GridWave",
+        "Auto": "Auto.TileSet.GridWave",
+        "Prop": "Prop.TileSet.GridWave",
+        "Imported": "Imported.TileSet.GridWave"
+      }
+    },
+    "Feature.Variants":{
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Border": "Border.Feature.GridWave",
+        "Debug": "Debug.Feature.GridWave",
+        "MultiAttempt": "MultiAttempt.Feature.GridWave",
+        "Multithreading": "Multithreading.Feature.GridWave",
+        "OverlapTile": "OverlapTile.Feature.GridWave",
+        "PathKey": "PathKey.Feature.GridWave",
+        "Restrainer": "Restrainer.Feature.GridWave",
+        "RandomRestrainer": "RandomRestrainer.Feature.GridWave"
       }
     },
     "Seed.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant": "Constant.Seed.WFC",
-        "Random": "Random.Seed.WFC",
-        "Time": "Time.Seed.WFC",
-        "Imported": "Imported.Seed.WFC"
+        "Constant": "Constant.Seed.GridWave",
+        "Position": "Position.Seed.GridWave",
+        "Time": "Time.Seed.GridWave",
+        "Imported": "Imported.Seed.GridWave"
       }
     },
     "DensityNodeVariants": {
@@ -454,7 +472,7 @@
     "PropDistribution.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "GridWave" :"GridWave.WFC",
+        "PropDistributionAlgo" :"PropDistributionAlgo.GridWave",
         "Constant" : "Constant.PropDistribution",
         "Positions" : "Positions.PropDistribution",
         "Assigned" : "Assigned.PropDistribution",
@@ -580,8 +598,8 @@
     "PropVariants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "GridWaveProp": "GridWaveProp.WFC",
-        "StaticMirror" : "StaticMirrorProp.WFC",
+        "PropAlgo": "PropAlgo.GridWave",
+        "StaticMirror" : "StaticMirrorProp.GridWave",
         "Box": "BoxProp",
         "Union": "Union.Prop",
         "Cluster": "Cluster.Prop",

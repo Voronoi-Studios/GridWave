@@ -1,0 +1,39 @@
+{
+  "Id": "Border.Feature.GridWave",
+  "Title": "Border Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "BorderRuleSet",
+      "Type": "RuleSet.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Border Rule Set",
+      "Description" : "Around the borders of the grid tiles with this rule set will be placed."
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Border",
+    "Skip" : "Skip",
+    "BorderRuleSet" : {
+      "Node" : "RuleSet.GridWave",
+      "Pin" : "BorderRuleSet"
+    }
+  }
+}
