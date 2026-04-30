@@ -10,8 +10,8 @@ var buildNumber = if (buildNumberFile.exists()) buildNumberFile.readText().toInt
 buildNumber++
 buildNumberFile.writeText(buildNumber.toString())
 
-group = "com.png"
-version = "0.6.${buildNumber}"
+group = "ch.voronoi"
+version = "0.7.${buildNumber}"
 val javaVersion = 25
 
 repositories {
