@@ -58,13 +58,11 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     //Implement different methods
     public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) { }
 
-    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, int grid, Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { }
 
-    public void AfterNeighbourPropagation(WaveCell source, int rot, WaveCell neighbor, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { return false; }
 
-    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return false; }
+    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, int participantNumber, TileSetAsset.Argument argument) { return true; }
 
-    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, int workerId, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return true; }
-
-    public void BeforeWFC(AttemptBehavior attemptBehavior, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public void BeforeWFC(AttemptBehavior attemptBehavior, TileSetAsset.Argument argument) { }
 }

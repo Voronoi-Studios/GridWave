@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.TileNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -10,15 +11,16 @@ import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MultiTileSet extends TileSet {
     protected final List<TileEntry> tileEntries;
-    protected final WeightedMap<List<IPrefabBuffer>> prefabWeightedMap;
+    protected final ConcurrentHashMap<Integer, WeightedMap<List<IPrefabBuffer>>> prefabWeightedMaps;
     protected final List<FeatureAsset> tileFeatureAssets;
 
-    public MultiTileSet(@Nonnull WeightedMap<List<IPrefabBuffer>> prefabWeightedMap, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
+    public MultiTileSet(ConcurrentHashMap<Integer, WeightedMap<List<IPrefabBuffer>>> prefabWeightedMaps, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
         this.tileEntries = new ArrayList<>();
-        this.prefabWeightedMap = prefabWeightedMap;
+        this.prefabWeightedMaps = prefabWeightedMaps;
         this.tileFeatureAssets = tileFeatureAssets;
         for (int r = 0; r < 4; r++) {
             Map<Vector3i, RuleSet.Combo> current = new HashMap<>();
@@ -51,7 +53,8 @@ public class MultiTileSet extends TileSet {
     public List<FeatureAsset> getTileFeatureAssets() { return tileFeatureAssets; }
 
     @Override
-    public Prop getProp(TileSetAsset.Argument argument) {
-        return new PrefabProp(prefabWeightedMap, argument.materialCache,argument.parentSeed);
+    public Prop getProp(@Nonnull TileSetAsset.Argument argument) {
+        if(!prefabWeightedMaps.containsKey(argument.workerId.id)) return EmptyProp.INSTANCE;
+        return new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed);
     }
 }

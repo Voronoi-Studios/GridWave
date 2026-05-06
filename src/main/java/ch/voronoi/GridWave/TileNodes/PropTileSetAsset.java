@@ -10,7 +10,7 @@ import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.math.vector.Vector3i;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSet2DAsset;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -31,18 +31,18 @@ public class PropTileSetAsset extends TileSetAsset {
             .addValidator(Validators.greaterThanOrEqual(0.0))
             .add()
             .build();
-    private RuleSetAsset[] ruleSetAssets = new SimpleRuleSetAsset[0];
+    private RuleSetAsset[] ruleSetAssets = new SimpleRuleSet2DAsset[0];
     private PropAsset propAsset = new EmptyPropAsset();
     private int zSize;
     private double weight = 1;
 
     @Nonnull
     @Override
-    public PropTileSet build(@Nonnull Argument argument, int grid) {
+    public PropTileSet build(@Nonnull Argument argument) {
         Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
         Vector3i offset = Vector3i.ZERO.clone();
         for(RuleSetAsset ruleSetAsset : ruleSetAssets){
-            ruleSets.put(offset.clone().scale(grid), ruleSetAsset.build());
+            ruleSets.put(offset.clone().scale(argument.algoAsset.getGrid()), ruleSetAsset.build());
             offset.z++;
             if(offset.z >= zSize) {
                 offset.z = 0;

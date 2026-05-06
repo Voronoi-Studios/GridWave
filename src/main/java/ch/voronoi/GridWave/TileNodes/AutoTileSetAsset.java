@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
@@ -11,6 +12,7 @@ import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
 
 import javax.annotation.Nonnull;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class AutoTileSetAsset extends TileSetAsset {
     @Nonnull
@@ -25,14 +27,27 @@ public class AutoTileSetAsset extends TileSetAsset {
     private String folderPath;
     private double weight = 1;
 
+    public AutoTileSetAsset(){}
+
+    public AutoTileSetAsset(String folderPath, FeatureAsset[] featureAssets){
+        this.folderPath = folderPath;
+        super.tileFeatureAssets = featureAssets;
+    }
+
+    public static final ConcurrentHashMap<String, ConcurrentHashMap<Integer, WeightedMap<List<IPrefabBuffer>>>> prefabBufferCache = new ConcurrentHashMap<>();
+
     @Nonnull
     @Override
-    public MultiTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
+    public MultiTileSet build(@Nonnull TileSetAsset.Argument argument) {
+        var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(folderPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!folderPath.isEmpty()) {
-            List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(folderPath);
-            if (pathPrefabs != null && !pathPrefabs.isEmpty()) prefabWeightedMap.add(pathPrefabs, 1);
+            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(folderPath, false);
+            if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
+                prefabWeightedMap.add(pathPrefabs, 1);
+            }
         }
+        prefabWeightedMaps.put(argument.workerId.id, prefabWeightedMap);
 
         List<String> parts = Arrays.stream(folderPath.split("/")).toList();
 
@@ -45,7 +60,7 @@ public class AutoTileSetAsset extends TileSetAsset {
         Map<Vector3i, RuleSet.Combo> ruleSets = new HashMap<>();
         Vector3i offset = Vector3i.ZERO.clone();
         for(RuleSet ruleSetAsset : ruleSetAssets){
-            ruleSets.put(offset.clone().scale(grid),new RuleSet.Combo(ruleSetAsset, ruleSetAsset));
+            ruleSets.put(offset.clone().scale(argument.algoAsset.getGrid()),new RuleSet.Combo(ruleSetAsset, ruleSetAsset));
             offset.z++;
             if(offset.z >= zSize) {
                 offset.z = 0;
@@ -53,6 +68,6 @@ public class AutoTileSetAsset extends TileSetAsset {
             }
         }
 
-        return new MultiTileSet(prefabWeightedMap, ruleSets, weight, argument, super.getTileFeatureAssets());
+        return new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument, super.getTileFeatureAssets());
     }
 }

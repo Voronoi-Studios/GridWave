@@ -26,6 +26,10 @@
       "RootNodeType": "PropDistribution.Variants",
       "MenuName" : "HytaleGenerator - PropDistributions"
     },
+    "TileSetCollections": {
+      "RootNodeType": "TileSetCollection.Variants",
+      "MenuName" : "HytaleGenerator - TileSetCollections"
+    },
     "TileSets": {
       "RootNodeType": "TileSet.Variants",
       "MenuName" : "HytaleGenerator - TileSets"
@@ -38,8 +42,16 @@
       "GridGen2D.GridWave"
     ],
     "GridWave.RuleSet" : [
-      "Simple.RuleSet.GridWave",
-      "Advanced.RuleSet.GridWave"
+      "Simple2D.RuleSet.GridWave",
+      "Simple3D.RuleSet.GridWave",
+      "Advanced2D.RuleSet.GridWave",
+      "Advanced3D.RuleSet.GridWave"
+    ],
+    "GridWave.TileSetCollection" : [
+	    "Simple.TileSetCollection.GridWave",	    
+      "Auto.TileSetCollection.GridWave",	
+      "Union.TileSetCollection.GridWave",	       
+      "Imported.TileSetCollection.GridWave"
     ],
     "GridWave.TileSet" : [
 	    "Single.TileSet.GridWave",	    
@@ -60,7 +72,6 @@
     ],
     "GridWave.Seed" : [
       "Constant.Seed.GridWave",
-      "Position.Seed.GridWave",
       "Time.Seed.GridWave",
       "Imported.Seed.GridWave"
     ],
@@ -356,6 +367,15 @@
         "Advanced": "Advanced.RuleSet.GridWave"
       }
     },
+    "TileSetCollection.Variants":{
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Single": "Single.TileSetCollection.GridWave",
+        "Auto": "Auto.TileSetCollection.GridWave",
+        "Union": "Union.TileSetCollection.GridWave",
+        "Imported": "Imported.TileSetCollection.GridWave"
+      }
+    },
     "TileSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
@@ -383,7 +403,6 @@
       "VariantFieldName": "Type",
       "Variants": {
         "Constant": "Constant.Seed.GridWave",
-        "Position": "Position.Seed.GridWave",
         "Time": "Time.Seed.GridWave",
         "Imported": "Imported.Seed.GridWave"
       }

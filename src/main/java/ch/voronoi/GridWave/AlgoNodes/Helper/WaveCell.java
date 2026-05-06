@@ -10,7 +10,7 @@ public class WaveCell {
     private Vector3i position;
     public LinkedHashSet<TileSet.TileEntry> possible;
     private GridTile chosen;
-    public LinkedHashSet<Vector3i> connectedPOIs = new LinkedHashSet<>();
+    public LinkedHashSet<POIInfo> connectedPOIs = new LinkedHashSet<>();
 
     public GridTile getChosen() { return chosen; }
     public boolean isCollapsed() { return chosen != null; }
@@ -41,7 +41,7 @@ public class WaveCell {
     public WaveCell(WaveCell other) {
         this.position = other.position == null ? null : other.position.clone();
         this.possible = other.possible == null ? null : new LinkedHashSet<>(other.possible);
-        this.chosen = other.chosen == null? null : new GridTile(other.chosen.tileEntry(),other.chosen.positionOffset(), other.chosen.type(), new LinkedHashSet<>(other.connectedPOIs));
+        this.chosen = other.chosen == null? null : new GridTile(other.chosen.tileEntry(),other.chosen.positionOffset().clone(), other.chosen.type(), new LinkedHashSet<>(other.connectedPOIs));
         this.connectedPOIs = new LinkedHashSet<>(other.connectedPOIs);
     }
 }

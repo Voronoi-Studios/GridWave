@@ -7,6 +7,7 @@ import com.hypixel.hytale.assetstore.codec.ContainedAssetCodec;
 import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.assetstore.map.JsonAssetWithMap;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
+import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
@@ -34,9 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAssetMap<String, TileSetAsset>>, Cleanable {
     @Nonnull
-    public static final AssetCodecMapCodec<String, TileSetAsset> CODEC = new AssetCodecMapCodec<>(
-            Codec.STRING, (t, k) -> t.id = k, t -> t.id, (t, data) -> t.data = data, t -> t.data
-    );
+    public static final AssetCodecMapCodec<String, TileSetAsset> CODEC = new AssetCodecMapCodec<>(Codec.STRING, (t, k) -> t.id = k, t -> t.id, (t, data) -> t.data = data, t -> t.data);
     @Nonnull
     private static final Map<String, TileSetAsset.Exported> exportedNodes = new ConcurrentHashMap<>();
     @Nonnull
@@ -68,10 +67,9 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     private String id;
     private AssetExtraInfo.Data data;
     private String exportName = "";
-    private @Nonnull FeatureAsset[] tileFeatureAssets = new FeatureAsset[0];
-    private boolean legacyPath = false;
+    protected @Nonnull FeatureAsset[] tileFeatureAssets = new FeatureAsset[0];
 
-    public abstract TileSet build(@Nonnull TileSetAsset.Argument argument, int grid);
+    public abstract TileSet build(@Nonnull TileSetAsset.Argument argument);
 
     @Override
     public void cleanUp() {
@@ -88,12 +86,12 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public @Nonnull List<FeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, IAlgoAsset algoAsset) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, algoAsset);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, algoAsset);
     }
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument, IAlgoAsset algoAsset) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, algoAsset);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, algoAsset);
     }
     @Nonnull
     public static PropAsset.Argument argumentFrom(@Nonnull TileSetAsset.Argument argument) {
@@ -109,6 +107,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         public MaterialCache materialCache;
         public ReferenceBundle referenceBundle;
         public WorkerIndexer.Id workerId;
+        public SeedBox seedBox;
         public IAlgoAsset algoAsset;
 
         public Argument(
@@ -116,12 +115,14 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                 @Nonnull MaterialCache materialCache,
                 @Nonnull ReferenceBundle referenceBundle,
                 @Nonnull WorkerIndexer.Id workerId,
+                @Nonnull SeedBox seedBox,
                 @Nonnull IAlgoAsset algoAsset
         ) {
             this.parentSeed = parentSeed;
             this.materialCache = materialCache;
             this.referenceBundle = referenceBundle;
             this.workerId = workerId;
+            this.seedBox = seedBox;
             this.algoAsset = algoAsset;
         }
 
@@ -130,45 +131,54 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
             this.materialCache = argument.materialCache;
             this.referenceBundle = argument.referenceBundle;
             this.workerId = argument.workerId;
+            this.seedBox = argument.seedBox;
             this.algoAsset = argument.algoAsset;
         }
     }
 
     @Nullable
-    public List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
+    public static List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path, boolean legacyPath) {
+        Map<Path, Path> packToFullPathsMap = getPackToFullPathsMap(path, legacyPath);
         List<IPrefabBuffer> loadedPrefabs = new LinkedList<>();
         Set<Path> traversedPaths = new LinkedHashSet<>();
+
+        for (var entry : packToFullPathsMap.entrySet()) {
+            try {
+                PrefabLoader.traverseAllPrefabBuffersUnder(entry.getValue(), (fullPrefabPath, prefab) -> {
+                    Path relativePrefabPath = fullPrefabPath.subpath(entry.getKey().getNameCount(), fullPrefabPath.getNameCount());
+                    if (!traversedPaths.contains(relativePrefabPath)) {
+                        traversedPaths.add(relativePrefabPath);
+                        loadedPrefabs.add(prefab);
+                    }
+                });
+            } catch (Exception var11) {
+                String msg = "Couldn't load prefab with path: " + path;
+                msg = msg + "\n";
+                msg = msg + ExceptionUtil.toStringWithStack(var11);
+                LoggerUtil.getLogger().severe(msg);
+                return null;
+            }
+        }
+
+        return loadedPrefabs;
+    }
+
+    public static Map<Path, Path> getPackToFullPathsMap(@Nonnull String path, boolean legacyPath) {
+        Map<Path, Path> packToFullPathsMap = new LinkedHashMap<>();
         List<AssetPack> packs = AssetModule.get().getAssetPacks();
 
         for (int i = packs.size() - 1; i >= 0; i--) {
             Path packRootPath = packs.get(i).getRoot();
             Path prefabsDir = packRootPath.resolve("Server");
-            if (this.legacyPath) {
+            if (legacyPath) {
                 prefabsDir = prefabsDir.resolve("World").resolve("Default").resolve("Prefabs");
             } else {
                 prefabsDir = prefabsDir.resolve("Prefabs");
             }
 
             Path fullPath = PathUtil.resolvePathWithinDir(prefabsDir, path);
-            if (fullPath != null) {
-                try {
-                    PrefabLoader.traverseAllPrefabBuffersUnder(fullPath, (fullPrefabPath, prefab) -> {
-                        Path relativePrefabPath = fullPrefabPath.subpath(packRootPath.getNameCount(), fullPrefabPath.getNameCount());
-                        if (!traversedPaths.contains(relativePrefabPath)) {
-                            traversedPaths.add(relativePrefabPath);
-                            loadedPrefabs.add(prefab);
-                        }
-                    });
-                } catch (Exception var11) {
-                    String msg = "Couldn't load prefab with path: " + path;
-                    msg = msg + "\n";
-                    msg = msg + ExceptionUtil.toStringWithStack(var11);
-                    LoggerUtil.getLogger().severe(msg);
-                    return null;
-                }
-            }
+            if (fullPath != null) packToFullPathsMap.put(packRootPath, fullPath);
         }
-
-        return loadedPrefabs;
+        return packToFullPathsMap;
     }
 }

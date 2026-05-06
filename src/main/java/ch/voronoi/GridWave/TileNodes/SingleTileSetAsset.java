@@ -1,18 +1,21 @@
 package ch.voronoi.GridWave.TileNodes;
 
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSet2DAsset;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class SingleTileSetAsset extends TileSetAsset {
+
     @Nonnull
     public static final BuilderCodec<SingleTileSetAsset> CODEC = BuilderCodec.builder(SingleTileSetAsset.class, SingleTileSetAsset::new, TileSetAsset.ABSTRACT_CODEC)
             .append(new KeyedCodec<>("RuleSet", RuleSetAsset.CODEC, true), (asset, value) -> asset.ruleSetAsset = value, asset -> asset.ruleSetAsset)
@@ -25,21 +28,25 @@ public class SingleTileSetAsset extends TileSetAsset {
             .append(new KeyedCodec<>("MinimizeVariants", Codec.BOOLEAN, true), (asset, value) -> asset.minimizeVariants = value, asset -> asset.minimizeVariants)
             .add()
             .build();
-    private RuleSetAsset ruleSetAsset = new SimpleRuleSetAsset();
+    private RuleSetAsset ruleSetAsset = new SimpleRuleSet2DAsset();
     private String prefabPath = "";
     private double weight = 1;
     private boolean minimizeVariants = true;
 
+    public static final ConcurrentHashMap<String, ConcurrentHashMap<Integer, WeightedMap<List<IPrefabBuffer>>>> prefabBufferCache = new ConcurrentHashMap<>();
+
     @Nonnull
     @Override
-    public SingleTileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
+    public SingleTileSet build(@Nonnull TileSetAsset.Argument argument) {
+        var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(prefabPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!prefabPath.isEmpty()) {
-            List<IPrefabBuffer> pathPrefabs = this.loadPrefabBuffersFrom(prefabPath);
+            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(prefabPath, false);
             if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
                 prefabWeightedMap.add(pathPrefabs, 1);
             }
         }
-        return new SingleTileSet(prefabWeightedMap,ruleSetAsset.build(), weight, minimizeVariants, argument, super.getTileFeatureAssets());
+        prefabWeightedMaps.put(argument.workerId.id, prefabWeightedMap);
+        return new SingleTileSet(prefabWeightedMaps,ruleSetAsset.build(), weight, minimizeVariants, argument, super.getTileFeatureAssets());
     }
 }
