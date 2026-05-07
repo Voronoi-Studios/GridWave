@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
@@ -7,6 +8,8 @@ import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 
 public abstract class TileSet {
@@ -18,7 +21,7 @@ public abstract class TileSet {
     }
 
     protected static String[][] rotate(String[][] arr, int r) {
-        int l = arr.length;
+        int l = 4; //Only affect first 4
         String[][] rotated = new String[l][];
         for (int i = 0; i < l; i++) {
             rotated[i] = arr[(i + r) % l];
@@ -53,6 +56,18 @@ public abstract class TileSet {
             double weight, int rot,
             Function<TileSetAsset.Argument, Prop> propFunction,
             List<FeatureAsset> tileFeatures) {
+
+        public TileEntry(TileEntry tileEntry) {
+            this(
+                    new LinkedHashMap<>(tileEntry.ruleSets),
+                    tileEntry.identifierKey.clone(),
+                    tileEntry.weight,
+                    tileEntry.rot,
+                    tileEntry.propFunction,
+                    new ArrayList<>(tileEntry.tileFeatures)
+            );
+        }
+
         public RuleSet.Combo getMainRuleSet() { return ruleSets.get(identifierKey); }
         public List<TileEntry> getSubTiles(){
             var result = new ArrayList<TileEntry>();
@@ -86,9 +101,9 @@ public abstract class TileSet {
             int maxX = Integer.MIN_VALUE, maxY = Integer.MIN_VALUE, maxZ = Integer.MIN_VALUE;
 
             for (Vector3i v : ruleSets.keySet()) {
-                int relX = v.x - identifierKey.x;
-                int relY = v.y - identifierKey.y;
-                int relZ = v.z - identifierKey.z;
+                int relX = v.x - identifierKey().x;
+                int relY = v.y - identifierKey().y;
+                int relZ = v.z - identifierKey().z;
 
                 minX = Math.min(minX, relX);
                 maxX = Math.max(maxX, relX);
@@ -103,6 +118,12 @@ public abstract class TileSet {
                     (minY + maxY) / 2,
                     (minZ + maxZ) / 2
             );
+        }
+
+        public double getWeight(Map<Vector3i, WaveCell> wave, TileSetAsset.Argument argument) {
+            AtomicReference<Double> newWeight = new AtomicReference<>(weight);
+            tileFeatures.forEach(feature -> feature.ReplaceWeight(newWeight, this, wave, argument));
+            return newWeight.get();
         }
     } //WeightedPaths empty if not corner
 

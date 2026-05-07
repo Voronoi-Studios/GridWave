@@ -4,6 +4,7 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.math.vector.Vector3i;
 
 import javax.annotation.Nonnull;
 
@@ -18,14 +19,14 @@ public class ImportedTileSetAsset extends TileSetAsset {
     private String importName = "";
 
     @Override
-    public TileSet build(@Nonnull TileSetAsset.Argument argument, int grid) {
+    public TileSet build(@Nonnull TileSetAsset.Argument argument) {
         if (this.importName != null && !this.importName.isEmpty()) {
             TileSetAsset.Exported exported = getExportedAsset(this.importName);
             if(exported != null && exported.asset != null){
-                return exported.asset.build(argument,grid);
+                return exported.asset.build(argument);
             }
             else {
-                HytaleLogger.getLogger().atWarning().log("An exported Seed with the name does not exist: " + this.importName);
+                HytaleLogger.getLogger().atWarning().log("An exported TileSet with this name does not exist: " + this.importName);
                 return null;
             }
         }

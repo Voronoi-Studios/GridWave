@@ -1,0 +1,40 @@
+{
+  "Id": "Union.TileSetCollection.GridWave",
+  "Title": "Union TileSet Collection",
+  "Color": "0,70,40",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "TileSetCollections",
+      "Type": "TileSetCollection.GridWave.Connection",
+      "Color": "0,70,40",
+      "Multiple" : true,
+      "Label" : "TileSetCollections"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSetCollection.GridWave.Connection",
+      "Color": "0,70,40"
+    }
+  ],
+  "Schema": {
+    "Type" : "Union",
+    "TileSetCollections" : {
+      "Node" : "TileSetCollection.Variants",
+      "Pin" : "TileSetCollections"
+    },
+    "ExportAs" : "ExportAs"
+  }
+}

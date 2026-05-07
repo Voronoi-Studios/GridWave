@@ -1,0 +1,40 @@
+{
+  "Id": "Simple.TileSetCollection.GridWave",
+  "Title": "TileSet Collection",
+  "Color": "0,70,40",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "TileSets",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50",
+      "Multiple" : true,
+      "Label" : "TileSets"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSetCollection.GridWave.Connection",
+      "Color": "0,70,40"
+    }
+  ],
+  "Schema": {
+    "Type" : "Simple",
+    "TileSets" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "TileSets"
+    },
+    "ExportAs" : "ExportAs"
+  }
+}

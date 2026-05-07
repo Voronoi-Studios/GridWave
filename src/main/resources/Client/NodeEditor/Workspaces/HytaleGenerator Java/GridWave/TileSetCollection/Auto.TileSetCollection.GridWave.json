@@ -1,0 +1,51 @@
+{
+  "Id": "Auto.TileSetCollection.GridWave",
+  "Title": "Automatic TileSet Collection",
+  "Color": "0,70,40",
+  "Content" : [
+        {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    },
+    {
+      "Id" : "FolderPath",
+      "Type" : "SmallString",
+      "Description" : "Uses the folder naming to create the ruleset for the MultiTiles\nExample: `Maze/FancyTiles/1x2/10X0-X010`",
+      "Options" : {
+        "Label" : "Folder Path",
+        "Default" : "",
+        "Width" : 600
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "TileSetCollection.GridWave.Connection",
+      "Color": "0,70,40"
+    }
+  ],
+  "Schema": {
+    "Type" : "Auto",
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    },
+    "ExportAs" : "ExportAs",
+    "FolderPath" : "FolderPath"
+  }
+}

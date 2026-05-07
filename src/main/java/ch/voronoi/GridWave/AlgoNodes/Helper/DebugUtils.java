@@ -1,9 +1,13 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
+import ch.voronoi.GridWave.AlgoNodes.IAlgoAsset;
+import ch.voronoi.GridWave.TileNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
+import com.hypixel.hytale.builtin.hytalegenerator.plugin.Handle;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
+import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.protocol.packets.interface_.NotificationStyle;
 import com.hypixel.hytale.server.core.Message;
-import com.hypixel.hytale.server.core.NameMatching;
 import com.hypixel.hytale.server.core.permissions.PermissionsModule;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
@@ -20,28 +24,25 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 public class DebugUtils {
-    public static void sendDebugLog(List<GridTile> gridTiles, int grid, List<FeatureAsset> featureAssets, SeedBox seedBox) {
-        GridWave.Winner winner = GridWave.winnerMap.get(seedBox.toString()).get(); //Maybe need to add checks
-        List<String> pathKeys = featureAssets.stream().filter(PathKeyAsset.class::isInstance).map(PathKeyAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
+    public static void sendDebugLog(List<GridTile> gridTiles, TileSetAsset.Argument argument, GridWave.WFCResult wfcResult) {
+        List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyAsset.class::isInstance).map(PathKeyAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
         String generatedString = generateString(gridTiles, pathKeys);
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        String str ="Generated " + gridTiles.size() + " tiles with grid: " + grid;
-        if(winner != null) str += ", based on " + winner;
-        String finalStr = str;
+        String str ="Generated " + gridTiles.size() + " tiles with grid: " + VectorStr(argument.algoAsset.getGrid());
+        String subStr = wfcResult.toString();
+        sendNotification(Message.raw(str), Message.raw(subStr), "Icons/AssetNotifications/icon-256.png",  wfcResult.success ? NotificationStyle.Success : NotificationStyle.Warning);
         scheduler.schedule(() -> {
-            LoggerUtil.getLogger().info("\n" + generatedString + "\n\n" + finalStr + "\n\n"); scheduler.shutdown();
-            Message message = Message.raw(finalStr).color(Color.GRAY);
-            sendNotification(message, winner.success() ?"Icons/AssetNotifications/IconCheckmark.png" : "Icons/AssetNotifications/IconAlert.png");
+            LoggerUtil.getLogger().info("\n" + generatedString + "\n\n" + str + "\n" + subStr + "\n\n"); scheduler.shutdown();
         }, 2, TimeUnit.SECONDS);
     }
 
-    public static void sendNotification(Message message1, String icon) {
+    public static void sendNotification(Message message1, Message message2, String icon, NotificationStyle style) {
         PermissionsModule perms = PermissionsModule.get();
+        //It does not seem possible to get the world we are currently generating...
         List<PlayerRef> playerRefs = Universe.get().getPlayers().stream().filter(playerRef -> perms.getGroupsForUser(playerRef.getUuid()).contains("OP")).toList();
-        playerRefs.forEach( playerRef -> NotificationUtil.sendNotification(playerRef.getPacketHandler(), message1,icon));
+        playerRefs.forEach( playerRef -> NotificationUtil.sendNotification(playerRef.getPacketHandler(), message1, message2, icon, style));
     }
 
     public static String generateString(@Nonnull List<GridTile> gridTiles, List<String> pathKeys) {
@@ -83,9 +84,13 @@ public class DebugUtils {
                 .filter(tile -> tile != null && tile.tileEntry() != null && tile.tileEntry().ruleSets() != null)
                 .flatMap(tile -> tile.tileEntry().ruleSets().values().stream())
                 .filter(Objects::nonNull)
-                .map(RuleSet.Combo::getDebug)
+                .map(RuleSet.Combo::toStringArray)
                 .flatMap(Arrays::stream)
                 .mapToInt(String::length)
                 .max().orElse(1);
+    }
+
+    public static String VectorStr(Vector3i position) {
+        return "[x"+position.x +", y"+position.y+", z"+position.z+"]";
     }
 }

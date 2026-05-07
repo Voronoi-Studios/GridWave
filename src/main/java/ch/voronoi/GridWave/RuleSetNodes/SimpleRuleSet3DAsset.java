@@ -5,11 +5,11 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
 
-public class SimpleRuleSetAsset extends RuleSetAsset{
+public class SimpleRuleSet3DAsset extends RuleSetAsset {
 
     @Nonnull
-    public static final BuilderCodec<SimpleRuleSetAsset> CODEC = BuilderCodec.builder(SimpleRuleSetAsset.class, SimpleRuleSetAsset::new, RuleSetAsset.ABSTRACT_CODEC)
-            .append(new KeyedCodec<>("RuleSet", RuleSet.CODEC), (op, val) -> op.ruleSet = val, op -> op.ruleSet)
+    public static final BuilderCodec<SimpleRuleSet3DAsset> CODEC = BuilderCodec.builder(SimpleRuleSet3DAsset.class, SimpleRuleSet3DAsset::new, RuleSetAsset.ABSTRACT_CODEC)
+            .append(new KeyedCodec<>("RuleSet", RuleSet.CODEC3D), (op, val) -> op.ruleSet = val, op -> op.ruleSet)
             .add()
             .build();
 

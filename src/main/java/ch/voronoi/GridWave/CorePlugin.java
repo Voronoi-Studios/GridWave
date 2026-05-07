@@ -4,7 +4,9 @@ import ch.voronoi.GridWave.AlgoNodes.GridGen2DAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropAlgoAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropDistributionAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.*;
+import ch.voronoi.GridWave.RuleSetNodes.*;
 import ch.voronoi.GridWave.SeedNodes.*;
+import ch.voronoi.GridWave.TileCollectionNodes.*;
 import ch.voronoi.GridWave.TileNodes.*;
 import com.hypixel.hytale.assetstore.AssetRegistry;
 import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
@@ -16,14 +18,7 @@ import com.hypixel.hytale.server.core.asset.HytaleAssetStore;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
-import ch.voronoi.GridWave.AlgoNodes.*;
-import ch.voronoi.GridWave.FeatureNodes.*;
 import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorPropAsset;
-import ch.voronoi.GridWave.RuleSetNodes.AdvancedRuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
-import ch.voronoi.GridWave.SeedNodes.*;
-import ch.voronoi.GridWave.TileNodes.*;
 
 public class CorePlugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -38,6 +33,13 @@ public class CorePlugin extends JavaPlugin {
         //Test stuff
         this.getCommandRegistry().registerCommand(new PingCommand(this.getName(), this.getManifest().getVersion().toString()));
 
+        AssetRegistry.register(HytaleAssetStore.builder(TileSetCollectionAsset.class, new DefaultAssetMap<String, TileSetCollectionAsset>())
+                .setPath("HytaleGenerator/TileSetCollections")
+                .setCodec(TileSetCollectionAsset.CODEC)
+                .setKeyFunction(TileSetCollectionAsset::getId)
+                .build()
+        );
+
         AssetRegistry.register(HytaleAssetStore.builder(TileSetAsset.class, new DefaultAssetMap<String, TileSetAsset>())
                 .setPath("HytaleGenerator/TileSets")
                 .setCodec(TileSetAsset.CODEC)
@@ -51,8 +53,16 @@ public class CorePlugin extends JavaPlugin {
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
 
         //RuleSet Nodes
-        RuleSetAsset.CODEC.register("Simple",SimpleRuleSetAsset.class, SimpleRuleSetAsset.CODEC);
-        RuleSetAsset.CODEC.register("Advanced", AdvancedRuleSetAsset.class, AdvancedRuleSetAsset.CODEC);
+        RuleSetAsset.CODEC.register("Simple2D", SimpleRuleSet2DAsset.class, SimpleRuleSet2DAsset.CODEC);
+        RuleSetAsset.CODEC.register("Simple3D", SimpleRuleSet3DAsset.class, SimpleRuleSet3DAsset.CODEC);
+        RuleSetAsset.CODEC.register("Advanced2D", AdvancedRuleSet2DAsset.class, AdvancedRuleSet2DAsset.CODEC);
+        RuleSetAsset.CODEC.register("Advanced3D", AdvancedRuleSet3DAsset.class, AdvancedRuleSet3DAsset.CODEC);
+
+        //TileSet Collection Nodes
+        TileSetCollectionAsset.CODEC.register("Simple", SimpleTileSetCollectionAsset.class, SimpleTileSetCollectionAsset.CODEC);
+        TileSetCollectionAsset.CODEC.register("Auto", AutoTileSetCollectionAsset.class, AutoTileSetCollectionAsset.CODEC);
+        TileSetCollectionAsset.CODEC.register("Union", UnionTileSetCollectionAsset.class, UnionTileSetCollectionAsset.CODEC);
+        TileSetCollectionAsset.CODEC.register("Imported", ImportedTileSetCollectionAsset.class, ImportedTileSetCollectionAsset.CODEC);
 
         //TileSet Nodes
         TileSetAsset.CODEC.register("Single", SingleTileSetAsset.class, SingleTileSetAsset.CODEC);
@@ -70,11 +80,11 @@ public class CorePlugin extends JavaPlugin {
         FeatureAsset.CODEC.register("PathKey", PathKeyAsset.class, PathKeyAsset.CODEC); //Global
         FeatureAsset.CODEC.register("Restrainer", RestrainerAsset.class, RestrainerAsset.CODEC); //Local
         FeatureAsset.CODEC.register("RandomRestrainer", RandomRestrainerAsset.class, RandomRestrainerAsset.CODEC); //Local
-
+        FeatureAsset.CODEC.register("PathCellSelector", PathCellSelectorAsset.class, PathCellSelectorAsset.CODEC); //Global
+        FeatureAsset.CODEC.register("ConditionalWeight", ConditionalWeight.class, ConditionalWeight.CODEC); //Local
 
         //Seed Nodes
         SeedAsset.CODEC.register("Constant", ConstantSeedAsset.class, ConstantSeedAsset.CODEC);
-        SeedAsset.CODEC.register("Position", PositionSeedAsset.class, PositionSeedAsset.CODEC);
         SeedAsset.CODEC.register("Time", TimeSeedAsset.class, TimeSeedAsset.CODEC);
         SeedAsset.CODEC.register("Imported", ImportedSeedAsset.class, ImportedSeedAsset.CODEC);
 

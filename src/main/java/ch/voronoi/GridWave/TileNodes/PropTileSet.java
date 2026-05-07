@@ -19,7 +19,7 @@ public class PropTileSet extends TileSet {
 
     public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3i, RuleSet.Combo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
         this.tileEntries = new ArrayList<>();
-        this.propAsset = propAsset;
+        this.propAsset = propAsset; //Might need same treatment
         this.tileFeatureAssets = tileFeatureAssets;
         for (int r = 0; r < 4; r++) {
             Map<Vector3i, RuleSet.Combo> current = new HashMap<>();
@@ -53,5 +53,5 @@ public class PropTileSet extends TileSet {
     public List<FeatureAsset> getTileFeatureAssets() { return tileFeatureAssets; }
 
     @Override
-    public Prop getProp(TileSetAsset.Argument argument) { return propAsset.build(TileSetAsset.argumentFrom(argument)); }
+    public Prop getProp(@Nonnull TileSetAsset.Argument argument) { return propAsset.build(TileSetAsset.argumentFrom(argument)); }
 }

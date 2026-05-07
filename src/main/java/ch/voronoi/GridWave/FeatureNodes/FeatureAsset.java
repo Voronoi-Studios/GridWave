@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.CellSelector;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
 import com.hypixel.hytale.assetstore.codec.ContainedAssetCodec;
@@ -14,7 +15,6 @@ import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
 import ch.voronoi.GridWave.AlgoNodes.Helper.AttemptBehavior;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.AlgoNodes.IAlgoAsset;
 import ch.voronoi.GridWave.TileNodes.TileSet;
 import ch.voronoi.GridWave.TileNodes.TileSetAsset;
 import org.jspecify.annotations.NonNull;
@@ -22,6 +22,7 @@ import org.jspecify.annotations.NonNull;
 import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String, DefaultAssetMap<String, FeatureAsset>> {
     @Nonnull
@@ -58,13 +59,15 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     //Implement different methods
     public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) { }
 
-    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, int grid, Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { }
 
-    public void AfterNeighbourPropagation(WaveCell source, int rot, WaveCell neighbor, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { return false; }
 
-    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return false; }
+    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, int participantNumber, TileSetAsset.Argument argument) { return true; }
 
-    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, int workerId, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { return true; }
+    public void BeforeWFC(AttemptBehavior attemptBehavior, TileSetAsset.Argument argument) { }
 
-    public void BeforeWFC(AttemptBehavior attemptBehavior, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) { }
+    public void ReplaceCellSelector(AtomicReference<CellSelector> cellSelector, TileSetAsset.Argument argument) { }
+
+    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3i, WaveCell> wave, TileSetAsset.Argument argument) {}
 }

@@ -1,6 +1,6 @@
 {
-  "Id": "Simple.RuleSet.GridWave",
-  "Title": "Simple RuleSet",
+  "Id": "Simple2D.RuleSet.GridWave",
+  "Title": "Simple 2D RuleSet",
   "Color": "60,100,80",
   "Content" : [
         {
@@ -60,7 +60,7 @@
     }
   ],
   "Schema": {
-    "Type": "Simple",
+    "Type": "Simple2D",
     "RuleSet": "RuleSet"
   }
 }

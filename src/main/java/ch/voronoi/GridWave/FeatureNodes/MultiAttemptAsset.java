@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
+import ch.voronoi.GridWave.TileNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
@@ -24,7 +25,7 @@ public class MultiAttemptAsset extends FeatureAsset {
     public int maxAttempts = 500;
 
     @Override
-    public void BeforeWFC(AttemptBehavior attemptBehavior, List<FeatureAsset> featureAssets, IAlgoAsset algoAsset) {
+    public void BeforeWFC(AttemptBehavior attemptBehavior, TileSetAsset.Argument argument) {
         if(skip()) return;
         attemptBehavior.maxAttempts = maxAttempts;
         attemptBehavior.maxBacktracks = maxBacktracks;
