@@ -33,13 +33,9 @@
 					"Z":	16
 				},
 				"POIs":	{
-					"$NodeId":	"Simple.TileSetCollection.GridWave-4c8ee7d3-b96c-452f-8cc6-801b579349fd",
-					"Type":	"Simple",
-					"TileSets":	[{
-							"$NodeId":	"Imported.TileSet.GridWave-60d1c133-e5a6-4541-9b47-93b32aa61a39",
-							"Type":	"Imported",
-							"Name":	"Floor-1_Z-POI_Room2x2_1"
-						}]
+					"$NodeId":	"Imported.TileSetCollection.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1",
+					"Type":	"Imported",
+					"Name":	"MazeFixedTiles1"
 				},
 				"BaseTiles":	{
 					"$NodeId":	"Simple.TileSetCollection.GridWave-a227edbd-e3e7-48f3-a430-f89843595212",
@@ -216,10 +212,34 @@
 			},
 			"PropDistributionAlgo.GridWave-c8712686-4b6a-4d89-a4bb-3e016184ecaa":	{
 				"$Position":	{
-					"$x":	-3332,
-					"$y":	-4109
+					"$x":	-3374,
+					"$y":	-4154
 				},
 				"$Title":	"[ROOT] GridWave Algorithm [WFC]"
+			},
+			"GridGen2D.GridWave-fe07f60e-382d-4ba4-8837-c68b0436fda7":	{
+				"$Position":	{
+					"$x":	-2682,
+					"$y":	-4621
+				}
+			},
+			"Point3D-88e5fede-1b05-417f-9119-480cfc013736":	{
+				"$Position":	{
+					"$x":	-2505,
+					"$y":	-4815
+				}
+			},
+			"Point3D-cf21f48a-d0ed-444d-bfb8-1fc63f5fd5a8":	{
+				"$Position":	{
+					"$x":	-2682,
+					"$y":	-4302
+				}
+			},
+			"Simple.TileSetCollection.GridWave-a227edbd-e3e7-48f3-a430-f89843595212":	{
+				"$Position":	{
+					"$x":	-2695,
+					"$y":	-3993
+				}
 			},
 			"Single.TileSet.GridWave-9c00bbfe-e2c5-4008-b13e-ea2fcae5c4a7":	{
 				"$Position":	{
@@ -231,6 +251,18 @@
 				"$Position":	{
 					"$x":	-1207,
 					"$y":	-3997
+				}
+			},
+			"Single.TileSet.GridWave-a477f262-1f2d-4d6c-9cb2-de39aef64389":	{
+				"$Position":	{
+					"$x":	-2003,
+					"$y":	-3700
+				}
+			},
+			"Simple2D.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292":	{
+				"$Position":	{
+					"$x":	-1208,
+					"$y":	-3698
 				}
 			},
 			"Single.TileSet.GridWave-1c25470b-223b-4e4c-b153-b53c972298e4":	{
@@ -283,8 +315,20 @@
 			},
 			"Constant.Seed.GridWave-b1948fcf-bf76-417c-abd0-9d10819d9bf3":	{
 				"$Position":	{
-					"$x":	-2664,
-					"$y":	-3806
+					"$x":	-2693,
+					"$y":	-3748
+				}
+			},
+			"Border.Feature.GridWave-c53d02ba-67f2-4e99-8f5b-abf72a999983":	{
+				"$Position":	{
+					"$x":	-2700,
+					"$y":	-3566
+				}
+			},
+			"Simple2D.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3":	{
+				"$Position":	{
+					"$x":	-2705,
+					"$y":	-3444
 				}
 			},
 			"Runtime-a0648449-47d7-45d9-8105-9d20eb004241":	{
@@ -329,68 +373,24 @@
 					"$y":	-2292
 				}
 			},
-			"Single.TileSet.GridWave-a477f262-1f2d-4d6c-9cb2-de39aef64389":	{
+			"Imported.TileSetCollection.GridWave-8a8b7e03-906f-4da2-be6a-d556b46edbea":	{
 				"$Position":	{
-					"$x":	-2003,
-					"$y":	-3700
+					"$x":	-2685,
+					"$y":	-3877
 				}
 			},
-			"Simple2D.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292":	{
+			"Imported.TileSetCollection.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1":	{
 				"$Position":	{
-					"$x":	-1208,
-					"$y":	-3698
-				}
-			},
-			"Simple.TileSetCollection.GridWave-4c8ee7d3-b96c-452f-8cc6-801b579349fd":	{
-				"$Position":	{
-					"$x":	-2693,
-					"$y":	-4147
-				}
-			},
-			"Imported.TileSet.GridWave-60d1c133-e5a6-4541-9b47-93b32aa61a39":	{
-				"$Position":	{
-					"$x":	-2044,
-					"$y":	-4146
-				}
-			},
-			"GridGen2D.GridWave-fe07f60e-382d-4ba4-8837-c68b0436fda7":	{
-				"$Position":	{
-					"$x":	-3309,
-					"$y":	-4617
-				}
-			},
-			"Point3D-88e5fede-1b05-417f-9119-480cfc013736":	{
-				"$Position":	{
-					"$x":	-3132,
-					"$y":	-4811
-				}
-			},
-			"Point3D-cf21f48a-d0ed-444d-bfb8-1fc63f5fd5a8":	{
-				"$Position":	{
-					"$x":	-3133,
-					"$y":	-4301
-				}
-			},
-			"Border.Feature.GridWave-c53d02ba-67f2-4e99-8f5b-abf72a999983":	{
-				"$Position":	{
-					"$x":	-2671,
-					"$y":	-3624
-				}
-			},
-			"Simple2D.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3":	{
-				"$Position":	{
-					"$x":	-2676,
-					"$y":	-3502
-				}
-			},
-			"Simple.TileSetCollection.GridWave-a227edbd-e3e7-48f3-a430-f89843595212":	{
-				"$Position":	{
-					"$x":	-2695,
-					"$y":	-3993
+					"$x":	-2690,
+					"$y":	-4107
 				}
 			}
 		},
-		"$FloatingNodes":	[],
+		"$FloatingNodes":	[{
+				"$NodeId":	"Imported.TileSetCollection.GridWave-8a8b7e03-906f-4da2-be6a-d556b46edbea",
+				"Type":	"Imported",
+				"Name":	"MazeFancyTiles1"
+			}],
 		"$Links":	{
 		},
 		"$Groups":	[],

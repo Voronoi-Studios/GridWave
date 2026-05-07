@@ -1,60 +1,55 @@
 {
-	"$NodeId":	"Multi.TileSet.WFC-6e42b574-2457-49b3-a0e1-1c61c0203f91",
+	"$NodeId":	"Multi.TileSet.GridWave-6e42b574-2457-49b3-a0e1-1c61c0203f91",
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Room2x2_1",
 	"RuleSets":	[{
 			"$NodeId":	"Simple2D.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba",
 			"Type":	"Simple2D",
-			"N":	"0",
-			"E":	"0",
-			"S":	"",
-			"W":	""
+			"RuleSet":	{
+				"N":	"0",
+				"E":	"0",
+				"S":	"",
+				"W":	""
+			}
 		}, {
 			"$NodeId":	"Simple2D.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549",
 			"Type":	"Simple2D",
-			"N":	"",
-			"E":	"0",
-			"S":	"1",
-			"W":	""
+			"RuleSet":	{
+				"N":	"",
+				"E":	"0",
+				"S":	"1",
+				"W":	""
+			}
 		}, {
 			"$NodeId":	"Simple2D.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b",
 			"Type":	"Simple2D",
-			"N":	"0",
-			"E":	"",
-			"S":	"",
-			"W":	"0"
+			"RuleSet":	{
+				"N":	"0",
+				"E":	"",
+				"S":	"",
+				"W":	"0"
+			}
 		}, {
 			"$NodeId":	"Simple2D.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b",
 			"Type":	"Simple2D",
-			"N":	"",
-			"E":	"",
-			"S":	"0",
-			"W":	"0"
+			"RuleSet":	{
+				"N":	"",
+				"E":	"",
+				"S":	"0",
+				"W":	"0"
+			}
 		}],
-	"PrefabPath": "Maze/FancyTiles/Floor-1_Y-SpecialTile_Room2x2_1.prefab.json",
+	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Room2x2_1.prefab.json",
 	"SizeZ":	2,
 	"Weight":	1,
-	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
-			"Multi.TileSet.WFC-6e42b574-2457-49b3-a0e1-1c61c0203f91":	{
+			"Multi.TileSet.GridWave-6e42b574-2457-49b3-a0e1-1c61c0203f91":	{
 				"$Position":	{
 					"$x":	3834,
 					"$y":	-648
 				},
 				"$Title":	"[ROOT] WFC Multi TileSet"
-			},
-			"Simple2D.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
-				"$Position":	{
-					"$x":	4694,
-					"$y":	-562
-				}
-			},
-			"Simple2D.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
-				"$Position":	{
-					"$x":	5197,
-					"$y":	-545
-				}
 			},
 			"Simple2D.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba":	{
 				"$Position":	{
@@ -68,10 +63,16 @@
 					"$y":	-788
 				}
 			},
-			"CWeightedPath.CPrefab.Prop-0f7f868a-6723-4bd6-8691-1363889ba6a3":	{
+			"Simple2D.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
 				"$Position":	{
-					"$x":	4691,
-					"$y":	-299
+					"$x":	4694,
+					"$y":	-562
+				}
+			},
+			"Simple2D.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
+				"$Position":	{
+					"$x":	5197,
+					"$y":	-545
 				}
 			}
 		},
