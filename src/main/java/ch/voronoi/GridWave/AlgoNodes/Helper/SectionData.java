@@ -37,6 +37,7 @@ public class SectionData {
     public SectionData(List<GridTile> gridTiles) {
         this.cells = new LinkedHashMap<>();
         for (GridTile tile : gridTiles) {
+            if(tile == null) continue;
             this.cells.putIfAbsent(cellKey(tile.positionOffset()), new Entry(tile));
         }
     }

@@ -80,7 +80,8 @@ public class CorePlugin extends JavaPlugin {
         FeatureAsset.CODEC.register("PathKey", PathKeyAsset.class, PathKeyAsset.CODEC); //Global
         FeatureAsset.CODEC.register("Restrainer", RestrainerAsset.class, RestrainerAsset.CODEC); //Local
         FeatureAsset.CODEC.register("RandomRestrainer", RandomRestrainerAsset.class, RandomRestrainerAsset.CODEC); //Local
-
+        FeatureAsset.CODEC.register("PathCellSelector", PathCellSelectorAsset.class, PathCellSelectorAsset.CODEC); //Global
+        FeatureAsset.CODEC.register("ConditionalWeight", ConditionalWeight.class, ConditionalWeight.CODEC); //Local
 
         //Seed Nodes
         SeedAsset.CODEC.register("Constant", ConstantSeedAsset.class, ConstantSeedAsset.CODEC);

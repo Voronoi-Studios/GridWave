@@ -4,6 +4,7 @@ import ch.voronoi.GridWave.AlgoNodes.Helper.POIValidator;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
 import ch.voronoi.GridWave.TileCollectionNodes.SimpleTileSetCollectionAsset;
 import ch.voronoi.GridWave.TileCollectionNodes.TileSetCollectionAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.bounds.DecimalBounds3dAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.ListPositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
@@ -61,12 +62,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
 
     private Vector3i grid = new Vector3i(16,16,16);
     private int maxPositionsCount = 20;
-
-    @Override
-    public void cleanUp() {
-
-    }
-
+    
     @Override
     public int getPOICount() { return poiTileSetAssets.getTileSetAssets().length; }
     @Override

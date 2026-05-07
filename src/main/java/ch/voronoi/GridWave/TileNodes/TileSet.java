@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
@@ -7,6 +8,8 @@ import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 
 public abstract class TileSet {
@@ -115,6 +118,12 @@ public abstract class TileSet {
                     (minY + maxY) / 2,
                     (minZ + maxZ) / 2
             );
+        }
+
+        public double getWeight(Map<Vector3i, WaveCell> wave, TileSetAsset.Argument argument) {
+            AtomicReference<Double> newWeight = new AtomicReference<>(weight);
+            tileFeatures.forEach(feature -> feature.ReplaceWeight(newWeight, this, wave, argument));
+            return newWeight.get();
         }
     } //WeightedPaths empty if not corner
 

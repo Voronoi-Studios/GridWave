@@ -47,7 +47,7 @@ public class PathKeyAsset extends FeatureAsset {
         boolean check = baseWave.values().stream().anyMatch(x -> x.connectedPOIs.size() >= count);
         if(check && cleanIsolated) baseWave.entrySet().stream()
                 .filter(x -> x.getValue().getChosen().type() != GridTileType.POI)
-                .filter(x -> x.getValue().connectedPOIs.size() < count)
+                .filter(x -> x.getValue().connectedPOIs.isEmpty())
                 .forEach(x -> x.setValue(new WaveCell(x.getKey(),new LinkedHashSet<>())));
         return check;
     }

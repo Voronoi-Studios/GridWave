@@ -23,7 +23,6 @@ import java.util.stream.Stream;
 public class GridWavePropDistribution extends PropDistribution {
     private static final ConcurrentHashMap<String, ConcurrentHashMap<Vector3i, SectionData>> cacheRegistry = new ConcurrentHashMap<>();
 
-    @Nonnull private final ConcurrentHashMap<Vector3i, SectionData> sectionCache;
     @Nonnull private final PositionProvider positionProvider;
     @Nonnull private final List<TileSet.TileEntry> poiTileEntries;
     @Nonnull private final List<TileSet.TileEntry> baseTileEntries;
@@ -40,14 +39,15 @@ public class GridWavePropDistribution extends PropDistribution {
             @Nonnull List<TileSet.TileEntry> fancyTileEntries,
             @Nonnull TileSetAsset.Argument argument)
     {
-        this.sectionCache = cacheRegistry.computeIfAbsent(argument.seedBox.toString(),_ -> new ConcurrentHashMap<>());
         this.positionProvider = positionProvider;
         this.poiTileEntries = poiTileEntries;
         this.baseTileEntries = baseTileEntries;
         this.fancyTileEntries = fancyTileEntries;
         this.argument = argument;
 
-        sectionSize = 50; //get from features
+        cacheRegistry.keySet().removeIf(key -> key.equals(argument.seedBox.toString()));
+
+        sectionSize = 11*20; //get from features
         cacheSize = 500; //get from features
 
         if (!(sectionSize > 0 && cacheSize >= 0)) throw new IllegalArgumentException();
@@ -70,28 +70,26 @@ public class GridWavePropDistribution extends PropDistribution {
         Vector3i boundsMin = context.bounds.min.toVector3i();
         Vector3i boundsMax = context.bounds.max.toVector3i();
 
+        ConcurrentHashMap<Vector3i, SectionData> sectionCache = cacheRegistry.computeIfAbsent(argument.seedBox.toString(),k -> new ConcurrentHashMap<>());
+
         for(int x = boundsMin.x; x <= boundsMax.x; x++){
-            for(int z = boundsMin.x; z <= boundsMax.x; z++){
-                for(int y = boundsMin.y; y <= boundsMax.x; y++){
+            for(int z = boundsMin.z; z <= boundsMax.z; z++){
+                for(int y = boundsMin.y; y <= boundsMax.y; y++){
                     if (control.stop) break;
                     Vector3d pos = new Vector3d(x,y,z);
-                    Prop prop = getActualProp(pos);
+                    Prop prop = getActualProp(pos, sectionCache);
+                    if(prop == EmptyProp.INSTANCE) continue;
                     context.pipe.accept(pos, prop, control);
                 }
             }
         }
     }
 
-    private Prop getActualProp(Vector3d pos) {
+    private Prop getActualProp(Vector3d pos, ConcurrentHashMap<Vector3i, SectionData> sectionCache) {
         Vector3i sectionAddress = sectionAddress(pos);
-        if(!sectionCache.containsKey(sectionAddress)) sectionCache.put(sectionAddress, solveSection(sectionAddress));
-
-        SectionData sectionData = sectionCache.get(sectionAddress);
-        if (sectionData == null) return EmptyProp.INSTANCE;
-
+        SectionData sectionData = sectionCache.computeIfAbsent(sectionAddress, k -> solveSection(sectionAddress));
         var entry = sectionData.getEntry(pos);
         if (entry == null || entry.propFunction == null) return EmptyProp.INSTANCE;
-
         return entry.propFunction.apply(argument);
     }
 
@@ -108,15 +106,15 @@ public class GridWavePropDistribution extends PropDistribution {
     }
 
     private SectionData solveSection(Vector3i sectionAddress) {
-        Bounds3d bounds = new Bounds3d(sectionAddress.toVector3d(), sectionMax(sectionAddress));
-        List<Vector3d> gridPositions = GridWave.getPositions(positionProvider, bounds, argument.algoAsset.getMaxPositionsCount());
-        List<GridTile> gridTiles = GridWave.solve(gridPositions, poiTileEntries, baseTileEntries, fancyTileEntries, argument);
-        return sectionCache.putIfAbsent(sectionAddress, new SectionData(gridTiles));
+        Bounds3d bounds = new Bounds3d(sectionAddress.clone().scale(this.sectionSize).toVector3d(), sectionMax(sectionAddress.clone().scale(this.sectionSize)));
+        List<Vector3d> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
+        List<GridTile> gridTiles = GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, this.argument);
+        return new SectionData(gridTiles);
     }
 
     @Nonnull
     private Vector3d sectionMax(@Nonnull Vector3i sectionAddress) { //floor from sectionAddress
-        Vector3d max = sectionAddress.toVector3d();
+        Vector3d max = sectionAddress.clone().toVector3d();
         max.x = max.x + this.sectionSize;
         max.y = max.y + this.sectionSize;
         max.z = max.z + this.sectionSize;

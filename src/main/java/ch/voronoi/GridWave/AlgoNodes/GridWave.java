@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.*;
+import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
@@ -13,7 +14,6 @@ import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
-import ch.voronoi.GridWave.FeatureNodes.MultithreadingAsset;
 import ch.voronoi.GridWave.FeatureNodes.OverlapTileAsset;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
 import ch.voronoi.GridWave.TileNodes.TileSet;
@@ -52,11 +52,9 @@ public class GridWave {
      * =========================================================== */
     public static @NonNull List<GridTile> solve(List<Vector3d> gridPositions, List<TileSet.TileEntry> poiTileEntries, List<TileSet.TileEntry> baseTileEntries, List<TileSet.TileEntry> fancyTileEntries, TileSetAsset.Argument argument) {
         WFCResult wfcResult = new WFCResult();
-
         var baseWave = getBaseWave(gridPositions, poiTileEntries, baseTileEntries, argument);
         var wfcWave = performWFC(baseWave, argument,false,null,0, wfcResult);
         var fancyWave = placeFancyTiles(wfcWave, fancyTileEntries, argument);
-
         List<GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 
         DebugUtils.sendDebugLog(gridTiles, argument, wfcResult);
@@ -68,7 +66,6 @@ public class GridWave {
         AtomicReference<List<GridTile>> winnerGridTiles = winnerGridTilesMap.computeIfAbsent(argument.seedBox.toString(), k -> new AtomicReference<>());
         AtomicReference<Winner> winner = winnerMap.computeIfAbsent(argument.seedBox.toString(), k -> new AtomicReference<>(null));
         AtomicInteger participants = participantTracker.computeIfAbsent(argument.seedBox.toString(), k -> new AtomicInteger());
-
         int participantNumber = participants.incrementAndGet();
 
         if(participantNumber == 1){ //I'm the first so lets restart the race.
@@ -77,15 +74,13 @@ public class GridWave {
         }
 
         WFCResult wfcResult = new WFCResult();
-
         var baseWave = getBaseWave(gridPositions, poiTileEntries, baseTileEntries, argument);
         var wfcWave = performWFC(baseWave, argument,true, winner, participantNumber, wfcResult);
         var fancyWave = placeFancyTiles(wfcWave, fancyTileEntries, argument);
-
         List<GridTile> gridTiles = new ArrayList<>(fancyWave.values().stream().map(WaveCell::getChosen).toList());
 
         Winner winnerData = new Winner(participantNumber, wfcResult);
-        if (winner.get() == null && winnerGridTiles.compareAndSet(null, new LinkedList<>(gridTiles)))
+        if (winner.get() == null && winnerGridTiles.compareAndSet(null,gridTiles))
             winner.set(winnerData);
         else if(participantNumber == 1) winner.set(winnerData);
 
@@ -133,6 +128,8 @@ public class GridWave {
         return baseWave;
     }
 
+
+
     /*===========================================================
     *                     PERFORM WFC
     * =========================================================== */
@@ -150,8 +147,23 @@ public class GridWave {
         SeedBox attemptSeedBox = null;
 
         AttemptBehavior attemptBehavior = new AttemptBehavior(10, 5000,baseWave.size());
-
         featureAssets.forEach(feature -> feature.BeforeWFC(attemptBehavior, argument));
+
+        //Default Greedy Lowest Entropy
+        AtomicReference<CellSelector> cellSelectorRef = new AtomicReference<>(new CellSelector() {
+            @Override
+            public CellSelectiorResult select(Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
+                Optional<WaveCell> lowestEntropyCell = wave.values().stream().filter(waveCell -> !waveCell.isCollapsed()).min(Comparator.comparingInt(WaveCell::getEntropy));
+                if (lowestEntropyCell.isPresent() && lowestEntropyCell.get().getEntropy() == 0) {
+                    if (backtracksCount > attemptBehavior.maxBacktracks) return new CellSelectiorResult(null, EarlyExitReason.MAX_BACKTRACKS_HIT);
+                    else return Backtrack(stack, wave);
+                }
+                return new CellSelectiorResult(lowestEntropyCell.orElse(null), null);
+            }
+        });
+        featureAssets.forEach(feature -> feature.ReplaceCellSelector(cellSelectorRef, argument));
+
+        CellSelector cellSelector = cellSelectorRef.get();
 
         boolean replaced = featureAssets.stream().anyMatch(feature -> feature.WFCReplacer(baseWave, argument));
         if(!replaced) {
@@ -162,7 +174,7 @@ public class GridWave {
                 wave = baseWave.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey,e -> new WaveCell(e.getValue()), (a, b) -> a, LinkedHashMap::new));
 
                 Deque<WaveCellChange> stack = new ArrayDeque<>();
-                sucess = true;
+                sucess = false;
 
                 backtracksCount = 0;
                 int collapsedCount = 0;
@@ -170,42 +182,21 @@ public class GridWave {
                 while (collapsedCount < attemptBehavior.maxCollapsedCount) {
                     if(multithreading && winner.get() != null) break; //Give up LOOSER!
 
-                    //Find cell with the lowest entropy
-                    WaveCell lowestEntropyCell = null;
-                    int minEntropyCell = Integer.MAX_VALUE;
-
-                    for (WaveCell waveCell : wave.values()) {
-                        if (waveCell.isCollapsed()) continue;
-                        int entropy = waveCell.getEntropy();
-                        if (entropy == 0) { //Dead End
-                            if(backtracksCount > attemptBehavior.maxBacktracks) { lowestEntropyCell = null; sucess = false; break; }
-                            WaveCellChange change = null;
-                            for (int i = 0; i < 5 && !stack.isEmpty(); i++) {
-                                change = stack.pop();
-                                if (change.cell() != null) wave.put(change.pos(), change.cell());
-                            }
-                            backtracksCount++;
-                            collapsedCount--;
-                            sucess = false; break;
-                        }
-                        if (entropy < minEntropyCell) {
-                            minEntropyCell = entropy;
-                            lowestEntropyCell = waveCell;
-                        }
-                    }
-
-                    if (lowestEntropyCell == null) break; //No collapsible cell found, either finished or failed
-                    if (!sucess) { sucess = true; continue; }
+                    CellSelectiorResult result = cellSelector.select(wave, stack, attemptBehavior, backtracksCount, randomSupplier);
+                    WaveCell selectedCell = result.selectedCell();
+                    if (result.earlyExitReason() == EarlyExitReason.BACKTRACKED) { backtracksCount += 1; collapsedCount -= 1; continue; }
+                    if (result.earlyExitReason() == EarlyExitReason.MAX_BACKTRACKS_HIT){ break; } //Failed
+                    if (selectedCell == null) { sucess = true; break; } //finished
 
                     //Collapse
-                    var waveCellChange = new WaveCellChange(lowestEntropyCell.getPosition(), lowestEntropyCell);
-                    lowestEntropyCell.collapse(randomSupplier);
-                    waveCellChange.cell().possible.remove(lowestEntropyCell.getChosen().tileEntry());
+                    var waveCellChange = new WaveCellChange(selectedCell.getPosition(), new WaveCell(selectedCell));
+                    selectedCell.collapse(randomSupplier, wave, argument);
+                    waveCellChange.cell().possible.remove(selectedCell.getChosen().tileEntry()); //We remove the choosen one so if we backtrack its not tried again
                     stack.push(waveCellChange);
                     collapsedCount++;
 
                     //Propagate to neighbors
-                    propagate(lowestEntropyCell, wave, stack, argument);
+                    propagate(selectedCell, wave, stack, argument);
                 }
                 if(sucess) {
                     Map<Vector3i, WaveCell> finalWave = wave;
@@ -221,7 +212,6 @@ public class GridWave {
         wfcResult.success = sucess;
         return wave;
     }
-
 
     /*===========================================================
     *                     PROPAGATION & MATCHING
