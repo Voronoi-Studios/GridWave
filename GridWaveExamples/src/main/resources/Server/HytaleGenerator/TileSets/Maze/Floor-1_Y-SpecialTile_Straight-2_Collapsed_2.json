@@ -1,25 +1,30 @@
 {
-	"$NodeId":	"Multi.TileSet.WFC-63380fdd-121e-41b5-868d-2192c6042a72",
+	"$NodeId":	"Multi.TileSet.GridWave-63380fdd-121e-41b5-868d-2192c6042a72",
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_2",
 	"RuleSets":	[{
-			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-6fc92689-2e79-49b3-b344-405cafa3ecf9",
-			"N":	"0",
-			"S":	"0",
-			"W":	"1"
+			"$NodeId":	"Simple2D.RuleSet.GridWave-6fc92689-2e79-49b3-b344-405cafa3ecf9",
+			"Type":	"Simple2D",
+			"RuleSet":	{
+				"N":	"0",
+				"S":	"0",
+				"W":	"1"
+			}
 		}, {
-			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-1b2eb634-0ec1-494e-9d72-168da031eb79",
-			"N":	"0",
-			"E":	"1",
-			"S":	"0"
+			"$NodeId":	"Simple2D.RuleSet.GridWave-1b2eb634-0ec1-494e-9d72-168da031eb79",
+			"Type":	"Simple2D",
+			"RuleSet":	{
+				"N":	"0",
+				"E":	"1",
+				"S":	"0"
+			}
 		}],
-	"PrefabPath": "Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-2_Collapsed_2.prefab.json",
+	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-2_Collapsed_2.prefab.json",
 	"SizeZ":	1,
 	"Weight":	1,
-	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
-			"Multi.TileSet.WFC-63380fdd-121e-41b5-868d-2192c6042a72":	{
+			"Multi.TileSet.GridWave-63380fdd-121e-41b5-868d-2192c6042a72":	{
 				"$Position":	{
 					"$x":	1830,
 					"$y":	19
@@ -36,12 +41,6 @@
 				"$Position":	{
 					"$x":	3233,
 					"$y":	-69
-				}
-			},
-			"CWeightedPath.CPrefab.Prop-3bed3ebe-2665-4456-b31e-468308755c49":	{
-				"$Position":	{
-					"$x":	2732,
-					"$y":	158
 				}
 			}
 		},

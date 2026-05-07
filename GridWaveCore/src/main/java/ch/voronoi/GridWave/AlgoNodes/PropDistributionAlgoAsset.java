@@ -33,7 +33,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
             .append(new KeyedCodec<>("Grid", Vector3i.CODEC, true), (asset, v) -> asset.grid = v, asset -> asset.grid)
             .add()
             .append(new KeyedCodec<>("POIs", TileSetCollectionAsset.CODEC, true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
-            .addValidator(new POIValidator())
+            //.addValidator(new POIValidator())
             .add()
             .append(new KeyedCodec<>("BaseTiles", TileSetCollectionAsset.CODEC, true), (asset, v) -> asset.baseTileSetAssets = v, asset -> asset.baseTileSetAssets)
             .add()

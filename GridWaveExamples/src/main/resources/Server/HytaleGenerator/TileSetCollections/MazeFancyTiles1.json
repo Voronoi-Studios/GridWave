@@ -1,0 +1,83 @@
+{
+	"$NodeId":	"Simple.TileSetCollection.GridWave-a205f75b-d31d-456f-b216-1a522843a370",
+	"Type":	"Simple",
+	"TileSets":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-59df0e03-7b90-4241-8591-07a997a28384",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Corner-Straight-Corner_Collapsed_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.GridWave-bb7af3d3-fa5b-43cd-ab2a-1a06600bb513",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.GridWave-09c21eae-a1fb-4b20-a5ed-9328b9366b88",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_2"
+		}, {
+			"$NodeId":	"Imported.TileSet.GridWave-6a3c6a73-346d-424e-81de-09f8bb16bc44",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-4_Spiral_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.GridWave-50af1ea1-7fd0-4981-a44e-082189d8459c",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Room2x2_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.GridWave-da0b714a-28f9-4033-8d06-03619061fe5c",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Room2x2_2"
+		}],
+	"ExportAs":	"MazeFancyTiles1",
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Simple.TileSetCollection.GridWave-a205f75b-d31d-456f-b216-1a522843a370":	{
+				"$Position":	{
+					"$x":	3160,
+					"$y":	1319
+				},
+				"$Title":	"[ROOT] TileSet Collection"
+			},
+			"Imported.TileSet.GridWave-59df0e03-7b90-4241-8591-07a997a28384":	{
+				"$Position":	{
+					"$x":	3935,
+					"$y":	1098
+				}
+			},
+			"Imported.TileSet.GridWave-bb7af3d3-fa5b-43cd-ab2a-1a06600bb513":	{
+				"$Position":	{
+					"$x":	3946,
+					"$y":	1229
+				}
+			},
+			"Imported.TileSet.GridWave-09c21eae-a1fb-4b20-a5ed-9328b9366b88":	{
+				"$Position":	{
+					"$x":	3947,
+					"$y":	1362
+				}
+			},
+			"Imported.TileSet.GridWave-6a3c6a73-346d-424e-81de-09f8bb16bc44":	{
+				"$Position":	{
+					"$x":	3948,
+					"$y":	1485
+				}
+			},
+			"Imported.TileSet.GridWave-50af1ea1-7fd0-4981-a44e-082189d8459c":	{
+				"$Position":	{
+					"$x":	3948,
+					"$y":	1619
+				}
+			},
+			"Imported.TileSet.GridWave-da0b714a-28f9-4033-8d06-03619061fe5c":	{
+				"$Position":	{
+					"$x":	3941,
+					"$y":	1746
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - TileSetCollections"
+	}
+}

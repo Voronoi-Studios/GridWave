@@ -38,7 +38,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
             .append(new KeyedCodec<>("Bounds", DecimalBounds3dAsset.CODEC, true), (asset, v) -> asset.decimalBounds3dAsset = v, asset -> asset.decimalBounds3dAsset)
             .add()
             .append(new KeyedCodec<>("POIs", TileSetCollectionAsset.CODEC, true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
-            .addValidator(new POIValidator())
+            //.addValidator(new POIValidator())
             .add()
             .append(new KeyedCodec<>("BaseTiles", TileSetCollectionAsset.CODEC, true), (asset, v) -> asset.baseTileSetAssets = v, asset -> asset.baseTileSetAssets)
             .add()
