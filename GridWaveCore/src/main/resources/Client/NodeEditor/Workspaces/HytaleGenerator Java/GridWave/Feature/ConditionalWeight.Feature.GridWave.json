@@ -1,0 +1,76 @@
+{
+  "Id": "ConditionalWeight.Feature.GridWave",
+  "Title": "Conditional Weight Feature",
+  "Description": "A feature that applies a weight based on a conditional check",
+  "Color": "150,180,129",
+  "Content": [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default": false
+      }
+    },
+    {
+      "Id": "Value1Source",
+      "Type": "Enum",
+      "Options": {
+        "Label": "Value 1 Source",
+        "Default": "CollapsedPercentage",
+        "Values": [
+          "CollapsedPercentage"
+        ],
+        "Width" : 250
+      }
+    },
+    {
+      "Id": "ComparisonType",
+      "Type": "Enum",
+      "Options": {
+        "Label": "Comparison",
+        "Default": "Greater",
+        "Values": [
+          "GreaterOrEqual",
+          "Greater",
+          "LessOrEqual",
+          "Less",
+          "Equal"
+        ],
+        "Width" : 250
+      }
+    },
+    {
+      "Id": "Value2",
+      "Type": "Float",
+      "Options": {
+        "Label": "Value 2",
+        "Default": 0.0
+      }
+    },
+    {
+      "Id": "WeightIfTrue",
+      "Type": "Float",
+      "Options": {
+        "Label": "Weight If True",
+        "Default": 1.0
+      }
+    }
+  ],
+  "Outputs": [],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type": "ConditionalWeight",
+    "Skip": "Skip",
+    "Value1Source": "Value1Source",
+    "ComparisonType": "ComparisonType",
+    "Value2": "Value2",
+    "WeightIfTrue": "WeightIfTrue"
+  }
+}

@@ -1,0 +1,85 @@
+{
+	"$NodeId":	"Multi.TileSet.WFC-8dd96ef3-a81e-42a4-b929-cccc8ab0984e",
+	"Type":	"Multi",
+	"ExportAs":	"Floor-1_Y-SpecialTile_Room2x2_2",
+	"RuleSets":	[{
+			"$NodeId":	"Simple2D.RuleSet.GridWave-f0d59443-a4eb-4015-9fa3-994ca30f13ca",
+			"Type":	"Simple2D",
+			"N":	"0",
+			"E":	"0",
+			"S":	"",
+			"W":	""
+		}, {
+			"$NodeId":	"Simple2D.RuleSet.GridWave-70a00ae8-574b-4fba-938c-5f471b48e9f0",
+			"Type":	"Simple2D",
+			"N":	"",
+			"E":	"0",
+			"S":	"0",
+			"W":	""
+		}, {
+			"$NodeId":	"Simple2D.RuleSet.GridWave-9bb584a7-2140-4a0f-a5fb-8673f9d4862c",
+			"Type":	"Simple2D",
+			"N":	"0",
+			"E":	"",
+			"S":	"",
+			"W":	"0"
+		}, {
+			"$NodeId":	"Simple2D.RuleSet.GridWave-af0f9ee9-5313-43c2-94bb-7ec98d78f6b1",
+			"Type":	"Simple2D",
+			"N":	"",
+			"E":	"",
+			"S":	"1",
+			"W":	"0"
+		}],
+	"PrefabPath": "Maze/FancyTiles/Floor-1_Y-SpecialTile_Room2x2_2.prefab.json",
+	"SizeZ":	2,
+	"Weight":	1,
+	"MinimizeVariants":	true,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Multi.TileSet.WFC-8dd96ef3-a81e-42a4-b929-cccc8ab0984e":	{
+				"$Position":	{
+					"$x":	2058,
+					"$y":	-808
+				},
+				"$Title":	"[ROOT] WFC Multi TileSet"
+			},
+			"Simple2D.RuleSet.GridWave-9bb584a7-2140-4a0f-a5fb-8673f9d4862c":	{
+				"$Position":	{
+					"$x":	2917,
+					"$y":	-723
+				}
+			},
+			"Simple2D.RuleSet.GridWave-af0f9ee9-5313-43c2-94bb-7ec98d78f6b1":	{
+				"$Position":	{
+					"$x":	3425,
+					"$y":	-719
+				}
+			},
+			"Simple2D.RuleSet.GridWave-f0d59443-a4eb-4015-9fa3-994ca30f13ca":	{
+				"$Position":	{
+					"$x":	2921,
+					"$y":	-955
+				}
+			},
+			"Simple2D.RuleSet.GridWave-70a00ae8-574b-4fba-938c-5f471b48e9f0":	{
+				"$Position":	{
+					"$x":	3427,
+					"$y":	-950
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-41be66aa-3695-40f3-a71d-79b82729f7ab":	{
+				"$Position":	{
+					"$x":	2915,
+					"$y":	-461
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - TileSets"
+	}
+}

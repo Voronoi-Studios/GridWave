@@ -1,0 +1,77 @@
+{
+	"$NodeId":	"Biome-8ed95326-1e58-4740-9216-17f675eaa806",
+	"Name":	"",
+	"Props":	[{
+			"$NodeId":	"Runtime-58d28ee3-3e98-44f9-b23a-179e395ceaf0",
+			"Skip":	false,
+			"Runtime":	0,
+			"PropDistribution":	{
+				"$NodeId":	"Constant.PropDistribution-3919fcd5-3c96-4140-a75c-e651cec02bca",
+				"Type":	"Constant",
+				"Positions":	{
+					"$NodeId":	"ListPositions-b43833c8-7e36-4829-b15f-ad5b2157b7d1",
+					"Type":	"List",
+					"Skip":	false,
+					"Positions":	[{
+							"$NodeId":	"Point3D-5c557b09-af09-4a52-98c6-4738f2bf6bfb",
+							"X":	0,
+							"Y":	90,
+							"Z":	0
+						}]
+				},
+				"Prop":	{
+					"$NodeId":	"Imported.Prop-73fcbc90-6f39-4e30-b551-0e512fe9b25f",
+					"Type":	"Imported",
+					"Name":	"Maze20x20",
+					"Skip":	false
+				}
+			}
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
+				"$Position":	{
+					"$x":	-4994,
+					"$y":	-4100
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Runtime-58d28ee3-3e98-44f9-b23a-179e395ceaf0":	{
+				"$Position":	{
+					"$x":	-4309,
+					"$y":	-4021
+				}
+			},
+			"Constant.PropDistribution-3919fcd5-3c96-4140-a75c-e651cec02bca":	{
+				"$Position":	{
+					"$x":	-3613,
+					"$y":	-3940
+				}
+			},
+			"ListPositions-b43833c8-7e36-4829-b15f-ad5b2157b7d1":	{
+				"$Position":	{
+					"$x":	-3613,
+					"$y":	-3789
+				}
+			},
+			"Point3D-5c557b09-af09-4a52-98c6-4738f2bf6bfb":	{
+				"$Position":	{
+					"$x":	-3377,
+					"$y":	-3638
+				}
+			},
+			"Imported.Prop-73fcbc90-6f39-4e30-b551-0e512fe9b25f":	{
+				"$Position":	{
+					"$x":	-2906,
+					"$y":	-3900
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}

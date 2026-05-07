@@ -1,0 +1,379 @@
+{
+	"$NodeId":	"GridWaveProp.WFC-c330b7a7-f0e2-440d-9eb9-196e587cdac7",
+	"Type":	"PropAlgo",
+	"ExportAs":	"Maze20x20",
+	"Skip":	false,
+	"GridPoints":	{
+		"$NodeId":	"GridGen2D.WFC-38d5aef4-2080-42c1-b553-7916f0f5a27b",
+		"Type":	"GridGen2D",
+		"ExportAs":	"",
+		"OffsetX":	16,
+		"OffsetZ":	16,
+		"RepeatX":	20,
+		"RepeatZ":	20,
+		"Centered":	true
+	},
+	"POIs":	[{
+			"$NodeId":	"Fixed.TileSet.WFC-0c1ff02b-dff8-496b-9a5c-d8b3441dda2d",
+			"Type":	"Fixed",
+			"TileSet":	{
+				"$NodeId":	"Imported.TileSet.WFC-133b14d9-f1f4-4152-b2a6-8792dd494a9d",
+				"Type":	"Imported",
+				"Name":	"Floor-1_Z-POI_Room2x2_1"
+			},
+			"Pos":	{
+				"$NodeId":	"Point3D-b381165f-bed0-4858-bdd3-b5bc4bfed1a0",
+				"X":	0,
+				"Y":	0,
+				"Z":	0
+			},
+			"Rot":	"None"
+		}],
+	"BaseTiles":	[{
+			"$NodeId":	"Single.TileSet.GridWave-72315b20-d1bb-4a15-ab80-ec1941b11008",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-5b28a421-9fe0-4a6a-ae06-17b13857a053",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "0",
+    "E": "0",
+    "S": "0",
+    "W": "0"
+}},
+			"WeightedPrefabPaths":	[],
+			"Weight":	1,
+			"MinimizeVariants":	false
+		}, {
+			"$NodeId":	"Single.TileSet.GridWave-bff10fb2-0f15-46f3-845e-68debbea2758",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-495fcd57-ee32-4147-a411-ef1dd9082ee8",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "0",
+    "E": "0",
+    "S": "1",
+    "W": "1"
+}},
+			"PrefabPath": "Maze/BaseTiles/Corner",
+			"Weight":	0.8,
+			"MinimizeVariants":	true
+		}, {
+			"$NodeId":	"Single.TileSet.GridWave-89c313ff-1542-46fa-8ff3-f3f0ac23cb38",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-b9fe2d37-c8f5-4c8a-9913-46b6b058e35c",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "1",
+    "E": "0",
+    "S": "1",
+    "W": "0"
+}},
+			"PrefabPath": "Maze/BaseTiles/Straight",
+			"Weight":	3,
+			"MinimizeVariants":	true
+		}, {
+			"$NodeId":	"Single.TileSet.GridWave-9b78bf2e-465e-453f-85a3-5468a0af35ee",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-90c83e9a-5fb6-410e-88ed-64a431abde44",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "1",
+    "E": "0",
+    "S": "1",
+    "W": "1"
+}},
+			"PrefabPath": "Maze/BaseTiles/Junction",
+			"Weight":	0.4,
+			"MinimizeVariants":	true
+		}, {
+			"$NodeId":	"Single.TileSet.GridWave-fa4a25d2-8e99-415e-9354-5043870d8cfe",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-ca714aa8-eb97-4a44-a3bc-247fde43d270",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "1",
+    "E": "1",
+    "S": "1",
+    "W": "1"
+}},
+			"PrefabPath": "Maze/BaseTiles/Cross",
+			"Weight":	1,
+			"MinimizeVariants":	true
+		}, {
+			"$NodeId":	"Single.TileSet.GridWave-028bce47-1cf0-4d45-82eb-a25027cbcd74",
+			"Type":	"Single",
+			"RuleSet":	{
+				"$NodeId":	"Simple2D.RuleSet.GridWave-e8d65e7e-6061-4948-959c-5c9eeaaaa00c",
+				"Type": "Simple2D",
+"RuleSet": {
+    "N": "1",
+    "E": "0",
+    "S": "0",
+    "W": "0"
+}},
+			"PrefabPath": "Maze/BaseTiles/DeadEnd",
+			"Weight":	0.2,
+			"MinimizeVariants":	true
+		}],
+	"FancyTiles":	[{
+			"$NodeId":	"Imported.TileSet.WFC-3b21193e-3f03-4c33-8c19-3bfc6856da99",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Corner-Straight-Corner_Collapsed_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.WFC-3bdd860a-668c-4853-ba51-24b827463d8a",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.WFC-7490b813-46f3-4d76-839c-b3b19c4e1c05",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_2"
+		}, {
+			"$NodeId":	"Imported.TileSet.WFC-726eccc7-f56c-4e97-82b6-e45e7667a562",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Straight-4_Spiral_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.WFC-67de64b8-fb19-4f62-bb8a-57b4b747345b",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Room2x2_1"
+		}, {
+			"$NodeId":	"Imported.TileSet.WFC-2a7f329b-10f9-4589-b668-1235c7265603",
+			"Type":	"Imported",
+			"Name":	"Floor-1_Y-SpecialTile_Room2x2_2"
+		}],
+	"BorderRuleSet":	{
+		"$NodeId":	"Simple2D.RuleSet.GridWave-6a394fcd-d869-437b-8321-a9db0f898dd1",
+		"Type": "Simple2D",
+"RuleSet": {
+    "N": "0",
+    "E": "0",
+    "S": "0",
+    "W": "0"
+}},
+	"Seed":	{
+		"$NodeId":	"Constant.Seed.WFC-fc375078-4d5b-45ae-b7d8-21ce0db6a223",
+		"Type":	"Constant",
+		"Seed":	"SomeSeed"
+	},
+	"MaxPositionsCount":	10000,
+	"MaxAttempts":	200,
+	"MaxBacktracks":	100,
+	"PathKey":	"1",
+	"Multithreading":	false,
+	"Debug":	false,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"GridWaveProp.WFC-c330b7a7-f0e2-440d-9eb9-196e587cdac7":	{
+				"$Position":	{
+					"$x":	3441,
+					"$y":	37
+				},
+				"$Title":	"[ROOT] Wave Function Collapse Algorithm"
+			},
+			"GridGen2D.WFC-38d5aef4-2080-42c1-b553-7916f0f5a27b":	{
+				"$Position":	{
+					"$x":	3445,
+					"$y":	-290
+				}
+			},
+			"Fixed.TileSet.WFC-0c1ff02b-dff8-496b-9a5c-d8b3441dda2d":	{
+				"$Position":	{
+					"$x":	4460,
+					"$y":	-630
+				}
+			},
+			"Imported.TileSet.WFC-133b14d9-f1f4-4152-b2a6-8792dd494a9d":	{
+				"$Position":	{
+					"$x":	5134,
+					"$y":	-650
+				}
+			},
+			"Point3D-b381165f-bed0-4858-bdd3-b5bc4bfed1a0":	{
+				"$Position":	{
+					"$x":	5138,
+					"$y":	-532
+				}
+			},
+			"Single.TileSet.GridWave-72315b20-d1bb-4a15-ab80-ec1941b11008":	{
+				"$Position":	{
+					"$x":	4455,
+					"$y":	-260
+				}
+			},
+			"Simple2D.RuleSet.GridWave-5b28a421-9fe0-4a6a-ae06-17b13857a053":	{
+				"$Position":	{
+					"$x":	5177,
+					"$y":	-267
+				}
+			},
+			"Single.TileSet.GridWave-bff10fb2-0f15-46f3-845e-68debbea2758":	{
+				"$Position":	{
+					"$x":	4455,
+					"$y":	-25
+				}
+			},
+			"Simple2D.RuleSet.GridWave-495fcd57-ee32-4147-a411-ef1dd9082ee8":	{
+				"$Position":	{
+					"$x":	5176,
+					"$y":	-31
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-7d8fbe86-ec72-4c27-bc00-9aa4bd3690f9":	{
+				"$Position":	{
+					"$x":	5687,
+					"$y":	-58
+				}
+			},
+			"Single.TileSet.GridWave-89c313ff-1542-46fa-8ff3-f3f0ac23cb38":	{
+				"$Position":	{
+					"$x":	4449,
+					"$y":	211
+				}
+			},
+			"Simple2D.RuleSet.GridWave-b9fe2d37-c8f5-4c8a-9913-46b6b058e35c":	{
+				"$Position":	{
+					"$x":	5173,
+					"$y":	207
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-97e59de7-193c-46b3-a8b4-a6160b42645f":	{
+				"$Position":	{
+					"$x":	5666,
+					"$y":	213
+				}
+			},
+			"Single.TileSet.GridWave-9b78bf2e-465e-453f-85a3-5468a0af35ee":	{
+				"$Position":	{
+					"$x":	4447,
+					"$y":	450
+				}
+			},
+			"Simple2D.RuleSet.GridWave-90c83e9a-5fb6-410e-88ed-64a431abde44":	{
+				"$Position":	{
+					"$x":	5164,
+					"$y":	452
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-6154542f-3380-4f2d-9dd4-a34fd590187b":	{
+				"$Position":	{
+					"$x":	5660,
+					"$y":	455
+				}
+			},
+			"Single.TileSet.GridWave-fa4a25d2-8e99-415e-9354-5043870d8cfe":	{
+				"$Position":	{
+					"$x":	4455,
+					"$y":	692
+				}
+			},
+			"Simple2D.RuleSet.GridWave-ca714aa8-eb97-4a44-a3bc-247fde43d270":	{
+				"$Position":	{
+					"$x":	5166,
+					"$y":	691
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-28647e6d-b2a8-4358-bea7-fad968293a72":	{
+				"$Position":	{
+					"$x":	5657,
+					"$y":	699
+				}
+			},
+			"Single.TileSet.GridWave-028bce47-1cf0-4d45-82eb-a25027cbcd74":	{
+				"$Position":	{
+					"$x":	4455,
+					"$y":	928
+				}
+			},
+			"Simple2D.RuleSet.GridWave-e8d65e7e-6061-4948-959c-5c9eeaaaa00c":	{
+				"$Position":	{
+					"$x":	5170,
+					"$y":	927
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-5105b579-f914-4fd6-aafc-e2b22c20ca06":	{
+				"$Position":	{
+					"$x":	5666,
+					"$y":	936
+				}
+			},
+			"Imported.TileSet.WFC-3b21193e-3f03-4c33-8c19-3bfc6856da99":	{
+				"$Position":	{
+					"$x":	7012,
+					"$y":	504
+				}
+			},
+			"Imported.TileSet.WFC-3bdd860a-668c-4853-ba51-24b827463d8a":	{
+				"$Position":	{
+					"$x":	7008,
+					"$y":	626
+				}
+			},
+			"Imported.TileSet.WFC-7490b813-46f3-4d76-839c-b3b19c4e1c05":	{
+				"$Position":	{
+					"$x":	7007,
+					"$y":	758
+				}
+			},
+			"Imported.TileSet.WFC-726eccc7-f56c-4e97-82b6-e45e7667a562":	{
+				"$Position":	{
+					"$x":	7006,
+					"$y":	887
+				}
+			},
+			"Imported.TileSet.WFC-67de64b8-fb19-4f62-bb8a-57b4b747345b":	{
+				"$Position":	{
+					"$x":	7004,
+					"$y":	1012
+				}
+			},
+			"Imported.TileSet.WFC-2a7f329b-10f9-4589-b668-1235c7265603":	{
+				"$Position":	{
+					"$x":	7006,
+					"$y":	1141
+				}
+			},
+			"Simple2D.RuleSet.GridWave-6a394fcd-d869-437b-8321-a9db0f898dd1":	{
+				"$Position":	{
+					"$x":	3445,
+					"$y":	474
+				}
+			},
+			"Constant.Seed.WFC-fc375078-4d5b-45ae-b7d8-21ce0db6a223":	{
+				"$Position":	{
+					"$x":	3447,
+					"$y":	708
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+			"c4c2748e-6eaa-4b1d-b294-3daea409541c":	{
+				"$Position":	{
+					"$x":	6687,
+					"$y":	1143
+				},
+				"inputConnections":	["link:2d0b1ca8-672f-4a4e-aaea-89a66666ef21"],
+				"outputConnections":	["Imported.TileSet.WFC-3b21193e-3f03-4c33-8c19-3bfc6856da99:OutputPin", "Imported.TileSet.WFC-3bdd860a-668c-4853-ba51-24b827463d8a:OutputPin", "Imported.TileSet.WFC-7490b813-46f3-4d76-839c-b3b19c4e1c05:OutputPin", "Imported.TileSet.WFC-726eccc7-f56c-4e97-82b6-e45e7667a562:OutputPin", "Imported.TileSet.WFC-67de64b8-fb19-4f62-bb8a-57b4b747345b:OutputPin", "Imported.TileSet.WFC-2a7f329b-10f9-4589-b668-1235c7265603:OutputPin"],
+				"sourceEndpoint":	"GridWaveProp.WFC-c330b7a7-f0e2-440d-9eb9-196e587cdac7:FancyTiles",
+				"targetEndpoint":	"Imported.TileSet.WFC-3b21193e-3f03-4c33-8c19-3bfc6856da99:OutputPin"
+			},
+			"2d0b1ca8-672f-4a4e-aaea-89a66666ef21":	{
+				"$Position":	{
+					"$x":	4446,
+					"$y":	1141
+				},
+				"inputConnections":	["GridWaveProp.WFC-c330b7a7-f0e2-440d-9eb9-196e587cdac7:FancyTiles"],
+				"outputConnections":	["link:c4c2748e-6eaa-4b1d-b294-3daea409541c"],
+				"sourceEndpoint":	"GridWaveProp.WFC-c330b7a7-f0e2-440d-9eb9-196e587cdac7:FancyTiles",
+				"targetEndpoint":	"Imported.TileSet.WFC-3b21193e-3f03-4c33-8c19-3bfc6856da99:OutputPin"
+			}
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Props"
+	}
+}

@@ -1,0 +1,75 @@
+{
+	"$NodeId":	"Multi.TileSet.WFC-92e829d2-3b47-4467-af46-833aa35a1513",
+	"Type":	"Multi",
+	"ExportAs":	"Floor-1_Y-SpecialTile_Straight-4_Spiral_1",
+	"RuleSets":	[{
+			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-68353a21-a03d-44e2-8e58-b22cf0597288",
+			"N":	"1",
+			"E":	"0",
+			"W":	"0"
+		}, {
+			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-4bf640ee-8dd2-46dc-b279-0354cc613a30",
+			"E":	"0",
+			"W":	"0"
+		}, {
+			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-5476e894-eeb6-4f73-a1c0-4baa2376c1af",
+			"E":	"0",
+			"W":	"0"
+		}, {
+			"Type": "Simple2D", "$NodeId":	"Simple2D.RuleSet.GridWave-64a7c5c9-0232-4338-acd4-e0ad11b7af30",
+			"E":	"0",
+			"S":	"1",
+			"W":	"0"
+		}],
+	"PrefabPath": "Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-4_Spiral_1.prefab.json",
+	"SizeZ":	4,
+	"Weight":	1,
+	"MinimizeVariants":	true,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Multi.TileSet.WFC-92e829d2-3b47-4467-af46-833aa35a1513":	{
+				"$Position":	{
+					"$x":	2221,
+					"$y":	-316
+				},
+				"$Title":	"[ROOT] WFC Multi TileSet"
+			},
+			"Simple2D.RuleSet.GridWave-68353a21-a03d-44e2-8e58-b22cf0597288":	{
+				"$Position":	{
+					"$x":	3113,
+					"$y":	-430
+				}
+			},
+			"Simple2D.RuleSet.GridWave-4bf640ee-8dd2-46dc-b279-0354cc613a30":	{
+				"$Position":	{
+					"$x":	3598,
+					"$y":	-411
+				}
+			},
+			"Simple2D.RuleSet.GridWave-5476e894-eeb6-4f73-a1c0-4baa2376c1af":	{
+				"$Position":	{
+					"$x":	4088,
+					"$y":	-392
+				}
+			},
+			"Simple2D.RuleSet.GridWave-64a7c5c9-0232-4338-acd4-e0ad11b7af30":	{
+				"$Position":	{
+					"$x":	4578,
+					"$y":	-364
+				}
+			},
+			"CWeightedPath.CPrefab.Prop-48ab4348-70b6-4420-96cc-92bd0a80b5de":	{
+				"$Position":	{
+					"$x":	3111,
+					"$y":	-161
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - TileSets"
+	}
+}
