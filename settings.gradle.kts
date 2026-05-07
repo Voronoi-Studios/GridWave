@@ -13,3 +13,5 @@ plugins {
 }
 
 rootProject.name = "GridWave"
+include("GridWaveCore")
+include("GridWaveExamples")

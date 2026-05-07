@@ -1,0 +1,55 @@
+{
+  "Id": "Debug.Feature.GridWave",
+  "Title": "Debug Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "DebugGrid",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "DebugGrid",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "LimitSteps",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "LimitSteps",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "MaxSteps",
+      "Type": "Int",
+      "Options": {
+        "Label": "MaxSteps",
+        "Default" : 20
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Debug",
+    "Skip" : "Skip",
+    "DebugGrid" : "DebugGrid",
+    "LimitSteps" : "LimitSteps",
+    "MaxSteps" : "MaxSteps"
+  }
+}

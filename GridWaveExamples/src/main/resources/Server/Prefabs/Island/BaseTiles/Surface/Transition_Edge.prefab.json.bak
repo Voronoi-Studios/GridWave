@@ -1,0 +1,4111 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    {
+      "x": -3,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": -2,
+      "name": "Soil_Gravel_Mossy",
+      "support": 15
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 9,
+      "z": -1,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 9,
+      "z": 2,
+      "name": "Rubble_Stone",
+      "support": 15
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -3,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -3,
+      "y": 8,
+      "z": 3,
+      "name": "Soil_Gravel_Mossy_Half"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": -3,
+      "name": "Soil_Gravel_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 9,
+      "z": -2,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -2,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -2,
+      "y": 8,
+      "z": 3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 9,
+      "z": -2,
+      "name": "Rubble_Stone_Mossy_Medium",
+      "support": 15
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 9,
+      "z": 0,
+      "name": "Rubble_Stone",
+      "support": 15
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": 2,
+      "name": "Soil_Gravel_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": -1,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": -1,
+      "y": 8,
+      "z": 3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": -1,
+      "y": 9,
+      "z": 3,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": -3,
+      "name": "Soil_Gravel_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": -2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 0,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 2,
+      "name": "Soil_Gravel_Mossy"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 3,
+      "name": "Soil_Gravel_Mossy_Half",
+      "support": 15
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": -3,
+      "name": "Soil_Gravel_Mossy_Half"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": -2,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 1,
+      "name": "Soil_Gravel_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 2,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": -3,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": -2,
+      "name": "Soil_Gravel_Mossy",
+      "support": 15
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": -1,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 0,
+      "name": "Soil_Gravel_Mossy_Half",
+      "support": 15
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 2,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": -3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": -2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": -2,
+      "name": "Soil_Gravel_Mossy",
+      "support": 15
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": -1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 0,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 0,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 1,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 1,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 1,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 2,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 2,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 2,
+      "name": "Plant_Moss_Rug_Green",
+      "support": 15
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 3,
+      "name": "Rock_Basalt"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 3,
+      "name": "Rock_Stone_Mossy"
+    }
+  ],
+  "fluids": [
+    {
+      "x": -3,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -3,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -2,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": -1,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": -1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 0,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 1,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 2,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 3,
+      "name": "Water_Source",
+      "level": 1
+    }
+  ]
+}

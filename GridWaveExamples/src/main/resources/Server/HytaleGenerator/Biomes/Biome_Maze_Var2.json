@@ -1,0 +1,43 @@
+{
+	"$NodeId":	"Biome-8ed95326-1e58-4740-9216-17f675eaa806",
+	"Name":	"",
+	"Props":	[{
+			"$NodeId":	"Runtime-58d28ee3-3e98-44f9-b23a-179e395ceaf0",
+			"Skip":	false,
+			"Runtime":	0,
+			"PropDistribution":	{
+				"$NodeId":	"Imported.PropDistribution-57168f65-158e-40e0-b121-a00844ec3f41",
+				"Type":	"Imported",
+				"Name":	"Maze20x20"
+			}
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
+				"$Position":	{
+					"$x":	-4994,
+					"$y":	-4100
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Runtime-58d28ee3-3e98-44f9-b23a-179e395ceaf0":	{
+				"$Position":	{
+					"$x":	-4235,
+					"$y":	-4026
+				}
+			},
+			"Imported.PropDistribution-57168f65-158e-40e0-b121-a00844ec3f41":	{
+				"$Position":	{
+					"$x":	-3563,
+					"$y":	-3952
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}
