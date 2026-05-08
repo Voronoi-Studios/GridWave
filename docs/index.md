@@ -9,9 +9,9 @@ draft: false
 
 <br>
 
->[!NOTE]
-> ___GridWave is in Early Access. Things will break.<br>
-Join [https://discord.voronoi.ch](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation___
+> [!NOTE]
+> GridWave is in Early Access. Things will break.
+> Join [https://discord.voronoi.ch](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation
 
 
 ## ___**GridWave**___
