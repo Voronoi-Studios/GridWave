@@ -14,6 +14,9 @@ draft: false
 > Join [https://discord.voronoi.ch](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation
 
 
+> [!NOTE]
+> Useful information the reader should know.
+
 ## ___**GridWave**___
 
 All of ORBIS's magic was built by the mages of old - the incredible minds whose grimoires we still read and wield today. Hexcode is simply the way they did it.
