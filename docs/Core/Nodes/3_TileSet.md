@@ -4,4 +4,14 @@ published: true
 draft: true
 ---
 
-333
+# TileSet Nodes
+
+Defines a Set of Tiles.
+Can be read from in the folder `Server/HytaleGenerator/TileSets` 
+
+## Variants
+* Automatic TileSet
+* Imported TileSet
+* Single TileSet
+* Multi TileSet
+* Prop TileSet

@@ -1,7 +1,13 @@
 ---
-order: 1
+title: "Algo"
 published: true
 draft: true
 ---
 
-1111
+# GridWave Algorithm Nodes
+
+The main workhorse of this plugin
+
+## Variants
+* GridWave Algorithm (PropDistribution)
+* GridWave Algorithm (Prop)
