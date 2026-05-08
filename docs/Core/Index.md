@@ -34,6 +34,8 @@ Check out the [`GridWaveExamples`](https://github.com/Voronoi-Studios/GridWaveEx
 > [!CAUTION]
 > For ease of use, the included _Workspace file is intended as is a replacement for the original, if you have other node mods, you need to manually copy the sections that are different.
 
+<img width="440" height="492" alt="grafik" src="https://github.com/user-attachments/assets/61200491-8557-4235-91d3-26207dee1eea" />
+
 ## Usage
 
 Check out the [`GridWaveExamples`](https://github.com/Voronoi-Studios/GridWaveExamples) to get an idea an idea how different things can be accieved using the Node Editor.
