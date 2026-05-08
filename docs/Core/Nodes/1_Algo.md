@@ -15,14 +15,31 @@ draft: true
 ## Details
 
 <details>
-<summary>### GridPositions</summary>
+<summary>GridPositions</summary>
 
 Stuff goes here
 
 </details>
 
+
 <details>
-<summary>### FixedTiles</summary>
+<summary>Grid</summary>
+
+Stuff goes here
+
+</details>
+
+
+<details>
+<summary>(Bounds)</summary>
+
+Stuff goes here
+
+</details>
+
+
+<details>
+<summary>FixedTiles</summary>
 
 Need a Restrainer [`Feature`](Feature)
 
@@ -30,7 +47,7 @@ Need a Restrainer [`Feature`](Feature)
 
 
 <details>
-<summary>### BaseTiles</summary>
+<summary>BaseTiles</summary>
 
 Stuff goes here
 
@@ -38,7 +55,23 @@ Stuff goes here
 
 
 <details>
-<summary>### FancyTiles</summary>
+<summary>FancyTiles</summary>
+
+Stuff goes here
+
+</details>
+
+
+<details>
+<summary>Seed</summary>
+
+Stuff goes here
+
+</details>
+
+
+<details>
+<summary>Features</summary>
 
 Stuff goes here
 
