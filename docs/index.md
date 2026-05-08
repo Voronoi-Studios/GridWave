@@ -8,8 +8,7 @@ draft: false
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
 > [!NOTE]
-> GridWave is in Early Access. Things will break!
-> <p>Join<a href="https://discord.voronoi.ch" style="display:inline-flex; vertical-align:middle; margin-left:3px; margin-right:3px;"><img alt="discord" height="23px" style="margin:0px;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=outline&amp;size=xs&amp;logoColor=7289da&amp;label=Discord&amp;valueColor=ffffff&amp;labelTextColor=7289da"></a>report bugs, give suggestions, and shape the future of constraint based procedural generation</p>
+> <p>GridWave is in Early Access. Things will break!<br>Join<a href="https://discord.voronoi.ch" style="display:inline-flex; vertical-align:middle; margin-left:3px; margin-right:3px;"><img alt="discord" height="23px" style="margin:0px;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=outline&amp;size=xs&amp;logoColor=7289da&amp;label=Discord&amp;valueColor=ffffff&amp;labelTextColor=7289da"></a>report bugs, give suggestions, and shape the future of constraint based procedural generation</p>
 
 
 ## ___**GridWave**___
