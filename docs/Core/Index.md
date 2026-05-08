@@ -69,3 +69,7 @@ GridWave applies Wave Function Collapse by:
 ### Wishlist
 * Infinite Grids
 * MultiTile support for baseTileSets
+
+### CheatSheet
+
+<img src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt=""/>
