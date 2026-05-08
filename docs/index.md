@@ -11,6 +11,19 @@ draft: false
 > GridWave is in Early Access. Things will break.
 > Join [<img alt="discord" height="32" style="margin: 0px; vertical-align: middle;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=ghost&size=xs&logoColor=7289da&label=Discord&valueColor=ffffff&labelTextColor=7289da"/>](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation
 
+
+<div class="markdown-callout-content">
+  <p>
+    GridWave is in Early Access. Things will break.
+  </p>
+  Join
+  <a href="https://discord.voronoi.ch" style="display:inline-flex; align-items:center; gap:6px;">
+    <img alt="discord" height="32" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=ghost&size=xs&logoColor=7289da&label=Discord&valueColor=ffffff&labelTextColor=7289da"></a>
+    <span>
+      Report bugs, give suggestions, and shape the future of constraint based procedural generation
+    </span>
+</div>
+
 ## ___**GridWave**___
 <div>
   <p>Download:</p>
