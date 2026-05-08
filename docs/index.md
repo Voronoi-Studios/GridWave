@@ -7,8 +7,9 @@ draft: false
 
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
-___GridWave is in Early Access. Things will break.<br>
-Join [https://discord.hexcodec.com](https://discord.hexcodec.com) to report bugs, give suggestions, and shape the future of constraint based procedural generation___ 
+---
+> ___GridWave is in Early Access. Things will break.<br>
+Join [https://discord.voronoi.ch](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation___
 
 
 ## ___**GridWave**___
