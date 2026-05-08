@@ -10,11 +10,15 @@ draft: false
 
 This is an extension to GridWaveCore which is a Hytale plugin that integrates Wave Function Collapse (WFC) into the World Generation V2 Node Editor. It enables structured, constraint-based procedural generation for dungeons, mazes, cities, towns, castles, structures, and many more.
 
-##Examples:
+## Examples:
 - Island
-- Boardgame (Carcasonne)
+- Boardgame (Carcasonne)[^3]
 - City
-- Maze -# by Icarus
-- Dungeon -# by Andy
-- Jungle Village -# by Andy & Icarus
-- Cave Village -# by Andy
+- Maze[^1]
+- Dungeon[^2]
+- Jungle Village[^1][^2]
+- Cave Village[^2]
+
+[^1]: by Icarus : [https://icarustale.com](https://icarustale.com)
+[^2]: by Andy
+[^3]: in no affiliation to HasBro
