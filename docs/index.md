@@ -4,7 +4,9 @@ order: 1
 published: true
 draft: false
 ---
-![image](https://media.forgecdn.net/attachments/description/1448311/description_24df6807-f0ae-457a-a068-9cbaf45f3e11.png)
+
+<img width="1207" height="130" alt="core" src="https://github.com/user-attachments/assets/d54d7c5f-02e9-43f2-8b3c-d23c92174414" />
+
 
 ___GridWave is in Early Access. Things will break.<br>
 Join [https://discord.hexcodec.com](https://discord.hexcodec.com) to report bugs, give suggestions, and shape the future of constraint based procedural generation___ 
