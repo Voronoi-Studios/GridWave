@@ -11,12 +11,12 @@ draft: true
 ![NodeTreeTile](https://media.discordapp.net/attachments/1480191590935822457/1489793296761880757/image.png?ex=69d1b5a0&is=69d06420&hm=f00546876e78d333325b750edc60db39b3ba0176fbb7f9ef1c7f0f80eeafe47e&=&format=webp&quality=lossless&width=2153&height=1018)
 
 # Nodes
-* [`Algo`](Algo)
-* [`TileSetCollection`](TileSetCollection)
-* [`TileSet`](TileSet)
-* [`RuleSet`](RuleSet)
-* [`Feature`](Feature)
+* [`Algo`](1-Algo)
+* [`TileSetCollection`](2-TileSetCollection)
+* [`TileSet`](3-TileSet)
+* [`RuleSet`](4-RuleSet)
+* [`Feature`](5-Feature)
 * [`Seed`](Seed)
 * Utils
-* * [`GridGen`](GridGen)
-* * [`StaticMirrorProp`](StaticMirrorProp)
+  * [`GridGen`](GridGen)
+  * [`StaticMirrorProp`](StaticMirrorProp)
