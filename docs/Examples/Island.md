@@ -2,10 +2,9 @@
 published: true
 draft: false
 ---
-![image](https://media.forgecdn.net/attachments/description/1448311/description_24df6807-f0ae-457a-a068-9cbaf45f3e11.png)
+
 
 ## _*Island (Kyst)*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
-
 
 
 Inspired by [this](https://adamatomic.itch.io/kyst) tile sets from Adam Saltsmann.
