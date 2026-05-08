@@ -11,6 +11,31 @@ draft: false
 > GridWave is in Early Access. Things will break.
 > Join [![discord](https://shieldcn.dev/discord/781549207051960370.svg?variant=ghost&size=xs&logoColor=7289da&label=Discord&valueColor=ffffff&labelTextColor=7289da)](https://discord.voronoi.ch) to report bugs, give suggestions, and shape the future of constraint based procedural generation
 
+<div style="border-left:4px solid #3b82f6; padding:12px 16px; border-radius:6px; background:#0f172a1a;">
+  <div style="font-weight:bold; margin-bottom:8px;">
+    NOTE
+  </div>
+
+  <p style="margin:0 0 10px 0;">
+    GridWave is in Early Access. Things will break.
+  </p>
+
+  <a
+    href="https://discord.voronoi.ch"
+    style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;"
+  >
+    <img
+      alt="Discord"
+      src="https://shieldcn.dev/discord/781549207051960370.svg?variant=ghost&size=xs&logoColor=7289da&label=Discord&valueColor=ffffff&labelTextColor=7289da"
+      style="display:block;"
+    >
+
+    <span>
+      Report bugs, give suggestions, and shape the future of constraint based procedural generation
+    </span>
+  </a>
+</div>
+
 
 ## ___**GridWave**___
 <div>
@@ -18,10 +43,10 @@ draft: false
   <a href="https://www.curseforge.com/hytale/mods/gridwave">
     <img alt="Curse Forge" height="32" style="margin: 0px;"
       src="https://shieldcn.dev/badge/Curse%20Forge-GridWave-ff44ff.svg?variant=outline&logo=curseforge&logoColor=f97316&color=f97316&valueColor=ffffff&labelTextColor=f97316">
-  </a>  <a href="https://github.com/Voronoi-Studios/GridWave">
+  </a><a href="https://github.com/Voronoi-Studios/GridWave">
     <img alt="GitHub" height="32" style="margin: 0px;"
       src="https://shieldcn.dev/badge/GitHub-GridWave-8534F3.svg?variant=outline&logo=lu%3AGithub">
-  </a>  <a href="https://github.com/Voronoi-Studios/GridWave/releases/latest">
+  </a><a href="https://github.com/Voronoi-Studios/GridWave/releases/latest">
     <img alt="Latest Release" height="32" style="margin: 0px;"
       src="https://shieldcn.dev/github/Voronoi-Studios/GridWave/release.svg?variant=outline">
   </a>
