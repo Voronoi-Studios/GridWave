@@ -6,11 +6,11 @@ draft: true
 ---
 
 # Nodes
-* [`Algo`](1-Algo)
-* [`TileSetCollection`](2-TileSetCollection)
-* [`TileSet`](3-TileSet)
-* [`RuleSet`](4-RuleSet)
-* [`Feature`](5-Feature)
+* [`Algo`](Algo)
+* [`TileSetCollection`](TileSetCollection)
+* [`TileSet`](TileSet)
+* [`RuleSet`](RuleSet)
+* [`Feature`](Feature)
 * [`Seed`](Seed)
 * Utils
   * [`GridGen`](GridGen)
