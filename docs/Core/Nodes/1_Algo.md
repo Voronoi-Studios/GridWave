@@ -12,8 +12,7 @@ draft: true
 * GridWave Algorithm (PropDistribution)
 * GridWave Algorithm (Prop)
 
-<img width="400px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoProp.png" alt="AlgoProp"/> 
-<img width="400px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoPropDistribution.png" alt="AlgoPropDistribution" />
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoProp.png" alt="AlgoProp"/> <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoPropDistribution.png" alt="AlgoPropDistribution" />
 
 ## Details
 
