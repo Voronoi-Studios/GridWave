@@ -18,6 +18,13 @@ Can be read from in the folder `Server/HytaleGenerator/TileSets`
 
 Automatically creates all TileSets based on the folders naming, allows for export
 
+<details>
+<summary>show cheat sheet</summary>
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
+</details>
+
 ---
 
 ### Imported TileSet
@@ -33,6 +40,13 @@ Allows you to import nodes
 
 Standard node, allows for exports
 
+<details>
+<summary>show cheat sheet</summary>
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
+</details>
+
 ---
 
 ### Multi TileSet
@@ -40,6 +54,13 @@ Standard node, allows for exports
 
 Used for prefabs that span multiple cells, allows for export.
 ZSize defines how man tiles it spans
+
+<details>
+<summary>show cheat sheet</summary>
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
+</details>
 
 ---
 

@@ -52,6 +52,11 @@ GridWave applies Wave Function Collapse by:
 4. Uses pattern matching to try and replace base tiles with FancyTiles to add variety
 5. Assembles a PropDistribution or Prop
 
+
+## CheatSheet
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
 ## Roadmap
 
 ### pt 4
@@ -69,7 +74,3 @@ GridWave applies Wave Function Collapse by:
 ### Wishlist
 * Infinite Grids
 * MultiTile support for baseTileSets
-
-### CheatSheet
-
-<img src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt=""/>
