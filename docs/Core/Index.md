@@ -10,7 +10,7 @@ draft: true
 
 GridWave is a Hytale plugin that integrates Wave Function Collapse (WFC) into the World Generation V2 Node Editor. It enables structured, constraint-based procedural generation for dungeons, mazes, cities, towns, castles, structures, and many more.
 
-Check out the [`GridWaveExamples`](https://github.com/Voronoi-Studios/GridWaveExamples) to get an idea an idea how different things can be accieved.
+Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea an idea how different things can be accieved.
 
 ## Features
 
@@ -34,11 +34,15 @@ Check out the [`GridWaveExamples`](https://github.com/Voronoi-Studios/GridWaveEx
 > [!CAUTION]
 > For ease of use, the included _Workspace file is intended as is a replacement for the original, if you have other node mods, you need to manually copy the sections that are different.
 
-<img width="440" height="492" alt="grafik" src="https://github.com/user-attachments/assets/61200491-8557-4235-91d3-26207dee1eea" />
+### New Root Spaces
+
+For convenience some new roots paces where added:
+
+<img width="440" height="492" alt="new root spaces" src="https://github.com/user-attachments/assets/61200491-8557-4235-91d3-26207dee1eea" />
 
 ## Usage
 
-Check out the [`GridWaveExamples`](https://github.com/Voronoi-Studios/GridWaveExamples) to get an idea an idea how different things can be accieved using the Node Editor.
+Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea an idea how different things can be accieved using the Node Editor.
 
 ## How It Works
 
@@ -52,25 +56,21 @@ GridWave applies Wave Function Collapse by:
 4. Uses pattern matching to try and replace base tiles with FancyTiles to add variety
 5. Assembles a PropDistribution or Prop
 
-
-## CheatSheet
-
-<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
-
 ## Roadmap
 
-### pt 4
-* Random Point from ListPositionsAsset for FixedTile
-* Random Rotation for FixedTile
-* POI Path system with checks and distance
-### pt 5
+### pt 8
 * Neightborhood system
 * bool or distance for self connection
-### pt 6
+### pt 9
 * New Attempt Behavor
-### pt 7
+### pt 10
 * Elevation
 
 ### Wishlist
 * Infinite Grids
 * MultiTile support for baseTileSets
+
+
+## CheatSheet
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
