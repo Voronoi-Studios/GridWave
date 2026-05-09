@@ -5,7 +5,7 @@ published: true
 draft: false
 ---
 
-![mazeVideo](https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4)
+<video width="100%" autoplay loop muted playsinline src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4"></video>
 
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
