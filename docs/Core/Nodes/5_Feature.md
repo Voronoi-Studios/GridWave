@@ -78,7 +78,7 @@ Allows you to overwrite the weight of a tile based on some condition
 Gives various debug options:
 
 * DebugGrid: places every tile with every possible rotation after each other. 
-* LimitSteps % MaxSteps: Allows you to step through the solving process to see where ge might do something wrong.
+* LimitSteps & MaxSteps: Allows you to step through the solving process to see where ge might do something wrong.
 
 ---
 
