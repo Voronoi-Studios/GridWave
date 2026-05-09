@@ -1,6 +1,6 @@
 ---
 title: "Nodes"
-icon: "Brush"
+icon: ToyBrick
 order: 1
 published: true
 draft: true

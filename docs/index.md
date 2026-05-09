@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-icon: "BookType"
+icon: HardHat
 order: 1
 published: true
 draft: false

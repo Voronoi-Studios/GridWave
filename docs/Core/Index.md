@@ -1,6 +1,6 @@
 ---
 title: "Core"
-icon: "Bot"
+icon: BrainCircuit
 order: 1
 published: true
 draft: true
