@@ -1,5 +1,6 @@
 ---
 title: "Introduction"
+icon: "BookType"
 order: 1
 published: true
 draft: false

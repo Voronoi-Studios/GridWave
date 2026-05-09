@@ -1,5 +1,6 @@
 ---
 title: "Nodes"
+icon: "Brush"
 order: 1
 published: true
 draft: true

@@ -1,5 +1,6 @@
 ---
 title: "Examples"
+icon: "Earth"
 order: 2
 published: true
 draft: true
