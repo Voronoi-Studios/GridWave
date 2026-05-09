@@ -7,9 +7,9 @@ draft: true
 ## _*Island (Kyst)*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
 
-Inspired by [this](https://adamatomic.itch.io/kyst) tile sets from Adam Saltsmann.
+Inspired by the [Kyst](https://adamatomic.itch.io/kyst) tile sets from Adam Saltsmann.
 
-[<img alt="img.png" src="../Images/img.png" width="200"/>](https://adamatomic.itch.io/kyst)
+[<img alt="Island Image" width="200" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/IslandImg.png" />](https://adamatomic.itch.io/kyst)
 
 This example has lots of Advanced Rulesets to achieve the fallowing effects:
 

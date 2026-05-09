@@ -42,7 +42,7 @@ For convenience some new roots paces where added:
 
 ## Usage
 
-Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea an idea how different things can be accieved using the Node Editor.
+Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea how different things can be achieved using the Node Editor.
 
 ## How It Works
 
