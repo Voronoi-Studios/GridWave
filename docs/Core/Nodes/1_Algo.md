@@ -55,7 +55,7 @@ Only present on the Prop version, restrains the positions. can be left empty if 
 Input for a [`TileSetCollection`](TileSetCollection).
 These tiles will be places first, before anything runs. Make sure your stuff is not overlapping. 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > All tiles do need a Restrainer [`Feature`](Feature) for this to work or else he might place a tile everywhere.
 
 </details>
@@ -83,6 +83,12 @@ This is extremely powerful and can be used for many things;
 * Add mini encounters
 * much more
 
+<details>
+<summary>show cheat sheet</summary>
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
+</details>
 </details>
 
 

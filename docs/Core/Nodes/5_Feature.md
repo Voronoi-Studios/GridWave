@@ -24,7 +24,8 @@ Used to create POI Tiles, fixes the positon and rotation of a tile. The position
 
 Same as RestrainerFeature, but takes a list of Positions as input where it chooses a random spot from using the seed.
 
-Tip: By sharing the seed, you can for example make two separate algos spawn a top and bottom part of a stair in the same place
+> [!TIP]
+> By sharing the seed, you can for example make two separate algos spawn a top and bottom part of a stair in the same place
 
 ---
 
