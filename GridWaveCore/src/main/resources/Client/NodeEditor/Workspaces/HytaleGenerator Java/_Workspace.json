@@ -26,41 +26,42 @@
       "RootNodeType": "PropDistribution.Variants",
       "MenuName" : "HytaleGenerator - PropDistributions"
     },
-    "TileSetCollections": {
-      "RootNodeType": "TileSetCollection.Variants",
-      "MenuName" : "HytaleGenerator - TileSetCollections"
-    },
     "TileSets": {
       "RootNodeType": "TileSet.Variants",
-      "MenuName" : "HytaleGenerator - TileSets"
+      "MenuName" : "GridWave - TileSets"
+    },
+    "GridWaveFeatures": {
+      "RootNodeType": "Feature.Variants",
+      "MenuName" : "GridWave - Features"
     }
   },
   "NodeCategories": {
     "GridWave" : [
       "PropDistributionAlgo.GridWave",
-	    "PropAlgo.GridWave",
-      "GridGen2D.GridWave"
+	    "PropAlgo.GridWave"
     ],
     "GridWave.RuleSet" : [
-      "Simple2D.RuleSet.GridWave",
-      "Simple3D.RuleSet.GridWave",
-      "Advanced2D.RuleSet.GridWave",
-      "Advanced3D.RuleSet.GridWave"
-    ],
-    "GridWave.TileSetCollection" : [
-	    "Simple.TileSetCollection.GridWave",	    
-      "Auto.TileSetCollection.GridWave",	
-      "Union.TileSetCollection.GridWave",	       
-      "Imported.TileSetCollection.GridWave"
+      "Simple.RuleSet.GridWave",
+      "Advanced.RuleSet.GridWave",
+
+      "Simple.VerticalRules.GridWave",
+      "Advanced.VerticalRules.GridWave",
+      "ElevationRules.GridWave"
     ],
     "GridWave.TileSet" : [
+      "Imported.TileSet.GridWave",
+      "Group.TileSet.GridWave",
+      "AutoGroup.TileSet.GridWave",
+
 	    "Single.TileSet.GridWave",	    
       "Multi.TileSet.GridWave",
       "Auto.TileSet.GridWave",	
-      "Prop.TileSet.GridWave",	       
-      "Imported.TileSet.GridWave"
+      "Prop.TileSet.GridWave"       
     ],
     "GridWave.Feature" : [
+      "Imported.Feature.GridWave",
+      "Group.Feature.GridWave",
+
       "Border.Feature.GridWave",
       "Debug.Feature.GridWave",
       "MultiAttempt.Feature.GridWave",
@@ -78,7 +79,9 @@
       "Imported.Seed.GridWave"
     ],
     "GridWave.Utils" : [
-      "StaticMirrorProp.GridWave"
+      "GridGen2D.GridWave",
+      "StaticMirrorProp.GridWave",
+      "GridBounds.GridWave"
     ],
      "Material" : [
       "Material",
@@ -365,34 +368,29 @@
     "RuleSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
-        "Simple2D": "Simple2D.RuleSet.GridWave",
-        "Simple3D": "Simple3D.RuleSet.GridWave",
-        "Advanced2D": "Advanced2D.RuleSet.GridWave",
-        "Advanced3D": "Advanced3D.RuleSet.GridWave"
-      }
-    },
-    "TileSetCollection.Variants":{
-      "VariantFieldName": "Type",
-      "Variants": {
-        "Simple": "Simple.TileSetCollection.GridWave",
-        "Auto": "Auto.TileSetCollection.GridWave",
-        "Union": "Union.TileSetCollection.GridWave",
-        "Imported": "Imported.TileSetCollection.GridWave"
+        "Simple": "Simple.RuleSet.GridWave",
+        "Advanced": "Advanced.RuleSet.GridWave"
       }
     },
     "TileSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
+        "Imported": "Imported.TileSet.GridWave",
+        "Group": "Group.TileSet.GridWave",
+        "AutoGroup": "AutoGroup.TileSet.GridWave",
+
         "Single": "Single.TileSet.GridWave",
         "Multi": "Multi.TileSet.GridWave",
         "Auto": "Auto.TileSet.GridWave",
-        "Prop": "Prop.TileSet.GridWave",
-        "Imported": "Imported.TileSet.GridWave"
+        "Prop": "Prop.TileSet.GridWave"
       }
     },
     "Feature.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
+        "Imported": "Imported.Feature.GridWave",
+        "Group": "Group.Feature.GridWave",
+
         "Border": "Border.Feature.GridWave",
         "Debug": "Debug.Feature.GridWave",
         "MultiAttempt": "MultiAttempt.Feature.GridWave",

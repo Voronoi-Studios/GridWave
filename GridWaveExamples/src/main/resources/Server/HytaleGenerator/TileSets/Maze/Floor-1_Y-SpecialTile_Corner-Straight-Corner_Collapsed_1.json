@@ -3,24 +3,24 @@
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Corner-Straight-Corner_Collapsed_1",
 	"RuleSets":	[{
-			"$NodeId":	"Simple2D.RuleSet.GridWave-90144105-f02d-48fe-9788-bc08cd2a4d62",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-90144105-f02d-48fe-9788-bc08cd2a4d62",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"0",
 				"E":	"1",
 				"W":	"0"
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-de6d941c-93b5-446f-b046-d3ed9dbebcd3",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-de6d941c-93b5-446f-b046-d3ed9dbebcd3",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"E":	"0",
 				"W":	"0"
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-ec4bd774-bf3e-4ee6-bfe5-71bb32553797",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-ec4bd774-bf3e-4ee6-bfe5-71bb32553797",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"E":	"1",
 				"S":	"0",
 				"W":	"0"
@@ -38,19 +38,19 @@
 				},
 				"$Title":	"[ROOT] WFC Multi TileSet"
 			},
-			"Simple2D.RuleSet.GridWave-90144105-f02d-48fe-9788-bc08cd2a4d62":	{
+			"Simple.RuleSet.GridWave-90144105-f02d-48fe-9788-bc08cd2a4d62":	{
 				"$Position":	{
 					"$x":	1762,
 					"$y":	36
 				}
 			},
-			"Simple2D.RuleSet.GridWave-de6d941c-93b5-446f-b046-d3ed9dbebcd3":	{
+			"Simple.RuleSet.GridWave-de6d941c-93b5-446f-b046-d3ed9dbebcd3":	{
 				"$Position":	{
 					"$x":	2261,
 					"$y":	40
 				}
 			},
-			"Simple2D.RuleSet.GridWave-ec4bd774-bf3e-4ee6-bfe5-71bb32553797":	{
+			"Simple.RuleSet.GridWave-ec4bd774-bf3e-4ee6-bfe5-71bb32553797":	{
 				"$Position":	{
 					"$x":	2757,
 					"$y":	49
@@ -62,6 +62,6 @@
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - TileSets"
+		"$WorkspaceID":	"GridWave - TileSets"
 	}
 }

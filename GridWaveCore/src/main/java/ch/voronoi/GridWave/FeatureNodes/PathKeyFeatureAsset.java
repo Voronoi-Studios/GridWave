@@ -42,7 +42,7 @@ public class PathKeyFeatureAsset extends FeatureAsset {
         if(check && cleanIsolated) baseWave.entrySet().stream()
                 .filter(x -> x.getValue().getChosen().type() != GridTileType.POI)
                 .filter(x -> x.getValue().connectedPOIs.isEmpty())
-                .forEach(x -> x.setValue(new WaveCell(x.getKey(),new LinkedHashSet<>())));
+                .forEach(x -> x.setValue(new WaveCell(x.getKey(),x.getKey(),new LinkedHashSet<>())));
         return check;
     }
 
@@ -59,7 +59,7 @@ public class PathKeyFeatureAsset extends FeatureAsset {
             WaveCell source = queue.poll();
 
             IntStream.range(0, 4).forEach(dir -> {
-                Vector3i neighborPos = new Vector3i(source.getPosition()).add(dirs[dir].clone().scale(argument.algoAsset.getGrid()));
+                Vector3i neighborPos = new Vector3i(source.getGridPosition()).add(dirs[dir].clone().scale(argument.algoAsset.getGrid()));
                 WaveCell neighbor = baseWave.get(neighborPos);
 
                 if (neighbor == null || !neighbor.isCollapsed()) return;

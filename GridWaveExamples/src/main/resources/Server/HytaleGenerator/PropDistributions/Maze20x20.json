@@ -24,40 +24,30 @@
 		"Y":	16,
 		"Z":	16
 	},
-	"POIs":	{
-		"$NodeId":	"Imported.TileSetCollection.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e",
-		"Type":	"Imported",
-		"Name":	"MazeFixedTiles1"
-	},
-	"BaseTiles":	{
-		"$NodeId":	"Imported.TileSetCollection.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada",
-		"Type":	"Imported",
-		"Name":	"MazeBaseTiles1"
-	},
-	"FancyTiles":	{
-		"$NodeId":	"Imported.TileSetCollection.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6",
-		"Type":	"Imported",
-		"Name":	"MazeFancyTiles1"
-	},
+	"POIs":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e",
+			"Type":	"Imported",
+			"Name":	"MazeFixedTiles1"
+		}],
+	"BaseTiles":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada",
+			"Type":	"Imported",
+			"Name":	"MazeBaseTiles1"
+		}],
+	"FancyTiles":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6",
+			"Type":	"Imported",
+			"Name":	"MazeFancyTiles1"
+		}],
 	"Seed":	{
 		"$NodeId":	"Constant.Seed.GridWave-55d2aaed-9286-4867-bf97-beffd1a65b1b",
 		"Type":	"Constant",
 		"Seed":	"SomeSeedss"
 	},
 	"Features":	[{
-			"$NodeId":	"Border.Feature.GridWave-06c6a6ba-bdb2-4136-8f93-8323697e7a70",
-			"Type":	"Border",
-			"Skip":	false,
-			"BorderRuleSet":	{
-				"$NodeId":	"Simple2D.RuleSet.GridWave-92e8fd9d-f823-4a11-8ce4-ad6b17d81d6e",
-				"Type":	"Simple2D",
-				"RuleSet":	{
-					"N":	"0",
-					"E":	"0",
-					"S":	"0",
-					"W":	"0"
-				}
-			}
+			"$NodeId":	"Imported.Feature.GridWave-c3783ce1-c6dc-470d-a3f4-be54d542a11e",
+			"Type":	"Imported",
+			"Name":	"MazeGlobalFeatures1"
 		}],
 	"MaxPositionsCount":	1000000,
 	"$NodeEditorMetadata":	{
@@ -87,19 +77,19 @@
 					"$y":	-136
 				}
 			},
-			"Imported.TileSetCollection.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
+			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
 				"$Position":	{
 					"$x":	2685,
 					"$y":	65
 				}
 			},
-			"Imported.TileSetCollection.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada":	{
+			"Imported.TileSet.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada":	{
 				"$Position":	{
 					"$x":	2685,
 					"$y":	187
 				}
 			},
-			"Imported.TileSetCollection.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6":	{
+			"Imported.TileSet.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6":	{
 				"$Position":	{
 					"$x":	2686,
 					"$y":	308
@@ -107,20 +97,14 @@
 			},
 			"Constant.Seed.GridWave-55d2aaed-9286-4867-bf97-beffd1a65b1b":	{
 				"$Position":	{
-					"$x":	2673,
-					"$y":	429
+					"$x":	2691,
+					"$y":	425
 				}
 			},
-			"Border.Feature.GridWave-06c6a6ba-bdb2-4136-8f93-8323697e7a70":	{
+			"Imported.Feature.GridWave-c3783ce1-c6dc-470d-a3f4-be54d542a11e":	{
 				"$Position":	{
-					"$x":	2673,
-					"$y":	595
-				}
-			},
-			"Simple2D.RuleSet.GridWave-92e8fd9d-f823-4a11-8ce4-ad6b17d81d6e":	{
-				"$Position":	{
-					"$x":	2662,
-					"$y":	721
+					"$x":	2694,
+					"$y":	580
 				}
 			}
 		},

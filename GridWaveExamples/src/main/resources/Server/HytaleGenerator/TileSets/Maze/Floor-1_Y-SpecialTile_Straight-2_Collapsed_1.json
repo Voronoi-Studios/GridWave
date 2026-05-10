@@ -3,17 +3,17 @@
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_1",
 	"RuleSets":	[{
-			"$NodeId":	"Simple2D.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"0",
 				"S":	"0",
 				"W":	"1"
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"0",
 				"E":	"1",
 				"S":	"0"
@@ -31,13 +31,13 @@
 				},
 				"$Title":	"[ROOT] WFC Multi TileSet"
 			},
-			"Simple2D.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a":	{
+			"Simple.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a":	{
 				"$Position":	{
 					"$x":	1717,
 					"$y":	-48
 				}
 			},
-			"Simple2D.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127":	{
+			"Simple.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127":	{
 				"$Position":	{
 					"$x":	2237,
 					"$y":	-32
@@ -49,6 +49,6 @@
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - TileSets"
+		"$WorkspaceID":	"GridWave - TileSets"
 	}
 }

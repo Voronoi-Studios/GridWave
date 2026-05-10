@@ -1,6 +1,6 @@
 package ch.voronoi.GridWave;
 
-import ch.voronoi.GridWave.AlgoNodes.GridGen2DAsset;
+import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropAlgoAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropDistributionAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.*;

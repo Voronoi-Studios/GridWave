@@ -1,4 +1,4 @@
-package ch.voronoi.GridWave.AlgoNodes;
+package ch.voronoi.GridWave.AlgoNodes.Helper;
 
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import com.hypixel.hytale.math.vector.Vector3i;

@@ -44,15 +44,15 @@ public class DebugUtils {
         if (gridTiles.stream().allMatch(Objects::isNull)) return "Failed, everything is empty";
         var list = new ArrayList<>(gridTiles);
         list.removeIf(Objects::isNull);
-        list.sort(Comparator.comparingInt((GridTile gt) -> gt.positionOffset().x).thenComparingInt(gt -> gt.positionOffset().z));
+        list.sort(Comparator.comparingInt((GridTile gt) -> gt.actualPosition().x).thenComparingInt(gt -> gt.actualPosition().z));
         int maxKeyLenght = getMaxKeyLength(list);
         StringBuilder sb = new StringBuilder();
         StringBuilder[] lines = {new StringBuilder(), new StringBuilder(), new StringBuilder()};
 
-        int lastX = list.getFirst().positionOffset().x;
+        int lastX = list.getFirst().actualPosition().x;
 
         for (GridTile gridTile : list) {
-            if (lastX != gridTile.positionOffset().x) {
+            if (lastX != gridTile.actualPosition().x) {
                 sb.insert(0, lines[2].toString() + "\n");
                 sb.insert(0, lines[1].toString() + "\n");
                 sb.insert(0, lines[0].toString() + "\n");
@@ -61,7 +61,7 @@ public class DebugUtils {
                 lines[1].setLength(0);
                 lines[2].setLength(0);
 
-                lastX = gridTile.positionOffset().x;
+                lastX = gridTile.actualPosition().x;
             }
             gridTile.appendLines(lines, pathKeys, maxKeyLenght);
         }

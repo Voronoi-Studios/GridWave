@@ -1,7 +1,8 @@
 {
-  "Id": "Simple.TileSetCollection.GridWave",
-  "Title": "TileSet Collection",
-  "Color": "0,70,40",
+  "Id": "Group.TileSet.GridWave",
+  "Title": "Group TileSet",
+  "Description": "Groups multiple TileSets together, this group is arbitrary and only used for organizational purposes, besides allowing to export multiple TileSets at once.",
+  "Color": "10,80,50",
   "Content" : [
     {
       "Id" : "ExportAs",
@@ -25,12 +26,12 @@
   "Inputs": [
     {
       "Id": "Output",
-      "Type": "TileSetCollection.GridWave.Connection",
-      "Color": "0,70,40"
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50"
     }
   ],
   "Schema": {
-    "Type" : "Simple",
+    "Type" : "Group",
     "TileSets" : {
       "Node" : "TileSet.Variants",
       "Pin" : "TileSets"

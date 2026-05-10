@@ -1,14 +1,14 @@
 {
-  "Id": "Simple2D.RuleSet.GridWave",
-  "Title": "Simple 2D RuleSet",
+  "Id": "Simple.RuleSet.GridWave",
+  "Title": "Simple RuleSet",
   "Color": "60,100,80",
   "Content" : [
         {
-      "Id": "RuleSet",
+      "Id": "HorizontalRules",
       "Type": "Object",
       "Options": {
         "Description": "Defines both am I and who I like",
-        "Label": "RuleSet",
+        "Label": "Horizontal Rules",
         "Fields": [
           {
             "Id": "N",
@@ -51,6 +51,18 @@
     }
   ],
   "Outputs": [
+    {
+      "Id": "VerticalRules",
+      "Type": "Simple.VerticalRules.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Vertical Rules"
+    },
+    {
+      "Id": "ElevationRules",
+      "Type": "ElevationRules.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Elevation Rules"
+    }
   ],
   "Inputs": [
     {
@@ -60,7 +72,15 @@
     }
   ],
   "Schema": {
-    "Type": "Simple2D",
-    "RuleSet": "RuleSet"
+    "Type": "Simple",
+    "HorizontalRules": "HorizontalRules",
+    "VerticalRules" : {
+      "Node" : "VerticalRules.GridWave.Connection",
+      "Pin" : "VerticalRules"
+    },
+    "ElevationRules" : {
+      "Node" : "ElevationRules.GridWave.Connection",
+      "Pin" : "ElevationRules"
+    }
   }
 }

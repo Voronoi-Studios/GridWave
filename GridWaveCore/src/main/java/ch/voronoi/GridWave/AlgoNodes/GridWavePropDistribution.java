@@ -5,6 +5,7 @@ import ch.voronoi.GridWave.AlgoNodes.Helper.SectionData;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
@@ -24,6 +25,7 @@ public class GridWavePropDistribution extends PropDistribution {
     private static final ConcurrentHashMap<String, ConcurrentHashMap<Vector3i, SectionData>> cacheRegistry = new ConcurrentHashMap<>();
 
     @Nonnull private final PositionProvider positionProvider;
+    @Nonnull private final Bounds3i seccondaryBounds;
     @Nonnull private final List<TileSet> poiTileEntries;
     @Nonnull private final List<TileSet> baseTileEntries;
     @Nonnull private final List<TileSet> fancyTileEntries;
@@ -34,12 +36,14 @@ public class GridWavePropDistribution extends PropDistribution {
 
     public GridWavePropDistribution(
             @Nonnull PositionProvider positionProvider,
+            @Nonnull Bounds3i seccondaryBounds,
             @Nonnull List<TileSet> poiTileEntries,
             @Nonnull List<TileSet> baseTileEntries,
             @Nonnull List<TileSet> fancyTileEntries,
             @Nonnull TileSetAsset.Argument argument)
     {
         this.positionProvider = positionProvider;
+        this.seccondaryBounds = seccondaryBounds;
         this.poiTileEntries = poiTileEntries;
         this.baseTileEntries = baseTileEntries;
         this.fancyTileEntries = fancyTileEntries;
@@ -68,8 +72,8 @@ public class GridWavePropDistribution extends PropDistribution {
     public void distribute(@Nonnull PropDistribution.Context context) {
         Control control = new Control();
 
-        Vector3i boundsMin = context.bounds.min.toVector3i();
-        Vector3i boundsMax = context.bounds.max.toVector3i();
+        Vector3i boundsMin = Vector3i.max(context.bounds.min.toVector3i(), seccondaryBounds.min.clone());
+        Vector3i boundsMax = Vector3i.min(context.bounds.max.toVector3i(), seccondaryBounds.max.clone());
 
         ConcurrentHashMap<Vector3i, SectionData> sectionCache = cacheRegistry.computeIfAbsent(argument.seedBox.toString(),k -> new ConcurrentHashMap<>());
 
@@ -107,15 +111,15 @@ public class GridWavePropDistribution extends PropDistribution {
     }
 
     private SectionData solveSection(Vector3i sectionAddress) {
-        Bounds3d bounds = new Bounds3d(sectionAddress.clone().scale(this.sectionSize).toVector3d(), sectionMax(sectionAddress.clone().scale(this.sectionSize)));
+        Bounds3i bounds = new Bounds3i(sectionAddress.clone().scale(this.sectionSize), sectionMax(sectionAddress.clone().scale(this.sectionSize)));
         List<Vector3d> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
         List<GridTile> gridTiles = GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, this.argument);
         return new SectionData(gridTiles);
     }
 
     @Nonnull
-    private Vector3d sectionMax(@Nonnull Vector3i sectionAddress) { //floor from sectionAddress
-        Vector3d max = sectionAddress.clone().toVector3d();
+    private Vector3i sectionMax(@Nonnull Vector3i sectionAddress) { //floor from sectionAddress
+        Vector3i max = sectionAddress.clone();
         max.x = max.x + this.sectionSize;
         max.y = max.y + this.sectionSize;
         max.z = max.z + this.sectionSize;

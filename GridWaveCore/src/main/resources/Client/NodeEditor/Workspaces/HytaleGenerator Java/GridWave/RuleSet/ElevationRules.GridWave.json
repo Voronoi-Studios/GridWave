@@ -1,0 +1,60 @@
+{
+  "Id": "ElevationRules.GridWave",
+  "Title": "Elevation Rules",
+  "Color": "60,100,80",
+  "Content" : [
+        {
+      "Id": "ElevationRules",
+      "Type": "Object",
+      "Options": {
+        "Label": "Elevation Rules",
+        "Fields": [
+          {
+            "Id": "ElevationDirection",
+            "Type": "Enum",
+            "Options": {
+              "Label": "Elevation Direction",
+              "Default": "None",
+              "Values": [
+                "None",
+                "North",
+                "NorthEast",
+                "East",
+                "SouthEast",
+                "South",
+                "SouthWest",
+                "West",
+                "NorthWest",
+                "Up",
+                "Down"
+              ],
+              "Width" : 200
+            }
+          },
+          {
+            "Id": "ElevationChange",
+            "Type": "Float",
+            "Options": {
+              "Label": "Elevation Change Delta",
+              "Description": "How much the edge(s) towards the specified direction change the elevation. Negative values are allowed.",
+              "Default" : 1,
+              "Width" : 100
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "ElevationRules",
+      "Type": "ElevationRules.GridWave.Connection",
+      "Color": "60,100,80"
+    }
+  ],
+  "Schema": {
+    "ElevationRules": "ElevationRules"
+  }
+}

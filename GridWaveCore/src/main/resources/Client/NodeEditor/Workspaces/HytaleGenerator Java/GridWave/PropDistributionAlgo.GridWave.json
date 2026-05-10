@@ -42,33 +42,41 @@
     },
     {
       "Id": "Grid",
-      "Type": "Point3D.Connection",
+      "Type": "Vector3i.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Grid",
       "Description" : "Defines the Grid spacing in each direction"
     },
     {
-      "Id": "POIs",
-      "Type": "TileSetCollection.GridWave.Connection",
-      "Color": "0,70,40",
+      "Id": "Bounds",
+      "Type": "Bounds3i.Connection",
+      "Color": "Orange",
+      "Label" : "Bounds",
       "Multiple" : false,
+      "Description" : "Limits the size if the generated grid"
+    },
+    {
+      "Id": "POIs",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "0,70,40",
+      "Multiple" : true,
       "Label" : "POIs",
       "Description" : "MUST HAVE A RESTRAINER FEATURE. Points of Interest that will be placed on the grid before the algorithm starts. This is useful to force certain tiles to be placed on the grid, such as entrances, exits, or special rooms."
     },
     {
       "Id": "BaseTiles",
-      "Type": "TileSetCollection.GridWave.Connection",
+      "Type": "TileSet.GridWave.Connection",
       "Color": "0,70,40",
-      "Multiple" : false,
+      "Multiple" : true,
       "Label" : "Base Tiles",
       "Description" : "Main TilesetCollection used for generation. The algorithm will try to place these tiles after the POIs have been placed."
     },
     {
       "Id": "FancyTiles",
-      "Type": "TileSetCollection.GridWave.Connection",
+      "Type": "TileSet.GridWave.Connection",
       "Color": "0,70,40",
-      "Multiple" : false,
+      "Multiple" : true,
       "Label" : "Fancy Tiles",
       "Description" : "Additional TilesetCollection that can be used to add variety to the generated layout. The algorithm will pattern match with the fully generated grid to see if any of these tiles can replace some base tiles. This is useful to add details to the generated layout without affecting the overall structure."
     },
@@ -105,16 +113,20 @@
       "Node" : "Point3D",
       "Pin" : "Grid"
     },
+    "Bounds" : {
+      "Node" : "Bounds3i",
+      "Pin" : "Bounds"
+    },
     "POIs" : {
-      "Node" : "TileSetCollection.Variants",
+      "Node" : "TileSet.Variants",
       "Pin" : "POIs"
     },
     "BaseTiles" : {
-      "Node" : "TileSetCollection.Variants",
+      "Node" : "TileSet.Variants",
       "Pin" : "BaseTiles"
     },
     "FancyTiles" : {
-      "Node" : "TileSetCollection.Variants",
+      "Node" : "TileSet.Variants",
       "Pin" : "FancyTiles"
     },
     "Seed" : {

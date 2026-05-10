@@ -1,7 +1,7 @@
 {
-  "Id": "Imported.TileSetCollection.GridWave",
-  "Title": "Imported TileSet Collection",
-  "Color": "0,70,40",
+  "Id": "Imported.Feature.GridWave",
+  "Title": "Imported Feature",
+  "Color": "150,180,129",
   "Content": [
     {
       "Id" : "Name",
@@ -18,8 +18,8 @@
   "Inputs": [
     {
       "Id": "Output",
-      "Type": "TileSetCollection.GridWave.Connection",
-      "Color": "0,70,40"
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
     }
   ],
   "Schema": {

@@ -1,0 +1,47 @@
+{
+  "Id": "Simple.VerticalRules.GridWave",
+  "Title": "Simple Vertical Rules",
+  "Color": "60,100,80",
+  "Content" : [
+        {
+      "Id": "VerticalRules",
+      "Type": "Object",
+      "Options": {
+        "Description": "Defines both am I and who I like vertically",
+        "Label": "Vertical Rules",
+        "Fields": [
+          {
+            "Id": "U",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "Up [+y]",
+              "Default": "",
+              "Width": 200
+            }
+          },
+          {
+            "Id": "D",
+            "Type": "SmallString",
+            "Options": {
+              "Label": "Down [-y]",
+              "Default": "",
+              "Width": 200
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Simple.VerticalRules",
+      "Type": "Simple.VerticalRules.GridWave.Connection",
+      "Color": "60,100,80"
+    }
+  ],
+  "Schema": {
+    "VerticalRules": "VerticalRules"
+  }
+}

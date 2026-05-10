@@ -1,0 +1,61 @@
+{
+	"$NodeId":	"Group.Feature.GridWave-930ece1a-0c02-4d84-b55f-9c6cbe226de5",
+	"Type":	"Group",
+	"Features":	[{
+			"$NodeId":	"MultiAttempt.Feature.GridWave-4de2625a-c2e7-462a-aa6e-3d2a1cc199c7",
+			"Type":	"MultiAttempt",
+			"Skip":	false,
+			"MaxBacktracks":	1000,
+			"MaxAttempts":	200
+		}, {
+			"$NodeId":	"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd",
+			"Type":	"Border",
+			"Skip":	false,
+			"BorderRuleSet":	{
+				"$NodeId":	"Simple.RuleSet.GridWave-c7a4e0c0-8768-4143-ac4c-772a105655cb",
+				"Type":	"Simple",
+				"HorizontalRules":	{
+					"N":	"0",
+					"E":	"0",
+					"S":	"0",
+					"W":	"0"
+				}
+			}
+		}],
+	"ExportAs":	"MazeGlobalFeatures1",
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd":	{
+				"$Position":	{
+					"$x":	2906,
+					"$y":	316
+				}
+			},
+			"Simple.RuleSet.GridWave-c7a4e0c0-8768-4143-ac4c-772a105655cb":	{
+				"$Position":	{
+					"$x":	2895,
+					"$y":	442
+				}
+			},
+			"Group.Feature.GridWave-930ece1a-0c02-4d84-b55f-9c6cbe226de5":	{
+				"$Position":	{
+					"$x":	2128,
+					"$y":	166
+				},
+				"$Title":	"[ROOT] Group Feature"
+			},
+			"MultiAttempt.Feature.GridWave-4de2625a-c2e7-462a-aa6e-3d2a1cc199c7":	{
+				"$Position":	{
+					"$x":	2905,
+					"$y":	71
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - Features"
+	}
+}

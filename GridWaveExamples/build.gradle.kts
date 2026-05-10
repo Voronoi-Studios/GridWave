@@ -134,4 +134,8 @@ afterEvaluate {
     }
 }
 
+tasks.matching { it.name == "runServer" }.configureEach {
+    dependsOn(":GridWaveCore:jar")
+}
+
 apply(from = "copy-jar.gradle.kts")

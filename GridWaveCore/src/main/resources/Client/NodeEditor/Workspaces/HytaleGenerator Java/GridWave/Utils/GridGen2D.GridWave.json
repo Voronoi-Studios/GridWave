@@ -65,7 +65,7 @@
   "Outputs": [
     {
       "Id": "PointConnection",
-      "Type": "Point3D.Connection",
+      "Type": "Vector3i.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Position"

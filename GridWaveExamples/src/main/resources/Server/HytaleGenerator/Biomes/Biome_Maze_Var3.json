@@ -32,111 +32,111 @@
 					"Y":	16,
 					"Z":	16
 				},
-				"POIs":	{
-					"$NodeId":	"Imported.TileSetCollection.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1",
-					"Type":	"Imported",
-					"Name":	"MazeFixedTiles1"
-				},
-				"BaseTiles":	{
-					"$NodeId":	"Simple.TileSetCollection.GridWave-a227edbd-e3e7-48f3-a430-f89843595212",
-					"Type":	"Simple",
-					"TileSets":	[{
-							"$NodeId":	"Single.TileSet.GridWave-9c00bbfe-e2c5-4008-b13e-ea2fcae5c4a7",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-70657e4c-22e2-4254-9613-6622dea12860",
-								"Type":	"Simple2D",
+				"POIs":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1",
+						"Type":	"Imported",
+						"Name":	"MazeFixedTiles1"
+					}],
+				"BaseTiles":	[{
+						"$NodeId":	"Group.TileSet.GridWave-a227edbd-e3e7-48f3-a430-f89843595212",
+						"Type":	"Group",
+						"TileSets":	[{
+								"$NodeId":	"Single.TileSet.GridWave-9c00bbfe-e2c5-4008-b13e-ea2fcae5c4a7",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"0",
-									"E":	"0",
-									"S":	"0",
-									"W":	"0"
-								}
-							},
-							"Weight":	10,
-							"MinimizeVariants":	false
-						}, {
-							"$NodeId":	"Single.TileSet.GridWave-a477f262-1f2d-4d6c-9cb2-de39aef64389",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292",
-								"Type":	"Simple2D",
+									"$NodeId":	"Simple.RuleSet.GridWave-70657e4c-22e2-4254-9613-6622dea12860",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"0",
+										"E":	"0",
+										"S":	"0",
+										"W":	"0"
+									}
+								},
+								"Weight":	10,
+								"MinimizeVariants":	false
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-a477f262-1f2d-4d6c-9cb2-de39aef64389",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"0",
-									"E":	"0",
-									"S":	"1",
-									"W":	"1"
-								}
-							},
-							"PrefabPath":	"Maze/BaseTiles/Corner",
-							"Weight":	2,
-							"MinimizeVariants":	true
-						}, {
-							"$NodeId":	"Single.TileSet.GridWave-1c25470b-223b-4e4c-b153-b53c972298e4",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-fa39e873-16c2-4f12-9d63-bd0da88ea169",
-								"Type":	"Simple2D",
+									"$NodeId":	"Simple.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"0",
+										"E":	"0",
+										"S":	"1",
+										"W":	"1"
+									}
+								},
+								"PrefabPath":	"Maze/BaseTiles/Corner",
+								"Weight":	2,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-1c25470b-223b-4e4c-b153-b53c972298e4",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"1",
-									"E":	"0",
-									"S":	"1",
-									"W":	"0"
-								}
-							},
-							"PrefabPath":	"Maze/BaseTiles/Straight",
-							"Weight":	1,
-							"MinimizeVariants":	true
-						}, {
-							"$NodeId":	"Single.TileSet.GridWave-a29d4141-4c6a-402b-8cd5-0c804be526f6",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-0ce4cc41-52d6-4ec8-b3ea-32da65d22237",
-								"Type":	"Simple2D",
+									"$NodeId":	"Simple.RuleSet.GridWave-fa39e873-16c2-4f12-9d63-bd0da88ea169",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1",
+										"E":	"0",
+										"S":	"1",
+										"W":	"0"
+									}
+								},
+								"PrefabPath":	"Maze/BaseTiles/Straight",
+								"Weight":	1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-a29d4141-4c6a-402b-8cd5-0c804be526f6",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"1",
-									"E":	"0",
-									"S":	"1",
-									"W":	"1"
-								}
-							},
-							"PrefabPath":	"Maze/BaseTiles/Junction",
-							"Weight":	0.4,
-							"MinimizeVariants":	true
-						}, {
-							"$NodeId":	"Single.TileSet.GridWave-ecc60c79-27b8-48f7-a62d-e9046a93e1a6",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-a1dae3db-b4ac-49f9-9eaf-9cdb9a7180cb",
-								"Type":	"Simple2D",
+									"$NodeId":	"Simple.RuleSet.GridWave-0ce4cc41-52d6-4ec8-b3ea-32da65d22237",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1",
+										"E":	"0",
+										"S":	"1",
+										"W":	"1"
+									}
+								},
+								"PrefabPath":	"Maze/BaseTiles/Junction",
+								"Weight":	0.4,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-ecc60c79-27b8-48f7-a62d-e9046a93e1a6",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"1",
-									"E":	"1",
-									"S":	"1",
-									"W":	"1"
-								}
-							},
-							"PrefabPath":	"Maze/BaseTiles/Cross",
-							"Weight":	5,
-							"MinimizeVariants":	true
-						}, {
-							"$NodeId":	"Single.TileSet.GridWave-27dd7c27-e736-47ea-a6f1-f65bbab9459f",
-							"Type":	"Single",
-							"RuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-df89f349-278d-4262-94f6-5cfda24e2f5b",
-								"Type":	"Simple2D",
+									"$NodeId":	"Simple.RuleSet.GridWave-a1dae3db-b4ac-49f9-9eaf-9cdb9a7180cb",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1",
+										"E":	"1",
+										"S":	"1",
+										"W":	"1"
+									}
+								},
+								"PrefabPath":	"Maze/BaseTiles/Cross",
+								"Weight":	5,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-27dd7c27-e736-47ea-a6f1-f65bbab9459f",
+								"Type":	"Single",
 								"RuleSet":	{
-									"N":	"1",
-									"E":	"0",
-									"S":	"0",
-									"W":	"0"
-								}
-							},
-							"PrefabPath":	"Maze/BaseTiles/DeadEnd",
-							"Weight":	0.2,
-							"MinimizeVariants":	true
-						}]
-				},
+									"$NodeId":	"Simple.RuleSet.GridWave-df89f349-278d-4262-94f6-5cfda24e2f5b",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1",
+										"E":	"0",
+										"S":	"0",
+										"W":	"0"
+									}
+								},
+								"PrefabPath":	"Maze/BaseTiles/DeadEnd",
+								"Weight":	0.2,
+								"MinimizeVariants":	true
+							}]
+					}],
 				"Seed":	{
 					"$NodeId":	"Constant.Seed.GridWave-b1948fcf-bf76-417c-abd0-9d10819d9bf3",
 					"Type":	"Constant",
@@ -147,9 +147,9 @@
 						"Type":	"Border",
 						"Skip":	false,
 						"BorderRuleSet":	{
-							"$NodeId":	"Simple2D.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3",
-							"Type":	"Simple2D",
-							"RuleSet":	{
+							"$NodeId":	"Simple.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3",
+							"Type":	"Simple",
+							"HorizontalRules":	{
 								"N":	"0",
 								"E":	"0",
 								"S":	"0",
@@ -235,7 +235,13 @@
 					"$y":	-4302
 				}
 			},
-			"Simple.TileSetCollection.GridWave-a227edbd-e3e7-48f3-a430-f89843595212":	{
+			"Imported.TileSet.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1":	{
+				"$Position":	{
+					"$x":	-2690,
+					"$y":	-4107
+				}
+			},
+			"Group.TileSet.GridWave-a227edbd-e3e7-48f3-a430-f89843595212":	{
 				"$Position":	{
 					"$x":	-2695,
 					"$y":	-3993
@@ -247,7 +253,7 @@
 					"$y":	-3998
 				}
 			},
-			"Simple2D.RuleSet.GridWave-70657e4c-22e2-4254-9613-6622dea12860":	{
+			"Simple.RuleSet.GridWave-70657e4c-22e2-4254-9613-6622dea12860":	{
 				"$Position":	{
 					"$x":	-1207,
 					"$y":	-3997
@@ -259,7 +265,7 @@
 					"$y":	-3700
 				}
 			},
-			"Simple2D.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292":	{
+			"Simple.RuleSet.GridWave-8a69651b-9638-49bf-bb60-9ddb575e5292":	{
 				"$Position":	{
 					"$x":	-1208,
 					"$y":	-3698
@@ -271,7 +277,7 @@
 					"$y":	-3392
 				}
 			},
-			"Simple2D.RuleSet.GridWave-fa39e873-16c2-4f12-9d63-bd0da88ea169":	{
+			"Simple.RuleSet.GridWave-fa39e873-16c2-4f12-9d63-bd0da88ea169":	{
 				"$Position":	{
 					"$x":	-1214,
 					"$y":	-3389
@@ -283,7 +289,7 @@
 					"$y":	-3099
 				}
 			},
-			"Simple2D.RuleSet.GridWave-0ce4cc41-52d6-4ec8-b3ea-32da65d22237":	{
+			"Simple.RuleSet.GridWave-0ce4cc41-52d6-4ec8-b3ea-32da65d22237":	{
 				"$Position":	{
 					"$x":	-1213,
 					"$y":	-3090
@@ -295,7 +301,7 @@
 					"$y":	-2793
 				}
 			},
-			"Simple2D.RuleSet.GridWave-a1dae3db-b4ac-49f9-9eaf-9cdb9a7180cb":	{
+			"Simple.RuleSet.GridWave-a1dae3db-b4ac-49f9-9eaf-9cdb9a7180cb":	{
 				"$Position":	{
 					"$x":	-1208,
 					"$y":	-2787
@@ -307,7 +313,7 @@
 					"$y":	-2491
 				}
 			},
-			"Simple2D.RuleSet.GridWave-df89f349-278d-4262-94f6-5cfda24e2f5b":	{
+			"Simple.RuleSet.GridWave-df89f349-278d-4262-94f6-5cfda24e2f5b":	{
 				"$Position":	{
 					"$x":	-1209,
 					"$y":	-2484
@@ -325,7 +331,7 @@
 					"$y":	-3566
 				}
 			},
-			"Simple2D.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3":	{
+			"Simple.RuleSet.GridWave-87950ff3-e259-496f-b4d7-aa84fc2589b3":	{
 				"$Position":	{
 					"$x":	-2705,
 					"$y":	-3444
@@ -373,21 +379,15 @@
 					"$y":	-2292
 				}
 			},
-			"Imported.TileSetCollection.GridWave-8a8b7e03-906f-4da2-be6a-d556b46edbea":	{
+			"ImportedMaterialProvider-8a8b7e03-906f-4da2-be6a-d556b46edbea":	{
 				"$Position":	{
 					"$x":	-2685,
 					"$y":	-3877
 				}
-			},
-			"Imported.TileSetCollection.GridWave-14c8ba98-0bed-4346-8e39-b3bc42a307f1":	{
-				"$Position":	{
-					"$x":	-2690,
-					"$y":	-4107
-				}
 			}
 		},
 		"$FloatingNodes":	[{
-				"$NodeId":	"Imported.TileSetCollection.GridWave-8a8b7e03-906f-4da2-be6a-d556b46edbea",
+				"$NodeId":	"ImportedMaterialProvider-8a8b7e03-906f-4da2-be6a-d556b46edbea",
 				"Type":	"Imported",
 				"Name":	"MazeFancyTiles1"
 			}],

@@ -1,14 +1,14 @@
 {
-  "Id": "Advanced2D.RuleSet.GridWave",
-  "Title": "Advanced 2D RuleSet",
+  "Id": "Advanced.RuleSet.GridWave",
+  "Title": "Advanced RuleSet",
   "Color": "60,100,80",
   "Content": [
     {
-      "Id": "Provider RuleSets",
+      "Id": "HorizontalRulesProvider",
       "Type": "Object",
       "Options": {
-        "Description": "Who am I, defines what each edge's keys are",
-        "Label": "Provider RuleSets",
+        "Description": "Who am I, defines what each face's keys are",
+        "Label": "Horizontal Rules Provider",
         "Fields": [
           {
             "Id": "N",
@@ -50,11 +50,11 @@
       }
     },
     {
-      "Id": "Receiver RuleSets",
+      "Id": "HorizontalRulesReceiver",
       "Type": "Object",
       "Options": {
         "Description": "Who do I like, defines to what keys (provider) this tile can connect to",
-        "Label": "Receiver RuleSets",
+        "Label": "Horizontal Rules Receiver",
         "Fields": [
           {
             "Id": "N",
@@ -96,6 +96,20 @@
       }
     }
   ],
+  "Outputs": [
+    {
+      "Id": "VerticalRules",
+      "Type": "Advanced.VerticalRules.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Vertical Rules"
+    },
+    {
+      "Id": "ElevationRules",
+      "Type": "ElevationRules.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Elevation Rules"
+    }
+  ],
   "Inputs": [
     {
       "Id": "RuleSet",
@@ -104,8 +118,16 @@
     }
   ],
   "Schema": {
-    "Type": "Advanced2D",
-    "Provider RuleSets": "Provider RuleSets",
-    "Receiver RuleSets": "Receiver RuleSets"
+    "Type": "Advanced",
+    "HorizontalRulesProvider": "HorizontalRulesProvider",
+    "HorizontalRulesReceiver": "HorizontalRulesReceiver",
+    "VerticalRules" : {
+      "Node" : "VerticalRules.GridWave.Connection",
+      "Pin" : "VerticalRules"
+    },
+    "ElevationRules" : {
+      "Node" : "ElevationRules.GridWave.Connection",
+      "Pin" : "ElevationRules"
+    }
   }
 }

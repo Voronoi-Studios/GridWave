@@ -1,7 +1,8 @@
 {
-  "Id": "Auto.TileSetCollection.GridWave",
-  "Title": "Automatic TileSet Collection",
-  "Color": "0,70,40",
+  "Id": "AutoGroup.TileSet.GridWave",
+  "Title": "Automatic TileSet Group",
+  "Description": "Automatically creates TileSets based on the subfolders of a given folder",
+  "Color": "10,80,50",
   "Content" : [
         {
       "Id" : "ExportAs",
@@ -35,12 +36,12 @@
   "Inputs": [
     {
       "Id": "Output",
-      "Type": "TileSetCollection.GridWave.Connection",
-      "Color": "0,70,40"
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "10,80,50"
     }
   ],
   "Schema": {
-    "Type" : "Auto",
+    "Type" : "AutoGroup",
     "Features" : {
       "Node" : "Feature.Local.Variants",
       "Pin" : "Features"

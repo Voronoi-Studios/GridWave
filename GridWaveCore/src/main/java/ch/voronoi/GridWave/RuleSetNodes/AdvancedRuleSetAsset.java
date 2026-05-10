@@ -23,14 +23,17 @@ public class AdvancedRuleSetAsset extends RuleSetAsset {
             .add()
             .build();
 
-    private HorizontalRules horizontalRulesRulesProvider;
-    private HorizontalRules horizontalRulesRulesReceiver;
+    private HorizontalRules horizontalRulesRulesProvider = new HorizontalRules();
+    private HorizontalRules horizontalRulesRulesReceiver = new HorizontalRules();
 
-    private AdvancedVerticalRulesAsset advancedVerticalRulesAsset;
-    private ElevationRulesAsset elevationRulesAsset;
+    private AdvancedVerticalRulesAsset advancedVerticalRulesAsset = null;
+    private ElevationRulesAsset elevationRulesAsset = null;
 
     @Override
     public RuleCombo build() {
-        return new RuleCombo(new RuleSet(horizontalRulesRulesProvider, advancedVerticalRulesAsset.verticalRulesProvider), new RuleSet(horizontalRulesRulesReceiver, advancedVerticalRulesAsset.verticalRulesReceiver), elevationRulesAsset.elevationRules);
+        var advancedVerticalRulesProvider = advancedVerticalRulesAsset == null ? null : advancedVerticalRulesAsset.verticalRulesProvider;
+        var advancedVerticalRulesReceiver = advancedVerticalRulesAsset == null ? null : advancedVerticalRulesAsset.verticalRulesReceiver;
+        var elevationRules = elevationRulesAsset == null ? null : elevationRulesAsset.elevationRules;
+        return new RuleCombo(new RuleSet(horizontalRulesRulesProvider, advancedVerticalRulesProvider), new RuleSet(horizontalRulesRulesReceiver, advancedVerticalRulesReceiver), elevationRules);
     }
 }

@@ -1,6 +1,6 @@
 {
-	"$NodeId":	"Simple.TileSetCollection.GridWave-a205f75b-d31d-456f-b216-1a522843a370",
-	"Type":	"Simple",
+	"$NodeId":	"Group.TileSet.GridWave-a205f75b-d31d-456f-b216-1a522843a370",
+	"Type":	"Group",
 	"TileSets":	[{
 			"$NodeId":	"Imported.TileSet.GridWave-59df0e03-7b90-4241-8591-07a997a28384",
 			"Type":	"Imported",
@@ -29,7 +29,7 @@
 	"ExportAs":	"MazeFancyTiles1",
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
-			"Simple.TileSetCollection.GridWave-a205f75b-d31d-456f-b216-1a522843a370":	{
+			"Group.TileSet.GridWave-a205f75b-d31d-456f-b216-1a522843a370":	{
 				"$Position":	{
 					"$x":	3160,
 					"$y":	1319
@@ -78,6 +78,6 @@
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - TileSetCollections"
+		"$WorkspaceID":	"GridWave - TileSets"
 	}
 }

@@ -1,0 +1,71 @@
+{
+  "Id": "GridBounds.GridWave",
+  "Title": "Grid Bounds Generator",
+  "Color": "Orange",
+  "Description" : "Creates bounds extending from the position, offset * repeat times in each direction. If centered is true, the bounds will be centered on the position.",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Centered",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Centered",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "PointConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Position"
+    },
+    {
+      "Id": "OffsetConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Offset"
+    },
+    {
+      "Id": "RepeatConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Repeat"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Bounds3i.Connection",
+      "Color": "Orange"
+    }
+  ],
+  "Schema": {
+    "ExportAs" : "ExportAs",
+    "Position" : {
+      "Node" : "Point3D",
+      "Pin" : "PointConnection"
+    },
+    "Offset" : {
+      "Node" : "Point3D",
+      "Pin" : "OffsetConnection"
+    },
+    "Repeat" : {
+      "Node" : "Point3D",
+      "Pin" : "RepeatConnection"
+    },
+    "Centered" : "Centered"
+  }
+}

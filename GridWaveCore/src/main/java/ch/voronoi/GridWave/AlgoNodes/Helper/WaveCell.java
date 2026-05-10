@@ -9,7 +9,8 @@ import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import java.util.*;
 
 public class WaveCell {
-    private final Vector3i position;
+    private final Vector3i gridPosition;
+    private final Vector3i actualPosition;
     public LinkedHashSet<TileSet.TileEntry> possible;
     private GridTile chosen;
     public LinkedHashSet<POIInfo> connectedPOIs = new LinkedHashSet<>();
@@ -22,15 +23,14 @@ public class WaveCell {
                 .noneMatch(f -> f instanceof ConditionalWeightFeatureAsset cW && cW.weightIfTrue == 0))
                 .toList().size();
     }
-    public Vector3i getPosition() { return position.clone(); }
+    public Vector3i getGridPosition() { return gridPosition.clone(); }
+    public Vector3i getActualPosition() { return actualPosition.clone(); }
 
-    public WaveCell(Vector3i pos, TileSet.TileEntry tile, GridTileType type) {
-        this.position = pos.clone();
-        setChosen(tile,type);
-    }
+
+
 
     public void setChosen(TileSet.TileEntry tileEntry, GridTileType type){
-        chosen = new GridTile(tileEntry, position.clone(), type, connectedPOIs);
+        chosen = new GridTile(tileEntry,actualPosition.clone(), type, connectedPOIs);
         possible = null;
     }
 
@@ -42,15 +42,23 @@ public class WaveCell {
         setChosen(weightedMap.pick(randomSupplier), GridTileType.BASIC);
     }
 
-    public WaveCell(Vector3i pos, LinkedHashSet<TileSet.TileEntry> possible) {
-        this.position = pos.clone();
+    public WaveCell(Vector3i gridPos, Vector3i actualPos, TileSet.TileEntry tile, GridTileType type) {
+        this.gridPosition = gridPos.clone();
+        this.actualPosition = actualPos.clone();
+        setChosen(tile,type);
+    }
+
+    public WaveCell(Vector3i gridPos, Vector3i actualPos, LinkedHashSet<TileSet.TileEntry> possible) {
+        this.gridPosition = gridPos.clone();
+        this.actualPosition = actualPos.clone();
         this.possible = new LinkedHashSet<>(possible);
     }
 
     public WaveCell(WaveCell other) {
-        this.position = other.position == null ? null : other.position.clone();
+        this.gridPosition = other.gridPosition == null ? null : other.gridPosition.clone();
+        this.actualPosition = other.actualPosition == null ? null : other.actualPosition.clone();
         this.possible = other.possible == null ? null : new LinkedHashSet<>(other.possible);
-        this.chosen = other.chosen == null? null : new GridTile(other.chosen.tileEntry(),other.chosen.positionOffset().clone(), other.chosen.type(), new LinkedHashSet<>(other.connectedPOIs));
+        this.chosen = other.chosen == null? null : new GridTile(other.chosen.tileEntry(),other.chosen.actualPosition().clone(), other.chosen.type(), new LinkedHashSet<>(other.connectedPOIs));
         this.connectedPOIs = new LinkedHashSet<>(other.connectedPOIs);
     }
 

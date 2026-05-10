@@ -93,21 +93,21 @@
 						"Y":	16,
 						"Z":	16
 					},
-					"POIs":	{
-						"$NodeId":	"Imported.TileSetCollection.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5",
-						"Type":	"Imported",
-						"Name":	"MazeFixedTiles1"
-					},
-					"BaseTiles":	{
-						"$NodeId":	"Imported.TileSetCollection.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad",
-						"Type":	"Imported",
-						"Name":	"MazeBaseTiles1"
-					},
-					"FancyTiles":	{
-						"$NodeId":	"Imported.TileSetCollection.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06",
-						"Type":	"Imported",
-						"Name":	"MazeFancyTiles1"
-					},
+					"POIs":	[{
+							"$NodeId":	"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5",
+							"Type":	"Imported",
+							"Name":	"MazeFixedTiles1"
+						}],
+					"BaseTiles":	[{
+							"$NodeId":	"Imported.TileSet.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad",
+							"Type":	"Imported",
+							"Name":	"MazeBaseTiles1"
+						}],
+					"FancyTiles":	[{
+							"$NodeId":	"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06",
+							"Type":	"Imported",
+							"Name":	"MazeFancyTiles1"
+						}],
 					"Seed":	{
 						"$NodeId":	"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d",
 						"Type":	"Constant",
@@ -118,9 +118,9 @@
 							"Type":	"Border",
 							"Skip":	false,
 							"BorderRuleSet":	{
-								"$NodeId":	"Simple2D.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f",
-								"Type":	"Simple2D",
-								"RuleSet":	{
+								"$NodeId":	"Simple.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f",
+								"Type":	"Simple",
+								"HorizontalRules":	{
 									"N":	"0",
 									"E":	"0",
 									"S":	"0",
@@ -327,6 +327,24 @@
 					"$y":	-3909
 				}
 			},
+			"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5":	{
+				"$Position":	{
+					"$x":	-1079,
+					"$y":	-3708
+				}
+			},
+			"Imported.TileSet.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad":	{
+				"$Position":	{
+					"$x":	-1079,
+					"$y":	-3586
+				}
+			},
+			"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
+				"$Position":	{
+					"$x":	-1078,
+					"$y":	-3465
+				}
+			},
 			"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d":	{
 				"$Position":	{
 					"$x":	-1079,
@@ -339,7 +357,7 @@
 					"$y":	-3132
 				}
 			},
-			"Simple2D.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f":	{
+			"Simple.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f":	{
 				"$Position":	{
 					"$x":	-1075,
 					"$y":	-3010
@@ -433,24 +451,6 @@
 				"$Position":	{
 					"$x":	-5102,
 					"$y":	-2481
-				}
-			},
-			"Imported.TileSetCollection.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
-				"$Position":	{
-					"$x":	-1078,
-					"$y":	-3465
-				}
-			},
-			"Imported.TileSetCollection.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5":	{
-				"$Position":	{
-					"$x":	-1079,
-					"$y":	-3708
-				}
-			},
-			"Imported.TileSetCollection.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad":	{
-				"$Position":	{
-					"$x":	-1079,
-					"$y":	-3586
 				}
 			}
 		},

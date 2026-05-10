@@ -38,7 +38,7 @@ public class SectionData {
         this.cells = new LinkedHashMap<>();
         for (GridTile tile : gridTiles) {
             if(tile == null) continue;
-            this.cells.putIfAbsent(cellKey(tile.positionOffset()), new Entry(tile));
+            this.cells.putIfAbsent(cellKey(tile.actualPosition()), new Entry(tile));
         }
     }
 
@@ -68,7 +68,7 @@ public class SectionData {
 
         public Entry() {}
         public Entry(GridTile gridTile){
-            this.position = gridTile.positionOffset();
+            this.position = gridTile.actualPosition();
             this.ruleSet = gridTile.tileEntry().getMainRuleSet();
             this.gridTileType = gridTile.type();
             this.propFunction = gridTile.tileEntry().propFunction();

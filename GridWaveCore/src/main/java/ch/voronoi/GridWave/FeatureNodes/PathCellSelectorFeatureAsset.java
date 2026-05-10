@@ -39,7 +39,7 @@ public class PathCellSelectorFeatureAsset extends FeatureAsset {
                 if (100d / wave.size() * notCollapsed.size() < 100 - stopAfterPercent) { subWave = new LinkedHashSet<>(notCollapsed); }
                 else for (WaveCell waveCell : notCollapsed) {
                     for (int r = 0; r < 4; r++) {
-                        Vector3i neighborPos = new Vector3i(waveCell.getPosition()).add(dirs[r].clone().scale(argument.algoAsset.getGrid()));
+                        Vector3i neighborPos = new Vector3i(waveCell.getGridPosition()).add(dirs[r].clone().scale(argument.algoAsset.getGrid()));
                         WaveCell neighbor = wave.get(neighborPos);
                         if (neighbor != null && neighbor.isCollapsed()){
                             RuleCombo neighborRuleSet = neighbor.getChosen().tileEntry().getMainRuleSet();

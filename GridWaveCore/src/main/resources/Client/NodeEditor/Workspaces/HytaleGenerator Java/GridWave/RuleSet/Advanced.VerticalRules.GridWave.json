@@ -1,51 +1,43 @@
 {
-  "Id": "Simple3D.RuleSet.GridWave",
-  "Title": "Simple 3D RuleSet",
+  "Id": "Advanced.VerticalRules.GridWave",
+  "Title": "Advanced Vertical Rules",
   "Color": "60,100,80",
-  "Content" : [
-        {
-      "Id": "RuleSet",
+  "Content": [
+    {
+      "Id": "VerticalRulesProvider",
       "Type": "Object",
       "Options": {
-        "Description": "Defines both am I and who I like",
-        "Label": "RuleSet",
+        "Description": "Who am I, defines what each face's keys are",
+        "Label": "Vertical Rules Provider",
         "Fields": [
           {
-            "Id": "N",
+            "Id": "U",
             "Type": "SmallString",
             "Options": {
-              "Label": "North [-z]",
+              "Label": "Up [+y]",
               "Default": "",
               "Width": 200
             }
           },
           {
-            "Id": "E",
+            "Id": "D",
             "Type": "SmallString",
             "Options": {
-              "Label": "East [+x]",
+              "Label": "Down [-y]",
               "Default": "",
               "Width": 200
             }
-          },
-          {
-            "Id": "S",
-            "Type": "SmallString",
-            "Options": {
-              "Label": "South [+z]",
-              "Default": "",
-              "Width": 200
-            }
-          },
-          {
-            "Id": "W",
-            "Type": "SmallString",
-            "Options": {
-              "Label": "West [-x]",
-              "Default": "",
-              "Width": 200
-            }
-          },
+          }
+        ]
+      }
+    },
+    {
+      "Id": "VerticalRulesReceiver",
+      "Type": "Object",
+      "Options": {
+        "Description": "Who do I like, defines to what keys (provider) this tile can connect to vertically",
+        "Label": "Vertical Rules Receiver",
+        "Fields": [
           {
             "Id": "U",
             "Type": "SmallString",
@@ -68,17 +60,15 @@
       }
     }
   ],
-  "Outputs": [
-  ],
   "Inputs": [
     {
-      "Id": "RuleSet",
-      "Type": "RuleSet.GridWave.Connection",
+      "Id": "Advanced.VerticalRules",
+      "Type": "Advanced.VerticalRules.GridWave.Connection",
       "Color": "60,100,80"
     }
   ],
   "Schema": {
-    "Type": "Simple3D",
-    "RuleSet": "RuleSet"
+    "VerticalRulesProvider": "VerticalRulesProvider",
+    "VerticalRulesReceiver": "VerticalRulesReceiver"
   }
 }

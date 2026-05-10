@@ -1,6 +1,5 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
-import ch.voronoi.GridWave.FeatureNodes.MultithreadingFeatureAsset;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.AssetPack;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
@@ -23,8 +22,9 @@ import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.common.util.ExceptionUtil;
 import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.server.core.asset.AssetModule;
+import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import ch.voronoi.GridWave.AlgoNodes.IAlgoAsset;
+import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 
 import javax.annotation.Nonnull;
@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Stream;
 
 public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAssetMap<String, TileSetAsset>>, Cleanable {
     @Nonnull
@@ -141,8 +140,11 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
              return algoAsset.getFeatureAssets().stream().anyMatch(type::isInstance);
         }
 
-        public <T> T getFirstFeatureOf(Class<T> type) {
-            return type.cast(algoAsset.getFeatureAssets().stream().filter(type::isInstance).findFirst().orElse(null));
+        public <T> Optional<T> getFirstFeatureOf(Class<T> type) {
+            return algoAsset.getFeatureAssets().stream()
+                    .filter(type::isInstance)
+                    .map(type::cast)
+                    .findFirst();
         }
     }
 

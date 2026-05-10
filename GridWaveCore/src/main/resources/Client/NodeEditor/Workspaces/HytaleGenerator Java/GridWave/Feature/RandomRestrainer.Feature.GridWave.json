@@ -35,6 +35,14 @@
       "Description" : "Positions to choose a random entry from."
     },
     {
+      "Id": "Bounds",
+      "Type": "Bounds3i.Connection",
+      "Color": "Orange",
+      "Label" : "Bounds",
+      "Multiple" : false,
+      "Description" : "Limits the size if the generated grid"
+    },
+    {
       "Id": "Seed",
       "Type": "Seed.GridWave.Connection",
       "Color": "152,152,129",
@@ -54,6 +62,10 @@
     "Positions" : {
       "Node" : "PositionsVariants",
       "Pin" : "Positions"
+    },
+    "Bounds" : {
+      "Node" : "Bounds3i",
+      "Pin" : "Bounds"
     },
     "Seed" : {
       "Node" : "Seed.Variants",

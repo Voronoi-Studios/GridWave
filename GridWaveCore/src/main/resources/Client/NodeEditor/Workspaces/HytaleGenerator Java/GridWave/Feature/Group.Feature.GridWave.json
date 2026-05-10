@@ -1,0 +1,41 @@
+{
+  "Id": "Group.Feature.GridWave",
+  "Title": "Group Feature",
+  "Description": "Groups multiple Features together, this group is arbitrary and only used for organizational purposes, besides allowing to export multiple Features at once.",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 250
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Group",
+    "Features" : {
+      "Node" : "Feature.Variants",
+      "Pin" : "Features"
+    },
+    "ExportAs" : "ExportAs"
+  }
+}

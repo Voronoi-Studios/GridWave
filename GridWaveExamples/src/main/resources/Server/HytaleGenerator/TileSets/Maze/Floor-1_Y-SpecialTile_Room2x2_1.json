@@ -3,36 +3,36 @@
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Room2x2_1",
 	"RuleSets":	[{
-			"$NodeId":	"Simple2D.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"0",
 				"E":	"0",
 				"S":	"",
 				"W":	""
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"",
 				"E":	"0",
 				"S":	"1",
 				"W":	""
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"0",
 				"E":	"",
 				"S":	"",
 				"W":	"0"
 			}
 		}, {
-			"$NodeId":	"Simple2D.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b",
-			"Type":	"Simple2D",
-			"RuleSet":	{
+			"$NodeId":	"Simple.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b",
+			"Type":	"Simple",
+			"HorizontalRules":	{
 				"N":	"",
 				"E":	"",
 				"S":	"0",
@@ -51,25 +51,25 @@
 				},
 				"$Title":	"[ROOT] WFC Multi TileSet"
 			},
-			"Simple2D.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba":	{
+			"Simple.RuleSet.GridWave-633abcd7-b85e-48cc-90e9-459f18a048ba":	{
 				"$Position":	{
 					"$x":	4697,
 					"$y":	-793
 				}
 			},
-			"Simple2D.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549":	{
+			"Simple.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549":	{
 				"$Position":	{
 					"$x":	5203,
 					"$y":	-788
 				}
 			},
-			"Simple2D.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
+			"Simple.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
 				"$Position":	{
 					"$x":	4694,
 					"$y":	-562
 				}
 			},
-			"Simple2D.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
+			"Simple.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
 				"$Position":	{
 					"$x":	5197,
 					"$y":	-545
@@ -81,6 +81,6 @@
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - TileSets"
+		"$WorkspaceID":	"GridWave - TileSets"
 	}
 }

@@ -8,7 +8,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 
-public record GridTile(TileSet.TileEntry tileEntry, Vector3i positionOffset, GridTileType type, LinkedHashSet<POIInfo> connectedPOIs) {
+public record GridTile(TileSet.TileEntry tileEntry, Vector3i actualPosition, GridTileType type, LinkedHashSet<POIInfo> connectedPOIs) {
     public void appendLines(StringBuilder[] builders, List<String> pathKeys, int width) {
         String[] k = Arrays.stream(tileEntry.getMainRuleSet().toHorizontalStringArray())
                 .map(s -> (s == null || s.isEmpty()) ? "?" : s)

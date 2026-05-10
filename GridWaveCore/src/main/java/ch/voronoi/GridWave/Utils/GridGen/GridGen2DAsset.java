@@ -1,4 +1,4 @@
-package ch.voronoi.GridWave.AlgoNodes;
+package ch.voronoi.GridWave.Utils.GridGen;
 
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.*;
