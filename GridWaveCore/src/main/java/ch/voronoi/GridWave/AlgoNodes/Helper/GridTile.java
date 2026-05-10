@@ -1,7 +1,7 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
 import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.TileNodes.TileSet;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -9,17 +9,8 @@ import java.util.List;
 import java.util.Map;
 
 public record GridTile(TileSet.TileEntry tileEntry, Vector3i positionOffset, GridTileType type, LinkedHashSet<POIInfo> connectedPOIs) {
-    public GridTile(GridTile tile) {
-        this(
-                new TileSet.TileEntry(tile.tileEntry),
-                tile.positionOffset.clone(),
-                tile.type,
-                new LinkedHashSet<>(tile.connectedPOIs)
-        );
-    }
-
     public void appendLines(StringBuilder[] builders, List<String> pathKeys, int width) {
-        String[] k = Arrays.stream(tileEntry.getMainRuleSet().toStringArray())
+        String[] k = Arrays.stream(tileEntry.getMainRuleSet().toHorizontalStringArray())
                 .map(s -> (s == null || s.isEmpty()) ? "?" : s)
                 .toArray(String[]::new);
 

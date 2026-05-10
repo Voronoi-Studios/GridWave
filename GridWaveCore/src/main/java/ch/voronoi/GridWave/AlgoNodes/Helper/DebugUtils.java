@@ -1,10 +1,8 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.AlgoNodes.IAlgoAsset;
-import ch.voronoi.GridWave.TileNodes.TileSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
-import com.hypixel.hytale.builtin.hytalegenerator.plugin.Handle;
-import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.protocol.packets.interface_.NotificationStyle;
 import com.hypixel.hytale.server.core.Message;
@@ -13,12 +11,9 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.util.NotificationUtil;
 import ch.voronoi.GridWave.AlgoNodes.GridWave;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
-import ch.voronoi.GridWave.FeatureNodes.PathKeyAsset;
-import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
+import ch.voronoi.GridWave.FeatureNodes.PathKeyFeatureAsset;
 
 import javax.annotation.Nonnull;
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -27,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DebugUtils {
     public static void sendDebugLog(List<GridTile> gridTiles, TileSetAsset.Argument argument, GridWave.WFCResult wfcResult) {
-        List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyAsset.class::isInstance).map(PathKeyAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
+        List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyFeatureAsset.class::isInstance).map(PathKeyFeatureAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
         String generatedString = generateString(gridTiles, pathKeys);
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         String str ="Generated " + gridTiles.size() + " tiles with grid: " + VectorStr(argument.algoAsset.getGrid());
@@ -84,7 +79,7 @@ public class DebugUtils {
                 .filter(tile -> tile != null && tile.tileEntry() != null && tile.tileEntry().ruleSets() != null)
                 .flatMap(tile -> tile.tileEntry().ruleSets().values().stream())
                 .filter(Objects::nonNull)
-                .map(RuleSet.Combo::toStringArray)
+                .map(RuleCombo::toHorizontalStringArray)
                 .flatMap(Arrays::stream)
                 .mapToInt(String::length)
                 .max().orElse(1);

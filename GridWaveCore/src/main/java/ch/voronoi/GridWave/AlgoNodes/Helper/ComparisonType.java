@@ -11,7 +11,7 @@ public enum ComparisonType {
     Less((v1, v2) -> v1 < v2),
     Equal((v1, v2) -> v1 == v2);
 
-    public static final Codec<ComparisonType> CODEC = new EnumCodec(ComparisonType.class);
+    public static final Codec<ComparisonType> CODEC = new EnumCodec<>(ComparisonType.class);
 
     private final BiFloatPredicate satisfies;
 

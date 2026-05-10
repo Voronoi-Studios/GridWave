@@ -1,7 +1,7 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
-import ch.voronoi.GridWave.TileNodes.TileSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
@@ -55,14 +55,14 @@ public class SectionData {
         public static final BuilderCodec<Entry> CODEC = BuilderCodec.builder(Entry.class, Entry::new)
                 .append(new KeyedCodec<>("Position", Vector3i.CODEC, true), (t, v) -> t.position = v, t -> t.position)
                 .add()
-                .append(new KeyedCodec<>("RuleSet", new ArrayCodec<>(Codec.STRING, String[]::new), true), (t, v) -> t.ruleSet = RuleSet.Combo.fromStringArray(v), t -> t.ruleSet.toStringArray())
+                .append(new KeyedCodec<>("RuleSet", new ArrayCodec<>(Codec.STRING, String[]::new), true), (t, v) -> t.ruleSet = RuleCombo.fromHorizontalStringArray(v), t -> t.ruleSet.toHorizontalStringArray())
                 .add()
                 .append(new KeyedCodec<>("GridTileType", new EnumCodec<>(GridTileType.class), true), (t, v) -> t.gridTileType = v, t -> t.gridTileType)
                 .add()
                 .build();
 
         public Vector3i position;
-        public RuleSet.Combo ruleSet;
+        public RuleCombo ruleSet;
         public GridTileType gridTileType;
         public Function<TileSetAsset.Argument, Prop> propFunction = null;
 

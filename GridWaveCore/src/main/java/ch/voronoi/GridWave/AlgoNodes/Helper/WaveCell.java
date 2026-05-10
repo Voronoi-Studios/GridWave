@@ -1,15 +1,15 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.FeatureNodes.ConditionalWeight;
-import ch.voronoi.GridWave.TileNodes.TileSetAsset;
+import ch.voronoi.GridWave.FeatureNodes.ConditionalWeightFeatureAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.TileNodes.TileSet;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 
 import java.util.*;
 
 public class WaveCell {
-    private Vector3i position;
+    private final Vector3i position;
     public LinkedHashSet<TileSet.TileEntry> possible;
     private GridTile chosen;
     public LinkedHashSet<POIInfo> connectedPOIs = new LinkedHashSet<>();
@@ -19,7 +19,7 @@ public class WaveCell {
     public int getEntropy() {
         if (possible == null) return 0;
         return possible.stream().filter(x -> x.tileFeatures().stream()
-                .noneMatch(f -> f instanceof ConditionalWeight cW && cW.weightIfTrue == 0))
+                .noneMatch(f -> f instanceof ConditionalWeightFeatureAsset cW && cW.weightIfTrue == 0))
                 .toList().size();
     }
     public Vector3i getPosition() { return position.clone(); }

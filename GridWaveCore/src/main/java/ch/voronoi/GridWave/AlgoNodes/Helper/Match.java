@@ -1,25 +1,29 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.RuleSetNodes.RuleSet;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
 
 import javax.annotation.Nonnull;
 import java.util.stream.IntStream;
 
 public class Match {
-    public static final int[] oppositeDirection = {2, 3, 0, 1};
+    public static final int[] oppositeDirection = {2, 3, 0, 1, 5, 4};
 
-    public static boolean dir(int dir, @Nonnull RuleSet.Combo a, @Nonnull RuleSet.Combo b){
+    public static boolean dir(int dir, @Nonnull RuleCombo a, @Nonnull RuleCombo b){
         return dir(dir, a.providerRuleSet(), b.recieverRuleSet()) && dir(dir, a.recieverRuleSet(),b.providerRuleSet());
     }
     public static boolean dir(int dir, @Nonnull RuleSet a, @Nonnull RuleSet b){
-        return array(a.getRuleSetArrays()[oppositeDirection[dir]],b.getRuleSetArrays()[dir]);
+        if(dir < 4) return array(a.horizontalRules().getArrays()[oppositeDirection[dir]],b.horizontalRules().getArrays()[dir]);
+        return array(a.verticalRules().getArrays()[oppositeDirection[dir]-4],b.verticalRules().getArrays()[dir-4]);
     }
 
-    public static boolean is(@Nonnull RuleSet.Combo a, @Nonnull RuleSet.Combo b){
-        return is(a.providerRuleSet(), b.recieverRuleSet()) && is(a.recieverRuleSet(),b.providerRuleSet());
+    public static boolean is(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
+        return is(a.providerRuleSet(), b.recieverRuleSet()) && is(a.recieverRuleSet(),b.providerRuleSet()); //wrong!? Why both?
     }
     public static boolean is(@Nonnull RuleSet a, @Nonnull RuleSet b){
-        return is(a.getRuleSetArrays(),b.getRuleSetArrays());
+        return is(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
+                a.verticalRules() == null || b.verticalRules() == null || is(a.verticalRules().getArrays(), b.verticalRules().getArrays())
+        );
     }
     public static boolean is(String[][] a, String[][] b){
         return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> arrayIs(a[i], b[i]));
@@ -30,11 +34,14 @@ public class Match {
     }
 
 
-    public static boolean full(@Nonnull RuleSet.Combo a, @Nonnull RuleSet.Combo b){
-        return full(a.providerRuleSet(), b.recieverRuleSet()) && full(a.recieverRuleSet(),b.providerRuleSet());
+    public static boolean full(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
+        return full(a.providerRuleSet(), b.recieverRuleSet()) && full(a.recieverRuleSet(),b.providerRuleSet()); //wrong!? Why both?
     }
     public static boolean full(@Nonnull RuleSet a, @Nonnull RuleSet b){
-        return full(a.getRuleSetArrays(),b.getRuleSetArrays());
+        return full(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
+                (a.verticalRules() == null && b.verticalRules() == null) ||
+                (a.verticalRules() != null && is(a.verticalRules().getArrays(), b.verticalRules().getArrays()))
+        );
     }
     public static boolean full(String[][] a, String[][] b){
         return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> array(a[i], b[i]));

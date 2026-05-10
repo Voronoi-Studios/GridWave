@@ -40,7 +40,7 @@ This is an extension to GridWaveCore which is a Hytale plugin that integrates Wa
 Adding examples for:
 * Maze
 * Maze multilayered
-* Maze with elevation
+* Maze with elevationRules
 * Dungeon
 * Town
 * City

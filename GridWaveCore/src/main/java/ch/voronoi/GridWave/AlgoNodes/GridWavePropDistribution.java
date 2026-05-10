@@ -2,8 +2,8 @@ package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.GridTile;
 import ch.voronoi.GridWave.AlgoNodes.Helper.SectionData;
-import ch.voronoi.GridWave.TileNodes.TileSet;
-import ch.voronoi.GridWave.TileNodes.TileSetAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
@@ -24,9 +24,9 @@ public class GridWavePropDistribution extends PropDistribution {
     private static final ConcurrentHashMap<String, ConcurrentHashMap<Vector3i, SectionData>> cacheRegistry = new ConcurrentHashMap<>();
 
     @Nonnull private final PositionProvider positionProvider;
-    @Nonnull private final List<TileSet.TileEntry> poiTileEntries;
-    @Nonnull private final List<TileSet.TileEntry> baseTileEntries;
-    @Nonnull private final List<TileSet.TileEntry> fancyTileEntries;
+    @Nonnull private final List<TileSet> poiTileEntries;
+    @Nonnull private final List<TileSet> baseTileEntries;
+    @Nonnull private final List<TileSet> fancyTileEntries;
     @Nonnull private final TileSetAsset.Argument argument;
 
     private final int sectionSize;
@@ -34,9 +34,9 @@ public class GridWavePropDistribution extends PropDistribution {
 
     public GridWavePropDistribution(
             @Nonnull PositionProvider positionProvider,
-            @Nonnull List<TileSet.TileEntry> poiTileEntries,
-            @Nonnull List<TileSet.TileEntry> baseTileEntries,
-            @Nonnull List<TileSet.TileEntry> fancyTileEntries,
+            @Nonnull List<TileSet> poiTileEntries,
+            @Nonnull List<TileSet> baseTileEntries,
+            @Nonnull List<TileSet> fancyTileEntries,
             @Nonnull TileSetAsset.Argument argument)
     {
         this.positionProvider = positionProvider;
@@ -58,6 +58,7 @@ public class GridWavePropDistribution extends PropDistribution {
     public void forEachPossibleProp(@NonNull Consumer<Prop> consumer) {
         Stream.of(poiTileEntries, baseTileEntries, fancyTileEntries)
                 .flatMap(Collection::stream)
+                .flatMap(TileSet::getAllTileEntries)
                 .map(TileSet.TileEntry::propFunction)
                 .filter(Objects::nonNull)
                 .forEach(x -> x.apply(argument));
