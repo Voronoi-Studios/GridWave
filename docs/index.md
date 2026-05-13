@@ -6,6 +6,9 @@ published: true
 draft: false
 ---
 
+> [!DANGER]
+> This Wiki/Dokumentation is for the upcomming v0.8 and not for the currently released v0.7!
+
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
 <video width="100%" autoplay loop muted playsinline src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4"></video>
