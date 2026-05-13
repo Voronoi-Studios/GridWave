@@ -6,7 +6,7 @@ published: true
 draft: false
 ---
 
-> [!DANGER]
+> [!CAUTION]
 > This Wiki/Dokumentation is for the upcomming v0.8 and not for the currently released v0.7!
 
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
