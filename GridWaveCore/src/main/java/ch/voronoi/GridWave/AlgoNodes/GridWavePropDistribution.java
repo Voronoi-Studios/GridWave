@@ -4,7 +4,6 @@ import ch.voronoi.GridWave.AlgoNodes.Helper.GridTile;
 import ch.voronoi.GridWave.AlgoNodes.Helper.SectionData;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
@@ -36,14 +35,14 @@ public class GridWavePropDistribution extends PropDistribution {
 
     public GridWavePropDistribution(
             @Nonnull PositionProvider positionProvider,
-            @Nonnull Bounds3i seccondaryBounds,
+            @Nonnull Bounds3i secondaryBounds,
             @Nonnull List<TileSet> poiTileEntries,
             @Nonnull List<TileSet> baseTileEntries,
             @Nonnull List<TileSet> fancyTileEntries,
             @Nonnull TileSetAsset.Argument argument)
     {
         this.positionProvider = positionProvider;
-        this.seccondaryBounds = seccondaryBounds;
+        this.seccondaryBounds = secondaryBounds;
         this.poiTileEntries = poiTileEntries;
         this.baseTileEntries = baseTileEntries;
         this.fancyTileEntries = fancyTileEntries;
@@ -113,7 +112,8 @@ public class GridWavePropDistribution extends PropDistribution {
     private SectionData solveSection(Vector3i sectionAddress) {
         Bounds3i bounds = new Bounds3i(sectionAddress.clone().scale(this.sectionSize), sectionMax(sectionAddress.clone().scale(this.sectionSize)));
         List<Vector3d> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
-        List<GridTile> gridTiles = GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, this.argument);
+        TileSetAsset.Argument subArgument = new TileSetAsset.Argument(this.argument, bounds);
+        List<GridTile> gridTiles = GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, subArgument);
         return new SectionData(gridTiles);
     }
 

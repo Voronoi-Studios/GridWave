@@ -55,17 +55,16 @@ public class GridWaveUnionProp extends Prop {
             writeBounds_voxelGrid.encompass(prop.getWriteBounds_voxelGrid());
         }
 
-        Vector3i gridMin = smallest(gridPositions);
-        Vector3i gridMax = biggest(gridPositions);
-        Vector3i gridCenter = gridMax.clone().subtract(gridMin.clone()).scale(0.5);
-
         this.readBounds_voxelGrid = new Bounds3i();
-        this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offsetOpposite(gridCenter));
-        this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offset(gridCenter));
-
         this.writeBounds_voxelGrid = new Bounds3i();
-        this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offsetOpposite(gridCenter));
-        this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offset(gridCenter));
+
+        for (Vector3d pos : gridPositions){
+            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offset(pos.toVector3i()));
+            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offsetOpposite(pos.toVector3i()));
+
+            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offset(pos.toVector3i()));
+            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offsetOpposite(pos.toVector3i()));
+        }
     }
 
     @Override
@@ -78,6 +77,7 @@ public class GridWaveUnionProp extends Prop {
                 argument.referenceBundle,
                 argument.workerId,
                 argument.seedBox.child(DebugUtils.VectorStr(context.position)),
+                getWriteBounds_voxelGrid(),
                 argument.algoAsset
         );
 
@@ -111,19 +111,5 @@ public class GridWaveUnionProp extends Prop {
     @Override
     public Bounds3i getWriteBounds_voxelGrid() {
         return this.writeBounds_voxelGrid;
-    }
-
-    private static Vector3i smallest(List<Vector3d> positions) {
-        return positions.stream().reduce(
-                new Vector3d(Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE),
-                (a, b) -> new Vector3d(Math.min(a.x, b.x), Math.min(a.y, b.y), Math.min(a.z, b.z))
-        ).toVector3i();
-    }
-
-    private static Vector3i biggest(List<Vector3d> positions) {
-        return positions.stream().reduce(
-                new Vector3d(-Double.MAX_VALUE, -Double.MAX_VALUE, -Double.MAX_VALUE),
-                (a, b) -> new Vector3d(Math.max(a.x, b.x), Math.max(a.y, b.y), Math.max(a.z, b.z))
-        ).toVector3i();
     }
 }

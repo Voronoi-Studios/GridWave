@@ -11,6 +11,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.prefabprop.PrefabLoader;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
 import com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
@@ -86,12 +87,12 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public @Nonnull List<FeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull IAlgoAsset algoAsset) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, algoAsset);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull Bounds3i bounds, @Nonnull IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, bounds, algoAsset);
     }
     @Nonnull
-    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull IAlgoAsset algoAsset) {
-        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, algoAsset);
+    public static TileSetAsset.Argument argumentFrom(@Nonnull PropDistributionAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull Bounds3i bounds, @Nonnull IAlgoAsset algoAsset) {
+        return new TileSetAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId, seedBox, bounds, algoAsset);
     }
     @Nonnull
     public static PropAsset.Argument argumentFrom(@Nonnull TileSetAsset.Argument argument) {
@@ -105,6 +106,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
 
     public static class Argument {
         public SeedBox parentSeed;
+        public Bounds3i bounds;
         public MaterialCache materialCache;
         public ReferenceBundle referenceBundle;
         public WorkerIndexer.Id workerId;
@@ -117,6 +119,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                 @Nonnull ReferenceBundle referenceBundle,
                 @Nonnull WorkerIndexer.Id workerId,
                 @Nonnull SeedBox seedBox,
+                @Nonnull Bounds3i bounds,
                 @Nonnull IAlgoAsset algoAsset
         ) {
             this.parentSeed = parentSeed;
@@ -124,16 +127,24 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
             this.referenceBundle = referenceBundle;
             this.workerId = workerId;
             this.seedBox = seedBox;
+            this.bounds = bounds;
             this.algoAsset = algoAsset;
         }
 
-        public Argument(@Nonnull TileSetAsset.Argument argument) {
+
+        public Argument(@Nonnull Argument argument) {
             this.parentSeed = argument.parentSeed;
             this.materialCache = argument.materialCache;
             this.referenceBundle = argument.referenceBundle;
             this.workerId = argument.workerId;
             this.seedBox = argument.seedBox;
+            this.bounds = argument.bounds;
             this.algoAsset = argument.algoAsset;
+        }
+
+        public Argument(Argument argument, Bounds3i bounds) {
+            this(argument);
+            this.bounds = bounds;
         }
 
         public <T> boolean hasFeature(Class<T> type) {

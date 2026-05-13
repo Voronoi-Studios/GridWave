@@ -32,6 +32,7 @@ public class GridWave {
     
     public static class WFCResult {
         public SeedBox seedBox;
+        public Bounds3i bounds;
         public int backtracks;
         public int attempts;
         public boolean success;

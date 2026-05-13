@@ -3,6 +3,7 @@ package ch.voronoi.GridWave.AlgoNodes.Helper;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.protocol.packets.interface_.NotificationStyle;
 import com.hypixel.hytale.server.core.Message;
@@ -25,7 +26,7 @@ public class DebugUtils {
         List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyFeatureAsset.class::isInstance).map(PathKeyFeatureAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
         String generatedString = generateString(gridTiles, pathKeys);
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        String str ="Generated " + gridTiles.size() + " tiles with grid: " + VectorStr(argument.algoAsset.getGrid());
+        String str ="Generated " + gridTiles.size() + " tiles with bounds: " + BoundsStr(argument.bounds);
         String subStr = wfcResult.toString();
         sendNotification(Message.raw(str), Message.raw(subStr), "Icons/AssetNotifications/icon-256.png",  wfcResult.success ? NotificationStyle.Success : NotificationStyle.Warning);
         scheduler.schedule(() -> {
@@ -88,4 +89,7 @@ public class DebugUtils {
     public static String VectorStr(Vector3i position) {
         return "[x"+position.x +", y"+position.y+", z"+position.z+"]";
     }
+    public static String BoundsStr(Bounds3i bounds) { return VectorStr(bounds.min)+ "to" + VectorStr(bounds.max);
+    }
+
 }

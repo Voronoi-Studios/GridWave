@@ -73,7 +73,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
             return NoPropDistribution.INSTANCE;
         } else {
             SeedBox seedBox = argument.parentSeed.child(seed.build(this));
-            TileSetAsset.Argument tileSetArgument = TileSetAsset.argumentFrom(argument, seedBox, this);
+            TileSetAsset.Argument tileSetArgument = TileSetAsset.argumentFrom(argument, seedBox, new Bounds3i(), this);
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
             Bounds3i bounds3i = new Bounds3i(Vector3i.MIN, Vector3i.MAX);
             if(integerBounds3dAsset != null) bounds3i = integerBounds3dAsset.build();

@@ -31,6 +31,7 @@ public class CorePlugin extends JavaPlugin {
     protected void setup() {
         //Test stuff
         this.getCommandRegistry().registerCommand(new PingCommand(this.getName(), this.getManifest().getVersion().toString()));
+        this.getCommandRegistry().registerCommand(new GenerateCommand());
 
         AssetRegistry.register(HytaleAssetStore.builder(TileSetAsset.class, new DefaultAssetMap<String, TileSetAsset>())
                 .setPath("HytaleGenerator/TileSets")
