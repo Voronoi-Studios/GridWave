@@ -1,0 +1,115 @@
+{
+	"$NodeId":	"Biome-53335452-56b6-496f-8874-0ef4f85e39ad",
+	"Props":	[{
+			"$NodeId":	"Runtime-e140dd7b-3a19-4a48-95c7-45159ead732d",
+			"Skip":	false,
+			"Runtime":	1,
+			"PropDistribution":	{
+				"$NodeId":	"PropDistributionAlgo.GridWave-e2335b4b-b717-4610-bad9-182adf25fc27",
+				"Type":	"PropDistributionAlgo",
+				"Skip":	false,
+				"GridPoints":	{
+					"$NodeId":	"GridGen2D.GridWave-4924d9bc-12b4-4944-bff2-f6bee6b0e0a8",
+					"Type":	"GridGen2D",
+					"Position":	{
+						"$NodeId":	"Vector3i-000b5e41-b813-476b-a717-5df11c1fd187",
+						"X":	0,
+						"Y":	150,
+						"Z":	0
+					},
+					"OffsetX":	11,
+					"OffsetZ":	11,
+					"RepeatX":	16,
+					"RepeatZ":	16,
+					"Centered":	true
+				},
+				"BaseTiles":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885",
+						"Type":	"Imported",
+						"Name":	"DungeonBase1"
+					}],
+				"FancyTiles":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169",
+						"Type":	"Imported",
+						"Name":	"DungeonFancy1"
+					}],
+				"Seed":	{
+					"$NodeId":	"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910",
+					"Type":	"Constant",
+					"ExportAs":	"mySeed",
+					"Seed":	"SomeSeedssssss"
+				},
+				"Features":	[{
+						"$NodeId":	"Imported.Feature.GridWave-143ebf53-7cb7-4777-be65-621338b37458",
+						"Type":	"Imported",
+						"Name":	"DungeonFeatures1"
+					}],
+				"MaxPositionsCount":	20000
+			}
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-53335452-56b6-496f-8874-0ef4f85e39ad":	{
+				"$Position":	{
+					"$x":	-182,
+					"$y":	1287
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Runtime-e140dd7b-3a19-4a48-95c7-45159ead732d":	{
+				"$Position":	{
+					"$x":	527,
+					"$y":	1371
+				}
+			},
+			"PropDistributionAlgo.GridWave-e2335b4b-b717-4610-bad9-182adf25fc27":	{
+				"$Position":	{
+					"$x":	1345,
+					"$y":	1300
+				}
+			},
+			"GridGen2D.GridWave-4924d9bc-12b4-4944-bff2-f6bee6b0e0a8":	{
+				"$Position":	{
+					"$x":	2049,
+					"$y":	1151
+				}
+			},
+			"Vector3i-000b5e41-b813-476b-a717-5df11c1fd187":	{
+				"$Position":	{
+					"$x":	2621,
+					"$y":	1154
+				}
+			},
+			"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885":	{
+				"$Position":	{
+					"$x":	2050,
+					"$y":	1466
+				}
+			},
+			"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169":	{
+				"$Position":	{
+					"$x":	2056,
+					"$y":	1589
+				}
+			},
+			"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910":	{
+				"$Position":	{
+					"$x":	2057,
+					"$y":	1714
+				}
+			},
+			"Imported.Feature.GridWave-143ebf53-7cb7-4777-be65-621338b37458":	{
+				"$Position":	{
+					"$x":	2058,
+					"$y":	1876
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}

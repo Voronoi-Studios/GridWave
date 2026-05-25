@@ -13,7 +13,7 @@
 		"Centered":	true
 	},
 	"Grid":	{
-		"$NodeId":	"Point3D-7252a360-1252-46d6-9ce5-9aa7ac21d992",
+		"$NodeId":	"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7",
 		"X":	16,
 		"Y":	16,
 		"Z":	16
@@ -65,14 +65,8 @@
 			},
 			"GridGen2D.GridWave-18ee225b-3c4f-4ea0-9a3a-750f6ac640c7":	{
 				"$Position":	{
-					"$x":	4176,
+					"$x":	4175,
 					"$y":	-408
-				}
-			},
-			"Point3D-7252a360-1252-46d6-9ce5-9aa7ac21d992":	{
-				"$Position":	{
-					"$x":	4179,
-					"$y":	-98
 				}
 			},
 			"Imported.TileSet.GridWave-adb41587-8ab6-4de2-aa0f-80b3a3603a8f":	{
@@ -109,6 +103,12 @@
 				"$Position":	{
 					"$x":	4170,
 					"$y":	743
+				}
+			},
+			"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7":	{
+				"$Position":	{
+					"$x":	4177,
+					"$y":	-97
 				}
 			}
 		},

@@ -35,7 +35,7 @@ public class GridGen extends PositionProvider {
     public void generate(@NonNullDecl PositionProvider.Context context) {
         if (!(context.bounds.min.y > 0.0) && !(context.bounds.max.y <= 0.0)) {
             this.rGridBounds.min.assign(context.bounds.min.x, context.bounds.min.y, context.bounds.min.z);
-            this.rGridBounds.max.assign(context.bounds.max.x, context.bounds.min.y, context.bounds.max.z);
+            this.rGridBounds.max.assign(context.bounds.max.x, context.bounds.max.y, context.bounds.max.z);
             if (this.rGridBounds.min.x >= rGridBounds.max.x) {
                 this.rGridBounds.max.x = this.rGridBounds.min.x + 1;
             }
@@ -46,16 +46,13 @@ public class GridGen extends PositionProvider {
                 this.rGridBounds.max.z = this.rGridBounds.min.z + 1;
             }
 
-            Bounds3i rSeccondaryGridBounds = createBounds(pos, offset, repeat, centeredOnPosition);
+            this.rGridBounds.intersect(createBounds(pos, offset, repeat, centeredOnPosition).toBounds3d());
 
             this.rControl.reset();
 
-            for (double x = rSeccondaryGridBounds.min.x; x < rSeccondaryGridBounds.max.x; x += offset.x) {
-                for (double y = rSeccondaryGridBounds.min.y; y < rSeccondaryGridBounds.max.y; y += offset.y) {
-                    for (double z = rSeccondaryGridBounds.min.z; z < rSeccondaryGridBounds.max.z; z += offset.z) {
-                        assert context.bounds.contains(x, y, z);
-                        assert rSeccondaryGridBounds.contains(x,y,z);
-
+            for (double x = rGridBounds.min.x; x < rGridBounds.max.x; x += offset.x) {
+                for (double y = rGridBounds.min.y; y < rGridBounds.max.y; y += offset.y) {
+                    for (double z = rGridBounds.min.z; z < rGridBounds.max.z; z += offset.z) {
                         if (this.rControl.stop) return;
 
                         this.rPosition.assign(x, y, z);

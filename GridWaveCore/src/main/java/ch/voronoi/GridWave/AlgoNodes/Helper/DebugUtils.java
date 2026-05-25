@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
+import ch.voronoi.GridWave.FeatureNodes.DebugFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
@@ -23,15 +24,17 @@ import java.util.concurrent.TimeUnit;
 
 public class DebugUtils {
     public static void sendDebugLog(List<GridTile> gridTiles, TileSetAsset.Argument argument, GridWave.WFCResult wfcResult) {
+        DebugFeatureAsset debugFeatureAsset = argument.getFirstFeatureOf(DebugFeatureAsset.class).orElse(new DebugFeatureAsset());
         List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyFeatureAsset.class::isInstance).map(PathKeyFeatureAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
-        String generatedString = generateString(gridTiles, pathKeys);
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         String str ="Generated " + gridTiles.size() + " tiles with bounds: " + BoundsStr(argument.bounds);
         String subStr = wfcResult.toString();
-        sendNotification(Message.raw(str), Message.raw(subStr), "Icons/AssetNotifications/icon-256.png",  wfcResult.success ? NotificationStyle.Success : NotificationStyle.Warning);
-        scheduler.schedule(() -> {
-            LoggerUtil.getLogger().info("\n" + generatedString + "\n\n" + str + "\n" + subStr + "\n\n"); scheduler.shutdown();
-        }, 2, TimeUnit.SECONDS);
+        if(debugFeatureAsset.getShowNotification()) sendNotification(Message.raw(str), Message.raw(subStr), "Icons/AssetNotifications/icon-256.png",  wfcResult.success ? NotificationStyle.Success : NotificationStyle.Warning);
+        if(debugFeatureAsset.getWriteToConsole()) {
+            ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+            scheduler.schedule(() -> {
+                LoggerUtil.getLogger().info("\n" + generateString(gridTiles, pathKeys) + "\n\n" + str + "\n" + subStr + "\n\n"); scheduler.shutdown();
+            }, 2, TimeUnit.SECONDS);
+        }
     }
 
     public static void sendNotification(Message message1, Message message2, String icon, NotificationStyle style) {

@@ -7,7 +7,7 @@
 		"$NodeId":	"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3",
 		"Type":	"GridGen2D",
 		"Position":	{
-			"$NodeId":	"Point3D-f0baf7b7-3e3d-4da4-8177-7aa674b45361",
+			"$NodeId":	"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f",
 			"X":	0,
 			"Y":	90,
 			"Z":	0
@@ -19,7 +19,7 @@
 		"Centered":	true
 	},
 	"Grid":	{
-		"$NodeId":	"Point3D-76b3363f-7bfd-4ada-88ef-e17ea46b6392",
+		"$NodeId":	"Vector3i-fef344c4-85d2-485a-88e8-8baf66493799",
 		"X":	16,
 		"Y":	16,
 		"Z":	16
@@ -65,18 +65,6 @@
 					"$y":	-463
 				}
 			},
-			"Point3D-f0baf7b7-3e3d-4da4-8177-7aa674b45361":	{
-				"$Position":	{
-					"$x":	2867,
-					"$y":	-668
-				}
-			},
-			"Point3D-76b3363f-7bfd-4ada-88ef-e17ea46b6392":	{
-				"$Position":	{
-					"$x":	2684,
-					"$y":	-136
-				}
-			},
 			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
 				"$Position":	{
 					"$x":	2685,
@@ -105,6 +93,18 @@
 				"$Position":	{
 					"$x":	2694,
 					"$y":	580
+				}
+			},
+			"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f":	{
+				"$Position":	{
+					"$x":	2856,
+					"$y":	-656
+				}
+			},
+			"Vector3i-fef344c4-85d2-485a-88e8-8baf66493799":	{
+				"$Position":	{
+					"$x":	2688,
+					"$y":	-141
 				}
 			}
 		},

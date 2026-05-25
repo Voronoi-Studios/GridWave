@@ -3,14 +3,17 @@ package ch.voronoi.GridWave.AlgoNodes;
 import ch.voronoi.GridWave.AlgoNodes.Helper.*;
 import ch.voronoi.GridWave.FeatureNodes.MultithreadingFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3d;
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
+import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorProp;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
+import com.hypixel.hytale.math.Axis;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
@@ -21,11 +24,15 @@ import ch.voronoi.GridWave.TileSetNodes.TileSet;
 
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
 
 public class GridWave {
     public static final Vector3i[] dirs = { Vector3i.NORTH, Vector3i.EAST, Vector3i.SOUTH, Vector3i.WEST };
@@ -73,7 +80,7 @@ public class GridWave {
         Map<Vector3i, WaveCell> baseWave = new HashMap<>();
         gridPositions.forEach(pos -> baseWave.put(toCellPos(pos, argument.algoAsset.getGrid()), new WaveCell(toCellPos(pos, argument.algoAsset.getGrid()), pos.toVector3i(), new LinkedHashSet<>(baseTileEntries.stream().flatMap(TileSet::getAllTileEntries).toList()))));
 
-        featureAssets.forEach(feature -> feature.BaseWaveProcessor(gridPositions, baseWave, argument));
+        featureAssets.forEach(feature -> feature.BaseWaveProcessor(baseWave, argument));
 
         Map<Vector3i, LinkedHashSet<POIInfo>> poiGroupMap = new HashMap<>();
 
@@ -156,7 +163,7 @@ public class GridWave {
                     WaveCell selectedCell = result.selectedCell();
                     if (result.earlyExitReason() == EarlyExitReason.BACKTRACKED) { backtracksCount += 1; collapsedCount -= 1; continue; }
                     if (result.earlyExitReason() == EarlyExitReason.MAX_BACKTRACKS_HIT){ break; } //Failed
-                    if (selectedCell == null) { sucess = true; break; } //finished
+                    if (selectedCell == null) { sucess = true; break; } //finished => can this even happen?
 
                     //Collapse
                     var waveCellChange = new WaveCellChange(selectedCell.getGridPosition(), new WaveCell(selectedCell));
@@ -168,7 +175,7 @@ public class GridWave {
                     //Propagate to neighbors
                     propagate(selectedCell, wave, stack, argument);
                 }
-                if(sucess) {
+                if (sucess || collapsedCount >= attemptBehavior.maxCollapsedCount) {
                     Map<Vector3i, WaveCell> finalWave = wave;
                     sucess = featureAssets.stream().allMatch(feature -> feature.FinalCheck(finalWave, participantNumber, argument));
                 }
@@ -194,18 +201,17 @@ public class GridWave {
      * @param stack A stack to keep track of changes for backtracking purposes; can be null if backtracking is not needed
      */
     public static void propagate(WaveCell source, Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, TileSetAsset.Argument argument) {
-        IntStream.range(0, 4).forEach(rot -> {
-            Vector3i neighborPos = new Vector3i(source.getGridPosition()).add(dirs[rot].clone().scale(argument.algoAsset.getGrid())); //Maybe make it so we have a rounded grid position and an actuall offset position
+        IntStream.range(0, 4).forEach(dir -> {
+            Vector3i neighborPos = getNeighborPos(source.getGridPosition(), dir, argument);
             WaveCell neighbor = wave.get(neighborPos);
             if(stack != null) stack.push(new WaveCellChange(neighborPos, neighbor));
             if (neighbor != null){
                 if(!neighbor.isCollapsed()){
-                    neighbor.possible.removeIf(tileEntry -> !Match.dir(rot, tileEntry.getMainRuleSet(), source.getChosen().tileEntry().getMainRuleSet()));
+                    neighbor.possible.removeIf(tileEntry -> !Match.dir(dir, tileEntry.getMainRuleSet(), source.getChosen().tileEntry().getMainRuleSet()));
                 }
             }
         });
     }
-
 
     /*===========================================================
     *                     FANCY TILE PLACEMENT
@@ -256,36 +262,12 @@ public class GridWave {
      * @return A map of world positions (Vector3d) to Props*/
     public static @NonNull Map<Vector3d, Prop> loadPrefabProps(List<GridTile> gridTiles, TileSetAsset.Argument argument) {
         Map<Vector3d, Prop> gridProps = new LinkedHashMap<>();
-        boolean swap = argument.algoAsset.getFeatureAssets().stream().anyMatch(feature -> feature instanceof OverlapTileFeatureAsset);
         for (var gridTile : gridTiles) {
             if (gridTile == null) continue;
-
-            TileSet.TileEntry tileEntry = new TileSet.TileEntry(gridTile.tileEntry());
-            Vector3i[] anchorOffsets = getAnchorOffsets(argument.algoAsset.getGrid(), swap || tileEntry.tileFeatures().stream().anyMatch(feature -> feature instanceof OverlapTileFeatureAsset));
-            TileSetAsset.Argument subArgument = new TileSetAsset.Argument(argument);
-            Prop prop = Optional.ofNullable(tileEntry.propFunction()).map(f -> f.apply(subArgument)).orElse(EmptyProp.INSTANCE);
-            if(prop.equals(EmptyProp.INSTANCE)) continue;
-            Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(tileEntry.rotation(), Rotation.None, Rotation.None), subArgument.materialCache);
-            Vector3i offset = gridTile.actualPosition().clone().add(tileEntry.getOffset().clone().add(anchorOffsets[tileEntry.rot()].clone()));
-            gridProps.put(offset.toVector3d(), rotatedProp);
+            var result = gridTile.getFullPropFunction();
+            gridProps.put(gridTile.actualPosition().toVector3d(),result.apply(argument));
         }
         return gridProps;
-    }
-
-    public static @NonNull Vector3i[] getAnchorOffsets(Vector3i grid, boolean swap) {
-        int evenOffsetX = (grid.x % 2 == 0) ? 1 : 0;
-        int evenOffsetZ = (grid.z % 2 == 0) ? 1 : 0;
-        if (swap){
-            evenOffsetX = 1 - evenOffsetX;
-            evenOffsetZ = 1 - evenOffsetZ;
-        }
-
-        return new Vector3i[] { //To-Do: Check if this  is actually offsetting correctly for nonuniform grids
-                new Vector3i(0, 0, 0),
-                new Vector3i(0, 0, evenOffsetZ),
-                new Vector3i(evenOffsetX, 0, evenOffsetZ),
-                new Vector3i(evenOffsetX, 0, 0)
-        };
     }
 
     /*===========================================================
@@ -312,4 +294,9 @@ public class GridWave {
                 (int) Math.round(pos.z / grid.z) * grid.z
         );
     }
+
+    public static @NonNull Vector3i getNeighborPos(Vector3i source, int dir, TileSetAsset.Argument argument) {
+        return new Vector3i(source).add(dirs[dir].clone().scale(argument.algoAsset.getGrid()));
+    }
+
 }

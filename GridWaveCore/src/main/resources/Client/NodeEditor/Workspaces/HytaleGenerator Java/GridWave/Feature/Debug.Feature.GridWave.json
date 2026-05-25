@@ -12,6 +12,22 @@
       }
     },
     {
+      "Id": "WriteToConsole",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "WriteToConsole",
+        "Default" : true
+      }
+    },    
+    {
+      "Id": "ShowNotification",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "ShowNotification",
+        "Default" : true
+      }
+    },    
+    {
       "Id": "DebugGrid",
       "Type": "Checkbox",
       "Options": {
@@ -48,6 +64,8 @@
   "Schema": {
     "Type" : "Debug",
     "Skip" : "Skip",
+    "WriteToConsole" : "WriteToConsole",
+    "ShowNotification" : "ShowNotification",
     "DebugGrid" : "DebugGrid",
     "LimitSteps" : "LimitSteps",
     "MaxSteps" : "MaxSteps"

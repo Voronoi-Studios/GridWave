@@ -1,5 +1,8 @@
 package ch.voronoi.GridWave;
 
+import ch.voronoi.GridWave.Utils.GridGen.BoundsConverterAsset;
+import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
+import ch.voronoi.GridWave.Utils.GridGen.GridBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropAlgoAsset;
 import ch.voronoi.GridWave.AlgoNodes.PropDistributionAlgoAsset;
@@ -75,14 +78,17 @@ public class CorePlugin extends JavaPlugin {
         FeatureAsset.CODEC.register("RandomRestrainer", RandomRestrainerFeatureAsset.class, RandomRestrainerFeatureAsset.CODEC); //Local
         FeatureAsset.CODEC.register("PathCellSelector", PathCellSelectorFeatureAsset.class, PathCellSelectorFeatureAsset.CODEC); //Global
         FeatureAsset.CODEC.register("ConditionalWeight", ConditionalWeightFeatureAsset.class, ConditionalWeightFeatureAsset.CODEC); //Local
+        FeatureAsset.CODEC.register("SectionStorage", SectionStorageAsset.class, SectionStorageAsset.CODEC); //Global
 
         //Seed Nodes
         SeedAsset.CODEC.register("Constant", ConstantSeedAsset.class, ConstantSeedAsset.CODEC);
         SeedAsset.CODEC.register("Time", TimeSeedAsset.class, TimeSeedAsset.CODEC);
         SeedAsset.CODEC.register("Imported", ImportedSeedAsset.class, ImportedSeedAsset.CODEC);
 
-        //Currently Util Nodes
+        //Util Nodes
         PropAsset.CODEC.register("StaticMirror", StaticMirrorPropAsset.class, StaticMirrorPropAsset.CODEC);
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
+        CustomBoundsAsset.CODEC.register("Grid", GridBoundsAsset.class, GridBoundsAsset.CODEC);
+        CustomBoundsAsset.CODEC.register("Converter", BoundsConverterAsset.class, BoundsConverterAsset.CODEC);
     }
 }

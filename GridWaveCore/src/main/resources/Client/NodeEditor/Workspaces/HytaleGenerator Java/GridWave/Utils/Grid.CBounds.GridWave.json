@@ -1,18 +1,9 @@
 {
-  "Id": "GridBounds.GridWave",
+  "Id": "Grid.CBounds.GridWave",
   "Title": "Grid Bounds Generator",
   "Color": "Orange",
   "Description" : "Creates bounds extending from the position, offset * repeat times in each direction. If centered is true, the bounds will be centered on the position.",
   "Content" : [
-    {
-      "Id" : "ExportAs",
-      "Type" : "SmallString",
-      "Options" : {
-        "Label" : "ExportAs",
-        "Default" : "",
-        "Width" : 200
-      }
-    },
     {
       "Id": "Centered",
       "Type": "Checkbox",
@@ -48,12 +39,12 @@
   "Inputs": [
     {
       "Id": "Output",
-      "Type": "Bounds3i.Connection",
+      "Type": "CBounds.Connection",
       "Color": "Orange"
     }
   ],
   "Schema": {
-    "ExportAs" : "ExportAs",
+    "Type" : "Grid",
     "Position" : {
       "Node" : "Point3D",
       "Pin" : "PointConnection"

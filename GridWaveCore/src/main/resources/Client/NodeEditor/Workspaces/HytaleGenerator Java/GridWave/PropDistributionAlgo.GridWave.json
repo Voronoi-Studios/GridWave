@@ -25,7 +25,7 @@
       "Type": "Int",
       "Options": {
         "Label": "MaxGridPositionsCount",
-        "Default" : 200,
+        "Default" : 200000,
         "SmallChange": 10,
         "LargeChange": 50
       }
@@ -50,7 +50,7 @@
     },
     {
       "Id": "Bounds",
-      "Type": "Bounds3i.Connection",
+      "Type": "CBounds.Connection",
       "Color": "Orange",
       "Label" : "Bounds",
       "Multiple" : false,
@@ -114,7 +114,7 @@
       "Pin" : "Grid"
     },
     "Bounds" : {
-      "Node" : "Bounds3i",
+      "Node" : "CBounds.Variants",
       "Pin" : "Bounds"
     },
     "POIs" : {

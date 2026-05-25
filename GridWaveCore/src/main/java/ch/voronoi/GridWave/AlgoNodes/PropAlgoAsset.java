@@ -2,6 +2,9 @@ package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
+import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
+import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
+import ch.voronoi.GridWave.Utils.GridGen.MaxBounds;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.bounds.IntegerBounds3dAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.ListPositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
@@ -30,9 +33,9 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
             .add()
             .append(new KeyedCodec<>("GridPoints", PositionProviderAsset.CODEC, true), (asset, v) -> asset.positionProviderAsset = v, asset -> asset.positionProviderAsset)
             .add()
-            .append(new KeyedCodec<>("Grid", Vector3i.CODEC, true), (asset, v) -> asset.grid = v, asset -> asset.grid)
+            .append(new KeyedCodec<>("Grid", Vector3i.CODEC, false), (asset, v) -> asset.grid = v, asset -> asset.grid)
             .add()
-            .append(new KeyedCodec<>("Bounds", IntegerBounds3dAsset.CODEC, true), (asset, v) -> asset.integerBounds3dAsset = v, asset -> asset.integerBounds3dAsset)
+            .append(new KeyedCodec<>("Bounds", CustomBoundsAsset.CODEC, false), (asset, v) -> asset.boundsAsset = v, asset -> asset.boundsAsset)
             .add()
             .append(new KeyedCodec<>("POIs", new ArrayCodec<>(TileSetAsset.CODEC, TileSetAsset[]::new), true), (asset, v) -> asset.poiTileSetAssets = v, asset -> asset.poiTileSetAssets)
             .add()
@@ -49,8 +52,8 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
     private int maxPositionsCount = 20;
 
     private PositionProviderAsset positionProviderAsset = new ListPositionProviderAsset();
-    private Vector3i grid = new Vector3i(16,16,16);
-    private IntegerBounds3dAsset integerBounds3dAsset = null;
+    private Vector3i grid = null;
+    private CustomBoundsAsset boundsAsset = null;
     private TileSetAsset[] poiTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] baseTileSetAssets = new TileSetAsset[0];
     private TileSetAsset[] fancyTileSetAssets = new TileSetAsset[0];
@@ -58,11 +61,13 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
     private FeatureAsset[] featureAssets = new FeatureAsset[0];
 
     @Override
-    public Vector3i getGrid() { return grid; }
+    public Vector3i getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
+    @Override
+    public Bounds3i getFullBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
     @Override
     public int getMaxPositionsCount() { return maxPositionsCount; }
     @Override
-    public List<FeatureAsset> getFeatureAssets() { return Arrays.stream(featureAssets).toList(); }
+    public List<FeatureAsset> getFeatureAssets() { return Arrays.stream(featureAssets).flatMap(x -> x.build().stream()).toList(); }
 
     @Nonnull
     @Override
@@ -73,11 +78,9 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
             SeedBox seedBox = argument.parentSeed.child(seed.build(this));
             TileSetAsset.Argument tileSetArgument = TileSetAsset.argumentFrom(argument, seedBox, new Bounds3i(), this);
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
-            Bounds3i bounds3i = new Bounds3i(Vector3i.MIN, Vector3i.MAX);
-            if(integerBounds3dAsset != null) bounds3i = integerBounds3dAsset.build();
 
             return new GridWaveUnionProp(
-                    GridWave.getPositions(positionProvider, bounds3i, maxPositionsCount),
+                    GridWave.getPositions(positionProvider, getFullBounds(), maxPositionsCount),
                     Arrays.stream(poiTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
                     Arrays.stream(baseTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
                     Arrays.stream(fancyTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),

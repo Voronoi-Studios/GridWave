@@ -10,14 +10,28 @@
         "Label": "Skip",
         "Default" : false
       }
+    },
+    {
+      "Id" : "BorderType",
+      "Type" : "Enum",
+      "Options" : {
+        "Label" : "Border Type",
+        "Default" : "OuterBorder",
+        "Values" : [
+          "InnerBorder",
+          "OuterBorder"
+        ],
+        "Description" : "Whether the border should be placed along the full bounds or on the individual sections"
+      }
     }
   ],
   "Outputs": [
     {
-      "Id": "BorderRuleSet",
+      "Id": "BorderRuleSets",
       "Type": "RuleSet.GridWave.Connection",
       "Color": "60,100,80",
-      "Label": "Border Rule Set",
+      "Label": "Border Rule Sets",
+      "Multiple" : true,
       "Description" : "Around the borders of the grid tiles with this rule set will be placed."
     }
   ],
@@ -31,9 +45,9 @@
   "Schema": {
     "Type" : "Border",
     "Skip" : "Skip",
-    "BorderRuleSet" : {
+    "BorderRuleSets" : {
       "Node" : "RuleSet.GridWave",
-      "Pin" : "BorderRuleSet"
+      "Pin" : "BorderRuleSets"
     }
   }
 }

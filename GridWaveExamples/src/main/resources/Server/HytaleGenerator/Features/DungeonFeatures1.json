@@ -1,0 +1,98 @@
+{
+	"$NodeId":	"Group.Feature.GridWave-30fcda05-1eeb-4f38-9f5a-9016944004cf",
+	"Type":	"Group",
+	"Features":	[{
+			"$NodeId":	"Debug.Feature.GridWave-0ff61b50-9346-4d75-8622-021c987a0440",
+			"Type":	"Debug",
+			"Skip":	true,
+			"DebugGrid":	false,
+			"LimitSteps":	false,
+			"MaxSteps":	200
+		}, {
+			"$NodeId":	"MultiAttempt.Feature.GridWave-2168eb65-2279-41fa-bc25-84e057507524",
+			"Type":	"MultiAttempt",
+			"Skip":	false,
+			"MaxBacktracks":	1000,
+			"MaxAttempts":	20
+		}, {
+			"$NodeId":	"PathCellSelector.Feature.GridWave-562c02a3-8ea3-4642-bbf9-5f90a7a45af5",
+			"Type":	"PathCellSelector",
+			"Skip":	true,
+			"PathKey":	"1",
+			"StopAfterPercent":	60
+		}, {
+			"$NodeId":	"PathKey.Feature.GridWave-2db61e39-beee-4e93-b3b1-7423c5415548",
+			"Type":	"PathKey",
+			"Skip":	true,
+			"PathKey":	"1",
+			"CleanIsolated":	true
+		}, {
+			"$NodeId":	"Border.Feature.GridWave-ac85bf26-4b67-4215-bfd6-fc257833dcd3",
+			"Type":	"Border",
+			"Skip":	true,
+			"BorderRuleSet":	{
+				"$NodeId":	"Simple.RuleSet.GridWave-5689716c-79fe-430a-adb6-1b8bc03af229",
+				"Type":	"Simple",
+				"HorizontalRules":	{
+					"N":	"0",
+					"E":	"0",
+					"S":	"0",
+					"W":	"0"
+				}
+			}
+		}],
+	"ExportAs":	"DungeonFeatures1",
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Group.Feature.GridWave-30fcda05-1eeb-4f38-9f5a-9016944004cf":	{
+				"$Position":	{
+					"$x":	2527,
+					"$y":	2173
+				},
+				"$Title":	"[ROOT] Group Feature"
+			},
+			"Debug.Feature.GridWave-0ff61b50-9346-4d75-8622-021c987a0440":	{
+				"$Position":	{
+					"$x":	3440,
+					"$y":	1740
+				}
+			},
+			"MultiAttempt.Feature.GridWave-2168eb65-2279-41fa-bc25-84e057507524":	{
+				"$Position":	{
+					"$x":	3417,
+					"$y":	1971
+				}
+			},
+			"PathCellSelector.Feature.GridWave-562c02a3-8ea3-4642-bbf9-5f90a7a45af5":	{
+				"$Position":	{
+					"$x":	3333,
+					"$y":	2208
+				}
+			},
+			"PathKey.Feature.GridWave-2db61e39-beee-4e93-b3b1-7423c5415548":	{
+				"$Position":	{
+					"$x":	3335,
+					"$y":	2403
+				}
+			},
+			"Border.Feature.GridWave-ac85bf26-4b67-4215-bfd6-fc257833dcd3":	{
+				"$Position":	{
+					"$x":	3305,
+					"$y":	2601
+				}
+			},
+			"Simple.RuleSet.GridWave-5689716c-79fe-430a-adb6-1b8bc03af229":	{
+				"$Position":	{
+					"$x":	3838,
+					"$y":	2608
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - Features"
+	}
+}

@@ -1,0 +1,65 @@
+{
+  "Id": "SectionStorage.Feature.GridWave",
+  "Title": "Section Storage Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "WriteToWorldFolder",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "WriteToWorldFolder",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "CacheSize",
+      "Type": "Int",
+      "Options": {
+        "Label": "CacheSize",
+        "Default" : 50
+      }
+    },
+    {
+      "Id": "HorizontalSectionSize",
+      "Type": "Int",
+      "Options": {
+        "Label": "HorizontalSectionSize",
+        "Default" : 150
+      }
+    },
+    {
+      "Id": "VerticalSectionSize",
+      "Type": "Int",
+      "Options": {
+        "Label": "VerticalSectionSize",
+        "Default" : 640
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "SectionStorage",
+    "Skip" : "Skip",
+    "WriteToWorldFolder" : "WriteToWorldFolder",
+    "LimitSteps" : "LimitSteps",
+    "CacheSize" : "CacheSize",
+    "HorizontalSectionSize" : "HorizontalSectionSize",
+    "VerticalSectionSize" : "VerticalSectionSize"
+  }
+}

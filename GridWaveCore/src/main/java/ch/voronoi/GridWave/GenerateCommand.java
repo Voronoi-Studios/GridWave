@@ -67,12 +67,11 @@ public class GenerateCommand extends AbstractPlayerCommand {
         Bounds3i readBounds = prop.getReadBounds_voxelGrid().clone();
         Bounds3i writeBounds = prop.getWriteBounds_voxelGrid().clone();
 
-        writeBounds.max.y += 50;
+        //writeBounds.max.y += 50;
 //        readBounds.correct();
 //        writeBounds.correct();
 
         Bounds3i bounds = writeBounds.clone();
-        //bounds.max.y += 50; //Hacky lol
 
         ArrayVoxelSpace<Material> readSpace = new ArrayVoxelSpace<>(readBounds);
         ArrayVoxelSpace<Material> writeSpace = new ArrayVoxelSpace<>(writeBounds);

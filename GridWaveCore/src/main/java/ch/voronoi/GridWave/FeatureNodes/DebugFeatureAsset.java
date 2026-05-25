@@ -18,6 +18,10 @@ public class DebugFeatureAsset extends FeatureAsset {
     @Nonnull
     public static final BuilderCodec<DebugFeatureAsset> CODEC = BuilderCodec.builder(
                     DebugFeatureAsset.class, DebugFeatureAsset::new, FeatureAsset.ABSTRACT_CODEC)
+            .append(new KeyedCodec<>("WriteToConsole", Codec.BOOLEAN), (asset, v) -> asset.writeToConsole = v, asset -> asset.writeToConsole)
+            .add()
+            .append(new KeyedCodec<>("ShowNotification", Codec.BOOLEAN), (asset, v) -> asset.showNotification = v, asset -> asset.showNotification)
+            .add()
             .append(new KeyedCodec<>("DebugGrid", Codec.BOOLEAN), (asset, v) -> asset.debugGrid = v, asset -> asset.debugGrid)
             .add()
             .append(new KeyedCodec<>("LimitSteps", Codec.BOOLEAN), (asset, v) -> asset.limitSteps = v, asset -> asset.limitSteps)
@@ -26,9 +30,14 @@ public class DebugFeatureAsset extends FeatureAsset {
             .add()
             .build();
 
+    private boolean writeToConsole = false;
+    private boolean showNotification = false;
     private boolean debugGrid;
     private boolean limitSteps;
     private int maxSteps;
+
+    public boolean getWriteToConsole() { return writeToConsole;}
+    public boolean getShowNotification() { return showNotification;}
 
     @Override
     public void BeforeWFC(AttemptBehavior attemptBehavior, TileSetAsset.Argument argument) {

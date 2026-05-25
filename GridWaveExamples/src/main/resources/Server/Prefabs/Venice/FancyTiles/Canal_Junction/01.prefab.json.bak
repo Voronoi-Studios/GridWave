@@ -1,0 +1,81 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    {
+      "x": -5,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": -4,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Beam"
+    },
+    {
+      "x": -3,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": -2,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Beam"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Beam"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Beam"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick_Wall"
+    }
+  ]
+}

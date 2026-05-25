@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.SectionStorageAsset;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.AssetPack;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
@@ -156,6 +157,11 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                     .filter(type::isInstance)
                     .map(type::cast)
                     .findFirst();
+        }
+
+        public SectionStorageAsset.Context getSectionStorageContext() {
+            var sectionStorage = getFirstFeatureOf(SectionStorageAsset.class).orElse(new SectionStorageAsset());
+            return sectionStorage.getContext(seedBox.toString());
         }
     }
 

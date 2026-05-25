@@ -1,5 +1,7 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.SectionData;
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import ch.voronoi.GridWave.RuleSetNodes.Components.HorizontalRules;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
@@ -60,7 +62,7 @@ public abstract class TileSet {
     public record TileEntry(
             Map<Vector3i, RuleCombo> ruleSets,
             Vector3i identifierKey,
-            double weight, int rot,
+            double weight, int rot, MirrorDirection mirrorDirection,
             Function<TileSetAsset.Argument, Prop> propFunction,
             List<FeatureAsset> tileFeatures) {
 
@@ -70,8 +72,16 @@ public abstract class TileSet {
                     tileEntry.identifierKey.clone(),
                     tileEntry.weight,
                     tileEntry.rot,
+                    tileEntry.mirrorDirection,
                     tileEntry.propFunction,
                     new ArrayList<>(tileEntry.tileFeatures)
+            );
+        }
+
+        public TileEntry(SectionData.Entry entry) {
+            this(
+                    Map.of(Vector3i.ZERO, entry.ruleSet),Vector3i.ZERO,
+                    1, 0, MirrorDirection.None, null, new ArrayList<>()
             );
         }
 
@@ -84,6 +94,7 @@ public abstract class TileSet {
                         new Vector3i(subIdentifier),
                         weight,
                         rot,
+                        mirrorDirection,
                         subIdentifier.equals(identifierKey) ? propFunction : null,
                         new ArrayList<>(tileFeatures))
                 );
@@ -92,7 +103,7 @@ public abstract class TileSet {
             return result;
         }
 
-        public Rotation rotation() {
+        public static Rotation toRotation(int rot) {
             return switch (rot) {
                 case 1 -> Rotation.Ninety;
                 case 2 -> Rotation.OneEighty;
@@ -146,6 +157,7 @@ public abstract class TileSet {
                 identifierKey,
                 entry.weight(),
                 entry.rot(),
+                entry.mirrorDirection(),
                 entry.propFunction,
                 new ArrayList<>(entry.tileFeatures)
         );

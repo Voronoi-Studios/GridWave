@@ -1,6 +1,10 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
+import ch.voronoi.GridWave.AlgoNodes.GridWave;
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import ch.voronoi.GridWave.FeatureNodes.OverlapTileFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
@@ -13,6 +17,7 @@ import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +51,7 @@ public class SectionData {
         return address.x + "," + address.y + "," + address.z;
     }
 
-    public SectionData.Entry getEntry(Vector3d pos) {
+    public @Nullable SectionData.Entry getEntry(Vector3d pos) {
         return cells.get(cellKey(pos.toVector3i()));
     }
 
@@ -66,12 +71,14 @@ public class SectionData {
         public GridTileType gridTileType;
         public Function<TileSetAsset.Argument, Prop> propFunction = null;
 
+        //public List<FeatureAsset> tileFeatures;
+
         public Entry() {}
         public Entry(GridTile gridTile){
             this.position = gridTile.actualPosition();
             this.ruleSet = gridTile.tileEntry().getMainRuleSet();
             this.gridTileType = gridTile.type();
-            this.propFunction = gridTile.tileEntry().propFunction();
+            this.propFunction = gridTile.getFullPropFunction();
         }
     }
 }

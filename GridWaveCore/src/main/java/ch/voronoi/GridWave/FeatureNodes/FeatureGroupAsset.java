@@ -6,6 +6,7 @@ import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FeatureGroupAsset extends FeatureAsset {
@@ -19,10 +20,6 @@ public class FeatureGroupAsset extends FeatureAsset {
 
     @Override
     public List<FeatureAsset> build() {
-        List<FeatureAsset> combinedFeatureAssets = new ArrayList<>();
-        for(var featureAsset : featureAssets){
-            combinedFeatureAssets.addAll(featureAsset.build());
-        }
-        return combinedFeatureAssets;
+        return Arrays.stream(featureAssets).flatMap(x -> x.build().stream()).toList();
     }
 }

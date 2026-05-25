@@ -42,10 +42,16 @@ public class WaveCell {
         setChosen(weightedMap.pick(randomSupplier), GridTileType.BASIC);
     }
 
+    public WaveCell(SectionData.Entry entry) {
+        this.gridPosition = entry.position.clone();
+        this.actualPosition = entry.position.clone();
+        setChosen(new TileSet.TileEntry(entry), entry.gridTileType);
+    }
+
     public WaveCell(Vector3i gridPos, Vector3i actualPos, TileSet.TileEntry tile, GridTileType type) {
         this.gridPosition = gridPos.clone();
         this.actualPosition = actualPos.clone();
-        setChosen(tile,type);
+        setChosen(tile, type);
     }
 
     public WaveCell(Vector3i gridPos, Vector3i actualPos, LinkedHashSet<TileSet.TileEntry> possible) {

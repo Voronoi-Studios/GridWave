@@ -1,0 +1,31 @@
+{
+  "Id": "Converter.CBounds.GridWave",
+  "Title": "Bounds Converter",
+  "Color": "Orange",
+  "Description" : "Hytales Bounds are not setup so I can extend them, so I have to convert them to my own format",
+  "Content" : [
+  ],
+  "Outputs": [
+    {
+      "Id": "Bounds",
+      "Type": "Bounds3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Bounds"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "CBounds.Connection",
+      "Color": "Orange"
+    }
+  ],
+  "Schema": {
+    "Type" : "Converter",
+    "Bounds" : {
+      "Node" : "Bounds3i",
+      "Pin" : "Bounds"
+    }
+  }
+}

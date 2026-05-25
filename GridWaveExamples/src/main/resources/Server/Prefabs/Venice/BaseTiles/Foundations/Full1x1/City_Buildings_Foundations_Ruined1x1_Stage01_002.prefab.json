@@ -1,0 +1,8485 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 4,
+  "anchorY": 0,
+  "anchorZ": -5,
+  "blocks": [
+    {
+      "x": -2,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -35,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -34,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -33,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -32,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -31,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -30,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -29,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -28,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -27,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -26,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -25,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -24,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -23,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -22,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -21,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -20,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -19,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -18,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -17,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -16,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -15,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -14,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -35,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -34,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -33,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -32,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -31,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -30,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -29,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -28,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -27,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -26,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -25,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -24,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -23,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -22,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -21,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -20,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -19,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -18,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -17,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -16,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -15,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -14,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -13,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -2,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -2,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -2,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -18,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -17,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -16,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -35,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -34,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -33,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -32,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -31,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -30,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -29,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -28,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -27,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -26,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -25,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -24,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -23,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -22,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -21,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -20,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -19,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -18,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -17,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -16,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -15,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -14,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -35,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -34,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -33,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -32,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -31,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -30,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -29,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -28,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -27,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -26,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -25,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -24,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -23,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -22,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -21,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -20,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -19,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -18,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -17,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -16,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -15,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -14,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -35,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -34,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -33,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -32,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -31,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -30,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -29,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -28,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -27,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -26,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -25,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -24,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -23,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -22,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -21,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -20,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -19,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -18,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -17,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -16,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -15,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -14,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -13,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -12,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -11,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -10,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -9,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -8,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -7,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": -1,
+      "y": -6,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -5,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -4,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": -1,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -19,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -19,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -8,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -7,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": -1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -35,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -34,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -33,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -32,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -31,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -30,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -29,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -28,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -27,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -26,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -25,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -24,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -23,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -22,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -21,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -20,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -19,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -35,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -34,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -33,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -32,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -31,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -30,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -29,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -28,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -27,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -26,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -25,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -24,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -23,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -22,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -21,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -20,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -19,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -35,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -34,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -33,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -32,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -31,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -30,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -29,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -28,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -27,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -26,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -25,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -24,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -23,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -22,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -21,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -20,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -19,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -18,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -17,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -16,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -15,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -14,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -13,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -12,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -11,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -10,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -9,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -8,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -7,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 0,
+      "y": -6,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -5,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 0,
+      "y": -4,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 1,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 11
+    },
+    {
+      "x": 1,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone",
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 2,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble",
+      "rotation": 1
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 2,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 2,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 7,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 7,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 7,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone",
+      "rotation": 1
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 8,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 9
+    },
+    {
+      "x": 8,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 8,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 1
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -35,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -34,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -33,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -32,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -31,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -30,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -29,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -28,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -27,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -26,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -25,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -24,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -23,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -22,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -21,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -20,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -19,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -18,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -17,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -16,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -15,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -14,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -35,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -34,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -33,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -32,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -31,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -30,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -29,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -28,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -27,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -26,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -25,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -24,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -23,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -22,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -21,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -20,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -19,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -18,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -17,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -16,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -35,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -34,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -33,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -32,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -31,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -30,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -29,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -28,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -27,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -26,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -25,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -24,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -23,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -22,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -21,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -20,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -19,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -8,
+      "name": "Rock_Sandstone_Cobble",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Cobble",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -7,
+      "name": "Rock_Sandstone",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -7,
+      "name": "Rock_Sandstone",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -16,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -15,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -14,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -18,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -17,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -16,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -15,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -14,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -13,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -12,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -11,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -10,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -9,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -8,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -7,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -6,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -5,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -4,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 9,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -35,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -34,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -33,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -32,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -31,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -30,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -29,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -28,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -27,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -26,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -25,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -24,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -23,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -22,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -21,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -20,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -19,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -18,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -17,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -16,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -15,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -14,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": -11,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": -11,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -11,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -35,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -34,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -33,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -32,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -31,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -30,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -29,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -28,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -27,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -26,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -25,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -24,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -23,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -22,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -21,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -20,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -19,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -18,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -17,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -16,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -35,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -34,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -33,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -32,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -31,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -30,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -29,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -28,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -27,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -26,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -25,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -24,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -23,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -22,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -21,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -20,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -19,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone",
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -15,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -14,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -13,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -12,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -11,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -10,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -9,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -8,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -7,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -6,
+      "z": 2,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 10,
+      "y": -5,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -4,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -3,
+      "z": 2,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 10,
+      "y": -2,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": -1,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -35,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -34,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -33,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -32,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -31,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -30,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -29,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -28,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -27,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -26,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -25,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -24,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -23,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -22,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -21,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -20,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -19,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -18,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -17,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -16,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -15,
+      "z": -10,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -14,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -13,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -12,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -11,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -10,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -9,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -8,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -7,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -6,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -5,
+      "z": -10,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -4,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -10,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -35,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -34,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -33,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -32,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -31,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -30,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -29,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -28,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -27,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -26,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -25,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -24,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -23,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -22,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -21,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -20,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -19,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -18,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -17,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -16,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -15,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -14,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -13,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -12,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -11,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -10,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -9,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -8,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -7,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -6,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -5,
+      "z": -9,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -4,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": -9,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -9,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 10
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -8,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -7,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -6,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -5,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -4,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -3,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -2,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick_Stairs",
+      "rotation": 8
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": -1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -13,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -12,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -11,
+      "z": 0,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -10,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -9,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -8,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -7,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -6,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -5,
+      "z": 0,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -4,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -12,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -11,
+      "z": 1,
+      "name": "Rock_Sandstone_Cobble"
+    },
+    {
+      "x": 11,
+      "y": -10,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -9,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -8,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -7,
+      "z": 1,
+      "name": "Rock_Sandstone"
+    },
+    {
+      "x": 11,
+      "y": -6,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -5,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -4,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -3,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -2,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": -1,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "z": 1,
+      "name": "Rock_Sandstone_Brick"
+    }
+  ]
+}

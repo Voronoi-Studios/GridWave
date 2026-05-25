@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
@@ -27,7 +28,7 @@ public class SingleTileSet extends TileSet {
         for (int r = 0; r < 4; r++) {
             RuleCombo current = rotate(ruleSet,r);
             String key = Arrays.toString(current.toHorizontalStringArray());
-            TileEntry tileEntry = new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r, this::getProp, new ArrayList<>(tileFeatureAssets));
+            TileEntry tileEntry = new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets));
             if (!minimizeVariants || seen.add(key)) tileEntries.add(tileEntry);
         }
         tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));

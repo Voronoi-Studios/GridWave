@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.Utils.GridGen;
 
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.*;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
@@ -8,6 +9,8 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.math.vector.Vector3i;
 
 import javax.annotation.Nonnull;
+
+import static ch.voronoi.GridWave.Utils.GridGen.GridGen.createBounds;
 
 public class GridGen2DAsset extends PositionProviderAsset {
     @Nonnull
@@ -39,5 +42,13 @@ public class GridGen2DAsset extends PositionProviderAsset {
     @Override
     public PositionProvider build(@Nonnull PositionProviderAsset.Argument argument) {
         return new GridGen(pos.clone(), new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
+    }
+
+    public Vector3i getGrid() {
+        return new Vector3i(offsetX, 0, offsetZ);
+    }
+
+    public Bounds3i getBounds() {
+        return createBounds(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
     }
 }

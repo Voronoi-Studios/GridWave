@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Stream;
 
 public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String, DefaultAssetMap<String, FeatureAsset>> {
     @Nonnull
@@ -87,7 +88,7 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     //Implement different methods
     public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) { }
 
-    public void BaseWaveProcessor(@NonNull List<Vector3d> gridPositions, Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { }
+    public void BaseWaveProcessor(@NonNull Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { }
 
     public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) { return false; }
 

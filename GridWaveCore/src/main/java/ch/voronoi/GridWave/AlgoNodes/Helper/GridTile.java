@@ -1,12 +1,22 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
+import ch.voronoi.GridWave.FeatureNodes.OverlapTileFeatureAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
+import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
+import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
 import com.hypixel.hytale.math.vector.Vector3i;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
+import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
+import org.jspecify.annotations.NonNull;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
+
+import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
 
 public record GridTile(TileSet.TileEntry tileEntry, Vector3i actualPosition, GridTileType type, LinkedHashSet<POIInfo> connectedPOIs) {
     public void appendLines(StringBuilder[] builders, List<String> pathKeys, int width) {
@@ -75,5 +85,36 @@ public record GridTile(TileSet.TileEntry tileEntry, Vector3i actualPosition, Gri
         int left = total / 2;
         int right = total - left - 1;
         return " ".repeat(left) + s + " ".repeat(right);
+    }
+
+    public Function<TileSetAsset.Argument, Prop> getFullPropFunction(){
+        return argument -> {
+            TileSet.TileEntry entry = new TileSet.TileEntry(tileEntry());
+            boolean localSwap = entry.tileFeatures().stream().anyMatch(feature -> feature instanceof OverlapTileFeatureAsset);
+            boolean globalSwap = argument.hasFeature(OverlapTileFeatureAsset.class); //A bit inefficient to check this every time?
+            Vector3i[] anchorOffsets = getAnchorOffsets(argument.algoAsset.getGrid(), globalSwap || localSwap);
+            Vector3i offset = entry.getOffset().clone().add(anchorOffsets[entry.rot()].clone());
+            TileSetAsset.Argument subArgument = new TileSetAsset.Argument(argument); //Might be needed, to stop some cross-referencing
+            Prop prop = Optional.ofNullable(entry.propFunction()).map(f -> f.apply(subArgument)).orElse(EmptyProp.INSTANCE);
+            if(prop.equals(EmptyProp.INSTANCE)) return prop;
+            Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(toRotation(entry.rot()), Rotation.None, Rotation.None), subArgument.materialCache);
+            Prop mirroredProp = entry.mirrorDirection().toAxis() == null ? rotatedProp : new StaticMirrorProp(rotatedProp, entry.mirrorDirection().toAxis(), subArgument.materialCache);
+            return new OffsetProp(offset,mirroredProp);
+        };
+    }
+    public static @NonNull Vector3i[] getAnchorOffsets(Vector3i grid, boolean swap) {
+        int evenOffsetX = (grid.x % 2 == 0) ? 1 : 0;
+        int evenOffsetZ = (grid.z % 2 == 0) ? 1 : 0;
+        if (swap){
+            evenOffsetX = 1 - evenOffsetX;
+            evenOffsetZ = 1 - evenOffsetZ;
+        }
+
+        return new Vector3i[] { //To-Do: Check if this  is actually offsetting correctly for nonuniform grids
+                new Vector3i(0, 0, 0),
+                new Vector3i(0, 0, evenOffsetZ),
+                new Vector3i(evenOffsetX, 0, evenOffsetZ),
+                new Vector3i(evenOffsetX, 0, 0)
+        };
     }
 }

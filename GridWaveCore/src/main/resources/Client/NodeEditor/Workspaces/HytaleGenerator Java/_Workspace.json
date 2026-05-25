@@ -71,7 +71,8 @@
       "Restrainer.Feature.GridWave",
       "RandomRestrainer.Feature.GridWave",
       "PathCellSelector.Feature.GridWave",
-      "ConditionalWeight.Feature.GridWave"
+      "ConditionalWeight.Feature.GridWave",
+      "SectionStorage.Feature.GridWave"
     ],
     "GridWave.Seed" : [
       "Constant.Seed.GridWave",
@@ -81,7 +82,8 @@
     "GridWave.Utils" : [
       "GridGen2D.GridWave",
       "StaticMirrorProp.GridWave",
-      "GridBounds.GridWave"
+      "Grid.CBounds.GridWave",
+      "Converter.CBounds.GridWave"
     ],
      "Material" : [
       "Material",
@@ -400,7 +402,8 @@
         "Restrainer": "Restrainer.Feature.GridWave",
         "RandomRestrainer": "RandomRestrainer.Feature.GridWave",
         "PathCellSelector": "PathCellSelector.Feature.GridWave",
-        "ConditionalWeight": "ConditionalWeight.Feature.GridWave"
+        "ConditionalWeight": "ConditionalWeight.Feature.GridWave",
+        "SectionStorage": "SectionStorage.Feature.GridWave"
       }
     },
     "Seed.Variants":{
@@ -409,6 +412,13 @@
         "Constant": "Constant.Seed.GridWave",
         "Time": "Time.Seed.GridWave",
         "Imported": "Imported.Seed.GridWave"
+      }
+    },
+    "CBounds.Variants":{
+      "VariantFieldName": "Type",
+      "Variants": {
+        "GridBounds": "GridBounds.GridWave",
+        "Converter": "BoundsConverter.GridWave"
       }
     },
     "DensityNodeVariants": {
