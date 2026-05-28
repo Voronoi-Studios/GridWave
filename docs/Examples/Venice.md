@@ -3,6 +3,7 @@ published: true
 draft: true
 ---
 
+<video width="100%" autoplay loop muted playsinline src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" />
 
 ## _*Venice*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
