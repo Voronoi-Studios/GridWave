@@ -48,9 +48,11 @@
 	"MaterialProvider":	{
 		"$NodeId":	"SolidityMaterialProvider-6c9457eb-7b70-425b-a731-f1ce5d8bf3d5",
 		"Type":	"Solidity",
+		"Skip":	false,
 		"Solid":	{
 			"$NodeId":	"ConstantMaterialProvider-a394f87f-3227-4694-a7e1-140c4c29fdc5",
 			"Type":	"Constant",
+			"Skip":	false,
 			"Material":	{
 				"$NodeId":	"Material-ee2d34e9-ce5d-4dce-9235-56e0c7107e46",
 				"Solid":	"Rock_Shale",
@@ -65,6 +67,7 @@
 			"PropDistribution":	{
 				"$NodeId":	"Constant.PropDistribution-3919fcd5-3c96-4140-a75c-e651cec02bca",
 				"Type":	"Constant",
+				"Skip":	false,
 				"Positions":	{
 					"$NodeId":	"ListPositions-b43833c8-7e36-4829-b15f-ad5b2157b7d1",
 					"Type":	"List",
@@ -86,12 +89,6 @@
 						"Type":	"Imported",
 						"Name":	"grid3",
 						"Skip":	false
-					},
-					"Grid":	{
-						"$NodeId":	"Point3D-44d97c07-5007-4d15-bb81-f0a33cc02742",
-						"X":	16,
-						"Y":	16,
-						"Z":	16
 					},
 					"POIs":	[{
 							"$NodeId":	"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5",
@@ -117,16 +114,16 @@
 							"$NodeId":	"Border.Feature.GridWave-b5b8a602-6f5e-44ca-b657-3283c48ec3e6",
 							"Type":	"Border",
 							"Skip":	false,
-							"BorderRuleSet":	{
-								"$NodeId":	"Simple.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f",
-								"Type":	"Simple",
-								"HorizontalRules":	{
-									"N":	"0",
-									"E":	"0",
-									"S":	"0",
-									"W":	"0"
-								}
-							}
+							"BorderRuleSets":	[{
+									"$NodeId":	"Simple.RuleSet.GridWave-24cc6f61-27f5-47cb-a94f-84f64af0db88",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"0",
+										"E":	"0",
+										"S":	"0",
+										"W":	"0"
+									}
+								}]
 						}],
 					"MaxPositionsCount":	10000
 				}
@@ -138,6 +135,7 @@
 			"PropDistribution":	{
 				"$NodeId":	"Constant.PropDistribution-e01ed7ff-0e15-4b96-984c-3920ac8baf28",
 				"Type":	"Constant",
+				"Skip":	false,
 				"Positions":	{
 					"$NodeId":	"FieldFunctionPositions-852e0e3a-9bfb-4f56-a1d5-5aca6f1167b7",
 					"Type":	"FieldFunction",
@@ -357,12 +355,6 @@
 					"$y":	-3132
 				}
 			},
-			"Simple.RuleSet.GridWave-8e407c2a-215c-42b2-876e-563277d9501f":	{
-				"$Position":	{
-					"$x":	-1075,
-					"$y":	-3010
-				}
-			},
 			"Runtime-f30691e6-f856-44d6-ae5a-653596fbdf7e":	{
 				"$Position":	{
 					"$x":	-4368,
@@ -452,9 +444,20 @@
 					"$x":	-5102,
 					"$y":	-2481
 				}
+			},
+			"Simple.RuleSet.GridWave-24cc6f61-27f5-47cb-a94f-84f64af0db88":	{
+				"$Position":	{
+					"$x":	-1076,
+					"$y":	-2977
+				}
 			}
 		},
-		"$FloatingNodes":	[],
+		"$FloatingNodes":	[{
+				"$NodeId":	"Point3D-44d97c07-5007-4d15-bb81-f0a33cc02742",
+				"X":	16,
+				"Y":	16,
+				"Z":	16
+			}],
 		"$Links":	{
 		},
 		"$Groups":	[],

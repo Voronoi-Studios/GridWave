@@ -8,8 +8,7 @@ import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
@@ -34,7 +33,7 @@ public class ConditionalWeightFeatureAsset extends FeatureAsset {
     public float weightIfTrue;
 
     @Override
-    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3i, WaveCell> wave, TileSetAsset.Argument argument) {
+    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {
         if(skip()) return;
         float value1 = switch (value1Source){
             case CollapsedPercentage -> 100f / wave.size() * wave.values().stream().filter(WaveCell::isCollapsed).count();

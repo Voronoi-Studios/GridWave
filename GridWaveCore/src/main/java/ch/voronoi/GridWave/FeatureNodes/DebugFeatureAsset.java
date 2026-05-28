@@ -1,14 +1,14 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.AttemptBehavior;
+import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
+import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
-import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -49,11 +49,11 @@ public class DebugFeatureAsset extends FeatureAsset {
      * @return if it had replaced the baseWave
      * */
     @Override
-    public boolean WFCReplacer(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) {
+    public boolean WFCReplacer(Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument) {
         if(skip() || !debugGrid) return false;
         sortByXThenZ(baseWave);
         int counter = 0;
-        for(Map.Entry<Vector3i, WaveCell> entry : baseWave.entrySet()){
+        for(Map.Entry<Vector3ic, WaveCell> entry : baseWave.entrySet()){
             if (entry.getValue().isCollapsed()) continue;
             List<TileSet.TileEntry> possibles = new ArrayList<>(entry.getValue().possible);
             entry.getValue().setChosen(possibles.get(counter % possibles.size()), GridTileType.BASIC);
@@ -62,11 +62,11 @@ public class DebugFeatureAsset extends FeatureAsset {
         return true;
     }
 
-    private void sortByXThenZ(Map<Vector3i, WaveCell> baseWave) {
+    private void sortByXThenZ(Map<Vector3ic, WaveCell> baseWave) {
         baseWave.entrySet().stream()
                 .sorted(Comparator
-                        .comparingInt((Map.Entry<Vector3i, WaveCell> e) -> e.getKey().x)
-                        .thenComparingInt(e -> e.getKey().z))
+                        .comparingInt((Map.Entry<Vector3ic, WaveCell> e) -> e.getKey().x())
+                        .thenComparingInt(e -> e.getKey().z()))
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,

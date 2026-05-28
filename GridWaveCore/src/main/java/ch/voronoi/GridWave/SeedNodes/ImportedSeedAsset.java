@@ -1,10 +1,10 @@
 package ch.voronoi.GridWave.SeedNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.logger.HytaleLogger;
-import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 
 import javax.annotation.Nonnull;
 

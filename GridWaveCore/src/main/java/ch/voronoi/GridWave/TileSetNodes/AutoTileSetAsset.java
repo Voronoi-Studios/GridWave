@@ -3,17 +3,20 @@ package ch.voronoi.GridWave.TileSetNodes;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.HorizontalRules;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.validation.Validators;
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AutoTileSetAsset extends TileSetAsset {
@@ -44,7 +47,7 @@ public class AutoTileSetAsset extends TileSetAsset {
         var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(folderPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!folderPath.isEmpty()) {
-            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(folderPath, false);
+            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(folderPath);
             if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
                 prefabWeightedMap.add(pathPrefabs, 1);
             }
@@ -57,18 +60,10 @@ public class AutoTileSetAsset extends TileSetAsset {
 
         String folderName = parts.getLast();
         List<String> tiles = Arrays.stream(folderName.split("-")).toList();
-        List<RuleSet> ruleSetAssets = tiles.stream().map(t -> new RuleSet(HorizontalRules.createSimpleFrom(t.split("")))).toList();
+        RuleCombo[] simpleRuleSets = tiles.stream().map(t -> new RuleCombo(new RuleSet(HorizontalRules.createSimpleFrom(t.split(""))),new RuleSet(HorizontalRules.createSimpleFrom(t.split(""))), null)).toArray(RuleCombo[]::new);
 
-        Map<Vector3i, RuleCombo> ruleSets = new HashMap<>();
-        Vector3i offset = Vector3i.ZERO.clone();
-        for(RuleSet ruleSetAsset : ruleSetAssets){
-            ruleSets.put(offset.clone().scale(argument.algoAsset.getGrid()),new RuleCombo(ruleSetAsset, ruleSetAsset, null));
-            offset.z++;
-            if(offset.z >= zSize) {
-                offset.z = 0;
-                offset.x--;
-            }
-        }
+        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(simpleRuleSets, zSize, argument);
+
         return new LinkedList<>(List.of(new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument, super.getTileFeatureAssets())));
     }
 }

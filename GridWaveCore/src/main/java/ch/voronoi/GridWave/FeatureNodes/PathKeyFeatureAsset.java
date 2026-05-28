@@ -2,13 +2,14 @@ package ch.voronoi.GridWave.FeatureNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
 import ch.voronoi.GridWave.AlgoNodes.Helper.POIInfo;
+import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -32,7 +33,7 @@ public class PathKeyFeatureAsset extends FeatureAsset {
     private boolean cleanIsolated;
 
     @Override
-    public boolean FinalCheck(Map<Vector3i, WaveCell> baseWave, int participantNumber, TileSetAsset.Argument argument) {
+    public boolean FinalCheck(Map<Vector3ic, WaveCell> baseWave, int participantNumber, TileSetAsset.Argument argument) {
         if(skip()) return true;
         final long count = baseWave.values().stream().flatMap(x -> x.getChosen().connectedPOIs().stream()).map(y -> y.key).distinct().count();
 
@@ -46,7 +47,7 @@ public class PathKeyFeatureAsset extends FeatureAsset {
         return check;
     }
 
-    private void FloodFill(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) {
+    private void FloodFill(Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument) {
         // Breadth-First Search from every POI cell outward, unioning connected cells into the same connectedPOIs set
         Deque<WaveCell> queue = new ArrayDeque<>();
 
@@ -59,7 +60,7 @@ public class PathKeyFeatureAsset extends FeatureAsset {
             WaveCell source = queue.poll();
 
             IntStream.range(0, 4).forEach(dir -> {
-                Vector3i neighborPos = new Vector3i(source.getGridPosition()).add(dirs[dir].clone().scale(argument.algoAsset.getGrid()));
+                Vector3ic neighborPos = new Vector3i(source.getGridPosition()).add(new Vector3i(dirs[dir]).mul(argument.algoAsset.getGrid()));
                 WaveCell neighbor = baseWave.get(neighborPos);
 
                 if (neighbor == null || !neighbor.isCollapsed()) return;

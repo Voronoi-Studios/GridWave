@@ -5,23 +5,22 @@ import ch.voronoi.GridWave.AlgoNodes.Helper.GridTile;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
+import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
+import org.joml.Vector3d;
+import org.joml.Vector3dc;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
-import javax.annotation.Nonnull;
-
-import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
-import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
-import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 
 public class GridWaveUnionProp extends Prop {
     private static final ConcurrentHashMap<String, List<GridTile>> tileListCache = new ConcurrentHashMap<>();
 
-    @Nonnull private final List<Vector3d> gridPositions;
+    @Nonnull private final List<Vector3dc> gridPositions;
     @Nonnull private final List<TileSet> poiTileEntries;
     @Nonnull private final List<TileSet> baseTileEntries;
     @Nonnull private final List<TileSet> fancyTileEntries;
@@ -30,7 +29,7 @@ public class GridWaveUnionProp extends Prop {
     @Nonnull private final Bounds3i readBounds_voxelGrid;
     @Nonnull private final Bounds3i writeBounds_voxelGrid;
 
-    public GridWaveUnionProp(@Nonnull List<Vector3d> gridPositions, @Nonnull List<TileSet> poiTileEntries, @Nonnull List<TileSet> baseTileEntries, @Nonnull List<TileSet> fancyTileEntries, @Nonnull TileSetAsset.Argument argument) {
+    public GridWaveUnionProp(@Nonnull List<Vector3dc> gridPositions, @Nonnull List<TileSet> poiTileEntries, @Nonnull List<TileSet> baseTileEntries, @Nonnull List<TileSet> fancyTileEntries, @Nonnull TileSetAsset.Argument argument) {
         this.gridPositions = gridPositions;
         this.poiTileEntries = poiTileEntries;
         this.baseTileEntries = baseTileEntries;
@@ -58,12 +57,12 @@ public class GridWaveUnionProp extends Prop {
         this.readBounds_voxelGrid = new Bounds3i();
         this.writeBounds_voxelGrid = new Bounds3i();
 
-        for (Vector3d pos : gridPositions){
-            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offset(pos.toVector3i()));
-            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offsetOpposite(pos.toVector3i()));
+        for (Vector3dc pos : gridPositions){
+            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offset(Vector3dUtil.toVector3i((Vector3d)pos)));
+            this.readBounds_voxelGrid.encompass(readBounds_voxelGrid.clone().offsetOpposite(Vector3dUtil.toVector3i((Vector3d)pos)));
 
-            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offset(pos.toVector3i()));
-            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offsetOpposite(pos.toVector3i()));
+            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offset(Vector3dUtil.toVector3i((Vector3d)pos)));
+            this.writeBounds_voxelGrid.encompass(writeBounds_voxelGrid.clone().offsetOpposite(Vector3dUtil.toVector3i((Vector3d)pos)));
         }
     }
 
@@ -91,7 +90,7 @@ public class GridWaveUnionProp extends Prop {
         Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(tiles, subArgument);
         List<Prop> props = new ArrayList<>();
         for (var entry : gridProps.entrySet()) {
-            props.add(new OffsetProp(entry.getKey().toVector3i().clone(), entry.getValue()));
+            props.add(new OffsetProp(Vector3dUtil.toVector3i(entry.getKey()), entry.getValue()));
         }
 
         for (Prop prop : props) {

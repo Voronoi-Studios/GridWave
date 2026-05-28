@@ -1,23 +1,22 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
+import ch.voronoi.GridWave.AlgoNodes.GridWave;
 import ch.voronoi.GridWave.FeatureNodes.DebugFeatureAsset;
+import ch.voronoi.GridWave.FeatureNodes.PathKeyFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.protocol.packets.interface_.NotificationStyle;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.permissions.PermissionsModule;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.util.NotificationUtil;
-import ch.voronoi.GridWave.AlgoNodes.GridWave;
-import ch.voronoi.GridWave.FeatureNodes.PathKeyFeatureAsset;
+import org.joml.Vector3i;
 
 import javax.annotation.Nonnull;
 import java.util.*;
-import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -48,15 +47,15 @@ public class DebugUtils {
         if (gridTiles.stream().allMatch(Objects::isNull)) return "Failed, everything is empty";
         var list = new ArrayList<>(gridTiles);
         list.removeIf(Objects::isNull);
-        list.sort(Comparator.comparingInt((GridTile gt) -> gt.actualPosition().x).thenComparingInt(gt -> gt.actualPosition().z));
+        list.sort(Comparator.comparingInt((GridTile gt) -> gt.actualPosition().x()).thenComparingInt(gt -> gt.actualPosition().z()));
         int maxKeyLenght = getMaxKeyLength(list);
         StringBuilder sb = new StringBuilder();
         StringBuilder[] lines = {new StringBuilder(), new StringBuilder(), new StringBuilder()};
 
-        int lastX = list.getFirst().actualPosition().x;
+        int lastX = list.getFirst().actualPosition().x();
 
         for (GridTile gridTile : list) {
-            if (lastX != gridTile.actualPosition().x) {
+            if (lastX != gridTile.actualPosition().x()) {
                 sb.insert(0, lines[2].toString() + "\n");
                 sb.insert(0, lines[1].toString() + "\n");
                 sb.insert(0, lines[0].toString() + "\n");
@@ -65,7 +64,7 @@ public class DebugUtils {
                 lines[1].setLength(0);
                 lines[2].setLength(0);
 
-                lastX = gridTile.actualPosition().x;
+                lastX = gridTile.actualPosition().x();
             }
             gridTile.appendLines(lines, pathKeys, maxKeyLenght);
         }

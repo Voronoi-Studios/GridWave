@@ -1,12 +1,12 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3ic;
 
 public class POIInfo{
-    public Vector3i key;
+    public Vector3ic key;
     public int distance;
 
-    public POIInfo(Vector3i key) {
+    public POIInfo(Vector3ic key) {
         this.key = key;
         this.distance = 0;
     }

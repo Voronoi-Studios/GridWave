@@ -1,11 +1,13 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -19,18 +21,18 @@ public class PropTileSet extends TileSet {
     protected final PropAsset propAsset;
     protected final List<FeatureAsset> tileFeatureAssets;
 
-    public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3i, RuleCombo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
+    public PropTileSet(PropAsset propAsset, @Nonnull Map<Vector3ic, RuleCombo> ruleSets, double weight, TileSetAsset.Argument argument, @Nonnull List<FeatureAsset> tileFeatureAssets) {
         this.tileEntries = new ArrayList<>();
         this.propAsset = propAsset; //Might need same treatment
         this.tileFeatureAssets = tileFeatureAssets;
         for (int r = 0; r < 4; r++) {
-            Map<Vector3i, RuleCombo> current = new HashMap<>();
-            for (Map.Entry<Vector3i, RuleCombo> e : ruleSets.entrySet()) {
-                Vector3i rotatedKey = rotate(e.getKey().clone(), r);
+            Map<Vector3ic, RuleCombo> current = new HashMap<>();
+            for (Map.Entry<Vector3ic, RuleCombo> e : ruleSets.entrySet()) {
+                Vector3i rotatedKey = rotate(e.getKey(), r);
                 RuleCombo rotatedValue = rotate(e.getValue(), r);
                 current.put(rotatedKey, rotatedValue);
             }
-            this.tileEntries.add(new TileEntry(current, Vector3i.ZERO.clone(), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets)));
+            this.tileEntries.add(new TileEntry(current, new Vector3i(Vector3iUtil.ZERO), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets)));
         }
         tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
 

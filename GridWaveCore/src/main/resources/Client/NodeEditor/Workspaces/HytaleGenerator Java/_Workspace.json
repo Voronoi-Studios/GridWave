@@ -18,14 +18,20 @@
       "RootNodeType": "AssignmentsVariants",
       "MenuName" : "HytaleGenerator - Assignments"
     },
-    "Props": {
+    "Prop": {
       "RootNodeType": "PropVariants",
-      "MenuName" : "HytaleGenerator - Props"
+      "MenuName" : "HytaleGenerator - Prop"
     },
-    "PropDistributions": {
+    "PropDistribution": {
       "RootNodeType": "PropDistribution.Variants",
-      "MenuName" : "HytaleGenerator - PropDistributions"
+      "MenuName" : "HytaleGenerator - PropDistribution"
     },
+    "Positions": {
+      "RootNodeType": "PositionsVariants",
+      "MenuName" : "HytaleGenerator - Positions"
+    },
+
+
     "TileSets": {
       "RootNodeType": "TileSet.Variants",
       "MenuName" : "GridWave - TileSets"
@@ -34,8 +40,12 @@
       "RootNodeType": "Feature.Variants",
       "MenuName" : "GridWave - Features"
     }
+
+
   },
   "NodeCategories": {
+
+
     "GridWave" : [
       "PropDistributionAlgo.GridWave",
 	    "PropAlgo.GridWave"
@@ -85,7 +95,9 @@
       "Grid.CBounds.GridWave",
       "Converter.CBounds.GridWave"
     ],
-     "Material" : [
+
+
+    "Material" : [
       "Material",
       "OrthogonalRotation"
     ],

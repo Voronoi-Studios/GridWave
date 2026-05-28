@@ -1,6 +1,8 @@
 package ch.voronoi.GridWave.RuleSetNodes;
 
-import ch.voronoi.GridWave.RuleSetNodes.Components.*;
+import ch.voronoi.GridWave.RuleSetNodes.Components.HorizontalRules;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
 import ch.voronoi.GridWave.RuleSetNodes.SubNodes.ElevationRulesAsset;
 import ch.voronoi.GridWave.RuleSetNodes.SubNodes.SimpleVerticalRulesAsset;
 import com.hypixel.hytale.codec.KeyedCodec;

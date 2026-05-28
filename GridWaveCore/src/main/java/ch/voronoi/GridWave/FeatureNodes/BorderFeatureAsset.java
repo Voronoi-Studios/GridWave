@@ -1,30 +1,29 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.GridWave;
 import ch.voronoi.GridWave.AlgoNodes.Helper.BorderType;
+import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
+import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
-import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
-import ch.voronoi.GridWave.AlgoNodes.GridWave;
-import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
-import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
-import ch.voronoi.GridWave.TileSetNodes.SingleTileSet;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Random;
 
-import static ch.voronoi.GridWave.AlgoNodes.GridWave.dirs;
 import static ch.voronoi.GridWave.AlgoNodes.GridWave.toCellPos;
 
 public class BorderFeatureAsset extends FeatureAsset {
@@ -43,19 +42,19 @@ public class BorderFeatureAsset extends FeatureAsset {
 
 
     @Override
-    public void BaseWaveProcessor(@NonNull Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument) {
+    public void BaseWaveProcessor(@NonNull Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument) {
         if(skip() || borderRuleSets.length == 0) return;
         Bounds3i fullBounds = argument.algoAsset.getFullBounds().clone();
-        Vector3i grid = argument.algoAsset.getGrid();
-        fullBounds.encompass(toCellPos(fullBounds.min.toVector3d(), grid));
-        fullBounds.encompass(toCellPos(fullBounds.max.clone().subtract(grid.clone()).toVector3d(), grid));
+        Vector3ic grid = argument.algoAsset.getGrid();
+        fullBounds.encompass(toCellPos(Vector3iUtil.toVector3d(fullBounds.min), grid));
+        fullBounds.encompass(toCellPos(Vector3iUtil.toVector3d(new Vector3i(fullBounds.max).sub(new Vector3i(grid))), grid));
 
-        Map<Long, Vector3i> borderPositions = new LinkedHashMap<>();
+        Map<Long, Vector3ic> borderPositions = new LinkedHashMap<>();
         for (var entry : baseWave.keySet()) {
             for (int dir = 0; dir < 4; dir++) {
-                Vector3i neighbor = GridWave.getNeighborPos(entry, dir, argument);
+                Vector3ic neighbor = GridWave.getNeighborPos(entry, dir, argument);
                 switch (borderType){
-                    case OuterBorder: if (!fullBounds.contains(neighbor)) borderPositions.put(getEdgeKey(entry, neighbor), neighbor); break;
+                    case OuterBorder: if (!fullBounds.contains((Vector3i)neighbor)) borderPositions.put(getEdgeKey(entry, neighbor), neighbor); break;
                     case InnerBorder: if (!baseWave.containsKey(neighbor)) borderPositions.put(getEdgeKey(entry, neighbor), neighbor); break;
                 }
             }
@@ -63,13 +62,13 @@ public class BorderFeatureAsset extends FeatureAsset {
 
         for(var entry : borderPositions.entrySet()){
             RuleCombo ruleCombo = borderRuleSets[new Random(entry.getKey()).nextInt()%borderRuleSets.length].build();
-            TileSet.TileEntry tileEntry = new TileSet.TileEntry(Map.of(Vector3i.ZERO,ruleCombo),Vector3i.ZERO,1,0, MirrorDirection.None, null, new ArrayList<>());
-            WaveCell waveCell = new WaveCell(entry.getValue().clone(), entry.getValue().clone(), tileEntry, GridTileType.BASIC);
+            TileSet.TileEntry tileEntry = new TileSet.TileEntry(Map.of(new Vector3i(Vector3iUtil.ZERO),ruleCombo),new Vector3i(Vector3iUtil.ZERO),1,0, MirrorDirection.None, null, new ArrayList<>());
+            WaveCell waveCell = new WaveCell(new Vector3i(entry.getValue()), new Vector3i(entry.getValue()), tileEntry, GridTileType.BASIC);
             GridWave.propagate(waveCell, baseWave, null, argument);
         }
     }
 
-    private static long getEdgeKey(Vector3i entry, Vector3i neighbor) {
-        return ((long) (entry.x + neighbor.x + 1024) << 42) | ((long) (entry.y + neighbor.y + 1024) << 22) | ((long) (entry.z + neighbor.z + 1024) << 2);
+    private static long getEdgeKey(Vector3ic entry, Vector3ic neighbor) {
+        return ((long) (entry.x() + neighbor.x() + 1024) << 42) | ((long) (entry.y() + neighbor.y() + 1024) << 22) | ((long) (entry.z() + neighbor.z() + 1024) << 2);
     }
 }

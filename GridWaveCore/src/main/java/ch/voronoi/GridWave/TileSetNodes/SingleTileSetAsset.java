@@ -1,13 +1,13 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.validation.Validators;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
-import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class SingleTileSetAsset extends TileSetAsset {
         var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(prefabPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!prefabPath.isEmpty()) {
-            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(prefabPath, false);
+            List<IPrefabBuffer> pathPrefabs = TileSetAsset.loadPrefabBuffersFrom(prefabPath);
             if (pathPrefabs != null && !pathPrefabs.isEmpty()) {
                 prefabWeightedMap.add(pathPrefabs, 1);
             }

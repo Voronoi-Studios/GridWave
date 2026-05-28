@@ -1,7 +1,10 @@
 package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
+import ch.voronoi.GridWave.SeedNodes.SeedAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
 import ch.voronoi.GridWave.Utils.GridGen.MaxBounds;
@@ -17,13 +20,13 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
-import ch.voronoi.GridWave.SeedNodes.SeedAsset;
-import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class PropDistributionAlgoAsset extends PropDistributionAsset implements IAlgoAsset {
@@ -33,7 +36,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
             .add()
             .append(new KeyedCodec<>("GridPoints", PositionProviderAsset.CODEC, true), (asset, v) -> asset.positionProviderAsset = v, asset -> asset.positionProviderAsset)
             .add()
-            .append(new KeyedCodec<>("Grid", Vector3i.CODEC, false), (asset, v) -> asset.grid = v, asset -> asset.grid)
+            .append(new KeyedCodec<>("Grid", Vector3iUtil.CODEC, false), (asset, v) -> asset.grid = v, asset -> asset.grid)
             .add()
             .append(new KeyedCodec<>("Bounds", CustomBoundsAsset.CODEC, false), (asset, v) -> asset.boundsAsset = v, asset -> asset.boundsAsset)
             .add()
@@ -61,7 +64,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     private FeatureAsset[] featureAssets = new FeatureAsset[0];
 
     @Override
-    public Vector3i getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
+    public Vector3ic getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
     @Override
     public Bounds3i getFullBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
     @Override

@@ -1,6 +1,10 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.FeatureNodes.SectionStorageAsset;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.AssetPack;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
@@ -23,11 +27,12 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.common.util.ExceptionUtil;
 import com.hypixel.hytale.common.util.PathUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import com.hypixel.hytale.server.core.asset.AssetModule;
-import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
+import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -100,7 +105,6 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         return new PropAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
     }
 
-
     public static class Exported {
         public TileSetAsset asset;
     }
@@ -166,7 +170,12 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     }
 
     @Nullable
-    public static List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path, boolean legacyPath) {
+    public static List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path) {
+        return loadPrefabBuffersFrom(path, false);
+    }
+
+    @Nullable
+    private static List<IPrefabBuffer> loadPrefabBuffersFrom(@Nonnull String path, boolean legacyPath) {
         Map<Path, Path> packToFullPathsMap = getPackToFullPathsMap(path, legacyPath);
         List<IPrefabBuffer> loadedPrefabs = new LinkedList<>();
         Set<Path> traversedPaths = new LinkedHashSet<>();
@@ -209,5 +218,22 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
             if (fullPath != null) packToFullPathsMap.put(packRootPath, fullPath);
         }
         return packToFullPathsMap;
+    }
+
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleSetAsset[] ruleSetAssets, int zSize, @NonNull Argument argument) {
+        return getRuleComboMap(Arrays.stream(ruleSetAssets).map(RuleSetAsset::build).toArray(RuleCombo[]::new),zSize, argument);
+    }
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleCombo[] ruleCombos, int zSize, @NonNull Argument argument) {
+        Map<Vector3ic, RuleCombo> ruleSets = new HashMap<>();
+        Vector3i offset = new Vector3i(Vector3iUtil.ZERO);
+        for(RuleCombo ruleCombo : ruleCombos){
+            ruleSets.put(new Vector3i(offset).mul(argument.algoAsset.getGrid()), ruleCombo);
+            offset.z++;
+            if(offset.z >= zSize) {
+                offset.z = 0;
+                offset.x--;
+            }
+        }
+        return ruleSets;
     }
 }

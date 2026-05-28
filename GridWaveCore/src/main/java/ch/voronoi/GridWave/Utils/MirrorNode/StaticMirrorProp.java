@@ -1,17 +1,16 @@
 package ch.voronoi.GridWave.Utils.MirrorNode;
 
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.Bounds3iExtension;
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorEntityFunnel;
+import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorVoxelSpace;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 
 import javax.annotation.Nonnull;
-
-import ch.voronoi.GridWave.Utils.MirrorNode.Helper.Bounds3iExtension;
-import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorEntityFunnel;
-import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorVoxelSpace;
-import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 
 public class StaticMirrorProp extends Prop {
     @Nonnull
@@ -36,8 +35,8 @@ public class StaticMirrorProp extends Prop {
         this.mirrorEntityFunnel = new MirrorEntityFunnel(axis);
         this.readBounds = prop.getReadBounds_voxelGrid().clone();
         this.writeBounds = prop.getWriteBounds_voxelGrid().clone();
-        Bounds3iExtension.mirrorBoundsAroundVoxel(this.readBounds, axis, Vector3i.ZERO);
-        Bounds3iExtension.mirrorBoundsAroundVoxel(this.writeBounds, axis, Vector3i.ZERO);
+        Bounds3iExtension.mirrorBoundsAroundVoxel(this.readBounds, axis, Vector3iUtil.ZERO);
+        Bounds3iExtension.mirrorBoundsAroundVoxel(this.writeBounds, axis, Vector3iUtil.ZERO);
         this.rChildContext = new Context();
     }
 

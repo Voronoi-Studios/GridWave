@@ -13,14 +13,20 @@ import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
 import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
+import org.joml.Vector3d;
+import org.joml.Vector3dc;
+import org.joml.Vector3i;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
@@ -86,8 +92,8 @@ public class GridWavePropDistribution extends PropDistribution {
         Control control = new Control();
 
         Bounds3i fullBounds = argument.algoAsset.getFullBounds();
-        Vector3i boundsMin = Vector3i.max(context.bounds.min.toVector3i(),fullBounds.min.clone());
-        Vector3i boundsMax = Vector3i.min(context.bounds.max.toVector3i(),fullBounds.max.clone());
+        Vector3i boundsMin = Vector3iUtil.max(Vector3dUtil.toVector3i(context.bounds.min), new Vector3i(fullBounds.min));
+        Vector3i boundsMax = Vector3iUtil.min( Vector3dUtil.toVector3i(context.bounds.max), new Vector3i(fullBounds.max));
 
         if (boundsMin.x > boundsMax.x || boundsMin.y > boundsMax.y || boundsMin.z > boundsMax.z) return;
 
@@ -111,7 +117,7 @@ public class GridWavePropDistribution extends PropDistribution {
     }
 
     private List<GridTile> solveSection(Bounds3i bounds) {
-        List<Vector3d> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
+        List<Vector3dc> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
         TileSetAsset.Argument subArgument = new TileSetAsset.Argument(this.argument, bounds);
         return GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, subArgument);
     }

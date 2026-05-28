@@ -6,7 +6,8 @@ import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -33,13 +34,13 @@ public class PathCellSelectorFeatureAsset extends FeatureAsset {
         if(skip()) return;
         cellSelector.set(new CellSelector() {
             @Override
-            public CellSelectorResult select(Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
+            public CellSelectorResult select(Map<Vector3ic, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
                 Set<WaveCell> subWave = new LinkedHashSet<>();
                 List<WaveCell> notCollapsed = wave.values().stream().filter(waveCell -> !waveCell.isCollapsed()).toList();
                 if (100d / wave.size() * notCollapsed.size() < 100 - stopAfterPercent) { subWave = new LinkedHashSet<>(notCollapsed); }
                 else for (WaveCell waveCell : notCollapsed) {
                     for (int r = 0; r < 4; r++) {
-                        Vector3i neighborPos = new Vector3i(waveCell.getGridPosition()).add(dirs[r].clone().scale(argument.algoAsset.getGrid()));
+                        Vector3i neighborPos = new Vector3i(waveCell.getGridPosition()).add(new Vector3i(dirs[r]).mul(argument.algoAsset.getGrid()));
                         WaveCell neighbor = wave.get(neighborPos);
                         if (neighbor != null && neighbor.isCollapsed()){
                             RuleCombo neighborRuleSet = neighbor.getChosen().tileEntry().getMainRuleSet();

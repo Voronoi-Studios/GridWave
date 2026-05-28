@@ -1,41 +1,31 @@
 package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.*;
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.FeatureNodes.MultithreadingFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
-import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
-import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorProp;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Pipe;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
-import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
-import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
-import com.hypixel.hytale.math.Axis;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
-import ch.voronoi.GridWave.FeatureNodes.OverlapTileFeatureAsset;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
-
-import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3d;
+import org.joml.Vector3dc;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
-
 public class GridWave {
-    public static final Vector3i[] dirs = { Vector3i.NORTH, Vector3i.EAST, Vector3i.SOUTH, Vector3i.WEST };
+    public static final Vector3ic[] dirs = { Vector3iUtil.NORTH, Vector3iUtil.EAST, Vector3iUtil.SOUTH, Vector3iUtil.WEST };
     
     public static class WFCResult {
         public SeedBox seedBox;
@@ -54,7 +44,7 @@ public class GridWave {
     /*===========================================================
      *                      MAIN SOLVER
      * =========================================================== */
-    public static @NonNull List<GridTile> solve(List<Vector3d> gridPositions, List<TileSet> poiTileEntries, List<TileSet> baseTileEntries, List<TileSet> fancyTileEntries, TileSetAsset.Argument argument) {
+    public static @NonNull List<GridTile> solve(List<Vector3dc> gridPositions, List<TileSet> poiTileEntries, List<TileSet> baseTileEntries, List<TileSet> fancyTileEntries, TileSetAsset.Argument argument) {
         WFCResult wfcResult = new WFCResult();
         var baseWave = getBaseWave(gridPositions, poiTileEntries, baseTileEntries, argument);
         var wfcWave = performWFC(baseWave, argument, wfcResult);
@@ -75,14 +65,14 @@ public class GridWave {
     * @param poiTileEntries Fixed tiles (Points of Interest)
     * @param baseTileEntries Base TileSet entries that define the possible tiles for the wave initialization
     * @return BaseWave represented as a map of grid positions to WaveCells*/
-    public static @NonNull Map<Vector3i, WaveCell> getBaseWave(@NonNull List<Vector3d> gridPositions, @NonNull List<TileSet> poiTileEntries, @NonNull List<TileSet> baseTileEntries, TileSetAsset.Argument argument){
+    public static @NonNull Map<Vector3ic, WaveCell> getBaseWave(@NonNull List<Vector3dc> gridPositions, @NonNull List<TileSet> poiTileEntries, @NonNull List<TileSet> baseTileEntries, TileSetAsset.Argument argument){
         List<FeatureAsset> featureAssets = argument.algoAsset.getFeatureAssets();
-        Map<Vector3i, WaveCell> baseWave = new HashMap<>();
-        gridPositions.forEach(pos -> baseWave.put(toCellPos(pos, argument.algoAsset.getGrid()), new WaveCell(toCellPos(pos, argument.algoAsset.getGrid()), pos.toVector3i(), new LinkedHashSet<>(baseTileEntries.stream().flatMap(TileSet::getAllTileEntries).toList()))));
+        Map<Vector3ic, WaveCell> baseWave = new HashMap<>();
+        gridPositions.forEach(pos -> baseWave.put(toCellPos(pos, argument.algoAsset.getGrid()), new WaveCell(toCellPos(pos, argument.algoAsset.getGrid()), Vector3dUtil.toVector3i((Vector3d)pos), new LinkedHashSet<>(baseTileEntries.stream().flatMap(TileSet::getAllTileEntries).toList()))));
 
         featureAssets.forEach(feature -> feature.BaseWaveProcessor(baseWave, argument));
 
-        Map<Vector3i, LinkedHashSet<POIInfo>> poiGroupMap = new HashMap<>();
+        Map<Vector3ic, LinkedHashSet<POIInfo>> poiGroupMap = new HashMap<>();
 
         //Replace fixed tiles
         for(TileSet.TileEntry tileEntry : poiTileEntries.stream().flatMap(TileSet::getAllTileEntries).toList()){
@@ -94,7 +84,7 @@ public class GridWave {
             if(baseWave.containsKey(tileEntry.identifierKey())) { //Maybe if debug add them?
                 WaveCell waveCell = baseWave.get(tileEntry.identifierKey());
                 waveCell.setChosen(tileEntry, GridTileType.POI);
-                Vector3i pos = waveCell.getGridPosition().clone().add(tileEntry.getOffset().clone());
+                Vector3ic pos = new Vector3i(waveCell.getGridPosition()).add(new Vector3i(tileEntry.getOffset()));
                 waveCell.connectedPOIs = poiGroupMap.computeIfAbsent(pos, k -> new LinkedHashSet<>(Set.of(new POIInfo(k))));
                 propagate(waveCell, baseWave, null,argument);
             }
@@ -112,12 +102,12 @@ public class GridWave {
     * Handles cell collapsing, backtracking, and multithreading if used.
     * @param baseWave Initial wave of collapsible tiles
     * @return Map of grid positions to WaveCells representing the collapsed wave, or null if no solution found in multithreading mode*/
-    public static @NonNull Map<Vector3i, WaveCell> performWFC(Map<Vector3i, WaveCell> baseWave, TileSetAsset.Argument argument, WFCResult wfcResult) {
+    public static @NonNull Map<Vector3ic, WaveCell> performWFC(Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument, WFCResult wfcResult) {
         List<FeatureAsset> featureAssets = argument.algoAsset.getFeatureAssets();
         MultithreadingFeatureAsset.Context multithreadContext = argument.getFirstFeatureOf(MultithreadingFeatureAsset.class).map(asset -> asset.get(argument)).orElse(null);
         int participantNumber = multithreadContext != null ? multithreadContext.participantNumber().incrementAndGet() : 0;
         SeedBox childSeedBox = multithreadContext != null ? argument.seedBox.child(participantNumber + "s") : argument.seedBox;
-        Map<Vector3i, WaveCell> wave = new LinkedHashMap<>();
+        Map<Vector3ic, WaveCell> wave = new LinkedHashMap<>();
         int backtracksCount = -1;
         int attempt = 0;
         boolean sucess = true;
@@ -129,7 +119,7 @@ public class GridWave {
         //Default Greedy Lowest Entropy
         AtomicReference<CellSelector> cellSelectorRef = new AtomicReference<>(new CellSelector() {
             @Override
-            public CellSelectorResult select(Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
+            public CellSelectorResult select(Map<Vector3ic, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
                 Optional<WaveCell> lowestEntropyCell = wave.values().stream().filter(waveCell -> !waveCell.isCollapsed()).min(Comparator.comparingInt(WaveCell::getEntropy));
                 if (lowestEntropyCell.isPresent() && lowestEntropyCell.get().getEntropy() == 0) {
                     if (backtracksCount > attemptBehavior.maxBacktracks) return new CellSelectorResult(null, EarlyExitReason.MAX_BACKTRACKS_HIT);
@@ -176,7 +166,7 @@ public class GridWave {
                     propagate(selectedCell, wave, stack, argument);
                 }
                 if (sucess || collapsedCount >= attemptBehavior.maxCollapsedCount) {
-                    Map<Vector3i, WaveCell> finalWave = wave;
+                    Map<Vector3ic, WaveCell> finalWave = wave;
                     sucess = featureAssets.stream().allMatch(feature -> feature.FinalCheck(finalWave, participantNumber, argument));
                 }
                 if(sucess) break; //finished
@@ -200,9 +190,9 @@ public class GridWave {
      * @param wave The current state of the wave
      * @param stack A stack to keep track of changes for backtracking purposes; can be null if backtracking is not needed
      */
-    public static void propagate(WaveCell source, Map<Vector3i, WaveCell> wave, Deque<WaveCellChange> stack, TileSetAsset.Argument argument) {
+    public static void propagate(WaveCell source, Map<Vector3ic, WaveCell> wave, Deque<WaveCellChange> stack, TileSetAsset.Argument argument) {
         IntStream.range(0, 4).forEach(dir -> {
-            Vector3i neighborPos = getNeighborPos(source.getGridPosition(), dir, argument);
+            Vector3ic neighborPos = getNeighborPos(source.getGridPosition(), dir, argument);
             WaveCell neighbor = wave.get(neighborPos);
             if(stack != null) stack.push(new WaveCellChange(neighborPos, neighbor));
             if (neighbor != null){
@@ -221,14 +211,14 @@ public class GridWave {
      * @param wave The current state of the wave
      * @param fancyTileEntries Our list of fancy tiles
      * @return A new wave map with fancy tiles placed according to the defined rules and random chance*/
-    public static @NonNull Map<Vector3i, WaveCell> placeFancyTiles(Map<Vector3i, WaveCell> wave, @NonNull List<TileSet> fancyTileEntries, TileSetAsset.Argument argument){
-        Map<Vector3i, WaveCell> fancyWave = new LinkedHashMap<>(wave);
+    public static @NonNull Map<Vector3ic, WaveCell> placeFancyTiles(Map<Vector3ic, WaveCell> wave, @NonNull List<TileSet> fancyTileEntries, TileSetAsset.Argument argument){
+        Map<Vector3ic, WaveCell> fancyWave = new LinkedHashMap<>(wave);
         Random randomSupplier = new Random(argument.seedBox.child("fancy").createSupplier().get());
         for(var waveCellEntry : fancyWave.entrySet()){
             for (var fancyTileEntry : fancyTileEntries.stream().flatMap(TileSet::getAllTileEntries).toList()){
                 boolean fullMatch = true;
                 for(var subRuleSet : fancyTileEntry.ruleSets().entrySet()){
-                    Vector3i key = waveCellEntry.getKey().clone().add(subRuleSet.getKey().clone());
+                    Vector3ic key = new Vector3i(waveCellEntry.getKey()).add(new Vector3i(subRuleSet.getKey()));
                     if(!fancyWave.containsKey(key)) { fullMatch = false; break;}
                     var chosen= fancyWave.get(key).getChosen();
                     if (chosen == null || chosen.type() != GridTileType.BASIC) { fullMatch = false; break; }
@@ -238,7 +228,7 @@ public class GridWave {
                 if (randomSupplier.nextDouble(1) > fancyTileEntry.weight()) continue; //To-DO: Implement WeightedMap
 
                 for(var subTiles : fancyTileEntry.getSubTiles()){
-                    Vector3i key = waveCellEntry.getKey().clone().add(subTiles.identifierKey().clone());
+                    Vector3ic key = new Vector3i(waveCellEntry.getKey()).add(new Vector3i(subTiles.identifierKey()));
                     if(Match.is(subTiles.getMainRuleSet(), RuleCombo.H_EMPTY)) continue;
                     if(Match.is(subTiles.getMainRuleSet(), RuleCombo.H_NULL)) continue;
                     if(Match.is(subTiles.getMainRuleSet(), RuleCombo.H_ALL_N)) continue;
@@ -265,7 +255,7 @@ public class GridWave {
         for (var gridTile : gridTiles) {
             if (gridTile == null) continue;
             var result = gridTile.getFullPropFunction();
-            gridProps.put(gridTile.actualPosition().toVector3d(),result.apply(argument));
+            gridProps.put(Vector3iUtil.toVector3d(gridTile.actualPosition()),result.apply(argument));
         }
         return gridProps;
     }
@@ -273,12 +263,12 @@ public class GridWave {
     /*===========================================================
     *                         UTILITY
     * =========================================================== */
-    public static List<Vector3d> getPositions(PositionProvider provider, Bounds3i bounds, int maxPositionsCount) {
-        List<Vector3d> positions = new ArrayList<>();
+    public static List<Vector3dc> getPositions(PositionProvider provider, Bounds3i bounds, int maxPositionsCount) {
+        List<Vector3dc> positions = new ArrayList<>();
 
         Pipe.One<Vector3d> collectingPipe = (position, control) -> {
             if (positions.size() < maxPositionsCount) {
-                positions.add(position.clone());
+                positions.add(new Vector3d(position));
             }
         };
 
@@ -287,16 +277,16 @@ public class GridWave {
         return positions;
     }
 
-    public static Vector3i toCellPos(Vector3d pos, Vector3i grid) {
+    public static Vector3ic toCellPos(Vector3dc pos, Vector3ic grid) {
         return new Vector3i(
-                (int) Math.round(pos.x / grid.x) * grid.x,
-                (int) Math.round(pos.y / grid.y) * grid.y,
-                (int) Math.round(pos.z / grid.z) * grid.z
+                (int) Math.round(pos.x() / grid.x()) * grid.x(),
+                (int) Math.round(pos.y() / grid.y()) * grid.y(),
+                (int) Math.round(pos.z() / grid.z()) * grid.z()
         );
     }
 
-    public static @NonNull Vector3i getNeighborPos(Vector3i source, int dir, TileSetAsset.Argument argument) {
-        return new Vector3i(source).add(dirs[dir].clone().scale(argument.algoAsset.getGrid()));
+    public static @NonNull Vector3ic getNeighborPos(Vector3ic source, int dir, TileSetAsset.Argument argument) {
+        return new Vector3i(source).add(new Vector3i(dirs[dir]).mul(argument.algoAsset.getGrid()));
     }
 
 }

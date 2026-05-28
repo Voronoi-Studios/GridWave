@@ -11,32 +11,20 @@
 			"$NodeId":	"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd",
 			"Type":	"Border",
 			"Skip":	false,
-			"BorderRuleSet":	{
-				"$NodeId":	"Simple.RuleSet.GridWave-c7a4e0c0-8768-4143-ac4c-772a105655cb",
-				"Type":	"Simple",
-				"HorizontalRules":	{
-					"N":	"0",
-					"E":	"0",
-					"S":	"0",
-					"W":	"0"
-				}
-			}
+			"BorderRuleSets":	[{
+					"$NodeId":	"Simple.RuleSet.GridWave-714eec46-75a3-45d9-b7fd-dd516178c965",
+					"Type":	"Simple",
+					"HorizontalRules":	{
+						"N":	"0",
+						"E":	"0",
+						"S":	"0",
+						"W":	"0"
+					}
+				}]
 		}],
 	"ExportAs":	"MazeGlobalFeatures1",
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
-			"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd":	{
-				"$Position":	{
-					"$x":	2906,
-					"$y":	316
-				}
-			},
-			"Simple.RuleSet.GridWave-c7a4e0c0-8768-4143-ac4c-772a105655cb":	{
-				"$Position":	{
-					"$x":	2895,
-					"$y":	442
-				}
-			},
 			"Group.Feature.GridWave-930ece1a-0c02-4d84-b55f-9c6cbe226de5":	{
 				"$Position":	{
 					"$x":	2128,
@@ -48,6 +36,18 @@
 				"$Position":	{
 					"$x":	2905,
 					"$y":	71
+				}
+			},
+			"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd":	{
+				"$Position":	{
+					"$x":	2906,
+					"$y":	316
+				}
+			},
+			"Simple.RuleSet.GridWave-714eec46-75a3-45d9-b7fd-dd516178c965":	{
+				"$Position":	{
+					"$x":	2905,
+					"$y":	474
 				}
 			}
 		},

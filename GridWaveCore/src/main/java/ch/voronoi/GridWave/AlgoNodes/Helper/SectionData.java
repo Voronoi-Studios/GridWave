@@ -1,10 +1,6 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.AlgoNodes.GridWave;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
-import ch.voronoi.GridWave.FeatureNodes.OverlapTileFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
@@ -13,8 +9,12 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.EnumCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.codec.codecs.map.MapCodec;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
+import org.joml.Vector3d;
+import org.joml.Vector3dc;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -47,18 +47,18 @@ public class SectionData {
         }
     }
 
-    public static String cellKey(Vector3i address) {
-        return address.x + "," + address.y + "," + address.z;
+    public static String cellKey(Vector3ic address) {
+        return address.x() + "," + address.y() + "," + address.z();
     }
 
-    public @Nullable SectionData.Entry getEntry(Vector3d pos) {
-        return cells.get(cellKey(pos.toVector3i()));
+    public @Nullable SectionData.Entry getEntry(Vector3dc pos) {
+        return cells.get(cellKey(Vector3dUtil.toVector3i((Vector3d)pos)));
     }
 
     public static class Entry {
         @Nonnull
         public static final BuilderCodec<Entry> CODEC = BuilderCodec.builder(Entry.class, Entry::new)
-                .append(new KeyedCodec<>("Position", Vector3i.CODEC, true), (t, v) -> t.position = v, t -> t.position)
+                .append(new KeyedCodec<>("Position", Vector3iUtil.CODEC, true), (t, v) -> t.position = v, t -> t.position)
                 .add()
                 .append(new KeyedCodec<>("RuleSet", new ArrayCodec<>(Codec.STRING, String[]::new), true), (t, v) -> t.ruleSet = RuleCombo.fromHorizontalStringArray(v), t -> t.ruleSet.toHorizontalStringArray())
                 .add()
@@ -75,7 +75,7 @@ public class SectionData {
 
         public Entry() {}
         public Entry(GridTile gridTile){
-            this.position = gridTile.actualPosition();
+            this.position = new Vector3i(gridTile.actualPosition());
             this.ruleSet = gridTile.tileEntry().getMainRuleSet();
             this.gridTileType = gridTile.type();
             this.propFunction = gridTile.getFullPropFunction();

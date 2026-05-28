@@ -6,8 +6,9 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
 import java.nio.file.Path;
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class AutoTileSetGroupAsset extends TileSetAsset {
     @Nonnull

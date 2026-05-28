@@ -1,14 +1,15 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.Utils.MirrorNode.Helper.MirrorDirection;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.PrefabProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
-import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import org.joml.Vector3i;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -28,7 +29,7 @@ public class SingleTileSet extends TileSet {
         for (int r = 0; r < 4; r++) {
             RuleCombo current = rotate(ruleSet,r);
             String key = Arrays.toString(current.toHorizontalStringArray());
-            TileEntry tileEntry = new TileEntry(Map.of(Vector3i.ZERO.clone(), current), Vector3i.ZERO.clone(), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets));
+            TileEntry tileEntry = new TileEntry(Map.of(new Vector3i(Vector3iUtil.ZERO), current), new Vector3i(Vector3iUtil.ZERO), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets));
             if (!minimizeVariants || seen.add(key)) tileEntries.add(tileEntry);
         }
         tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
@@ -48,6 +49,6 @@ public class SingleTileSet extends TileSet {
     @Override
     public Prop getProp(@Nonnull TileSetAsset.Argument argument) {
         if(!prefabWeightedMaps.containsKey(argument.workerId.id)) return EmptyProp.INSTANCE;
-        return new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed);
+        return new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed,TileSetAsset::loadPrefabBuffersFrom);
     }
 }

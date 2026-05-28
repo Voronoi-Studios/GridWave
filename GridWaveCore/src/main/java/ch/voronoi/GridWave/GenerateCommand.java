@@ -2,44 +2,41 @@ package ch.voronoi.GridWave;
 
 import com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
+import com.hypixel.hytale.builtin.hytalegenerator.engine.entityfunnel.EntityFunnel;
+import com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial;
+import com.hypixel.hytale.builtin.hytalegenerator.material.Material;
+import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
+import com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
+import com.hypixel.hytale.builtin.hytalegenerator.voxelspace.ArrayVoxelSpace;
 import com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
-import com.hypixel.hytale.protocol.GameMode;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand;
-import com.hypixel.hytale.server.core.command.system.basecommands.CommandBase;
-import com.hypixel.hytale.builtin.hytalegenerator.material.Material;
-import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
-import com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial;
-import com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial;
-import com.hypixel.hytale.builtin.hytalegenerator.voxelspace.ArrayVoxelSpace;
-import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
-import com.hypixel.hytale.builtin.hytalegenerator.engine.entityfunnel.EntityFunnel;
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.permissions.provider.HytalePermissionsProvider;
 import com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
-import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import org.joml.Vector3i;
+import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
-
-
-import javax.annotation.Nonnull;
 
 public class GenerateCommand extends AbstractPlayerCommand {
     RequiredArg<String> propName;
 
     public GenerateCommand() {
         super("generate", "generates prop Node");
-        this.setPermissionGroup(GameMode.Adventure); // Allows the command to be used by anyone, not just OP
+        this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADVENTURER); // Allows the command to be used by anyone, not just OP
         propName = this.withRequiredArg("PropName", "the export name of the prop NODE", ArgTypes.STRING);
     }
 
@@ -130,14 +127,14 @@ public class GenerateCommand extends AbstractPlayerCommand {
             }
         }
 
-        Vector3i localMin = Vector3i.ZERO;
-        Vector3i localMax = writeBounds.getSize();
+        Vector3ic localMin = Vector3iUtil.ZERO;
+        Vector3ic localMax = writeBounds.getSize();
 
         selection.setSelectionArea(localMin, localMax);
         selection.setAnchor(
-                (localMin.x + localMax.x) / 2,
-                (localMin.y + localMax.y) / 2,
-                (localMin.z + localMax.z) / 2
+                (localMin.x() + localMax.x()) / 2,
+                (localMin.y() + localMax.y()) / 2,
+                (localMin.z() + localMax.z()) / 2
         );
 
         return selection;
