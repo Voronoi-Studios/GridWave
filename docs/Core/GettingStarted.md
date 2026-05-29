@@ -45,10 +45,15 @@ Shown is an example setup of a [Gridwave Algorithm Prop](algo#gridwave-algorithm
 featuring directly setup Fixed Props, imported TileSet Group for the Base tiles and individually imported TileSets for the FancyTiles.
 
 > [!TIP]
-> Importing TileSetGroups allows for very easy setup of multi floored generations, see the [Multi Floor Maze]() as an example
+> Importing TileSetGroups allows for very easy setup of multi floored generations, see the [Multi Floor Maze](maze#maze-multi-floor) as an example
 
 <img height="200" alt="prop" src="https://github.com/user-attachments/assets/fcd2ef63-d145-4291-8e6d-60f2d0cbce16" />
 
 ## Tile
+
+Shown is an example of a 2x2 cell MultiTile.
+
+> [!CAUTION]
+> Make sure the tiny Index [x] in the top left corner of the RuleSet is correct, they get assigned *only* based on the nodes vertical position. So if you want the index to neatly go left to right make sure the node to the right is positioned slightly lower.
 
 <img height="200" alt="Tile" src="https://github.com/user-attachments/assets/8d071295-ca07-4b32-a2d7-2743b2e76e8c" />
