@@ -12,6 +12,25 @@ Allows to add special features to the Algo -> (global) or individual tiles -> (l
 
 ---
 
+### Group Feature (global or local)
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/GroupFeature.png" alt="GroupFeature"/> 
+
+Combines the all Features that are returned by its child nodes in to a singular flattened list, which allows for visual clarity and exports of multiple Features at once.
+
+---
+
+### Debug Feature (global)
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/DebugFeature.png" alt="DebugFeature"/> 
+
+Gives various debug options:
+
+* WriteToConsole: Writes the same info as the Notification plus an ASCII representation of the generated section to the console 
+* ShowNotification: Shows an in game notification after each run of the core algo with some handy information to any OP'ed person. (Currently there is no way to make it world specific)
+* DebugGrid: places every tile with every possible rotation after each other.
+* LimitSteps & MaxSteps: Allows you to step through the solving process to see where ge might do something wrong.
+
+---
+
 ### Restrainer Feature (local)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/RestrainerFeature.png" alt="RestrainerFeature"/> 
 
@@ -26,6 +45,13 @@ Same as RestrainerFeature, but takes a list of Positions as input where it choos
 
 > [!TIP]
 > By sharing the seed, you can for example make two separate algos spawn a top and bottom part of a stair in the same place
+
+---
+
+### Multi Attempt Feature (global)
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/MultiAttemptFeature.png" alt="MultiAttemptFeature"/> 
+
+Defines how many attempts (default: 1) he is allowed to make. A fresh attempt is started after the maximum Backtracks (default: 5k) are reached.
 
 ---
 
@@ -55,7 +81,7 @@ When the Algo is finished it checks if all POI's are connected (by performing a 
 CleanIsloated removes any tile that are not connected to any POI, will likely become its own feature in the future.
 
 > [!NOTE]
-> In my own testing I had this feature lead to more success if I was NOT using "Path Cell Selector Feature" as well. Have no clue why...
+> In my own testing I had this feature lead to more success if I was NOT using "Path Cell Selector Feature" as well.
 
 ---
 
@@ -63,6 +89,8 @@ CleanIsloated removes any tile that are not connected to any POI, will likely be
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/BorderFeature.png" alt="BorderFeature"/> 
 
 If not present the Algo does not care what rulesets touch a border. If added it allows you to now specify that, by defining an imaginary tile that would be placed around your grid.
+* BorderType: Whether the border should be placed along the full bounds or on the individual [sections](feature#section-storage-feature-global).
+* Border RuleSets : If multiple RuleSets are provided it chooses one randomly for outer borders and deterministically random (based on edge position) for inner borders.
 
 ---
 
@@ -73,30 +101,21 @@ Allows you to overwrite the weight of a tile based on some condition
 
 ---
 
-### Debug Feature (global)
-<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/DebugFeature.png" alt="DebugFeature"/> 
-
-Gives various debug options:
-
-* DebugGrid: places every tile with every possible rotation after each other. 
-* LimitSteps & MaxSteps: Allows you to step through the solving process to see where ge might do something wrong.
-
----
-
-### Multi Attempt Feature (global)
-<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/MultiAttemptFeature.png" alt="MultiAttemptFeature"/> 
-
-Defines how many attempts (default: 1) he is allowed to make. A fresh attempt is started after the maximum Backtracks (default: 5k) are reached.
-
----
 
 ### Multithreading Feature (global)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/MultithreadingFeature.png" alt="Multithreading"/> 
 
-Splits the search of a correct solution for the WFC over multiple threads and shares the result with others. Mainly beneficial if any of the prefabs in the tile set are very large and cause many chunks to access a wfc section.
+Splits the search of a correct solution for the WFC over multiple threads and shares the result with others. Mainly beneficial if any of the prefabs in the tile set are very large and cause many chunks to access the same wfc section.
 
 > [!WARNING]
 > This node often breaks so use with caution
 
 ---
 
+### Section Storage Feature (global)
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/SectionStorageFeature.png" alt="SectionStorageFeature"/> 
+
+If not present as a feature the above shown default values are used by the PropDistribution GridWave Algorithm.
+Allows for sectioning of larger or infinite use cases.
+
+---
