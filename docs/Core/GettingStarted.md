@@ -29,7 +29,7 @@ Use `/worldgen 2 create` to set up a WorldGen V2 asset-pack and starter biome fo
 # Quick Overview:
 
 <details>
-<summary><h3>Biome</h3></summary>
+<summary>### Biome</summary>
 
 This shows a minimal setup for a biome
 
