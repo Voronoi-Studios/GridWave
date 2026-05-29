@@ -12,9 +12,10 @@ Allows for easier generation of bounds based on a position, grid size (offset) a
 ---
 
 * Green dot -> Position
-* Distance between points -> Offset
-* Number of points in each direction -> Repeat
+* Distance between points ( x7, z7 ) -> Offset
+* Number of points across one direction ( x5, z5 ) -> Repeat
 
-Left image -> Not Centered / Right image -> Centered
+Shown 2D bellow, but the same applies for up and down (y) as well.
 
-<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/GridPositionsExplainerExplainer.png" alt="GridPositionsExplainerExplainer" />
+Left image -> Not Centered   /   Right image -> Centered
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/GridPositionsExplainer.png" alt="GridPositionsExplainer" />
