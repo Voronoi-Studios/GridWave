@@ -52,11 +52,11 @@ Only present on the Prop version, restrains the positions. can be left empty if 
 <details>
 <summary>FixedTiles</summary>
 
-Input for a [TileSet](TileSet).
-These tiles will be places first, before anything runs. Make sure your stuff is not overlapping. 
+Input for multiple [TileSet Nodes](TileSet).
+These tiles will be placed first, before anything runs. Make sure your stuff is not overlapping. 
 
 > [!IMPORTANT]  
-> All tiles do need a Restrainer [Feature](Feature) for this to work or else he might place a tile everywhere.
+> All tiles do need a [Restrainer Feature](Feature#restrainer-feature-local) for this to work or else he might place a tile everywhere.
 
 </details>
 
@@ -64,7 +64,7 @@ These tiles will be places first, before anything runs. Make sure your stuff is 
 <details>
 <summary>BaseTiles</summary>
 
-Input for [TileSet](TileSet) Nodes.
+Input for multiple [TileSet Nodes](TileSet).
 He will now try to figure out which of the provided tiles should be placed at every cell position.
 Uses the [Greedy Lowest Entropy Cell Selector](https://github.com/Voronoi-Studios/GridWave/blob/c4c6b195661f1bb5c7742b1e2fa29b1d0086fa5f/GridWaveCore/src/main/java/ch/voronoi/GridWave/AlgoNodes/GridWave.java#L120-L130) by default to choose the next cell to collapse.
 
@@ -74,12 +74,13 @@ Uses the [Greedy Lowest Entropy Cell Selector](https://github.com/Voronoi-Studio
 <details>
 <summary>FancyTiles</summary>
 
+Input for multiple [TileSet Nodes](TileSet).
 Before the tiles get actually spawned in, we now have the opportunity to use Pattern matching to replace singular or multiple tiles with others. 
 
 This is extremely powerful and can be used for many things;
 * Cars on a road
 * Hanging bridges connecting platforms
-* replacing odd generation with cool stuff (like a 4 long boring hallways with a 4 long integrate lava trap obstacle)
+* replacing odd generation with cool stuff (like a 4 long boring hallways with a challenging 4 long lava trap obstacle)
 * Add mini encounters
 * much more
 
