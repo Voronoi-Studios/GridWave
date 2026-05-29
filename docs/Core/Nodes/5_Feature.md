@@ -70,7 +70,7 @@ all it actually does is to invert when we apply offsets when a tile is rotated. 
 ### Path Cell Selector Feature (global)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/PathCellSelectorFeature.png" alt="PathCellSelectorFeature"/> 
 
-Replaces the default [`Greedy Lowest Entropy Cell Selector`](https://github.com/Voronoi-Studios/GridWave/blob/c4c6b195661f1bb5c7742b1e2fa29b1d0086fa5f/GridWaveCore/src/main/java/ch/voronoi/GridWave/AlgoNodes/GridWave.java#L120-L130), with one that only allows propagation of edges with the specified key. StopAfterPercent allows you to revert back to the default cell selector after the entered percent of grid spots where filled.
+Replaces the default [Greedy Lowest Entropy Cell Selector](https://github.com/Voronoi-Studios/GridWave/blob/c4c6b195661f1bb5c7742b1e2fa29b1d0086fa5f/GridWaveCore/src/main/java/ch/voronoi/GridWave/AlgoNodes/GridWave.java#L120-L130), with one that only allows propagation of edges with the specified key. StopAfterPercent allows you to revert back to the default cell selector after the entered percent of grid spots where filled.
 
 ---
 

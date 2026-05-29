@@ -7,13 +7,13 @@ draft: true
 ---
 
 # Nodes
-* [`Algo`](Algo)
-* [`TileSetCollection`](TileSetCollection)
-* [`TileSet`](TileSet)
-* [`RuleSet`](RuleSet)
-* [`Feature`](Feature)
-* [`Seed`](Seed)
+* [Algo](Algo)
+* [TileSet](TileSet)
+* [RuleSet](RuleSet)
+* [Feature](Feature)
+* [Seed](Seed)
 * Utils
-  * [`GridGen`](GridGen)
-  * [`StaticMirrorProp`](StaticMirrorProp)
+  * [GridPointGenerator](GridPointGenerator)
+  * [GridBoundGenerator](GridBoundGenerator)
+  * [StaticMirrorProp](StaticMirrorProp)
 
