@@ -12,12 +12,12 @@ draft: true
 
 ---
 
-### GridWave Algorithm (PropDistribution)
+### GridWave Algorithm (Prop)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoProp.png" alt="AlgoProp"/>
 
 ---
 
-### GridWave Algorithm (Prop)
+### GridWave Algorithm (PropDistribution)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoPropDistribution.png" alt="AlgoPropDistribution" />
 
 ---

@@ -11,39 +11,50 @@ draft: true
 
 This is an extension to GridWaveCore which is a Hytale plugin that integrates Wave Function Collapse (WFC) into the World Generation V2 Node Editor. It enables structured, constraint-based procedural generation for dungeons, mazes, cities, towns, castles, structures, and many more.
 
-## Examples:
-- [`Island`](Island)
-- [`Maze`](Maze)
-- [`Dungeon`](Dungeon)
-- [`Boardgame (Carcasonne)`](Boardgame)
-- [`City`](City)
-- [`Jungle Village`](Jungle-Village)
-- [`Cave Village`](Cave-Village)
+## Example Instances:
+- Mazes
+  - [Maze Simple Prop](maze#maze-simple-prop)
+  - [Maze Simple PropDistribution](maze#maze-simple-propdistribution)
+  - [Maze Multi Floor](maze#maze-multi-floor)
+  - [Maze Infinite](maze#maze-infinite)
+- [Island](Island)
+- [Ruin City](RuinCity)
+- [Jungle Dungeon](JungleDungeon)
+- [Venice](Venice)
 
 
 ## Features
 
-* Multiple example instances featuring GridWave
+* Multiple example instances utilizing GridWave in different ways
 
 ## Installation
 
-* Put his file in to your mod folder.
-* optional: for setup of the node editor look at [Nodes Installation](Core/Nodes).
+* Download jar
+* Put it in to your global or worlds mod folder.
+* Make sure you also have [GridWave.core](Core) installed!
 
-## How to change
+## How to edit
 
 * Extract the jar or copy the files from GitHub
 * Start modifying and changing them.
+* optional: if you wanna use the node editor look at [Nodes Installation](Nodes).
 
 
 ## Roadmap
 Adding examples for:
-* Maze
-* Maze multilayered
 * Maze with elevationRules
-* Dungeon
-* Town
-* City
-* Castle
-* Village
-* Kweebec treehouse village (might get its own repro) 
+* dnd inspired Dungeon
+* Structures
+  * Castle
+  * Tower
+  * House
+* Towns
+  * Medieval
+  * Mushroom
+* Cities
+  * Cyber
+  * Cave
+* Villages
+  * Dessert
+  * Treehouse
+
