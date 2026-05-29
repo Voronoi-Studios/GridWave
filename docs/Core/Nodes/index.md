@@ -13,7 +13,7 @@ draft: true
 * [Feature](Feature)
 * [Seed](Seed)
 * Utils
-  * [GridPointGenerator](GridPointGenerator)
-  * [GridBoundGenerator](GridBoundGenerator)
-  * [StaticMirrorProp](StaticMirrorProp)
+  * [GridPointGenerator](grid-point-generator)
+  * [GridBoundGenerator](grid-bounds-generator)
+  * [StaticMirrorProp](static-mirror-prop)
 

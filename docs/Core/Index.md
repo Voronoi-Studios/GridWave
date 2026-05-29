@@ -11,7 +11,7 @@ draft: true
 
 GridWave is a Hytale plugin that integrates Wave Function Collapse (WFC) into the World Generation V2 Node Editor. It enables structured, constraint-based procedural generation for dungeons, mazes, cities, towns, castles, structures, and many more.
 
-Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea an idea how different things can be accieved.
+Check out the [GridWaveExamples](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea an idea how different things can be accieved.
 
 ## Features
 
@@ -28,7 +28,7 @@ Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/e
 
 
 ### Adding Node Editor support:
-1. Copy contents of [`HytaleGenerator Java`](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
+1. Copy contents of [HytaleGenerator Java](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
 > [!NOTE]
 > Node modding is currently not offically suported by Hytale, thus we need to replace some files.
 
@@ -43,7 +43,7 @@ For convenience some new roots paces where added:
 
 ## Usage
 
-Check out the [`GridWaveExamples`](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea how different things can be achieved using the Node Editor.
+Check out the [GridWaveExamples](https://wiki.hytalemodding.dev/mod/gridwave/examples) to get an idea how different things can be achieved using the Node Editor.
 
 ## How It Works
 
@@ -59,13 +59,11 @@ GridWave applies Wave Function Collapse by:
 
 ## Roadmap
 
-### pt 8
-* Neightborhood system
+* Neighborhood system
 * bool or distance for self connection
-### pt 9
-* New Attempt Behavor
-### pt 10
+* New Attempt Behavior
 * Elevation
+* Infinite generations
 
 ### Wishlist
 * Infinite Grids
