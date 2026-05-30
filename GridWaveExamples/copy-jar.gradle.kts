@@ -1,6 +1,5 @@
 tasks.register("copyJar") {
     val targetDirs = listOf(
-        rootProject.file("run/mods"),
         rootProject.file("build/libs"),
     )
 

@@ -1,5 +1,6 @@
 package ch.voronoi.GridWaveExamples;
 
+import ch.voronoi.GridWaveExamples._Commands.GridWaveExamplesCommand;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -14,6 +15,6 @@ public class ExamplesPlugin extends JavaPlugin {
 
     @Override
     protected void setup() {
-        this.getCommandRegistry().registerCommand(new PingCommand(this.getName(), this.getManifest().getVersion().toString()));
+        this.getCommandRegistry().registerCommand(new GridWaveExamplesCommand(this.getName(), this.getManifest().getVersion().toString()));
     }
 }

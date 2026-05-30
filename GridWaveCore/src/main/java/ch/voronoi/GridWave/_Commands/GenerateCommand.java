@@ -1,4 +1,4 @@
-package ch.voronoi.GridWave;
+package ch.voronoi.GridWave._Commands;
 
 import com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;

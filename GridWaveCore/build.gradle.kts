@@ -3,18 +3,13 @@ plugins {
     id("hytale-mod") version "0.+"
 }
 
-
-
 val packBuildNumberFile = file("../packBuildNumber.txt")
 var packBuildNumber = if (packBuildNumberFile.exists()) packBuildNumberFile.readText().toInt() else 0
-
 val buildNumberFile = file("buildNumber.txt")
 var buildNumber = if (buildNumberFile.exists()) buildNumberFile.readText().toInt() else 0
-buildNumber++
-buildNumberFile.writeText(buildNumber.toString())
-
-group = "${findProperty("plugin_group")}"
 version = "${findProperty("plugin_version")}.${packBuildNumber * 100 + buildNumber}"
+group = "${findProperty("plugin_group")}"
+
 val javaVersion = 25
 
 repositories {
@@ -73,12 +68,12 @@ tasks.named<ProcessResources>("processResources") {
 tasks.withType<Jar> {
     manifest {
         attributes["Specification-Title"] = rootProject.name
-        attributes["Specification-Version"] = version
+        attributes["Specification-Version"] = rootProject.version
         attributes["Implementation-Title"] = project.name
         attributes["Implementation-Version"] =
             providers.environmentVariable("COMMIT_SHA_SHORT")
-                .map { "${version}-${it}" }
-                .getOrElse(version.toString())
+                .map { "${rootProject.version}-${it}" }
+                .getOrElse(rootProject.version.toString())
     }
 }
 
@@ -139,6 +134,24 @@ afterEvaluate {
     } else {
         logger.warn("⚠️ Could not find 'runServer' or 'server' task to hook auto-sync into.")
     }
+}
+
+val incrementBuildNumber = tasks.register("incrementBuildNumber") {
+    doFirst{
+        val packBuildNumberFile = file("../packBuildNumber.txt")
+        val packBuildNumber = if (packBuildNumberFile.exists()) packBuildNumberFile.readText().toInt() else 0
+
+        val buildNumberFile = file("buildNumber.txt")
+        var buildNumber = if (buildNumberFile.exists()) buildNumberFile.readText().toInt() else 0
+        buildNumber++
+        buildNumberFile.writeText(buildNumber.toString())
+
+        project.version = "${findProperty("plugin_version")}.${packBuildNumber * 100 + buildNumber}"
+    }
+}
+
+tasks.named("jar") {
+    dependsOn(incrementBuildNumber)
 }
 
 //Remove these lines if they cause issues

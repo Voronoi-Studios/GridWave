@@ -5,14 +5,12 @@ plugins {
 
 val packBuildNumberFile = file("../packBuildNumber.txt")
 var packBuildNumber = if (packBuildNumberFile.exists()) packBuildNumberFile.readText().toInt() else 0
-
 val buildNumberFile = file("buildNumber.txt")
 var buildNumber = if (buildNumberFile.exists()) buildNumberFile.readText().toInt() else 0
-buildNumber++
-buildNumberFile.writeText(buildNumber.toString())
-
-group = "${findProperty("plugin_group")}"
 version = "${findProperty("plugin_version")}.${packBuildNumber * 100 + buildNumber}"
+group = "${findProperty("plugin_group")}"
+
+
 val javaVersion = 25
 
 repositories {
@@ -22,9 +20,12 @@ repositories {
     }
 }
 
+evaluationDependsOn(":GridWaveCore")
+val coreOutput = project(":GridWaveCore").extensions.getByType<SourceSetContainer>()["main"].output
 dependencies {
     compileOnly(libs.jetbrains.annotations)
     compileOnly(libs.jspecify)
+    implementation(files(coreOutput))
 }
 
 hytale {
@@ -140,8 +141,22 @@ afterEvaluate {
     }
 }
 
-tasks.matching { it.name == "runServer" }.configureEach {
-    dependsOn(":GridWaveCore:jar")
+val incrementBuildNumber = tasks.register("incrementBuildNumber") {
+    doFirst{
+        val packBuildNumberFile = file("../packBuildNumber.txt")
+        val packBuildNumber = if (packBuildNumberFile.exists()) packBuildNumberFile.readText().toInt() else 0
+
+        val buildNumberFile = file("buildNumber.txt")
+        var buildNumber = if (buildNumberFile.exists()) buildNumberFile.readText().toInt() else 0
+        buildNumber++
+        buildNumberFile.writeText(buildNumber.toString())
+
+        project.version = "${findProperty("plugin_version")}.${packBuildNumber * 100 + buildNumber}"
+    }
+}
+
+tasks.named("jar") {
+    dependsOn(incrementBuildNumber)
 }
 
 apply(from = "copy-jar.gradle.kts")

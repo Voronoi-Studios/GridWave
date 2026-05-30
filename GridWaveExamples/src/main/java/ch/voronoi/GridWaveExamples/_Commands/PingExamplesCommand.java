@@ -1,4 +1,4 @@
-package ch.voronoi.GridWave;
+package ch.voronoi.GridWaveExamples._Commands;
 
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
@@ -10,12 +10,12 @@ import javax.annotation.Nonnull;
 /**
  * This is an example command that will simply print the name of the plugin in chat when used.
  */
-public class PingCommand extends CommandBase {
+public class PingExamplesCommand extends CommandBase {
     private final String pluginName;
     private final String pluginVersion;
 
-    public PingCommand(String pluginName, String pluginVersion) {
-        super("pingCore", "Prints a test message from the " + pluginName + " plugin.");
+    public PingExamplesCommand(String pluginName, String pluginVersion) {
+        super("ping", "Prints a test message from the " + pluginName + " plugin.");
         this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADVENTURER); // Allows the command to be used by anyone, not just OP
         this.pluginName = pluginName;
         this.pluginVersion = pluginVersion;
@@ -24,6 +24,5 @@ public class PingCommand extends CommandBase {
     @Override
     protected void executeSync(@Nonnull CommandContext ctx) {
         ctx.sendMessage(Message.raw("Hello from the " + pluginName + " v" + pluginVersion + " plugin!"));
-
     }
 }

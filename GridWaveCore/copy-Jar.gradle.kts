@@ -1,9 +1,7 @@
 tasks.register("copyJar") {
     val targetDirs = listOf(
         rootProject.file("../icarus-assets"),
-        rootProject.file("run/mods"),
         rootProject.file("build/libs"),
-        rootProject.file("GridWaveExamples/run/mods"),
         )
 
     doFirst {

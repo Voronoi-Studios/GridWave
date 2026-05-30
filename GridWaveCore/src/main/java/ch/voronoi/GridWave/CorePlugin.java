@@ -16,15 +16,27 @@ import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
 import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorPropAsset;
+import ch.voronoi.GridWave._Commands.GridWaveCoreCommand;
 import com.hypixel.hytale.assetstore.AssetRegistry;
 import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
+import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.asset.HytaleAssetStore;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class CorePlugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -37,8 +49,7 @@ public class CorePlugin extends JavaPlugin {
     @Override
     protected void setup() {
         //Test stuff
-        this.getCommandRegistry().registerCommand(new PingCommand(this.getName(), this.getManifest().getVersion().toString()));
-        this.getCommandRegistry().registerCommand(new GenerateCommand());
+        this.getCommandRegistry().registerCommand(new GridWaveCoreCommand(this.getName(), this.getManifest().getVersion().toString(), getPatchSource(), getPatchTarget()));
 
         AssetRegistry.register(HytaleAssetStore.builder(TileSetAsset.class, new DefaultAssetMap<String, TileSetAsset>())
                 .setPath("HytaleGenerator/TileSets")
@@ -94,5 +105,29 @@ public class CorePlugin extends JavaPlugin {
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
         CustomBoundsAsset.CODEC.register("Grid", GridBoundsAsset.class, GridBoundsAsset.CODEC);
         CustomBoundsAsset.CODEC.register("Converter", BoundsConverterAsset.class, BoundsConverterAsset.CODEC);
+    }
+
+    private @NonNull Path getPatchSource() {
+        return this.getFile().resolve("Client/NodeEditor/Workspaces/HytaleGenerator Java");
+    }
+
+    private static @Nullable Path getPatchTarget() {
+        Path subPath = Paths.get("install/release/package/game/latest/Client/NodeEditor/Workspaces/HytaleGenerator Java");
+
+        List<Path> candidates = List.of(
+                // Windows
+                Paths.get(System.getenv().getOrDefault("APPDATA", ""), "Hytale"),
+                // Linux
+                PathUtil.getUserHome().resolve(".config").resolve("Hytale"),
+                PathUtil.getUserHome().resolve(".local/share/Hytale"),
+                // Mac
+                PathUtil.getUserHome().resolve("Library/Application Support/Hytale")
+        );
+
+        for (Path base : candidates) {
+            Path target = base.resolve(subPath);
+            if (Files.isDirectory(target)) return target;
+        }
+        return null;
     }
 }
