@@ -63,7 +63,6 @@ draft: false
           </div>
         </div>
       </div>
-  
       <!-- Duplicate set -->
       <div class="card">
         <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
