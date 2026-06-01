@@ -212,7 +212,7 @@ draft: false
 
 
 > [!CAUTION]
-> This Wiki/Dokumentation is for the upcomming v0.8 and not for the currently released v0.7!
+> This Wiki/Dokumentation is for the upcomming v0.9 and not for the currently released v0.7!
 
 
 > [!NOTE]
@@ -221,15 +221,19 @@ draft: false
 
 <div>
   Download:
-  <p style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap;margin: 0px;">
+  <p style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin: 0px; ">
       <a href="https://www.curseforge.com/hytale/mods/gridwave">
-        <img alt="Curse Forge" height="32" style="margin: 0px;" src="https://shieldcn.dev/badge/Curse%20Forge-GridWave-ff44ff.svg?variant=outline&amp;logo=curseforge&amp;logoColor=f97316&amp;color=f97316&amp;valueColor=ffffff&amp;labelTextColor=f97316">
-      </a><a href="https://github.com/Voronoi-Studios/GridWave">
+        <img alt="Curse Forge" height="32" style="margin: 0px;" src="https://shieldcn.dev/badge/Curse%20Forge-GridWave.core-ff44ff.svg?variant=outline&amp;logo=curseforge&amp;logoColor=f97316&amp;color=f97316&amp;valueColor=ffffff&amp;labelTextColor=f97316">
+      </a><a href="https://www.curseforge.com/hytale/mods/gridwave-examples">
+        <img alt="Curse Forge" height="32" style="margin: 0px;" src="https://shieldcn.dev/badge/Curse%20Forge-GridWave.examples-ff44ff.svg?variant=outline&amp;logo=curseforge&amp;logoColor=f97316&amp;color=f97316&amp;valueColor=ffffff&amp;labelTextColor=f97316">
+      </a>
+     </p><p style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin: 0px;">
+    <a href="https://github.com/Voronoi-Studios/GridWave">
         <img alt="GitHub" height="32" style="margin: 0px;" src="https://shieldcn.dev/badge/GitHub-GridWave-8534F3.svg?variant=outline&amp;logo=lu%3AGithub">
       </a><a href="https://github.com/Voronoi-Studios/GridWave/releases/latest">
         <img alt="Latest Release" height="32" style="margin: 0px;" src="https://shieldcn.dev/github/Voronoi-Studios/GridWave/release.svg?variant=outline">
       </a>
-  </p>
+ 
 
   <br>
   Check out the documentations here:
