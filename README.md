@@ -7,7 +7,7 @@ Check out the documentations here:<br>
 
 ## Contributing
 
-Pull requests and issue reports will be welcome, as soon as I'm trough the early phase (May)
+Pull requests and issue reports will be welcome, as soon as I'm trough the early phase (after July)
 
 ## License
 
