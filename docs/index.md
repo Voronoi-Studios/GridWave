@@ -16,12 +16,24 @@ draft: false
     <div class="track">
       <!-- First set -->
       <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Island</h3>
+              <p>by Jonas.png</p>
+            </div>
+            <a href="#" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
         <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
+              <h3>Jungle Dungeon</h3>
+              <p>by Andy</p>
             </div>
             <a href="#" class="button">↗</a>
           </div>
@@ -40,24 +52,12 @@ draft: false
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
-            </div>
-            <a href="#" class="button">↗</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
-        <div class="overlay">
-          <div class="content">
-            <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
+              <h3>Venice</h3>
+              <p>by Arrinity</p>
             </div>
             <a href="#" class="button">↗</a>
           </div>
@@ -65,12 +65,24 @@ draft: false
       </div>
       <!-- Duplicate set -->
       <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Island</h3>
+              <p>by Jonas.png</p>
+            </div>
+            <a href="#" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
         <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
+              <h3>Jungle Dungeon</h3>
+              <p>by Andy</p>
             </div>
             <a href="#" class="button">↗</a>
           </div>
@@ -89,29 +101,18 @@ draft: false
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
+              <h3>Venice</h3>
+              <p>by Arrinity</p>
             </div>
             <a href="#" class="button">↗</a>
           </div>
         </div>
       </div>
-      <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
-        <div class="overlay">
-          <div class="content">
-            <div>
-              <h3>Maze</h3>
-              <p>by Icarus Team</p>
-            </div>
-            <a href="#" class="button">↗</a>
-          </div>
-        </div>
-      </div>
+      <!-- End of duplicate set -->
     </div>
   </div>
 </div>
