@@ -16,99 +16,195 @@ draft: false
     <div class="track">
       <!-- First set -->
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Island</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="Island" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="JungleDungeon" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
+              <h3>Maze Simple Prop</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="maze#maze-simple-prop" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Simple PropDistribution</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-simple-propdistribution" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Venice</h3>
               <p>by Arrinity</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="Venice" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Multi Floor</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-multi-floor" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Infinite</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-infinite" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Ruin City</h3>
+              <p>by Jonas.png</p>
+            </div>
+            <a href="RuinCity" class="button">↗</a>
           </div>
         </div>
       </div>
       <!-- Duplicate set -->
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Island</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="Island" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="JungleDungeon" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Maze</h3>
+              <h3>Maze Simple Prop</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="maze#maze-simple-prop" class="button">↗</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay="true"></video>
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Simple PropDistribution</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-simple-propdistribution" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
         <div class="overlay">
           <div class="content">
             <div>
               <h3>Venice</h3>
               <p>by Arrinity</p>
             </div>
-            <a href="#" class="button">↗</a>
+            <a href="Venice" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Multi Floor</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-multi-floor" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Maze Infinite</h3>
+              <p>by Icarus Team</p>
+            </div>
+            <a href="maze#maze-infinite" class="button">↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
+        <div class="overlay">
+          <div class="content">
+            <div>
+              <h3>Ruin City</h3>
+              <p>by Jonas.png</p>
+            </div>
+            <a href="RuinCity" class="button">↗</a>
           </div>
         </div>
       </div>
