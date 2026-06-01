@@ -11,7 +11,109 @@ draft: false
 
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
-<video width="100%" autoplay loop muted playsinline src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4"></video>
+<div class="marquee">
+  <div class="track">
+    <!-- First set -->
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Duplicate set -->
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+    <div class="card">
+  <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay="true"></video>
+  <div class="overlay">
+    <div class="content">
+      <div>
+        <h3>Maze</h3>
+        <p>by Icarus Team</p>
+      </div>
+      <a href="#" class="button">↗</a>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
 
 ## ___**GridWave**___
 
