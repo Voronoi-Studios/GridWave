@@ -6,9 +6,6 @@ published: true
 draft: false
 ---
 
-> [!CAUTION]
-> This Wiki/Dokumentation is for the upcomming v0.8 and not for the currently released v0.7!
-
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
 <div>
@@ -23,7 +20,7 @@ draft: false
               <h3>Island</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="Island" class="button">↗</a>
+            <a href="gridwave/Island" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -35,7 +32,7 @@ draft: false
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="JungleDungeon" class="button">↗</a>
+            <a href="gridwave/JungleDungeon" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -47,7 +44,7 @@ draft: false
               <h3>Maze Simple Prop</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-simple-prop" class="button">↗</a>
+            <a href="gridwave/maze#maze-simple-prop" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -59,7 +56,7 @@ draft: false
               <h3>Maze Simple PropDistribution</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-simple-propdistribution" class="button">↗</a>
+            <a href="gridwave/maze#maze-simple-propdistribution" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -71,7 +68,7 @@ draft: false
               <h3>Venice</h3>
               <p>by Arrinity</p>
             </div>
-            <a href="Venice" class="button">↗</a>
+            <a href="gridwave/Venice" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -83,7 +80,7 @@ draft: false
               <h3>Maze Multi Floor</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-multi-floor" class="button">↗</a>
+            <a href="gridwave/maze#maze-multi-floor" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -95,7 +92,7 @@ draft: false
               <h3>Maze Infinite</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-infinite" class="button">↗</a>
+            <a href="gridwave/maze#maze-infinite" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -107,7 +104,7 @@ draft: false
               <h3>Ruin City</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="RuinCity" class="button">↗</a>
+            <a href="gridwave/RuinCity" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -120,7 +117,7 @@ draft: false
               <h3>Island</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="Island" class="button">↗</a>
+            <a href="gridwave/Island" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -132,7 +129,7 @@ draft: false
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="JungleDungeon" class="button">↗</a>
+            <a href="gridwave/JungleDungeon" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -144,7 +141,7 @@ draft: false
               <h3>Maze Simple Prop</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-simple-prop" class="button">↗</a>
+            <a href="gridwave/maze#maze-simple-prop" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -156,7 +153,7 @@ draft: false
               <h3>Maze Simple PropDistribution</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-simple-propdistribution" class="button">↗</a>
+            <a href="gridwave/maze#maze-simple-propdistribution" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -168,7 +165,7 @@ draft: false
               <h3>Venice</h3>
               <p>by Arrinity</p>
             </div>
-            <a href="Venice" class="button">↗</a>
+            <a href="gridwave/Venice" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -180,7 +177,7 @@ draft: false
               <h3>Maze Multi Floor</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-multi-floor" class="button">↗</a>
+            <a href="gridwave/maze#maze-multi-floor" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -192,7 +189,7 @@ draft: false
               <h3>Maze Infinite</h3>
               <p>by Icarus Team</p>
             </div>
-            <a href="maze#maze-infinite" class="button">↗</a>
+            <a href="gridwave/maze#maze-infinite" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -204,7 +201,7 @@ draft: false
               <h3>Ruin City</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="RuinCity" class="button">↗</a>
+            <a href="gridwave/RuinCity" class="button">↗</a>
           </div>
         </div>
       </div>
@@ -213,7 +210,10 @@ draft: false
   </div>
 </div>
 
-## ___**GridWave**___
+
+> [!CAUTION]
+> This Wiki/Dokumentation is for the upcomming v0.8 and not for the currently released v0.7!
+
 
 > [!NOTE]
 > <p>GridWave is in Early Access. Things will break!<br>Join<a href="https://discord.gridwave.voronoi.ch" style="display:inline-flex; verticalRules-align:middle; margin-left:3px; margin-right:3px;"><img alt="discord" height="23px" style="margin:0px;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=outline&amp;size=xs&amp;logoColor=7289da&amp;label=Discord&amp;valueColor=ffffff&amp;labelTextColor=7289da"></a>to report bugs, give suggestions, and shape the future of constraint based procedural generation</p>
