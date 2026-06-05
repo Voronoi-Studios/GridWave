@@ -8,6 +8,7 @@
 			"PropDistribution":	{
 				"$NodeId":	"Constant.PropDistribution-b7c871b2-275f-4d08-92fb-682d5c5626c4",
 				"Type":	"Constant",
+				"Skip":	false,
 				"Positions":	{
 					"$NodeId":	"Scaler.Positions-5dc7ee78-aec5-42e8-9593-7af21ad1b8ca",
 					"Type":	"Scaler",
@@ -46,6 +47,7 @@
 			"PropDistribution":	{
 				"$NodeId":	"Constant.PropDistribution-ba7cc336-cd33-41ae-a7eb-5e9cfcf4889d",
 				"Type":	"Constant",
+				"Skip":	false,
 				"Positions":	{
 					"$NodeId":	"ListPositions-90b54d90-b8e1-49e6-8563-588aa43b68c6",
 					"Type":	"List",
@@ -60,6 +62,7 @@
 				"Prop":	{
 					"$NodeId":	"PropAlgo.GridWave-92423b7b-b0c8-4f41-8ccc-41648539cc87",
 					"Type":	"PropAlgo",
+					"ExportAs":	"Island",
 					"Skip":	false,
 					"GridPoints":	{
 						"$NodeId":	"GridGen2D.GridWave-4e405c21-7ad0-4af8-b804-c35c15a9c53b",
@@ -68,8 +71,9 @@
 						"OffsetZ":	7,
 						"RepeatX":	20,
 						"RepeatZ":	20,
-						"Centered":	true
+						"Centered":	false
 					},
+					"POIs":	[],
 					"BaseTiles":	[{
 							"$NodeId":	"Imported.TileSet.GridWave-b84d94a0-86e2-4ed0-8112-8bee7dd4bbcf",
 							"Type":	"Imported",
@@ -81,9 +85,9 @@
 							"Name":	"IslandFancyTiles1"
 						}],
 					"Seed":	{
-						"$NodeId":	"Constant.Seed.GridWave-8fc6bc47-9bab-4b72-808d-89e02f9989f4",
+						"$NodeId":	"Constant.Seed.GridWave-4459e30d-6d11-4ad3-9f37-b2ad03d54d90",
 						"Type":	"Constant",
-						"Seed":	"SomeSeedsssss"
+						"Seed":	"SomeSeed"
 					},
 					"Features":	[{
 							"$NodeId":	"Group.Feature.GridWave-df9509cb-898a-45fe-8099-f8fbf9988688",
@@ -92,9 +96,11 @@
 									"$NodeId":	"Debug.Feature.GridWave-40b93519-3b05-4a60-ac50-53cb3087b2da",
 									"Type":	"Debug",
 									"Skip":	false,
-									"WriteToConsole":	false,
+									"WriteToConsole":	true,
 									"ShowNotification":	true,
+									"VisualizeGridPositions":	false,
 									"DebugGrid":	false,
+									"SkipFancyTiles":	false,
 									"LimitSteps":	false,
 									"MaxSteps":	10
 								}, {
@@ -107,6 +113,7 @@
 									"$NodeId":	"Border.Feature.GridWave-9e05f0c9-d052-436c-b41f-510d73c08b26",
 									"Type":	"Border",
 									"Skip":	false,
+									"BorderType":	"OuterBorder",
 									"BorderRuleSets":	[{
 											"$NodeId":	"Simple.RuleSet.GridWave-90aafd58-188b-442e-8034-58aeec0aba40",
 											"Type":	"Simple",
@@ -126,6 +133,7 @@
 	"TintProvider":	{
 		"$NodeId":	"Constant.TintProvider-b0087f9c-8a56-452a-ba0b-8f24382b23e5",
 		"Type":	"Constant",
+		"Skip":	false,
 		"Color":	"#2b5e35"
 	},
 	"$NodeEditorMetadata":	{
@@ -205,50 +213,62 @@
 			},
 			"PropAlgo.GridWave-92423b7b-b0c8-4f41-8ccc-41648539cc87":	{
 				"$Position":	{
-					"$x":	-5014,
-					"$y":	-4479
+					"$x":	-4094,
+					"$y":	-4390
 				}
 			},
 			"GridGen2D.GridWave-4e405c21-7ad0-4af8-b804-c35c15a9c53b":	{
 				"$Position":	{
-					"$x":	-4252,
-					"$y":	-4679
+					"$x":	-3335,
+					"$y":	-4752
 				}
 			},
-			"Constant.Seed.GridWave-8fc6bc47-9bab-4b72-808d-89e02f9989f4":	{
+			"Imported.TileSet.GridWave-b84d94a0-86e2-4ed0-8112-8bee7dd4bbcf":	{
 				"$Position":	{
-					"$x":	-4265,
-					"$y":	-4061
+					"$x":	-3346,
+					"$y":	-4230
+				}
+			},
+			"Imported.TileSet.GridWave-23630b71-e196-4559-a4e2-53e48a36eb60":	{
+				"$Position":	{
+					"$x":	-3351,
+					"$y":	-4112
+				}
+			},
+			"Time.Seed.GridWave-d7a0c715-c169-4593-9e5a-06a5b8397bdb":	{
+				"$Position":	{
+					"$x":	-2860,
+					"$y":	-3964
 				}
 			},
 			"Group.Feature.GridWave-df9509cb-898a-45fe-8099-f8fbf9988688":	{
 				"$Position":	{
-					"$x":	-5010,
-					"$y":	-4066
+					"$x":	-3330,
+					"$y":	-3709
 				}
 			},
 			"Debug.Feature.GridWave-40b93519-3b05-4a60-ac50-53cb3087b2da":	{
 				"$Position":	{
-					"$x":	-5015,
-					"$y":	-3943
+					"$x":	-3335,
+					"$y":	-3586
 				}
 			},
 			"MultiAttempt.Feature.GridWave-394241a4-4b18-46c1-ac69-b796ac7da25f":	{
 				"$Position":	{
-					"$x":	-5013,
-					"$y":	-3630
+					"$x":	-3332,
+					"$y":	-3210
 				}
 			},
 			"Border.Feature.GridWave-9e05f0c9-d052-436c-b41f-510d73c08b26":	{
 				"$Position":	{
-					"$x":	-5017,
-					"$y":	-3397
+					"$x":	-3336,
+					"$y":	-2977
 				}
 			},
 			"Simple.RuleSet.GridWave-90aafd58-188b-442e-8034-58aeec0aba40":	{
 				"$Position":	{
-					"$x":	-5024,
-					"$y":	-3219
+					"$x":	-3343,
+					"$y":	-2799
 				}
 			},
 			"Constant.TintProvider-b0087f9c-8a56-452a-ba0b-8f24382b23e5":	{
@@ -257,20 +277,193 @@
 					"$y":	-5377
 				}
 			},
-			"Imported.TileSet.GridWave-23630b71-e196-4559-a4e2-53e48a36eb60":	{
+			"PropDistributionAlgo.GridWave-b78977a0-5935-4929-8a3b-e28d7925672c":	{
 				"$Position":	{
-					"$x":	-4271,
-					"$y":	-4201
+					"$x":	-6517,
+					"$y":	-3488
 				}
 			},
-			"Imported.TileSet.GridWave-b84d94a0-86e2-4ed0-8112-8bee7dd4bbcf":	{
+			"Scaler.Positions-7a2f2c16-526e-4300-8cb7-73679fe2a84d":	{
 				"$Position":	{
-					"$x":	-4271,
-					"$y":	-4347
+					"$x":	-6500,
+					"$y":	-3706
+				}
+			},
+			"Point3D-ca1acbac-32e5-4b0c-bb26-ccd53fbc277d":	{
+				"$Position":	{
+					"$x":	-5784,
+					"$y":	-3724
+				}
+			},
+			"SquareGrid2d.Positions-e1838a67-8ff5-4eb6-9bd0-415729396ee4":	{
+				"$Position":	{
+					"$x":	-5805,
+					"$y":	-3897
+				}
+			},
+			"Vector3i-40bf52cd-39d9-4241-9eac-9939b8e13eac":	{
+				"$Position":	{
+					"$x":	-5833,
+					"$y":	-3527
+				}
+			},
+			"Imported.TileSet.GridWave-3191081b-d595-4a79-8420-6354356dbc4c":	{
+				"$Position":	{
+					"$x":	-5869,
+					"$y":	-3346
+				}
+			},
+			"Time.Seed.GridWave-0115251c-8603-4bef-9ebf-f08a1e46656d":	{
+				"$Position":	{
+					"$x":	-5843,
+					"$y":	-3102
+				}
+			},
+			"Group.Feature.GridWave-fd873c2b-3e3b-4ccf-b5b3-5cd01a702b42":	{
+				"$Position":	{
+					"$x":	-5853,
+					"$y":	-2825
+				}
+			},
+			"Debug.Feature.GridWave-795afb06-1401-4700-a915-f623df560f7f":	{
+				"$Position":	{
+					"$x":	-5000,
+					"$y":	-3388
+				}
+			},
+			"MultiAttempt.Feature.GridWave-c746d445-8bfd-44e9-aaa7-6302223a0062":	{
+				"$Position":	{
+					"$x":	-4997,
+					"$y":	-3012
+				}
+			},
+			"Border.Feature.GridWave-01893a25-3943-4610-b8bb-b72d7375b6c5":	{
+				"$Position":	{
+					"$x":	-5001,
+					"$y":	-2779
+				}
+			},
+			"Simple.RuleSet.GridWave-c1fc4df7-65e9-4891-9353-0ea08ac2a972":	{
+				"$Position":	{
+					"$x":	-5008,
+					"$y":	-2601
+				}
+			},
+			"SectionStorage.Feature.GridWave-63b38e2b-7d8f-4696-a9bd-7f1f115290a4":	{
+				"$Position":	{
+					"$x":	-5002,
+					"$y":	-2294
+				}
+			},
+			"Imported.TileSet.GridWave-e9c55b5e-1c98-4d62-94c5-0297e794351c":	{
+				"$Position":	{
+					"$x":	-5874,
+					"$y":	-3228
+				}
+			},
+			"Constant.Seed.GridWave-4459e30d-6d11-4ad3-9f37-b2ad03d54d90":	{
+				"$Position":	{
+					"$x":	-3345,
+					"$y":	-3955
 				}
 			}
 		},
-		"$FloatingNodes":	[],
+		"$FloatingNodes":	[{
+				"$NodeId":	"Time.Seed.GridWave-d7a0c715-c169-4593-9e5a-06a5b8397bdb",
+				"Type":	"Time",
+				"Interval":	5,
+				"Unit":	"Seconds"
+			}, {
+				"$NodeId":	"PropDistributionAlgo.GridWave-b78977a0-5935-4929-8a3b-e28d7925672c",
+				"Type":	"PropDistributionAlgo",
+				"Skip":	false,
+				"GridPoints":	{
+					"$NodeId":	"Scaler.Positions-7a2f2c16-526e-4300-8cb7-73679fe2a84d",
+					"Type":	"Scaler",
+					"Skip":	false,
+					"Scale":	{
+						"$NodeId":	"Point3D-ca1acbac-32e5-4b0c-bb26-ccd53fbc277d",
+						"X":	7,
+						"Y":	7,
+						"Z":	7
+					},
+					"Positions":	{
+						"$NodeId":	"SquareGrid2d.Positions-e1838a67-8ff5-4eb6-9bd0-415729396ee4",
+						"Type":	"SquareGrid2d",
+						"Skip":	false
+					}
+				},
+				"Grid":	{
+					"$NodeId":	"Vector3i-40bf52cd-39d9-4241-9eac-9939b8e13eac",
+					"X":	7,
+					"Y":	7,
+					"Z":	7
+				},
+				"BaseTiles":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-3191081b-d595-4a79-8420-6354356dbc4c",
+						"Type":	"Imported",
+						"Name":	"IslandBaseTiles1",
+						"Features":	[]
+					}],
+				"Seed":	{
+					"$NodeId":	"Time.Seed.GridWave-0115251c-8603-4bef-9ebf-f08a1e46656d",
+					"Type":	"Time",
+					"Interval":	5,
+					"Unit":	"Seconds"
+				},
+				"Features":	[{
+						"$NodeId":	"Group.Feature.GridWave-fd873c2b-3e3b-4ccf-b5b3-5cd01a702b42",
+						"Type":	"Group",
+						"Features":	[{
+								"$NodeId":	"Debug.Feature.GridWave-795afb06-1401-4700-a915-f623df560f7f",
+								"Type":	"Debug",
+								"Skip":	false,
+								"WriteToConsole":	false,
+								"ShowNotification":	true,
+								"VisualizeGridPositions":	false,
+								"DebugGrid":	false,
+								"SkipFancyTiles":	false,
+								"LimitSteps":	false,
+								"MaxSteps":	10
+							}, {
+								"$NodeId":	"MultiAttempt.Feature.GridWave-c746d445-8bfd-44e9-aaa7-6302223a0062",
+								"Type":	"MultiAttempt",
+								"Skip":	false,
+								"MaxBacktracks":	1000,
+								"MaxAttempts":	10
+							}, {
+								"$NodeId":	"Border.Feature.GridWave-01893a25-3943-4610-b8bb-b72d7375b6c5",
+								"Type":	"Border",
+								"Skip":	false,
+								"BorderType":	"InnerBorder",
+								"BorderRuleSets":	[{
+										"$NodeId":	"Simple.RuleSet.GridWave-c1fc4df7-65e9-4891-9353-0ea08ac2a972",
+										"Type":	"Simple",
+										"HorizontalRules":	{
+											"N":	"W",
+											"E":	"W",
+											"S":	"W",
+											"W":	"W"
+										}
+									}]
+							}, {
+								"$NodeId":	"SectionStorage.Feature.GridWave-63b38e2b-7d8f-4696-a9bd-7f1f115290a4",
+								"Type":	"SectionStorage",
+								"Skip":	false,
+								"WriteToWorldFolder":	false,
+								"LimitSteps":	"LimitSteps",
+								"CacheSize":	50,
+								"HorizontalSectionSize":	20,
+								"VerticalSectionSize":	0
+							}]
+					}],
+				"MaxPositionsCount":	200000
+			}, {
+				"$NodeId":	"Imported.TileSet.GridWave-e9c55b5e-1c98-4d62-94c5-0297e794351c",
+				"Type":	"Imported",
+				"Name":	"IslandFancyTiles1",
+				"Features":	[]
+			}],
 		"$Links":	{
 		},
 		"$Groups":	[{

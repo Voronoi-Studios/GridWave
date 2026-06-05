@@ -1,0 +1,239 @@
+{
+	"$NodeId":	"Group.TileSet.GridWave-f3d1990f-2f8c-45f5-8375-287c47d992b3",
+	"Type":	"Group",
+	"TileSets":	[{
+			"$NodeId":	"Auto.TileSet.GridWave-3b0df03f-7a7e-4b54-adf5-93ca029784fb",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x3/00XX-X1XX-X00X-0XX0-XXX0-XX00",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-082b9035-6e66-4588-b03e-197c1f3092b2",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x2/10X0-X000",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-87f2b414-c1aa-465c-bceb-954ccb64f214",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x1/00X2-X020",
+			"Weight":	0.5
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-cafaaa2a-bad6-4061-8736-2d9fefa63625",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x2/10XX-X00X-0XX0-XX00",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-42bb77a0-c760-4f21-b2b9-43bf7333b56f",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x2/10X0-X010",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-8eecc3c2-94aa-4189-a5a5-4e44ba34e1a3",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x1/02X2-X000",
+			"Weight":	0.5
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-94506d05-9940-46d8-9d68-973d96fa5a04",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x2/10XX-X00X-1XX0-XX00",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-107f223c-4346-4755-8d9c-d8a41f3335ce",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x2/10X0-X011",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-ef3c9925-2fa3-47e3-a71d-7ddef0526eef",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x1/20X0-X000",
+			"Weight":	0.5
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-fbc83e78-5e4b-4ee5-9888-35f638d13303",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x2/11XX-X01X-1XX1-XX10",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-9f08b0cd-43bc-4992-954f-73c2cb501d31",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x2/10X0-X101",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-c24c01ef-d7d6-4461-8da1-ec5aba305b0a",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x1/20X0-X020",
+			"Weight":	0.5
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-5bf1ae1a-f363-4ac0-8cd1-1a21b59b952d",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x3/01X0-X0X0-X100",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-720bc878-2257-4a32-a0a1-18a7de31350c",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x2/10X1-X010",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-83ce9040-371a-41f8-b54b-5f297723b54f",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x3/10X0-X0X0-X010",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-4d284bbf-e185-4746-ac68-48e366bd8890",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x2/00XX-X00X-0XX2-XX02",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-efcc8f4c-c716-4dbb-ae69-cd005d1546a2",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/1x4/10X0-X0X0-X0X0-X010",
+			"Weight":	1
+		}, {
+			"$NodeId":	"Auto.TileSet.GridWave-915e1ac6-4edb-4486-a1a9-91e5106b8f1f",
+			"Type":	"Auto",
+			"Features":	[],
+			"FolderPath":	"Echo/FancyTiles/2x2/20XX-X20X-0XX2-XX00",
+			"Weight":	1
+		}],
+	"ExportAs":	"MazeFancyTiles2",
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Auto.TileSet.GridWave-cafaaa2a-bad6-4061-8736-2d9fefa63625":	{
+				"$Position":	{
+					"$x":	4505,
+					"$y":	2206
+				}
+			},
+			"Auto.TileSet.GridWave-8eecc3c2-94aa-4189-a5a5-4e44ba34e1a3":	{
+				"$Position":	{
+					"$x":	3484,
+					"$y":	2338
+				}
+			},
+			"Auto.TileSet.GridWave-94506d05-9940-46d8-9d68-973d96fa5a04":	{
+				"$Position":	{
+					"$x":	4500,
+					"$y":	2363
+				}
+			},
+			"Auto.TileSet.GridWave-3b0df03f-7a7e-4b54-adf5-93ca029784fb":	{
+				"$Position":	{
+					"$x":	4507,
+					"$y":	2052
+				}
+			},
+			"Auto.TileSet.GridWave-87f2b414-c1aa-465c-bceb-954ccb64f214":	{
+				"$Position":	{
+					"$x":	3486,
+					"$y":	2160
+				}
+			},
+			"Auto.TileSet.GridWave-082b9035-6e66-4588-b03e-197c1f3092b2":	{
+				"$Position":	{
+					"$x":	2450,
+					"$y":	2139
+				}
+			},
+			"Auto.TileSet.GridWave-42bb77a0-c760-4f21-b2b9-43bf7333b56f":	{
+				"$Position":	{
+					"$x":	2454,
+					"$y":	2299
+				}
+			},
+			"Auto.TileSet.GridWave-83ce9040-371a-41f8-b54b-5f297723b54f":	{
+				"$Position":	{
+					"$x":	4516,
+					"$y":	2838
+				}
+			},
+			"Auto.TileSet.GridWave-5bf1ae1a-f363-4ac0-8cd1-1a21b59b952d":	{
+				"$Position":	{
+					"$x":	4510,
+					"$y":	2678
+				}
+			},
+			"Auto.TileSet.GridWave-915e1ac6-4edb-4486-a1a9-91e5106b8f1f":	{
+				"$Position":	{
+					"$x":	3488,
+					"$y":	3008
+				}
+			},
+			"Auto.TileSet.GridWave-fbc83e78-5e4b-4ee5-9888-35f638d13303":	{
+				"$Position":	{
+					"$x":	4509,
+					"$y":	2509
+				}
+			},
+			"Auto.TileSet.GridWave-c24c01ef-d7d6-4461-8da1-ec5aba305b0a":	{
+				"$Position":	{
+					"$x":	3483,
+					"$y":	2654
+				}
+			},
+			"Auto.TileSet.GridWave-107f223c-4346-4755-8d9c-d8a41f3335ce":	{
+				"$Position":	{
+					"$x":	2454,
+					"$y":	2468
+				}
+			},
+			"Auto.TileSet.GridWave-ef3c9925-2fa3-47e3-a71d-7ddef0526eef":	{
+				"$Position":	{
+					"$x":	3487,
+					"$y":	2492
+				}
+			},
+			"Auto.TileSet.GridWave-9f08b0cd-43bc-4992-954f-73c2cb501d31":	{
+				"$Position":	{
+					"$x":	2454,
+					"$y":	2625
+				}
+			},
+			"Auto.TileSet.GridWave-720bc878-2257-4a32-a0a1-18a7de31350c":	{
+				"$Position":	{
+					"$x":	2456,
+					"$y":	2789
+				}
+			},
+			"Auto.TileSet.GridWave-4d284bbf-e185-4746-ac68-48e366bd8890":	{
+				"$Position":	{
+					"$x":	3486,
+					"$y":	2842
+				}
+			},
+			"Auto.TileSet.GridWave-efcc8f4c-c716-4dbb-ae69-cd005d1546a2":	{
+				"$Position":	{
+					"$x":	4531,
+					"$y":	2994
+				}
+			},
+			"Group.TileSet.GridWave-f3d1990f-2f8c-45f5-8375-287c47d992b3":	{
+				"$Position":	{
+					"$x":	1272,
+					"$y":	2150
+				},
+				"$Title":	"[ROOT] Group TileSet"
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - TileSets"
+	}
+}

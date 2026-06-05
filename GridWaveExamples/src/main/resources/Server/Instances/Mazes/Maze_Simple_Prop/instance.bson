@@ -20,7 +20,7 @@
   "IsSavingPlayers": true,
   "WorldGen": {
     "Type": "HytaleGenerator",
-    "WorldStructure": "WorldStructures_Maze_Var1",
+    "WorldStructure": "WorldStructures_Maze_Simple_Prop",
     "PlayerSpawn" : {
       "X": 0,
       "Y": 141,

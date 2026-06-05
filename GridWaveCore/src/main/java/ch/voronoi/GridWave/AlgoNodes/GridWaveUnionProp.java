@@ -8,13 +8,16 @@ import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 import org.joml.Vector3d;
 import org.joml.Vector3dc;
+import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 public class GridWaveUnionProp extends Prop {
@@ -87,7 +90,7 @@ public class GridWaveUnionProp extends Prop {
 
         if (tiles == null) return false;
 
-        Map<Vector3d, Prop> gridProps = GridWave.loadPrefabProps(tiles, subArgument);
+        Map<Vector3d, Prop> gridProps = loadPrefabProps(tiles, subArgument);
         List<Prop> props = new ArrayList<>();
         for (var entry : gridProps.entrySet()) {
             props.add(new OffsetProp(Vector3dUtil.toVector3i(entry.getKey()), entry.getValue()));
@@ -110,5 +113,16 @@ public class GridWaveUnionProp extends Prop {
     @Override
     public Bounds3i getWriteBounds_voxelGrid() {
         return this.writeBounds_voxelGrid;
+    }
+
+
+    public static @NonNull Map<Vector3d, Prop> loadPrefabProps(List<GridTile> gridTiles, TileSetAsset.Argument argument) {
+        Map<Vector3d, Prop> gridProps = new LinkedHashMap<>();
+        for (var gridTile : gridTiles) {
+            if (gridTile == null) continue;
+            var result = gridTile.getFullPropFunction();
+            gridProps.put(Vector3iUtil.toVector3d(gridTile.actualPosition()),result.apply(argument));
+        }
+        return gridProps;
     }
 }

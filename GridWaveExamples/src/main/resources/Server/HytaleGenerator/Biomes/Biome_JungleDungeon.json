@@ -26,12 +26,12 @@
 				"BaseTiles":	[{
 						"$NodeId":	"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885",
 						"Type":	"Imported",
-						"Name":	"DungeonBase1"
+						"Name":	"JungleDungeonBase1"
 					}],
 				"FancyTiles":	[{
 						"$NodeId":	"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169",
 						"Type":	"Imported",
-						"Name":	"DungeonFancy1"
+						"Name":	"JungleDungeonFancy1"
 					}],
 				"Seed":	{
 					"$NodeId":	"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910",
@@ -42,7 +42,7 @@
 				"Features":	[{
 						"$NodeId":	"Imported.Feature.GridWave-143ebf53-7cb7-4777-be65-621338b37458",
 						"Type":	"Imported",
-						"Name":	"DungeonFeatures1"
+						"Name":	"JungleDungeonFeatures1"
 					}],
 				"MaxPositionsCount":	20000
 			}

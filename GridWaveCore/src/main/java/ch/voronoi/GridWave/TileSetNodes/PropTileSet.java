@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Stream;
 
 public class PropTileSet extends TileSet {
@@ -57,5 +58,7 @@ public class PropTileSet extends TileSet {
     public Stream<FeatureAsset> getTileFeatureAssets() { return tileFeatureAssets.stream(); }
 
     @Override
-    public Prop getProp(@Nonnull TileSetAsset.Argument argument) { return propAsset.build(TileSetAsset.argumentFrom(argument)); }
+    public Prop getProp(@Nonnull TileSetAsset.Argument argument) {
+        return propAsset.build(TileSetAsset.argumentFrom(argument));
+    }
 }

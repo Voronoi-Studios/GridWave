@@ -1,12 +1,17 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.logger.HytaleLogger;
+import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ImportedTileSetAsset extends TileSetAsset {
     @Nonnull
@@ -18,18 +23,19 @@ public class ImportedTileSetAsset extends TileSetAsset {
             .build();
     private String importName = "";
 
+    @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         if (this.importName != null && !this.importName.isEmpty()) {
             TileSetAsset.Exported exported = getExportedAsset(this.importName);
             if(exported != null && exported.asset != null){
-                return exported.asset.build(argument);
+                return exported.asset.build(argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toArray(FeatureAsset[]::new));
             }
             else {
                 HytaleLogger.getLogger().atWarning().log("An exported TileSet with this name does not exist: " + this.importName);
-                return null;
+                return new ArrayList<>();
             }
         }
-        return null;
+        return new ArrayList<>();
     }
 }

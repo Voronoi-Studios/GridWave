@@ -12,9 +12,9 @@ import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
-import org.jspecify.annotations.NonNull;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 
 import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
@@ -91,31 +91,36 @@ public record GridTile(TileSet.TileEntry tileEntry, Vector3ic actualPosition, Gr
     public Function<TileSetAsset.Argument, Prop> getFullPropFunction(){
         return argument -> {
             TileSet.TileEntry entry = new TileSet.TileEntry(tileEntry());
-            boolean localSwap = entry.tileFeatures().stream().anyMatch(feature -> feature instanceof OverlapTileFeatureAsset);
-            boolean globalSwap = argument.hasFeature(OverlapTileFeatureAsset.class); //A bit inefficient to check this every time?
-            Vector3ic[] anchorOffsets = getAnchorOffsets(argument.algoAsset.getGrid(), globalSwap || localSwap);
-            Vector3i offset = new Vector3i(entry.getOffset()).add(anchorOffsets[entry.rot()]);
+            if (entry.propFunction() == null) return EmptyProp.INSTANCE;
             TileSetAsset.Argument subArgument = new TileSetAsset.Argument(argument); //Might be needed, to stop some cross-referencing
-            Prop prop = Optional.ofNullable(entry.propFunction()).map(f -> f.apply(subArgument)).orElse(EmptyProp.INSTANCE);
-            if(prop.equals(EmptyProp.INSTANCE)) return prop;
+            Prop prop = entry.propFunction().apply(subArgument);
             Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(toRotation(entry.rot()), Rotation.None, Rotation.None), subArgument.materialCache);
             Prop mirroredProp = entry.mirrorDirection().toAxis() == null ? rotatedProp : new StaticMirrorProp(rotatedProp, entry.mirrorDirection().toAxis(), subArgument.materialCache);
-            return new OffsetProp(offset,mirroredProp);
+            AtomicReference<Prop> propReference = new AtomicReference<>(new OffsetProp(getOffset(argument, entry),mirroredProp));
+            argument.algoAsset.getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, entry, argument));
+            entry.getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, entry, argument));
+            return propReference.get();
         };
     }
-    public static @NonNull Vector3ic[] getAnchorOffsets(Vector3ic grid, boolean swap) {
+
+    //Is probably not correctly doing Tiles which have an actualPosition that differs
+    private static Vector3i getOffset(TileSetAsset.Argument argument, TileSet.TileEntry entry) {
+        boolean localSwap = entry.hasFeature(OverlapTileFeatureAsset.class);
+        boolean globalSwap = argument.algoAsset.hasFeature(OverlapTileFeatureAsset.class);
+        Vector3ic grid = argument.algoAsset.getGrid();
         int evenOffsetX = (grid.x() % 2 == 0) ? 1 : 0;
         int evenOffsetZ = (grid.z() % 2 == 0) ? 1 : 0;
-        if (swap){
+        if (globalSwap || localSwap){
             evenOffsetX = 1 - evenOffsetX;
             evenOffsetZ = 1 - evenOffsetZ;
         }
 
-        return new Vector3ic[] { //To-Do: Check if this  is actually offsetting correctly for nonuniform grids
-                new Vector3i(0, 0, 0),
-                new Vector3i(0, 0, evenOffsetZ),
-                new Vector3i(evenOffsetX, 0, evenOffsetZ),
-                new Vector3i(evenOffsetX, 0, 0)
+        Vector3ic anchorOffset = switch (entry.rot()){ //To-Do: Check if this  is actually offsetting correctly for nonuniform grids
+            case 3 -> new Vector3i(evenOffsetX, 0, 0);
+            case 2 -> new Vector3i(evenOffsetX, 0, evenOffsetZ);
+            case 1 -> new Vector3i(0, 0, evenOffsetZ);
+            default -> new Vector3i(0, 0, 0);
         };
+        return new Vector3i(entry.getMultiTileOffset()).add(anchorOffset);
     }
 }

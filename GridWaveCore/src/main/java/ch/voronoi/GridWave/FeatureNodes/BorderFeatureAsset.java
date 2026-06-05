@@ -13,16 +13,15 @@ import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
+import com.hypixel.hytale.math.util.FastRandom;
+import com.hypixel.hytale.math.util.MathUtil;
 import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 import static ch.voronoi.GridWave.AlgoNodes.GridWave.toCellPos;
 
@@ -53,16 +52,18 @@ public class BorderFeatureAsset extends FeatureAsset {
         for (var entry : baseWave.keySet()) {
             for (int dir = 0; dir < 4; dir++) {
                 Vector3ic neighbor = GridWave.getNeighborPos(entry, dir, argument);
-                switch (borderType){
+                switch (this.borderType){
                     case OuterBorder: if (!fullBounds.contains((Vector3i)neighbor)) borderPositions.put(getEdgeKey(entry, neighbor), neighbor); break;
                     case InnerBorder: if (!baseWave.containsKey(neighbor)) borderPositions.put(getEdgeKey(entry, neighbor), neighbor); break;
                 }
             }
         }
 
+        var ruleCombos = Arrays.stream(borderRuleSets).flatMap(x -> x.build().stream()).toList();
         for(var entry : borderPositions.entrySet()){
-            RuleCombo ruleCombo = borderRuleSets[new Random(entry.getKey()).nextInt()%borderRuleSets.length].build();
-            TileSet.TileEntry tileEntry = new TileSet.TileEntry(Map.of(new Vector3i(Vector3iUtil.ZERO),ruleCombo),new Vector3i(Vector3iUtil.ZERO),1,0, MirrorDirection.None, null, new ArrayList<>());
+            int key = MathUtil.abs(argument.seedBox.child(entry.getKey().toString()).createSupplier().get());
+            RuleCombo ruleCombo = ruleCombos.get(key%ruleCombos.size());
+            TileSet.TileEntry tileEntry = new TileSet.TileEntry(ruleCombo);
             WaveCell waveCell = new WaveCell(new Vector3i(entry.getValue()), new Vector3i(entry.getValue()), tileEntry, GridTileType.BASIC);
             GridWave.propagate(waveCell, baseWave, null, argument);
         }

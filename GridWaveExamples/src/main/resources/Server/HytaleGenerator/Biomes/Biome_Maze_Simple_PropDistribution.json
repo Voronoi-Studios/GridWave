@@ -8,7 +8,8 @@
 			"PropDistribution":	{
 				"$NodeId":	"Imported.PropDistribution-57168f65-158e-40e0-b121-a00844ec3f41",
 				"Type":	"Imported",
-				"Name":	"Maze20x20"
+				"Skip":	false,
+				"Name":	"MazePropDistribution"
 			}
 		}],
 	"$NodeEditorMetadata":	{
@@ -22,14 +23,14 @@
 			},
 			"Runtime-58d28ee3-3e98-44f9-b23a-179e395ceaf0":	{
 				"$Position":	{
-					"$x":	-4235,
-					"$y":	-4026
+					"$x":	-4265,
+					"$y":	-4022
 				}
 			},
 			"Imported.PropDistribution-57168f65-158e-40e0-b121-a00844ec3f41":	{
 				"$Position":	{
-					"$x":	-3563,
-					"$y":	-3952
+					"$x":	-3603,
+					"$y":	-3944
 				}
 			}
 		},

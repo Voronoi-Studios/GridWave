@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.AlgoNodes.Helper.IFeatureCheck;
 import ch.voronoi.GridWave.AlgoNodes.Helper.SectionData;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
@@ -61,12 +62,12 @@ public abstract class TileSet {
      * @param rot the rotation we need for spawning the prefab later on
      * @param ruleSets size 4: north, east, south, west, string represents connection type, so we can match it
      */
-    public record TileEntry(
+    public record TileEntry (
             Map<Vector3ic, RuleCombo> ruleSets,
             Vector3ic identifierKey,
             double weight, int rot, MirrorDirection mirrorDirection,
             Function<TileSetAsset.Argument, Prop> propFunction,
-            List<FeatureAsset> tileFeatures) {
+            List<FeatureAsset> tileFeatures) implements IFeatureCheck {
 
         public TileEntry(TileEntry tileEntry) {
             this(
@@ -86,6 +87,13 @@ public abstract class TileSet {
                     1, 0, MirrorDirection.None, null, new ArrayList<>()
             );
         }
+
+        public TileEntry(RuleCombo ruleCombo) {
+            this(Map.of(new Vector3i(Vector3iUtil.ZERO),ruleCombo),new Vector3i(Vector3iUtil.ZERO),1,0, MirrorDirection.None, null, new ArrayList<>());
+        }
+
+        @Override
+        public List<FeatureAsset> getFeatureAssets() { return tileFeatures(); }
 
         public RuleCombo getMainRuleSet() { return ruleSets.get(identifierKey); }
         public List<TileEntry> getSubTiles(){
@@ -114,7 +122,7 @@ public abstract class TileSet {
             };
         }
 
-        public Vector3ic getOffset() {
+        public Vector3ic getMultiTileOffset() {
             if (ruleSets.isEmpty()) return new Vector3i(0, 0, 0);
 
             int minX = Integer.MAX_VALUE, minY = Integer.MAX_VALUE, minZ = Integer.MAX_VALUE;
@@ -153,7 +161,7 @@ public abstract class TileSet {
             Vector3i newKey = new Vector3i(offset).add(e.getKey());
             newRuleSets.put(newKey, e.getValue());
         }
-        Vector3i identifierKey = new Vector3i(offset).add(entry.identifierKey());
+        Vector3i identifierKey = new Vector3i(entry.identifierKey()).add(offset);
         return new TileEntry(
                 newRuleSets,
                 identifierKey,

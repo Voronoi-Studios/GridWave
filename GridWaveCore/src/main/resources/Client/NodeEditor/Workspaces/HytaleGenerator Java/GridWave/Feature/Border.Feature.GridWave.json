@@ -45,6 +45,7 @@
   "Schema": {
     "Type" : "Border",
     "Skip" : "Skip",
+    "BorderType" : "BorderType",
     "BorderRuleSets" : {
       "Node" : "RuleSet.GridWave",
       "Pin" : "BorderRuleSets"

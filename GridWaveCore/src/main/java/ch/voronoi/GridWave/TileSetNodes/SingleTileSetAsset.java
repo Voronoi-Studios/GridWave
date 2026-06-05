@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
 import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
@@ -11,8 +12,10 @@ import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 public class SingleTileSetAsset extends TileSetAsset {
 
@@ -37,7 +40,7 @@ public class SingleTileSetAsset extends TileSetAsset {
 
     @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(prefabPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!prefabPath.isEmpty()) {
@@ -47,6 +50,6 @@ public class SingleTileSetAsset extends TileSetAsset {
             }
         }
         prefabWeightedMaps.put(argument.workerId.id, prefabWeightedMap);
-        return new ArrayList<>(List.of((new SingleTileSet(prefabWeightedMaps,ruleSetAsset.build(), weight, minimizeVariants, argument, super.getTileFeatureAssets())))) ;
+        return new ArrayList<>(List.of((new SingleTileSet(prefabWeightedMaps,ruleSetAsset.build().getFirst(), weight, minimizeVariants, argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toList()))));
     }
 }

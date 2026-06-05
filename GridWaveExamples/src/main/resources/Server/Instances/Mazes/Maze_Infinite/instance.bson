@@ -20,24 +20,16 @@
   "IsSavingPlayers": true,
   "WorldGen": {
     "Type": "HytaleGenerator",
-    "WorldStructure": "WorldStructures_Dungeon",
-    "PlayerSpawn" : {
-      "X": 0,
-      "Y": 141,
-      "Z": 0,
-      "Pitch" : 0,
-      "Yaw" : 180,
-      "Roll" : 0
-    }
+    "WorldStructure": "WorldStructures_Maze_Infinite"
   },
     "SpawnProvider": {
     "Id": "Global",
     "SpawnPoint": {
       "X": 0,
-      "Y": 161,
-      "Z": -20,
+      "Y": 142,
+      "Z": 0,
       "Pitch": 0.0,
-      "Yaw": 180,
+      "Yaw": 0.0,
       "Roll": 0.0
     }
   },

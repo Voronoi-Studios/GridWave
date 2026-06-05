@@ -8,6 +8,7 @@
 			"PropDistribution":	{
 				"$NodeId":	"Constant.PropDistribution-3919fcd5-3c96-4140-a75c-e651cec02bca",
 				"Type":	"Constant",
+				"Skip":	false,
 				"Positions":	{
 					"$NodeId":	"ListPositions-b43833c8-7e36-4829-b15f-ad5b2157b7d1",
 					"Type":	"List",
@@ -22,7 +23,7 @@
 				"Prop":	{
 					"$NodeId":	"Imported.Prop-73fcbc90-6f39-4e30-b551-0e512fe9b25f",
 					"Type":	"Imported",
-					"Name":	"Maze20x20",
+					"Name":	"MazeProp",
 					"Skip":	false
 				}
 			}
@@ -50,14 +51,14 @@
 			},
 			"ListPositions-b43833c8-7e36-4829-b15f-ad5b2157b7d1":	{
 				"$Position":	{
-					"$x":	-3613,
-					"$y":	-3789
+					"$x":	-3612,
+					"$y":	-4092
 				}
 			},
 			"Point3D-5c557b09-af09-4a52-98c6-4738f2bf6bfb":	{
 				"$Position":	{
-					"$x":	-3377,
-					"$y":	-3638
+					"$x":	-3375,
+					"$y":	-4287
 				}
 			},
 			"Imported.Prop-73fcbc90-6f39-4e30-b551-0e512fe9b25f":	{

@@ -20,7 +20,7 @@
   "IsSavingPlayers": true,
   "WorldGen": {
     "Type": "HytaleGenerator",
-    "WorldStructure": "WorldStructures_Maze_Var3"
+    "WorldStructure": "WorldStructures_Maze_Multi_Floor"
   },
     "SpawnProvider": {
     "Id": "Global",

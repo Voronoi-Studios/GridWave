@@ -28,10 +28,26 @@
       }
     },    
     {
+      "Id": "VisualizeGridPositions",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "VisualizeGridPositions",
+        "Default" : false
+      }
+    },
+    {
       "Id": "DebugGrid",
       "Type": "Checkbox",
       "Options": {
         "Label": "DebugGrid",
+        "Default" : false
+      }
+    },    
+    {
+      "Id": "SkipFancyTiles",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "SkipFancyTiles",
         "Default" : false
       }
     },
@@ -66,7 +82,9 @@
     "Skip" : "Skip",
     "WriteToConsole" : "WriteToConsole",
     "ShowNotification" : "ShowNotification",
+    "VisualizeGridPositions" : "VisualizeGridPositions",
     "DebugGrid" : "DebugGrid",
+    "SkipFancyTiles" : "SkipFancyTiles",
     "LimitSteps" : "LimitSteps",
     "MaxSteps" : "MaxSteps"
   }

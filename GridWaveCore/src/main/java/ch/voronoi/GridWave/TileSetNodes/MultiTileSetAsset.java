@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
 import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
@@ -14,9 +15,11 @@ import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 public class MultiTileSetAsset extends TileSetAsset {
     @Nonnull
@@ -40,7 +43,7 @@ public class MultiTileSetAsset extends TileSetAsset {
 
     @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(prefabPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!prefabPath.isEmpty()) {
@@ -53,6 +56,6 @@ public class MultiTileSetAsset extends TileSetAsset {
 
         Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(ruleSetAssets,zSize,argument);
 
-        return new ArrayList<>(List.of(new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument, super.getTileFeatureAssets())));
+        return new ArrayList<>(List.of(new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument, Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toList())));
     }
 }

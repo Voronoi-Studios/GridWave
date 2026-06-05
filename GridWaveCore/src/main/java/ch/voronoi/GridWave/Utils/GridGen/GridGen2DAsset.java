@@ -42,14 +42,14 @@ public class GridGen2DAsset extends PositionProviderAsset {
 
     @Override
     public PositionProvider build(@Nonnull PositionProviderAsset.Argument argument) {
-        return new GridGen(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
+        return new GridGen(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 1,repeatZ), centeredOnPosition);
     }
 
     public Vector3i getGrid() {
-        return new Vector3i(offsetX, 0, offsetZ);
+        return new Vector3i(offsetX, 1, offsetZ);
     }
 
     public Bounds3i getBounds() {
-        return createBounds(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 0,repeatZ), centeredOnPosition);
+        return createBounds(pos, new Vector3i(offsetX,0, offsetZ), new Vector3i(repeatX, 1,repeatZ), centeredOnPosition);
     }
 }

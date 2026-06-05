@@ -10,6 +10,8 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdvancedRuleSetAsset extends RuleSetAsset {
 
@@ -32,10 +34,10 @@ public class AdvancedRuleSetAsset extends RuleSetAsset {
     private ElevationRulesAsset elevationRulesAsset = null;
 
     @Override
-    public RuleCombo build() {
+    public List<RuleCombo> build() {
         var advancedVerticalRulesProvider = advancedVerticalRulesAsset == null ? null : advancedVerticalRulesAsset.verticalRulesProvider;
         var advancedVerticalRulesReceiver = advancedVerticalRulesAsset == null ? null : advancedVerticalRulesAsset.verticalRulesReceiver;
         var elevationRules = elevationRulesAsset == null ? null : elevationRulesAsset.elevationRules;
-        return new RuleCombo(new RuleSet(horizontalRulesRulesProvider, advancedVerticalRulesProvider), new RuleSet(horizontalRulesRulesReceiver, advancedVerticalRulesReceiver), elevationRules);
+        return new ArrayList<>(List.of(new RuleCombo(new RuleSet(horizontalRulesRulesProvider, advancedVerticalRulesProvider), new RuleSet(horizontalRulesRulesReceiver, advancedVerticalRulesReceiver), elevationRules)));
     }
 }

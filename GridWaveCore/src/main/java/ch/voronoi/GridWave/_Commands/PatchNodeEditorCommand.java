@@ -1,6 +1,5 @@
 package ch.voronoi.GridWave._Commands;
 
-import com.hypixel.hytale.builtin.hytalegenerator.plugin.editor.AssetPackUtil;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.arguments.system.DefaultArg;
@@ -12,20 +11,19 @@ import com.hypixel.hytale.server.core.permissions.provider.HytalePermissionsProv
 import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.net.URI;
+import java.nio.file.*;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class PatchNodeEditorCommand extends CommandBase {
-    private final Path patchSource;
+    private final Path sourceDirectory;
     private final DefaultArg<String> patchTarget;
 
-    public PatchNodeEditorCommand(Path patchSource, Path patchTarget) {
+    public PatchNodeEditorCommand(Path sourceDirectory, Path patchTarget) {
         super("patch", "Adds the custom nodes to your local NodeEditor installation");
         this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADMIN);
-        this.patchSource = patchSource;
+        this.sourceDirectory = sourceDirectory;
         this.patchTarget = this.withDefaultArg("patchTarget","path to `NodeEditor/Workspaces/HytaleGenerator Java`", ArgTypes.STRING, patchTarget == null ? null : patchTarget.toAbsolutePath().normalize().toString(),"what I think it is");
     }
 
@@ -41,17 +39,29 @@ public class PatchNodeEditorCommand extends CommandBase {
         try {
             // Backup _Workspace.json -> _Workspace_org.json if backup doesn't exist yet
             Path workspace = target.resolve("_Workspace.json");
-            Path workspaceBackup = target.resolve("_Workspace_org.json");
+            Path workspaceBackup = target.resolve("_Workspace_orig.json");
             if (Files.exists(workspace) && Files.exists(workspaceBackup)) {
                 ctx.sendMessage(Message.raw("Already patched! No changes where made."));
                 return;
             }
             Files.copy(workspace, workspaceBackup);
 
-            // Walk patchSource and copy everything to target
-            try (Stream<Path> stream = Files.walk(patchSource)) {
+            String subPath = "Client/NodeEditor/Workspaces/HytaleGenerator Java";
+            boolean isJar = sourceDirectory.toString().endsWith(".jar");
+
+            FileSystem jarFs = null;
+            Path sourcePath;
+            if (isJar) {
+                jarFs = FileSystems.newFileSystem(URI.create("jar:" + sourceDirectory.toUri()), Map.of());
+                sourcePath = jarFs.getPath(subPath);
+            } else {
+                sourcePath = sourceDirectory.resolve(subPath);
+            }
+
+            // Walk sourcePath and copy everything to target
+            try (Stream<Path> stream = Files.walk(sourcePath)) {
                 stream.forEach(source -> {
-                    Path dest = target.resolve(patchSource.relativize(source));
+                    Path dest = target.resolve(sourcePath.relativize(source).toString());
                     try {
                         if (Files.isDirectory(source)) {
                             Files.createDirectories(dest);
@@ -62,6 +72,8 @@ public class PatchNodeEditorCommand extends CommandBase {
                         throw new UncheckedIOException(e);
                     }
                 });
+            } finally {
+                if (jarFs != null) jarFs.close();
             }
 
             ctx.sendMessage(Message.raw("Patched the NodeEditor successfully at:\n" + target));

@@ -14,6 +14,13 @@
     }
   ],
   "Outputs": [
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
   ],
   "Inputs": [
     {
@@ -24,6 +31,10 @@
   ],
   "Schema": {
     "Type" : "Imported",
-    "Name" : "Name"
+    "Name" : "Name",
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    }
   }
 }

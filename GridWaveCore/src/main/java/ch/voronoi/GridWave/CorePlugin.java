@@ -49,7 +49,7 @@ public class CorePlugin extends JavaPlugin {
     @Override
     protected void setup() {
         //Test stuff
-        this.getCommandRegistry().registerCommand(new GridWaveCoreCommand(this.getName(), this.getManifest().getVersion().toString(), getPatchSource(), getPatchTarget()));
+        this.getCommandRegistry().registerCommand(new GridWaveCoreCommand(this.getName(), this.getManifest().getVersion().toString(), this.getFile(), getPatchTarget()));
 
         AssetRegistry.register(HytaleAssetStore.builder(TileSetAsset.class, new DefaultAssetMap<String, TileSetAsset>())
                 .setPath("HytaleGenerator/TileSets")
@@ -57,6 +57,14 @@ public class CorePlugin extends JavaPlugin {
                 .setKeyFunction(TileSetAsset::getId)
                 .build()
         );
+
+        AssetRegistry.register(HytaleAssetStore.builder(FeatureAsset.class, new DefaultAssetMap<String, FeatureAsset>())
+                .setPath("HytaleGenerator/Features")
+                .setCodec(FeatureAsset.CODEC)
+                .setKeyFunction(FeatureAsset::getId)
+                .build()
+        );
+
 
         //Algo Nodes
         PropDistributionAsset.CODEC.register("PropDistributionAlgo", PropDistributionAlgoAsset.class, PropDistributionAlgoAsset.CODEC);
@@ -107,10 +115,6 @@ public class CorePlugin extends JavaPlugin {
         CustomBoundsAsset.CODEC.register("Converter", BoundsConverterAsset.class, BoundsConverterAsset.CODEC);
     }
 
-    private @NonNull Path getPatchSource() {
-        return this.getFile().resolve("Client/NodeEditor/Workspaces/HytaleGenerator Java");
-    }
-
     private static @Nullable Path getPatchTarget() {
         Path subPath = Paths.get("install/release/package/game/latest/Client/NodeEditor/Workspaces/HytaleGenerator Java");
 
@@ -120,6 +124,7 @@ public class CorePlugin extends JavaPlugin {
                 // Linux
                 PathUtil.getUserHome().resolve(".config").resolve("Hytale"),
                 PathUtil.getUserHome().resolve(".local/share/Hytale"),
+                PathUtil.getUserHome().resolve(".var/app/com.hypixel.HytaleLauncher/data/Hytale"),
                 // Mac
                 PathUtil.getUserHome().resolve("Library/Application Support/Hytale")
         );

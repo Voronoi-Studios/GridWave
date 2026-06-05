@@ -1,7 +1,7 @@
 {
 	"$NodeId":	"PropAlgo.GridWave-c330b7a7-f0e2-440d-9eb9-196e587cdac7",
 	"Type":	"PropAlgo",
-	"ExportAs":	"Maze20x20",
+	"ExportAs":	"MazeProp",
 	"Skip":	false,
 	"GridPoints":	{
 		"$NodeId":	"GridGen2D.GridWave-18ee225b-3c4f-4ea0-9a3a-750f6ac640c7",

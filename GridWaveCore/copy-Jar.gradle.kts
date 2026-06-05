@@ -1,6 +1,7 @@
 tasks.register("copyJar") {
     val targetDirs = listOf(
         rootProject.file("../icarus-assets"),
+        rootProject.file("../Echo-Of-Icarus/run/mods"),
         rootProject.file("build/libs"),
         )
 

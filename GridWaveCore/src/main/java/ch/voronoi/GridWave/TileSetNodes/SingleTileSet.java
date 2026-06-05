@@ -14,6 +14,7 @@ import org.joml.Vector3i;
 import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Stream;
 
 public class SingleTileSet extends TileSet {
@@ -32,7 +33,7 @@ public class SingleTileSet extends TileSet {
             TileEntry tileEntry = new TileEntry(Map.of(new Vector3i(Vector3iUtil.ZERO), current), new Vector3i(Vector3iUtil.ZERO), weight, r, MirrorDirection.None, this::getProp, new ArrayList<>(tileFeatureAssets));
             if (!minimizeVariants || seen.add(key)) tileEntries.add(tileEntry);
         }
-        tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
+        this.tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
     }
 
     @Nonnull
@@ -48,7 +49,10 @@ public class SingleTileSet extends TileSet {
 
     @Override
     public Prop getProp(@Nonnull TileSetAsset.Argument argument) {
-        if(!prefabWeightedMaps.containsKey(argument.workerId.id)) return EmptyProp.INSTANCE;
-        return new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed,TileSetAsset::loadPrefabBuffersFrom);
+        Prop prop = EmptyProp.INSTANCE;
+        if(prefabWeightedMaps.containsKey(argument.workerId.id)) {
+            prop = new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed,TileSetAsset::loadPrefabBuffersFrom);
+        }
+        return prop;
     }
 }

@@ -32,7 +32,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Dungeon/BaseTiles/Straight",
+			"PrefabPath":	"JungleDungeon/BaseTiles/Straight",
 			"Weight":	2,
 			"MinimizeVariants":	true
 		}, {
@@ -47,7 +47,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Dungeon/BaseTiles/Corner",
+			"PrefabPath":	"JungleDungeon/BaseTiles/Corner",
 			"Weight":	1,
 			"MinimizeVariants":	true
 		}, {
@@ -64,7 +64,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Dungeon/BaseTiles/Junction",
+			"PrefabPath":	"JungleDungeon/BaseTiles/Junction",
 			"Weight":	1,
 			"MinimizeVariants":	true
 		}, {
@@ -81,7 +81,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Dungeon/BaseTiles/Cross",
+			"PrefabPath":	"JungleDungeon/BaseTiles/Cross",
 			"Weight":	1,
 			"MinimizeVariants":	true
 		}, {
@@ -106,11 +106,11 @@
 					"Value2":	50,
 					"WeightIfTrue":	0
 				}],
-			"PrefabPath":	"Dungeon/BaseTiles/DeadEnd",
+			"PrefabPath":	"JungleDungeon/BaseTiles/DeadEnd",
 			"Weight":	1,
 			"MinimizeVariants":	true
 		}],
-	"ExportAs":	"DungeonBase1",
+	"ExportAs":	"JungleDungeonBase1",
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Group.TileSet.GridWave-1ee8710f-1c05-400a-bc7e-fe321c747d7c":	{

@@ -1,6 +1,6 @@
 {
   "Type": "NoiseRange",
-  "DefaultBiome": "Biome_Maze_Var2",
+  "DefaultBiome": "Biome_Maze_Simple_PropDistribution",
   "BiomeTransitions": [],
   "DefaultTransitionDistance": 128,
   "Density": {

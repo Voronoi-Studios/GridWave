@@ -20,6 +20,7 @@ import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import org.joml.Vector3d;
 import org.joml.Vector3dc;
 import org.joml.Vector3i;
+import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
@@ -97,10 +98,13 @@ public class GridWavePropDistribution extends PropDistribution {
 
         if (boundsMin.x > boundsMax.x || boundsMin.y > boundsMax.y || boundsMin.z > boundsMax.z) return;
 
+        Vector3ic grid = argument.algoAsset.getGrid();
+
         for(int x = boundsMin.x; x <= boundsMax.x; x++){
             for(int z = boundsMin.z; z <= boundsMax.z; z++){
                 for(int y = boundsMin.y; y <= boundsMax.y; y++){
                     if (control.stop) break;
+                    if (x % grid.x() != 0 || y % grid.y() != 0 || z % grid.z() != 0) continue;
                     Vector3d pos = new Vector3d(x,y,z);
                     Prop prop = getActualProp(pos, sectionStorageContext);
                     if(prop == EmptyProp.INSTANCE) continue;

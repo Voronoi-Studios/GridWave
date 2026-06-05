@@ -1,0 +1,180 @@
+{
+	"$NodeId":	"PropDistributionAlgo.GridWave-0d476733-d01e-42c9-a72c-e548d6ce3544",
+	"Type":	"PropDistributionAlgo",
+	"ExportAs":	"MazePropDistribution",
+	"Skip":	false,
+	"GridPoints":	{
+		"$NodeId":	"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3",
+		"Type":	"GridGen2D",
+		"Position":	{
+			"$NodeId":	"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f",
+			"X":	-8,
+			"Y":	90,
+			"Z":	-8
+		},
+		"OffsetX":	16,
+		"OffsetZ":	16,
+		"RepeatX":	15,
+		"RepeatZ":	15,
+		"Centered":	false
+	},
+	"POIs":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e",
+			"Type":	"Imported",
+			"Name":	"MazeFixedTiles1"
+		}],
+	"BaseTiles":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada",
+			"Type":	"Imported",
+			"Name":	"MazeBaseTiles1"
+		}],
+	"FancyTiles":	[{
+			"$NodeId":	"Imported.TileSet.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6",
+			"Type":	"Imported",
+			"Name":	"MazeFancyTiles1"
+		}],
+	"Seed":	{
+		"$NodeId":	"Constant.Seed.GridWave-55d2aaed-9286-4867-bf97-beffd1a65b1b",
+		"Type":	"Constant",
+		"Seed":	"SomeSeedsssssssss"
+	},
+	"Features":	[{
+			"$NodeId":	"Debug.Feature.GridWave-a5a027cd-af69-4e06-bbef-8f4907cb2462",
+			"Type":	"Debug",
+			"Skip":	false,
+			"WriteToConsole":	false,
+			"ShowNotification":	true,
+			"VisualizeGridPositions":	true,
+			"DebugGrid":	false,
+			"SkipFancyTiles":	false,
+			"LimitSteps":	false,
+			"MaxSteps":	20
+		}, {
+			"$NodeId":	"SectionStorage.Feature.GridWave-f803b91a-c866-4c3a-a839-dadb1978736d",
+			"Type":	"SectionStorage",
+			"Skip":	true,
+			"WriteToWorldFolder":	false,
+			"LimitSteps":	"LimitSteps",
+			"CacheSize":	50,
+			"HorizontalSectionSize":	9,
+			"VerticalSectionSize":	0
+		}, {
+			"$NodeId":	"Border.Feature.GridWave-ae7aad5f-0709-4e07-9fc2-7e6f394a30b9",
+			"Type":	"Border",
+			"Skip":	true,
+			"BorderType":	"InnerBorder",
+			"BorderRuleSets":	[{
+					"$NodeId":	"Simple.RuleSet.GridWave-78ef9da8-d7e1-4f5a-b28f-d90c7bdbbc23",
+					"Type":	"Simple",
+					"HorizontalRules":	{
+						"N":	"1",
+						"E":	"1",
+						"S":	"1",
+						"W":	"1"
+					}
+				}, {
+					"$NodeId":	"Simple.RuleSet.GridWave-5f3e7fc8-ab6b-463a-b9b1-6baab0fac660",
+					"Type":	"Simple",
+					"HorizontalRules":	{
+						"N":	"0",
+						"E":	"0",
+						"S":	"0",
+						"W":	"0"
+					}
+				}]
+		}],
+	"MaxPositionsCount":	1000000,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"PropDistributionAlgo.GridWave-0d476733-d01e-42c9-a72c-e548d6ce3544":	{
+				"$Position":	{
+					"$x":	1985,
+					"$y":	142
+				},
+				"$Title":	"[ROOT] GridWave Algorithm [WFC]"
+			},
+			"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3":	{
+				"$Position":	{
+					"$x":	2694,
+					"$y":	-265
+				}
+			},
+			"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f":	{
+				"$Position":	{
+					"$x":	2869,
+					"$y":	-458
+				}
+			},
+			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
+				"$Position":	{
+					"$x":	2685,
+					"$y":	65
+				}
+			},
+			"Imported.TileSet.GridWave-9935aef6-d5ed-4be9-98b5-4c880a47bada":	{
+				"$Position":	{
+					"$x":	2685,
+					"$y":	187
+				}
+			},
+			"Imported.TileSet.GridWave-5b988531-94c0-4ab0-a34b-492408a493c6":	{
+				"$Position":	{
+					"$x":	2686,
+					"$y":	308
+				}
+			},
+			"Constant.Seed.GridWave-55d2aaed-9286-4867-bf97-beffd1a65b1b":	{
+				"$Position":	{
+					"$x":	2691,
+					"$y":	425
+				}
+			},
+			"Debug.Feature.GridWave-a5a027cd-af69-4e06-bbef-8f4907cb2462":	{
+				"$Position":	{
+					"$x":	2692,
+					"$y":	703
+				}
+			},
+			"SectionStorage.Feature.GridWave-f803b91a-c866-4c3a-a839-dadb1978736d":	{
+				"$Position":	{
+					"$x":	2694,
+					"$y":	1084
+				}
+			},
+			"Border.Feature.GridWave-ae7aad5f-0709-4e07-9fc2-7e6f394a30b9":	{
+				"$Position":	{
+					"$x":	2691,
+					"$y":	1381
+				}
+			},
+			"Simple.RuleSet.GridWave-78ef9da8-d7e1-4f5a-b28f-d90c7bdbbc23":	{
+				"$Position":	{
+					"$x":	3391,
+					"$y":	1261
+				}
+			},
+			"Simple.RuleSet.GridWave-5f3e7fc8-ab6b-463a-b9b1-6baab0fac660":	{
+				"$Position":	{
+					"$x":	3400,
+					"$y":	1578
+				}
+			},
+			"Imported.Feature.GridWave-c3783ce1-c6dc-470d-a3f4-be54d542a11e":	{
+				"$Position":	{
+					"$x":	2694,
+					"$y":	580
+				}
+			}
+		},
+		"$FloatingNodes":	[{
+				"$NodeId":	"Imported.Feature.GridWave-c3783ce1-c6dc-470d-a3f4-be54d542a11e",
+				"Type":	"Imported",
+				"Name":	"MazeGlobalFeatures1"
+			}],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - PropDistribution"
+	}
+}

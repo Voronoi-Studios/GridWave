@@ -6,9 +6,8 @@ import org.joml.Vector3ic;
 
 import java.util.List;
 
-public interface IAlgoAsset {
+public interface IAlgoAsset extends IFeatureCheck {
     int getMaxPositionsCount();
-    List<FeatureAsset> getFeatureAssets();
     Vector3ic getGrid();
     Bounds3i getFullBounds();
 }

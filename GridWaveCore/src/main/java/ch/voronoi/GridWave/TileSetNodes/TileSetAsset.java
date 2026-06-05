@@ -76,7 +76,8 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     private String exportName = "";
     protected @Nonnull FeatureAsset[] tileFeatureAssets = new FeatureAsset[0];
 
-    public abstract List<TileSet> build(@Nonnull TileSetAsset.Argument argument);
+    @Nonnull
+    public abstract List<TileSet> build(@Nonnull TileSetAsset.Argument argument, FeatureAsset... addFeatures);
 
     @Override
     public void cleanUp() {
@@ -89,8 +90,6 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     public String getId() {
         return this.id;
     }
-
-    public @Nonnull List<FeatureAsset> getTileFeatureAssets() {return new ArrayList<>(List.of(this.tileFeatureAssets)); }
 
     @Nonnull
     public static TileSetAsset.Argument argumentFrom(@Nonnull PropAsset.Argument argument, @Nonnull SeedBox seedBox, @Nonnull Bounds3i bounds, @Nonnull IAlgoAsset algoAsset) {
@@ -152,20 +151,10 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
             this.bounds = bounds;
         }
 
-        public <T> boolean hasFeature(Class<T> type) {
-             return algoAsset.getFeatureAssets().stream().anyMatch(type::isInstance);
-        }
-
-        public <T> Optional<T> getFirstFeatureOf(Class<T> type) {
-            return algoAsset.getFeatureAssets().stream()
-                    .filter(type::isInstance)
-                    .map(type::cast)
-                    .findFirst();
-        }
 
         public SectionStorageAsset.Context getSectionStorageContext() {
-            var sectionStorage = getFirstFeatureOf(SectionStorageAsset.class).orElse(new SectionStorageAsset());
-            return sectionStorage.getContext(seedBox.toString());
+            var sectionStorage = algoAsset.getFirstFeatureOf(SectionStorageAsset.class).orElse(new SectionStorageAsset());
+            return sectionStorage.getNewContext(this);
         }
     }
 
@@ -221,7 +210,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     }
 
     public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleSetAsset[] ruleSetAssets, int zSize, @NonNull Argument argument) {
-        return getRuleComboMap(Arrays.stream(ruleSetAssets).map(RuleSetAsset::build).toArray(RuleCombo[]::new),zSize, argument);
+        return getRuleComboMap(Arrays.stream(ruleSetAssets).flatMap(x -> x.build().stream()).toArray(RuleCombo[]::new),zSize, argument);
     }
     public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleCombo[] ruleCombos, int zSize, @NonNull Argument argument) {
         Map<Vector3ic, RuleCombo> ruleSets = new HashMap<>();

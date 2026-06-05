@@ -4,6 +4,7 @@ import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class Match {
@@ -34,17 +35,23 @@ public class Match {
     }
 
 
-    public static boolean full(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
-        return full(a.providerRuleSet(), b.recieverRuleSet()) && full(a.recieverRuleSet(),b.providerRuleSet()); //wrong!? Why both?
+    public static boolean fancyMatch(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
+        return fancyMatch(a.providerRuleSet(), b.recieverRuleSet());
     }
-    public static boolean full(@Nonnull RuleSet a, @Nonnull RuleSet b){
-        return full(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
+    public static boolean fancyMatch(@Nonnull RuleSet a, @Nonnull RuleSet b){
+        return fancyMatch(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
                 (a.verticalRules() == null && b.verticalRules() == null) ||
                 (a.verticalRules() != null && is(a.verticalRules().getArrays(), b.verticalRules().getArrays()))
         );
     }
-    public static boolean full(String[][] a, String[][] b){
-        return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> array(a[i], b[i]));
+    public static boolean fancyMatch(String[][] a, String[][] b){
+        return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> arrayContains(a[i], b[i]));
+    }
+    public static boolean arrayContains(@Nonnull String[] a, @Nonnull String[] b){
+        for (String x : a) {
+            if (x.isEmpty() || x.equals("N") || x.equals("X") || Arrays.stream(b).toList().contains(x)) return true;
+        }
+        return false;
     }
 
     public static boolean array(@Nonnull String[] a, @Nonnull String[] b){

@@ -1,8 +1,10 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
+import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -17,8 +19,9 @@ public class TileSetGroupAsset extends TileSetAsset {
 
     private TileSetAsset[] tileSetAssets = new TileSetAsset[0];
 
+    @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         List<TileSet> tileSets = new ArrayList<>();
         for(TileSetAsset tileSetAsset : tileSetAssets){
             tileSets.addAll(tileSetAsset.build(argument));

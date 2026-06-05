@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.RuleSetNodes;
 
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
 import com.hypixel.hytale.assetstore.codec.ContainedAssetCodec;
@@ -11,6 +12,7 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -35,5 +37,5 @@ public abstract class RuleSetAsset implements JsonAssetWithMap<String, DefaultAs
         return id;
     }
 
-    public abstract RuleCombo build();
+    public abstract List<RuleCombo> build();
 }

@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Stream;
 
 public class MultiTileSet extends TileSet {
@@ -61,7 +62,10 @@ public class MultiTileSet extends TileSet {
 
     @Override
     public Prop getProp(@Nonnull TileSetAsset.Argument argument) {
-        if(!prefabWeightedMaps.containsKey(argument.workerId.id)) return EmptyProp.INSTANCE;
-        return new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed, TileSetAsset::loadPrefabBuffersFrom);
+        Prop prop = EmptyProp.INSTANCE;
+        if(prefabWeightedMaps.containsKey(argument.workerId.id)) {
+            prop = new PrefabProp(prefabWeightedMaps.get(argument.workerId.id), argument.materialCache,argument.parentSeed,TileSetAsset::loadPrefabBuffersFrom);
+        }
+        return prop;
     }
 }

@@ -2,6 +2,7 @@ package ch.voronoi.GridWave.FeatureNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.AttemptBehavior;
 import ch.voronoi.GridWave.AlgoNodes.Helper.CellSelector;
+import ch.voronoi.GridWave.AlgoNodes.Helper.IFeatureCheck;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
@@ -12,6 +13,7 @@ import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.assetstore.map.JsonAssetWithMap;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
@@ -97,4 +99,6 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     public void ReplaceCellSelector(AtomicReference<CellSelector> cellSelector, TileSetAsset.Argument argument) { }
 
     public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {}
+
+    public void AfterPropCreation(AtomicReference<Prop> propReference, TileSet.TileEntry entry, TileSetAsset.Argument argument) { }
 }

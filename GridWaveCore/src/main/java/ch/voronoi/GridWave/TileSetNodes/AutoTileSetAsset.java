@@ -18,6 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 public class AutoTileSetAsset extends TileSetAsset {
     @Nonnull
@@ -43,7 +44,7 @@ public class AutoTileSetAsset extends TileSetAsset {
 
     @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         var prefabWeightedMaps = prefabBufferCache.computeIfAbsent(folderPath, k -> new ConcurrentHashMap<>());
         WeightedMap<List<IPrefabBuffer>> prefabWeightedMap = new WeightedMap<>();
         if(!folderPath.isEmpty()) {
@@ -64,6 +65,6 @@ public class AutoTileSetAsset extends TileSetAsset {
 
         Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(simpleRuleSets, zSize, argument);
 
-        return new LinkedList<>(List.of(new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument, super.getTileFeatureAssets())));
+        return new LinkedList<>(List.of(new MultiTileSet(prefabWeightedMaps, ruleSets, weight, argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toList())));
     }
 }

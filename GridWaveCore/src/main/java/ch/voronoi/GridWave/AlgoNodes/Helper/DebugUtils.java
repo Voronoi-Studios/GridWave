@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DebugUtils {
     public static void sendDebugLog(List<GridTile> gridTiles, TileSetAsset.Argument argument, GridWave.WFCResult wfcResult) {
-        DebugFeatureAsset debugFeatureAsset = argument.getFirstFeatureOf(DebugFeatureAsset.class).orElse(new DebugFeatureAsset());
+        DebugFeatureAsset debugFeatureAsset = argument.algoAsset.getFirstFeatureOf(DebugFeatureAsset.class).orElse(new DebugFeatureAsset());
         List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyFeatureAsset.class::isInstance).map(PathKeyFeatureAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
         String str ="Generated " + gridTiles.size() + " tiles with bounds: " + BoundsStr(argument.bounds);
         String subStr = wfcResult.toString();

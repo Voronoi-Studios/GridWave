@@ -1,5 +1,6 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
+import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
@@ -7,8 +8,10 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import javax.annotation.Nonnull;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class AutoTileSetGroupAsset extends TileSetAsset {
     @Nonnull
@@ -23,7 +26,7 @@ public class AutoTileSetGroupAsset extends TileSetAsset {
 
     @Nonnull
     @Override
-    public List<TileSet> build(@Nonnull TileSetAsset.Argument argument) {
+    public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         List<AutoTileSetAsset> autoTileSetAssets = new ArrayList<>();
         Map<Path, Path> map = TileSetAsset.getPackToFullPathsMap(folderPath, false);
 
@@ -35,7 +38,7 @@ public class AutoTileSetGroupAsset extends TileSetAsset {
 
         List<TileSet> tileSets = new ArrayList<>();
         for(TileSetAsset tileSetAsset : autoTileSetAssets){
-            tileSets.addAll(tileSetAsset.build(argument));
+            tileSets.addAll(tileSetAsset.build(argument,addFeatures));
         }
         return tileSets;
     }

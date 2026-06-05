@@ -32,7 +32,7 @@
       "Type": "Int",
       "Options": {
         "Label": "HorizontalSectionSize",
-        "Default" : 150
+        "Default" : 15
       }
     },
     {
@@ -40,7 +40,7 @@
       "Type": "Int",
       "Options": {
         "Label": "VerticalSectionSize",
-        "Default" : 640
+        "Default" : 0
       }
     }
   ],
