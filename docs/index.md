@@ -110,7 +110,7 @@ draft: false
       </div>
       <!-- Duplicate set -->
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
+        <img class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Examples/IslandExampleAnim.gif" autoplay loop></img>
         <div class="overlay">
           <div class="content">
             <div>
@@ -122,7 +122,7 @@ draft: false
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/mazeVideo.mp4" autoplay loop></video>
+        <img class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Examples/JungleDungeonExample.gif" autoplay loop></img>
         <div class="overlay">
           <div class="content">
             <div>
