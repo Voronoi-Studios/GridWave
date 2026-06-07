@@ -36,7 +36,7 @@
     },
     {
       "Id": "Bounds",
-      "Type": "Bounds3i.Connection",
+      "Type": "CBounds.Connection",
       "Color": "Orange",
       "Label" : "Bounds",
       "Multiple" : false,
@@ -64,7 +64,7 @@
       "Pin" : "Positions"
     },
     "Bounds" : {
-      "Node" : "Bounds3i",
+      "Node" : "CBounds.Variants",
       "Pin" : "Bounds"
     },
     "Seed" : {

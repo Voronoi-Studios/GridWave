@@ -28,7 +28,14 @@ Check out the [GridWaveExamples](examples) to get an idea an idea how different 
 
 
 ### Adding Node Editor support:
-1. Copy contents of [HytaleGenerator Java](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
+
+## Automatic
+
+Run /GridWave.core patch in any world where the mod is loaded. Only works if installed in your client.
+
+## Manual:
+
+Copy contents of [HytaleGenerator Java](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
 > [!NOTE]
 > Node modding is currently not offically suported by Hytale, thus we need to replace some files.
 
