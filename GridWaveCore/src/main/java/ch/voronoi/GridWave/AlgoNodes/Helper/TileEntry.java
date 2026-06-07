@@ -125,27 +125,11 @@ public record TileEntry (Map<Vector3ic, RuleCombo> ruleSets, Vector3ic mainKey,
         ruleSets.keySet().forEach(bounds::encompass);
         Vector3ic signedSize = new Vector3i(bounds.min.x + bounds.max.x - 1,bounds.min.y + bounds.max.y - 1,bounds.min.z + bounds.max.z - 1);
 
-        Vector3ic result1 = new Vector3i(
-                signedSize.x() < 0 ? (int)Math.ceil(signedSize.x() / 2d) : (int)Math.floor(signedSize.x() / 2d),
-                signedSize.y() < 0 ? (int)Math.ceil(signedSize.y() / 2d) : (int)Math.floor(signedSize.y() / 2d),
-                signedSize.z() < 0 ? (int)Math.ceil(signedSize.z() / 2d) : (int)Math.floor(signedSize.z() / 2d)
-        );
-        Vector3ic result2 = new Vector3i(
-                signedSize.x() / 2,
-                signedSize.y() / 2,
-                signedSize.z() / 2
-        );
-        Vector3ic result3 = new Vector3i(
-                (int)Math.ceil(signedSize.x() / 2d),
-                (int)Math.ceil(signedSize.y() / 2d),
-                (int)Math.ceil(signedSize.z() / 2d)
-        );
-        Vector3ic result4 = new Vector3i(
+        return new Vector3i(
                 (int)Math.floor(signedSize.x() / 2d),
-                (int)Math.floor(signedSize.y() / 2d),
+                signedSize.y(),
                 (int)Math.floor(signedSize.z() / 2d)
         );
-        return result4;
     }
 
     public Vector3ic getPoiKey() {return getPropMultiTileOffset(); }

@@ -1,0 +1,42 @@
+{
+	"$NodeId":	"Single.TileSet.GridWave-5f4077c5-c807-4c75-b018-d5ec8509adc5",
+	"Type":	"Single",
+	"ExportAs":	"EchoFixedTileStairTop",
+	"RuleSet":	{
+		"$NodeId":	"Simple.RuleSet.GridWave-4d15e186-ee6e-4118-956e-ba0174b27e63",
+		"Type":	"Simple",
+		"HorizontalRules":	{
+			"N":	"1",
+			"E":	"1",
+			"S":	"1",
+			"W":	"1"
+		}
+	},
+	"Features":	[],
+	"PrefabPath":	"",
+	"Weight":	1,
+	"MinimizeVariants":	true,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Single.TileSet.GridWave-5f4077c5-c807-4c75-b018-d5ec8509adc5":	{
+				"$Position":	{
+					"$x":	3487,
+					"$y":	685
+				},
+				"$Title":	"[ROOT] Single TileSet"
+			},
+			"Simple.RuleSet.GridWave-4d15e186-ee6e-4118-956e-ba0174b27e63":	{
+				"$Position":	{
+					"$x":	4377,
+					"$y":	684
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - TileSets"
+	}
+}

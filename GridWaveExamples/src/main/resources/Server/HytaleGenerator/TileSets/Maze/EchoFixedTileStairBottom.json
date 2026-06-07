@@ -1,0 +1,58 @@
+{
+	"$NodeId":	"Multi.TileSet.GridWave-3f5bb7d7-ac31-432a-a230-2b51fae75081",
+	"Type":	"Multi",
+	"ExportAs":	"EchoFixedTileStair",
+	"RuleSets":	[{
+			"$NodeId":	"Simple.RuleSet.GridWave-4d15e186-ee6e-4118-956e-ba0174b27e63",
+			"Type":	"Simple",
+			"HorizontalRules":	{
+				"N":	"1",
+				"E":	"1",
+				"S":	"1",
+				"W":	"1"
+			}
+		}, {
+			"$NodeId":	"Simple.RuleSet.GridWave-0057272c-aea7-4ea2-9b43-95cf4c5d7362",
+			"Type":	"Simple",
+			"HorizontalRules":	{
+				"N":	"1",
+				"E":	"1",
+				"S":	"1",
+				"W":	"1"
+			}
+		}],
+	"PrefabPath":	"Echo/FixedTiles/Stairs.prefab.json",
+	"SizeX":	1,
+	"SizeZ":	1,
+	"Weight":	1,
+	"MinimizeVariants":	true,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Simple.RuleSet.GridWave-4d15e186-ee6e-4118-956e-ba0174b27e63":	{
+				"$Position":	{
+					"$x":	4377,
+					"$y":	684
+				}
+			},
+			"Simple.RuleSet.GridWave-0057272c-aea7-4ea2-9b43-95cf4c5d7362":	{
+				"$Position":	{
+					"$x":	4383,
+					"$y":	995
+				}
+			},
+			"Multi.TileSet.GridWave-3f5bb7d7-ac31-432a-a230-2b51fae75081":	{
+				"$Position":	{
+					"$x":	3524,
+					"$y":	690
+				},
+				"$Title":	"[ROOT] Multi TileSet"
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - TileSets"
+	}
+}
