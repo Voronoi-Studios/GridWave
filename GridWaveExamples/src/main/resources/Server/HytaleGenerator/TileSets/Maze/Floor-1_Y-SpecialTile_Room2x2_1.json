@@ -40,8 +40,10 @@
 			}
 		}],
 	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Room2x2_1.prefab.json",
+	"SizeX":	2,
 	"SizeZ":	2,
 	"Weight":	1,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-6e42b574-2457-49b3-a0e1-1c61c0203f91":	{
@@ -59,20 +61,20 @@
 			},
 			"Simple.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549":	{
 				"$Position":	{
-					"$x":	5203,
-					"$y":	-788
+					"$x":	5346,
+					"$y":	-774
 				}
 			},
 			"Simple.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
 				"$Position":	{
-					"$x":	4694,
-					"$y":	-562
+					"$x":	4696,
+					"$y":	-485
 				}
 			},
 			"Simple.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
 				"$Position":	{
-					"$x":	5197,
-					"$y":	-545
+					"$x":	5346,
+					"$y":	-472
 				}
 			}
 		},

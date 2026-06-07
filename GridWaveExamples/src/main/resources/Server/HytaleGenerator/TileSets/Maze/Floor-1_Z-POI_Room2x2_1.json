@@ -46,8 +46,10 @@
 			"Rot":	"None"
 		}],
 	"PrefabPath":	"Maze/Fixed/Floor-1_Z-POI_Room2x2_1.prefab.json",
+	"SizeX":	2,
 	"SizeZ":	2,
 	"Weight":	1,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-6e42b574-2457-49b3-a0e1-1c61c0203f91":	{
@@ -65,26 +67,26 @@
 			},
 			"Simple.RuleSet.GridWave-be7adaaa-f0b1-46dd-a096-71c01f285549":	{
 				"$Position":	{
-					"$x":	5223,
-					"$y":	-815
+					"$x":	5367,
+					"$y":	-799
 				}
 			},
 			"Simple.RuleSet.GridWave-ed7076cc-7896-4330-82ae-e7682149448b":	{
 				"$Position":	{
-					"$x":	4715,
-					"$y":	-586
+					"$x":	4712,
+					"$y":	-510
 				}
 			},
 			"Simple.RuleSet.GridWave-984f9bda-6029-4455-9a3f-58345a34244b":	{
 				"$Position":	{
-					"$x":	5223,
-					"$y":	-582
+					"$x":	5367,
+					"$y":	-499
 				}
 			},
 			"Restrainer.Feature.GridWave-2863830b-225c-4398-b1f4-3d416bc7a523":	{
 				"$Position":	{
-					"$x":	4107,
-					"$y":	-416
+					"$x":	4103,
+					"$y":	-336
 				}
 			}
 		},

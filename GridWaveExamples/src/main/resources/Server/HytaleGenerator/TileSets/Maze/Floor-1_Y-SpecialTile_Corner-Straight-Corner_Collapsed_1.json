@@ -27,8 +27,10 @@
 			}
 		}],
 	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Corner-Straight-Corner_Collapsed_1.prefab.json",
+	"SizeX":	1,
 	"SizeZ":	3,
 	"Weight":	1,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-cdc9c4a4-2c88-463d-bc55-9d5f1f8a28a6":	{

@@ -13,6 +13,14 @@
       }
     },
     {
+      "Id": "SizeX",
+      "Type": "Int",
+      "Options": {
+        "Label": "X Size",
+        "Default" : 2
+      }
+    }, 
+    {
       "Id": "SizeZ",
       "Type": "Int",
       "Options": {
@@ -26,6 +34,14 @@
       "Options": {
         "Label": "Weight",
         "Default" : 1.0
+      }
+    },
+    {
+      "Id": "MinimizeVariants",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Minimize Variants",
+        "Default" : true
       }
     }
   ],
@@ -73,7 +89,9 @@
       "Node" : "Feature.Local.Variants",
       "Pin" : "Features"
     },
+    "SizeX" : "SizeX",
     "SizeZ" : "SizeZ",
-    "Weight" : "Weight"
+    "Weight" : "Weight",
+    "MinimizeVariants" : "MinimizeVariants"
   }
 }

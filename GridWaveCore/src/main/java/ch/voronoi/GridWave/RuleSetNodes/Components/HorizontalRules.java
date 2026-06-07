@@ -5,6 +5,7 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
 
 public class HorizontalRules {
     @Nonnull
@@ -49,6 +50,23 @@ public class HorizontalRules {
 
     public String[][] getArrays() {
         return new String[][]{n, e, s, w};
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof HorizontalRules other)) return false;
+
+        return Arrays.equals(this.n, other.n)
+            && Arrays.equals(this.e, other.e)
+            && Arrays.equals(this.s, other.s)
+            && Arrays.equals(this.w, other.w);
+    }
+
+    @Override
+    public @Nonnull String toString() {
+        return "[n:" + Arrays.toString(this.n) + ", e:" + Arrays.toString(this.e) + ", s:" + Arrays.toString(this.s) + ", w:" + Arrays.toString(this.w) + "]";
     }
 
     public static final HorizontalRules EMPTY = HorizontalRules.createSimpleFrom(new String[]{"", "", "", ""});

@@ -12,4 +12,16 @@ public record RuleSet(HorizontalRules horizontalRules, VerticalRules verticalRul
     public static final RuleSet H_ALL_N = new RuleSet(HorizontalRules.ALL_N, null);
     public static final RuleSet H_ALL_X = new RuleSet(HorizontalRules.ALL_X,null);
 
+    public static RuleSet createSimpleFrom(String[] keys) {
+        HorizontalRules hor = new HorizontalRules();
+        VerticalRules ver = null;
+        if (keys.length == 4) hor = HorizontalRules.createSimpleFrom(new String[]{keys[0],keys[1],keys[2],keys[3]});
+        if (keys.length == 6) ver = VerticalRules.createSimpleFrom(new String[]{keys[4],keys[5]});
+        return new RuleSet(hor, ver);
+    }
+
+    @Override
+    public @Nonnull String toString() {
+        return "[Hor:" + this.horizontalRules + ", Ver:" + this.verticalRules + "]";
+    }
 }

@@ -1,0 +1,40 @@
+{
+  "Id": "String.RuleSet.GridWave",
+  "Title": "String RuleSet",
+  "Color": "60,100,80",
+  "Content" : [
+    {
+      "Id" : "Str",
+      "Type" : "SmallString",
+      "Description" : "Uses this string to create the ruleset for the MultiTiles\nExample: `10X0-X010` // `10X00X-X010X0`",
+      "Options" : {
+        "Label" : "String",
+        "Default" : "",
+        "Width" : 600
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "ElevationRules",
+      "Type": "ElevationRules.GridWave.Connection",
+      "Color": "60,100,80",
+      "Label": "Elevation Rules"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "RuleSet",
+      "Type": "RuleSet.GridWave.Connection",
+      "Color": "60,100,80"
+    }
+  ],
+  "Schema": {
+    "Type": "String",
+    "Str": "Str",
+    "ElevationRules" : {
+      "Node" : "ElevationRules.GridWave.Connection",
+      "Pin" : "ElevationRules"
+    }
+  }
+}

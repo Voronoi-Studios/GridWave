@@ -2,9 +2,8 @@ package ch.voronoi.GridWave.FeatureNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.AttemptBehavior;
 import ch.voronoi.GridWave.AlgoNodes.Helper.CellSelector;
-import ch.voronoi.GridWave.AlgoNodes.Helper.IFeatureCheck;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.codec.AssetCodecMapCodec;
@@ -13,16 +12,21 @@ import com.hypixel.hytale.assetstore.map.DefaultAssetMap;
 import com.hypixel.hytale.assetstore.map.JsonAssetWithMap;
 import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.Cleanable;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
+import org.joml.Vector3d;
+import org.joml.Vector3i;
 import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -86,7 +90,7 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
     }
 
     //Implement different methods
-    public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) { }
+    public void AfterTileSetCreation(List<TileEntry> tileEntries, TileSetAsset.Argument argument) { }
 
     public void BaseWaveProcessor(@NonNull Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument) { }
 
@@ -98,7 +102,9 @@ public abstract class FeatureAsset implements Cleanable, JsonAssetWithMap<String
 
     public void ReplaceCellSelector(AtomicReference<CellSelector> cellSelector, TileSetAsset.Argument argument) { }
 
-    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {}
+    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {}
 
-    public void AfterPropCreation(AtomicReference<Prop> propReference, TileSet.TileEntry entry, TileSetAsset.Argument argument) { }
+    public void AfterPropCreation(AtomicReference<Prop> propReference, TileEntry entry, TileSetAsset.Argument argument) { }
+
+    public Map<Vector3d, Prop> GetExtraProps(@Nullable Bounds3i bounds, @Nonnull TileSetAsset.Argument argument) { return new LinkedHashMap<>(); }
 }

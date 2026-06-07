@@ -3,7 +3,10 @@ package ch.voronoi.GridWave.TileSetNodes;
 import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.FeatureNodes.SectionStorageAsset;
+import ch.voronoi.GridWave.RuleSetNodes.Components.ElevationRules;
+import ch.voronoi.GridWave.RuleSetNodes.Components.HorizontalRules;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
+import ch.voronoi.GridWave.RuleSetNodes.Components.RuleSet;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
 import com.hypixel.hytale.assetstore.AssetExtraInfo;
 import com.hypixel.hytale.assetstore.AssetPack;
@@ -18,6 +21,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.prefabprop.PrefabLoader;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.referencebundle.ReferenceBundle;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
 import com.hypixel.hytale.builtin.hytalegenerator.workerindexer.WorkerIndexer;
@@ -69,19 +73,21 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                     (asset, v) -> asset.tileFeatureAssets = v,
                     asset -> asset.tileFeatureAssets)
             .add()
+            .append(new KeyedCodec<>("MinimizeVariants", Codec.BOOLEAN, true), (asset, value) -> asset.minimizeVariants = value, asset -> asset.minimizeVariants)
+            .add()
             .build();
 
     private String id;
     private AssetExtraInfo.Data data;
     private String exportName = "";
     protected @Nonnull FeatureAsset[] tileFeatureAssets = new FeatureAsset[0];
+    protected boolean minimizeVariants;
 
     @Nonnull
     public abstract List<TileSet> build(@Nonnull TileSetAsset.Argument argument, FeatureAsset... addFeatures);
 
     @Override
-    public void cleanUp() {
-    }
+    public void cleanUp() {}
 
     public static TileSetAsset.Exported getExportedAsset(@Nonnull String name) {
         return exportedNodes.get(name);
@@ -209,18 +215,31 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         return packToFullPathsMap;
     }
 
-    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleSetAsset[] ruleSetAssets, int zSize, @NonNull Argument argument) {
-        return getRuleComboMap(Arrays.stream(ruleSetAssets).flatMap(x -> x.build().stream()).toArray(RuleCombo[]::new),zSize, argument);
+    public static RuleCombo[] buildRuleCombo(String str, ElevationRules elevationRules) {
+        List<String> tiles = Arrays.stream(str.split("-")).toList();
+        return tiles.stream().map(t -> new RuleCombo(RuleSet.createSimpleFrom(t.split("")),RuleSet.createSimpleFrom(t.split("")), elevationRules)).toArray(RuleCombo[]::new);
     }
-    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(RuleCombo[] ruleCombos, int zSize, @NonNull Argument argument) {
+    public static Vector3ic getSize(String str) {
+        if(!str.contains("x")) return null;
+        var sizeParts = str.split("x");
+        return new Vector3i(Integer.parseInt(sizeParts[0]),0,Integer.parseInt(sizeParts[1]));
+    }
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(Vector3ic size, RuleSetAsset[] ruleSetAssets, @NonNull Argument argument) {
+        return getRuleComboMap(size,Arrays.stream(ruleSetAssets).flatMap(x -> x.build().stream()).toArray(RuleCombo[]::new), argument);
+    }
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(Vector3ic size, RuleCombo[] ruleCombos, @NonNull Argument argument) {
         Map<Vector3ic, RuleCombo> ruleSets = new HashMap<>();
         Vector3i offset = new Vector3i(Vector3iUtil.ZERO);
         for(RuleCombo ruleCombo : ruleCombos){
             ruleSets.put(new Vector3i(offset).mul(argument.algoAsset.getGrid()), ruleCombo);
             offset.z++;
-            if(offset.z >= zSize) {
+            if(offset.z >= size.z()) {
                 offset.z = 0;
                 offset.x--;
+            }
+            if(-offset.x >= size.x()){
+                offset.x = 0;
+                offset.y--;
             }
         }
         return ruleSets;

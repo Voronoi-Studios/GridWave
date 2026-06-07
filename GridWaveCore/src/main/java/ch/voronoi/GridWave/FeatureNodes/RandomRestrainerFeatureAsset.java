@@ -3,7 +3,7 @@ package ch.voronoi.GridWave.FeatureNodes;
 import ch.voronoi.GridWave.AlgoNodes.GridWave;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
 import ch.voronoi.GridWave.SeedNodes.SeedAsset;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.bounds.IntegerBounds3dAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
@@ -43,10 +43,10 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
     public Rotation rot = Rotation.None;
 
     @Override
-    public void AfterTileSetCreation(List<TileSet.TileEntry> tileEntries, TileSetAsset.Argument argument) {
+    public void AfterTileSetCreation(List<TileEntry> tileEntries, TileSetAsset.Argument argument) {
         if(skip()) return;
         int rot = this.rot.getDegrees() / 90;
-        TileSet.TileEntry tileEntry = tileEntries.get(rot%tileEntries.size());
+        TileEntry tileEntry = tileEntries.get(rot%tileEntries.size());
         PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
         Bounds3i bounds3i = new Bounds3i(Vector3iUtil.MIN, Vector3iUtil.MAX);
         if(integerBounds3dAsset != null) bounds3i = integerBounds3dAsset.build();
@@ -55,7 +55,7 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
             SeedBox seedBox = argument.parentSeed.child(seed.build(argument.algoAsset));
             Random randomSupplier = new Random(seedBox.createSupplier().get());
             Vector3dc random = gridPositions.get(randomSupplier.nextInt(gridPositions.size()));
-            tileEntry = TileSet.offsetTileEntry(tileEntry, Vector3dUtil.toVector3i((Vector3d)random));
+            tileEntry = tileEntry.restrain(Vector3dUtil.toVector3i((Vector3d)random));
         }
         tileEntries.clear();
         tileEntries.add(tileEntry);

@@ -59,4 +59,9 @@ public record RuleCombo(@Nonnull RuleSet providerRuleSet, @Nonnull RuleSet recie
 
         return new RuleCombo(new RuleSet(new HorizontalRules(horizontalProviderRuleSet)), new RuleSet(new HorizontalRules(horizontalReceiverRuleSet)), null);
     }
+
+    @Override
+    public @Nonnull String toString() {
+        return "[Provider:" + this.providerRuleSet + ", Receiver:" + this.recieverRuleSet + ", Elevation:" + this.elevationRules + "]";
+    }
 }

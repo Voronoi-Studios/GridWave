@@ -5,46 +5,75 @@
 			"Skip":	false,
 			"Runtime":	1,
 			"PropDistribution":	{
-				"$NodeId":	"PropDistributionAlgo.GridWave-e2335b4b-b717-4610-bad9-182adf25fc27",
-				"Type":	"PropDistributionAlgo",
+				"$NodeId":	"Constant.PropDistribution-8ad9f862-f389-4d3a-859c-69cf04b8a766",
+				"Type":	"Constant",
 				"Skip":	false,
-				"GridPoints":	{
-					"$NodeId":	"GridGen2D.GridWave-4924d9bc-12b4-4944-bff2-f6bee6b0e0a8",
-					"Type":	"GridGen2D",
-					"Position":	{
-						"$NodeId":	"Vector3i-000b5e41-b813-476b-a717-5df11c1fd187",
-						"X":	0,
-						"Y":	150,
-						"Z":	0
+				"Positions":	{
+					"$NodeId":	"ListPositions-aa5412a4-d3d7-4385-b194-1566186b6f8c",
+					"Type":	"List",
+					"Skip":	false,
+					"Positions":	[{
+							"$NodeId":	"Point3D-4b5dcf9f-8a82-4db8-9382-a8e5c91fa086",
+							"X":	0,
+							"Y":	150,
+							"Z":	0
+						}]
+				},
+				"Prop":	{
+					"$NodeId":	"PropAlgo.GridWave-5f3f9909-77aa-431a-abe1-1751d368af31",
+					"Type":	"PropAlgo",
+					"Skip":	false,
+					"GridPoints":	{
+						"$NodeId":	"GridGen2D.GridWave-4924d9bc-12b4-4944-bff2-f6bee6b0e0a8",
+						"Type":	"GridGen2D",
+						"OffsetX":	11,
+						"OffsetZ":	11,
+						"RepeatX":	11,
+						"RepeatZ":	11,
+						"Centered":	true
 					},
-					"OffsetX":	11,
-					"OffsetZ":	11,
-					"RepeatX":	16,
-					"RepeatZ":	16,
-					"Centered":	true
-				},
-				"BaseTiles":	[{
-						"$NodeId":	"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885",
-						"Type":	"Imported",
-						"Name":	"JungleDungeonBase1"
-					}],
-				"FancyTiles":	[{
-						"$NodeId":	"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169",
-						"Type":	"Imported",
-						"Name":	"JungleDungeonFancy1"
-					}],
-				"Seed":	{
-					"$NodeId":	"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910",
-					"Type":	"Constant",
-					"ExportAs":	"mySeed",
-					"Seed":	"SomeSeedssssss"
-				},
-				"Features":	[{
-						"$NodeId":	"Imported.Feature.GridWave-143ebf53-7cb7-4777-be65-621338b37458",
-						"Type":	"Imported",
-						"Name":	"JungleDungeonFeatures1"
-					}],
-				"MaxPositionsCount":	20000
+					"POIs":	[{
+							"$NodeId":	"Auto.TileSet.GridWave-e6a4caed-f3e0-42ae-b57c-9785965d4301",
+							"Type":	"Auto",
+							"Features":	[{
+									"$NodeId":	"Restrainer.Feature.GridWave-858f757e-13e7-4455-9908-69b014b8e7e1",
+									"Type":	"Restrainer",
+									"Skip":	false,
+									"Pos":	{
+										"$NodeId":	"Point3D-20a31080-c4a4-42c1-bfa8-eed9c32f85ba",
+										"X":	11,
+										"Y":	0,
+										"Z":	-11
+									},
+									"Rot":	"None"
+								}],
+							"FolderPath":	"JungleDungeon/FixedTiles/start/3x3/00XX-X1XX-X00X-1XXX-XXXX-XX1X-0XX0-XXX1-XX00",
+							"Weight":	1,
+							"MinimizeVariants":	true
+						}],
+					"BaseTiles":	[{
+							"$NodeId":	"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885",
+							"Type":	"Imported",
+							"Name":	"JungleDungeonBase1"
+						}],
+					"FancyTiles":	[{
+							"$NodeId":	"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169",
+							"Type":	"Imported",
+							"Name":	"JungleDungeonFancy1"
+						}],
+					"Seed":	{
+						"$NodeId":	"Time.Seed.GridWave-de0578a4-c6f9-4c63-9de1-e5dc7727718a",
+						"Type":	"Time",
+						"Interval":	5,
+						"Unit":	"Seconds"
+					},
+					"Features":	[{
+							"$NodeId":	"Imported.Feature.GridWave-a844474c-da98-48b9-be12-0436d6d6fcb9",
+							"Type":	"Imported",
+							"Name":	"JungleDungeonFeatures1"
+						}],
+					"MaxPositionsCount":	20000
+				}
 			}
 		}],
 	"$NodeEditorMetadata":	{
@@ -62,50 +91,91 @@
 					"$y":	1371
 				}
 			},
-			"PropDistributionAlgo.GridWave-e2335b4b-b717-4610-bad9-182adf25fc27":	{
-				"$Position":	{
-					"$x":	1345,
-					"$y":	1300
-				}
-			},
 			"GridGen2D.GridWave-4924d9bc-12b4-4944-bff2-f6bee6b0e0a8":	{
 				"$Position":	{
-					"$x":	2049,
-					"$y":	1151
+					"$x":	2075,
+					"$y":	1233
 				}
 			},
-			"Vector3i-000b5e41-b813-476b-a717-5df11c1fd187":	{
+			"Auto.TileSet.GridWave-e6a4caed-f3e0-42ae-b57c-9785965d4301":	{
 				"$Position":	{
-					"$x":	2621,
-					"$y":	1154
+					"$x":	2056,
+					"$y":	1549
+				}
+			},
+			"Restrainer.Feature.GridWave-858f757e-13e7-4455-9908-69b014b8e7e1":	{
+				"$Position":	{
+					"$x":	3090,
+					"$y":	1568
+				}
+			},
+			"Point3D-20a31080-c4a4-42c1-bfa8-eed9c32f85ba":	{
+				"$Position":	{
+					"$x":	3662,
+					"$y":	1581
 				}
 			},
 			"Imported.TileSet.GridWave-692e74e3-9666-4c67-8d83-2b7adf9ce885":	{
 				"$Position":	{
-					"$x":	2050,
-					"$y":	1466
+					"$x":	2058,
+					"$y":	1750
 				}
 			},
-			"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169":	{
+			"Imported.Feature.GridWave-a844474c-da98-48b9-be12-0436d6d6fcb9":	{
 				"$Position":	{
-					"$x":	2056,
-					"$y":	1589
+					"$x":	2062,
+					"$y":	2188
 				}
 			},
 			"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910":	{
 				"$Position":	{
-					"$x":	2057,
-					"$y":	1714
+					"$x":	2060,
+					"$y":	2005
 				}
 			},
-			"Imported.Feature.GridWave-143ebf53-7cb7-4777-be65-621338b37458":	{
+			"Constant.PropDistribution-8ad9f862-f389-4d3a-859c-69cf04b8a766":	{
 				"$Position":	{
-					"$x":	2058,
-					"$y":	1876
+					"$x":	528,
+					"$y":	1571
+				}
+			},
+			"PropAlgo.GridWave-5f3f9909-77aa-431a-abe1-1751d368af31":	{
+				"$Position":	{
+					"$x":	1235,
+					"$y":	1629
+				}
+			},
+			"ListPositions-aa5412a4-d3d7-4385-b194-1566186b6f8c":	{
+				"$Position":	{
+					"$x":	1253,
+					"$y":	1200
+				}
+			},
+			"Point3D-4b5dcf9f-8a82-4db8-9382-a8e5c91fa086":	{
+				"$Position":	{
+					"$x":	1286,
+					"$y":	991
+				}
+			},
+			"Imported.TileSet.GridWave-64e1f7a2-0fc8-4f65-8f83-6eed44c75169":	{
+				"$Position":	{
+					"$x":	2057,
+					"$y":	1874
+				}
+			},
+			"Time.Seed.GridWave-de0578a4-c6f9-4c63-9de1-e5dc7727718a":	{
+				"$Position":	{
+					"$x":	2808,
+					"$y":	2061
 				}
 			}
 		},
-		"$FloatingNodes":	[],
+		"$FloatingNodes":	[{
+				"$NodeId":	"Constant.Seed.GridWave-c04a14bd-6b0a-449a-85bb-974e1fb86910",
+				"Type":	"Constant",
+				"ExportAs":	"",
+				"Seed":	"SomeSeedsssssss"
+			}],
 		"$Links":	{
 		},
 		"$Groups":	[],

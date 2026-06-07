@@ -13,51 +13,33 @@ public class Match {
     public static boolean dir(int dir, @Nonnull RuleCombo a, @Nonnull RuleCombo b){
         return dir(dir, a.providerRuleSet(), b.recieverRuleSet()) && dir(dir, a.recieverRuleSet(),b.providerRuleSet());
     }
-    public static boolean dir(int dir, @Nonnull RuleSet a, @Nonnull RuleSet b){
+    private static boolean dir(int dir, @Nonnull RuleSet a, @Nonnull RuleSet b){
         if(dir < 4) return array(a.horizontalRules().getArrays()[oppositeDirection[dir]],b.horizontalRules().getArrays()[dir]);
         return array(a.verticalRules().getArrays()[oppositeDirection[dir]-4],b.verticalRules().getArrays()[dir-4]);
     }
-
-    public static boolean is(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
-        return is(a.providerRuleSet(), b.recieverRuleSet()) && is(a.recieverRuleSet(),b.providerRuleSet()); //wrong!? Why both?
-    }
-    public static boolean is(@Nonnull RuleSet a, @Nonnull RuleSet b){
-        return is(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
-                a.verticalRules() == null || b.verticalRules() == null || is(a.verticalRules().getArrays(), b.verticalRules().getArrays())
-        );
-    }
-    public static boolean is(String[][] a, String[][] b){
-        return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> arrayIs(a[i], b[i]));
-    }
-
-    public static boolean arrayIs(@Nonnull String[] a, @Nonnull String[] b){
-        for (String x : a) { for (String y : b) { if (x.equals(y)) return true; } } return false;
-    }
-
-
-    public static boolean fancyMatch(@Nonnull RuleCombo a, @Nonnull RuleCombo b){
-        return fancyMatch(a.providerRuleSet(), b.recieverRuleSet());
-    }
-    public static boolean fancyMatch(@Nonnull RuleSet a, @Nonnull RuleSet b){
-        return fancyMatch(a.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
-                (a.verticalRules() == null && b.verticalRules() == null) ||
-                (a.verticalRules() != null && is(a.verticalRules().getArrays(), b.verticalRules().getArrays()))
-        );
-    }
-    public static boolean fancyMatch(String[][] a, String[][] b){
-        return a == null || b == null || a.length == b.length && IntStream.range(0, a.length).allMatch(i -> arrayContains(a[i], b[i]));
-    }
-    public static boolean arrayContains(@Nonnull String[] a, @Nonnull String[] b){
-        for (String x : a) {
-            if (x.isEmpty() || x.equals("N") || x.equals("X") || Arrays.stream(b).toList().contains(x)) return true;
-        }
-        return false;
-    }
-
-    public static boolean array(@Nonnull String[] a, @Nonnull String[] b){
+    private static boolean array(@Nonnull String[] a, @Nonnull String[] b){
         for (String x : a) { for (String y : b) { if (single(x, y)) return true; } } return false;
     }
-    public static boolean single(String a, String b){
+    private static boolean single(String a, String b){
         return a == null || b == null || a.isEmpty() || b.isEmpty() || a.equals("N") || b.equals("N") || a.equals("X") || b.equals("X") || a.equals(b);
+    }
+
+    public static boolean fancyMatch(@Nonnull RuleCombo fancyTile, @Nonnull RuleCombo baseTile){
+        return fancyMatch(fancyTile.recieverRuleSet(), baseTile.providerRuleSet());
+    }
+    private static boolean fancyMatch(@Nonnull RuleSet f, @Nonnull RuleSet b){
+        return fancyMatch(f.horizontalRules().getArrays(),b.horizontalRules().getArrays()) && (
+                (f.verticalRules() == null && b.verticalRules() == null) ||
+                (f.verticalRules() != null && fancyMatch(f.verticalRules().getArrays(), b.verticalRules().getArrays()))
+        );
+    }
+    private static boolean fancyMatch(String[][] f, String[][] b){
+        return f == null || b == null || f.length == b.length && IntStream.range(0, f.length).allMatch(i -> arrayContains(f[i], b[i]));
+    }
+    private static boolean arrayContains(@Nonnull String[] f, @Nonnull String[] b){
+        for (String fPart : f) {
+            if (fPart.isEmpty() || fPart.equals("N") || fPart.equals("X") || Arrays.stream(b).toList().contains(fPart)) return true;
+        }
+        return false;
     }
 }

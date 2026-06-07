@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.function.Function;
 
 public class SectionStorageAsset extends FeatureAsset {
@@ -81,9 +83,11 @@ public class SectionStorageAsset extends FeatureAsset {
 
             //target existed already, so we solve neighbors till the target is available
             int dist = 1;
+            long deadline = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(10);
             while (!target.isDone()){
+                if (System.currentTimeMillis() > deadline) return null;
                 for (Vector3ic neighborKey : getSurroundingKeys(sectionKey, dist++)) {
-                    if (argument.algoAsset.getFullBounds().contains(Vector3iUtil.toVector3d(neighborKey))) continue;
+                    if (argument.algoAsset.getGridBounds().contains(Vector3iUtil.toVector3d(neighborKey))) continue;
                     if (!sectionCache.containsKey(neighborKey)) {
                         getOrSolve(neighborKey, solver);
                     }

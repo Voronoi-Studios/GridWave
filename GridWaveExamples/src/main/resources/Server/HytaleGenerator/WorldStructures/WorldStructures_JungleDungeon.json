@@ -1,6 +1,6 @@
 {
   "Type": "NoiseRange",
-  "DefaultBiome": "Biome_Dungeon",
+  "DefaultBiome": "Biome_JungleDungeon",
   "BiomeTransitions": [],
   "DefaultTransitionDistance": 128,
   "Density": {

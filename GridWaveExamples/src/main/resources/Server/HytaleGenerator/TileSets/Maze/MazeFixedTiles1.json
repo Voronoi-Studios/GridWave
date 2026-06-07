@@ -2,9 +2,25 @@
 	"$NodeId":	"Group.TileSet.GridWave-62308eb3-1e98-415a-90e5-2c73290ce6b5",
 	"Type":	"Group",
 	"TileSets":	[{
-			"$NodeId":	"Imported.TileSet.GridWave-5af40349-b10b-4fca-9d22-03e0ac486700",
-			"Type":	"Imported",
-			"Name":	"Floor-1_Z-POI_Room2x2_1"
+			"$NodeId":	"Multi.TileSet.GridWave-bf782506-f80b-4f32-8184-9269d0dabe18",
+			"Type":	"Multi",
+			"ExportAs":	"Floor-1_Z-POI_Room2x2_1",
+			"RuleSets":	[{
+					"$NodeId":	"String.RuleSet.GridWave-151a2caa-acc8-4e98-820f-9cd99524bbb6",
+					"Type":	"String",
+					"Str":	"00XX-X01X-0XX0-XX00"
+				}],
+			"Features":	[{
+					"$NodeId":	"Restrainer.Feature.GridWave-98699256-22b3-44eb-987e-0e1560bfefac",
+					"Type":	"Restrainer",
+					"Skip":	false,
+					"Rot":	"None"
+				}],
+			"PrefabPath":	"Maze/Fixed/Floor-1_Z-POI_Room2x2_1.prefab.json",
+			"SizeX":	2,
+			"SizeZ":	2,
+			"Weight":	1,
+			"MinimizeVariants":	true
 		}],
 	"ExportAs":	"MazeFixedTiles1",
 	"$NodeEditorMetadata":	{
@@ -16,10 +32,23 @@
 				},
 				"$Title":	"[ROOT] TileSet Collection"
 			},
-			"Imported.TileSet.GridWave-5af40349-b10b-4fca-9d22-03e0ac486700":	{
+			"Multi.TileSet.GridWave-bf782506-f80b-4f32-8184-9269d0dabe18":	{
 				"$Position":	{
-					"$x":	3262,
-					"$y":	-102
+					"$x":	4200,
+					"$y":	-173
+				},
+				"$Title":	"[ROOT] WFC Multi TileSet"
+			},
+			"String.RuleSet.GridWave-151a2caa-acc8-4e98-820f-9cd99524bbb6":	{
+				"$Position":	{
+					"$x":	5036,
+					"$y":	-172
+				}
+			},
+			"Restrainer.Feature.GridWave-98699256-22b3-44eb-987e-0e1560bfefac":	{
+				"$Position":	{
+					"$x":	5049,
+					"$y":	-31
 				}
 			}
 		},

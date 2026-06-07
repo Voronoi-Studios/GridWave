@@ -34,8 +34,10 @@
 			}
 		}],
 	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-4_Spiral_1.prefab.json",
+	"SizeX":	1,
 	"SizeZ":	4,
 	"Weight":	1,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-92e829d2-3b47-4467-af46-833aa35a1513":	{

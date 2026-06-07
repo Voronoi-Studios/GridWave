@@ -112,24 +112,26 @@
 							"$NodeId":	"Simple.RuleSet.GridWave-5f13678c-371c-4094-b6b5-b50d67c120c3",
 							"Type":	"Simple",
 							"HorizontalRules":	{
-								"N":	"1,2",
+								"N":	"1",
 								"E":	"0,00",
-								"S":	"1,2",
+								"S":	"1",
 								"W":	"0,00"
 							}
 						}, {
 							"$NodeId":	"Simple.RuleSet.GridWave-83194dbe-e055-4d5b-a37f-9df29291ca55",
 							"Type":	"Simple",
 							"HorizontalRules":	{
-								"N":	"1,2",
+								"N":	"1",
 								"E":	"0,00",
-								"S":	"1,2",
+								"S":	"1",
 								"W":	"0,00"
 							}
 						}],
 					"PrefabPath":	"Venice/FancyTiles/Bridges_Small",
+					"SizeX":	2,
 					"SizeZ":	1,
-					"Weight":	0.8
+					"Weight":	0.8,
+					"MinimizeVariants":	true
 				}, {
 					"$NodeId":	"Prop.TileSet.GridWave-b0597374-b0d9-4a94-89e5-a008f277e920",
 					"Type":	"Prop",
@@ -194,8 +196,10 @@
 								"MoldingChildren":	false
 							}]
 					},
+					"SizeX":	2,
 					"SizeZ":	2,
-					"Weight":	1
+					"Weight":	1,
+					"MinimizeVariants":	true
 				}, {
 					"$NodeId":	"Prop.TileSet.GridWave-4b63bc27-28e4-478e-bbc0-94058954d56e",
 					"Type":	"Prop",
@@ -241,8 +245,10 @@
 								"MoldingChildren":	false
 							}]
 					},
+					"SizeX":	1,
 					"SizeZ":	1,
-					"Weight":	1
+					"Weight":	1,
+					"MinimizeVariants":	true
 				}]
 		}],
 	"Seed":	{
@@ -264,7 +270,12 @@
 			"$NodeId":	"Debug.Feature.GridWave-41f9f7e0-c3dc-4d0a-ad3e-5e23606dada6",
 			"Type":	"Debug",
 			"Skip":	false,
+			"WriteToConsole":	false,
+			"ShowNotification":	true,
+			"VisualizeGridPositions":	false,
+			"VisualizeSectionBounds":	false,
 			"DebugGrid":	false,
+			"SkipFancyTiles":	false,
 			"LimitSteps":	false,
 			"MaxSteps":	0
 		}],
@@ -292,38 +303,38 @@
 			},
 			"Single.TileSet.GridWave-b79bb929-b096-4a87-afa0-254269cf7949":	{
 				"$Position":	{
-					"$x":	2539,
-					"$y":	-1588
+					"$x":	2531,
+					"$y":	-1009
 				}
 			},
 			"Advanced.RuleSet.GridWave-7fcd2fe8-5d2c-46bd-a0ef-66dc3f744882":	{
 				"$Position":	{
-					"$x":	3325,
-					"$y":	-1587
+					"$x":	3317,
+					"$y":	-1008
 				}
 			},
 			"Single.TileSet.GridWave-dc330ec6-9343-455f-b5e8-f7383f50a3dd":	{
 				"$Position":	{
-					"$x":	2528,
-					"$y":	-1034
+					"$x":	2520,
+					"$y":	-455
 				}
 			},
 			"Advanced.RuleSet.GridWave-90402a64-a552-4030-a62a-e94832347f75":	{
 				"$Position":	{
-					"$x":	3322,
-					"$y":	-1032
+					"$x":	3314,
+					"$y":	-453
 				}
 			},
 			"Single.TileSet.GridWave-36262ef1-a7b1-45a0-ae22-58a5d24276f7":	{
 				"$Position":	{
-					"$x":	2505,
-					"$y":	-489
+					"$x":	2497,
+					"$y":	89
 				}
 			},
 			"Advanced.RuleSet.GridWave-51a160e1-7bdc-4ffa-958f-4c7327ec69d8":	{
 				"$Position":	{
-					"$x":	3312,
-					"$y":	-488
+					"$x":	3304,
+					"$y":	90
 				}
 			},
 			"Single.TileSet.GridWave-9b1ec876-2526-4a6e-b65d-d6641ee110d8":	{
@@ -340,26 +351,26 @@
 			},
 			"Group.TileSet.GridWave-a1c0ea86-be16-45f0-884d-16e76a172e85":	{
 				"$Position":	{
-					"$x":	1506,
-					"$y":	866
+					"$x":	1504,
+					"$y":	884
 				}
 			},
 			"Multi.TileSet.GridWave-47d38c0d-3ea5-404d-972e-c8b1d4ae0bd0":	{
 				"$Position":	{
-					"$x":	2364,
-					"$y":	1513
+					"$x":	2448,
+					"$y":	1518
 				}
 			},
 			"Simple.RuleSet.GridWave-5f13678c-371c-4094-b6b5-b50d67c120c3":	{
 				"$Position":	{
-					"$x":	3211,
-					"$y":	1509
+					"$x":	3256,
+					"$y":	1513
 				}
 			},
 			"Simple.RuleSet.GridWave-83194dbe-e055-4d5b-a37f-9df29291ca55":	{
 				"$Position":	{
-					"$x":	3218,
-					"$y":	1817
+					"$x":	3260,
+					"$y":	1829
 				}
 			},
 			"Prop.TileSet.GridWave-b0597374-b0d9-4a94-89e5-a008f277e920":	{
@@ -424,14 +435,14 @@
 			},
 			"Prop.TileSet.GridWave-4b63bc27-28e4-478e-bbc0-94058954d56e":	{
 				"$Position":	{
-					"$x":	2384,
-					"$y":	3706
+					"$x":	2392,
+					"$y":	3624
 				}
 			},
 			"Simple.RuleSet.GridWave-8fdf4a37-7412-4372-9415-e5b0ae97f0a7":	{
 				"$Position":	{
-					"$x":	3088,
-					"$y":	3712
+					"$x":	3091,
+					"$y":	3628
 				}
 			},
 			"Union.Prop-1e61d380-0e40-4f03-9d35-ac2d1ce1566a":	{
@@ -466,14 +477,14 @@
 			},
 			"Constant.Seed.GridWave-150a2fbf-b9d0-4a9b-a293-d84e9d8fef96":	{
 				"$Position":	{
-					"$x":	1505,
-					"$y":	992
+					"$x":	1502,
+					"$y":	1036
 				}
 			},
 			"MultiAttempt.Feature.GridWave-6c4f5e0b-4807-4c7b-9b5f-04314552436f":	{
 				"$Position":	{
-					"$x":	1503,
-					"$y":	1168
+					"$x":	1501,
+					"$y":	1196
 				}
 			},
 			"Multithreading.Feature.GridWave-4223269c-4fb7-478b-8e8c-1bdc38348a5c":	{
@@ -487,48 +498,13 @@
 					"$x":	1503,
 					"$y":	1570
 				}
-			},
-			"Single.TileSet.GridWave-d724bca1-89dd-4907-8eed-3bc8eb923d3a":	{
-				"$Position":	{
-					"$x":	2464,
-					"$y":	101
-				}
-			},
-			"Advanced.RuleSet.GridWave-88ab433b-d61b-41c3-a0bd-8b04e862fd3c":	{
-				"$Position":	{
-					"$x":	3297,
-					"$y":	101
-				}
 			}
 		},
-		"$FloatingNodes":	[{
-				"$NodeId":	"Single.TileSet.GridWave-d724bca1-89dd-4907-8eed-3bc8eb923d3a",
-				"Type":	"Single",
-				"RuleSet":	{
-					"$NodeId":	"Advanced.RuleSet.GridWave-88ab433b-d61b-41c3-a0bd-8b04e862fd3c",
-					"Type":	"Advanced",
-					"HorizontalRulesProvider":	{
-						"N":	"3",
-						"E":	"3",
-						"S":	"3",
-						"W":	"3"
-					},
-					"HorizontalRulesReceiver":	{
-						"N":	"3,2,1",
-						"E":	"3,2,1",
-						"S":	"3,2,1",
-						"W":	"3,2,1"
-					}
-				},
-				"Features":	[],
-				"PrefabPath":	"Venice/BaseTiles/Foundations/Ruined1x1",
-				"Weight":	0.6,
-				"MinimizeVariants":	true
-			}],
+		"$FloatingNodes":	[],
 		"$Links":	{
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - Props"
+		"$WorkspaceID":	"HytaleGenerator - Prop"
 	}
 }

@@ -1,9 +1,9 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
-import ch.voronoi.GridWave.AlgoNodes.Helper.ComparisonType;
-import ch.voronoi.GridWave.AlgoNodes.Helper.ValueSource;
+import ch.voronoi.GridWave.FeatureNodes.Helper.ComparisonType;
+import ch.voronoi.GridWave.FeatureNodes.Helper.ValueSource;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
@@ -33,7 +33,7 @@ public class ConditionalWeightFeatureAsset extends FeatureAsset {
     public float weightIfTrue;
 
     @Override
-    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileSet.TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {
+    public void ReplaceWeight(AtomicReference<Double> modifiableWeight, TileEntry tileEntry, Map<Vector3ic, WaveCell> wave, TileSetAsset.Argument argument) {
         if(skip()) return;
         float value1 = switch (value1Source){
             case CollapsedPercentage -> 100f / wave.size() * wave.values().stream().filter(WaveCell::isCollapsed).count();

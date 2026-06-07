@@ -20,6 +20,14 @@
         "Label": "Weight",
         "Default" : 1.0
       }
+    },
+    {
+      "Id": "MinimizeVariants",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Minimize Variants",
+        "Default" : true
+      }
     }
   ],
   "Outputs": [
@@ -45,6 +53,7 @@
       "Pin" : "Features"
     },
     "FolderPath" : "FolderPath",
-    "Weight" : "Weight"
+    "Weight" : "Weight",
+    "MinimizeVariants" : "MinimizeVariants"
   }
 }

@@ -6,11 +6,13 @@ import ch.voronoi.GridWave.FeatureNodes.*;
 import ch.voronoi.GridWave.RuleSetNodes.AdvancedRuleSetAsset;
 import ch.voronoi.GridWave.RuleSetNodes.RuleSetAsset;
 import ch.voronoi.GridWave.RuleSetNodes.SimpleRuleSetAsset;
+import ch.voronoi.GridWave.RuleSetNodes.StringRuleSetAsset;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
 import ch.voronoi.GridWave.SeedNodes.ImportedSeedAsset;
 import ch.voronoi.GridWave.SeedNodes.SeedAsset;
 import ch.voronoi.GridWave.SeedNodes.TimeSeedAsset;
 import ch.voronoi.GridWave.TileSetNodes.*;
+import ch.voronoi.GridWave.Utils.CuboidWireframe.WireframeCuboidPropAsset;
 import ch.voronoi.GridWave.Utils.GridGen.BoundsConverterAsset;
 import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridBoundsAsset;
@@ -27,16 +29,12 @@ import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.asset.HytaleAssetStore;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class CorePlugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -73,6 +71,7 @@ public class CorePlugin extends JavaPlugin {
         //RuleSet Nodes
         RuleSetAsset.CODEC.register("Simple", SimpleRuleSetAsset.class, SimpleRuleSetAsset.CODEC);
         RuleSetAsset.CODEC.register("Advanced", AdvancedRuleSetAsset.class, AdvancedRuleSetAsset.CODEC);
+        RuleSetAsset.CODEC.register("String", StringRuleSetAsset.class, StringRuleSetAsset.CODEC);
         //SimpleVerticalRules
         //AdvancedVerticalRules
         //ElevationRules
@@ -109,6 +108,7 @@ public class CorePlugin extends JavaPlugin {
         SeedAsset.CODEC.register("Imported", ImportedSeedAsset.class, ImportedSeedAsset.CODEC);
 
         //Util Nodes
+        PropAsset.CODEC.register("WireframeCuboid", WireframeCuboidPropAsset.class, WireframeCuboidPropAsset.CODEC);
         PropAsset.CODEC.register("StaticMirror", StaticMirrorPropAsset.class, StaticMirrorPropAsset.CODEC);
         PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
         CustomBoundsAsset.CODEC.register("Grid", GridBoundsAsset.class, GridBoundsAsset.CODEC);

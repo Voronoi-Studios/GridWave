@@ -2,21 +2,17 @@ package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.GridTile;
 import ch.voronoi.GridWave.FeatureNodes.SectionStorageAsset;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
-import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorProp;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.pipe.Control;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
-import com.hypixel.hytale.math.Axis;
 import com.hypixel.hytale.math.vector.Vector3dUtil;
 import com.hypixel.hytale.math.vector.Vector3iUtil;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import org.joml.Vector3d;
 import org.joml.Vector3dc;
 import org.joml.Vector3i;
@@ -24,15 +20,15 @@ import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Objects;
+import java.util.Map;
 import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
+import static ch.voronoi.GridWave.AlgoNodes.Helper.GridTile.getAllPossiblePropVariants;
 
 public class GridWavePropDistribution extends PropDistribution {
 
@@ -66,33 +62,17 @@ public class GridWavePropDistribution extends PropDistribution {
     public void forEachPossibleProp(@NonNull Consumer<Prop> consumer) {
         Stream.of(poiTileEntries, baseTileEntries, fancyTileEntries)
                 .flatMap(Collection::stream)
-                .flatMap(TileSet::getAllTileEntries)
-                .map(TileSet.TileEntry::propFunction)
-                .filter(Objects::nonNull)
-                .flatMap(this::getAllPossiblePropVariants)
+                .flatMap(TileSet::getTileEntries)
+                .map(TileEntry::getEntryPropFunction)
+                .flatMap(function -> getAllPossiblePropVariants(function, argument))
                 .forEach(consumer);
-    }
-
-    private @NonNull Stream<Prop> getAllPossiblePropVariants(Function<TileSetAsset.Argument, Prop> propFunction) {
-        List<Prop> props = new ArrayList<>();
-        for (int rot = 0; rot < 4; rot++){
-            TileSetAsset.Argument arg = new TileSetAsset.Argument(argument);
-            props.add(new StaticRotatorProp(propFunction.apply(arg),
-                    RotationTuple.of(toRotation(rot), Rotation.None, Rotation.None),
-                    arg.materialCache));
-        }
-        for (Axis axis : List.of(Axis.X, Axis.Z)) {
-            TileSetAsset.Argument arg = new TileSetAsset.Argument(argument);
-            props.add(new StaticMirrorProp(propFunction.apply(arg), axis, arg.materialCache));
-        }
-        return props.stream();
     }
 
     @Override
     public void distribute(@Nonnull PropDistribution.Context context) {
         Control control = new Control();
 
-        Bounds3i fullBounds = argument.algoAsset.getFullBounds();
+        Bounds3i fullBounds = argument.algoAsset.getGridBounds();
         Vector3i boundsMin = Vector3iUtil.max(Vector3dUtil.toVector3i(context.bounds.min), new Vector3i(fullBounds.min));
         Vector3i boundsMax = Vector3iUtil.min( Vector3dUtil.toVector3i(context.bounds.max), new Vector3i(fullBounds.max));
 

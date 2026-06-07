@@ -53,6 +53,7 @@
     "GridWave.RuleSet" : [
       "Simple.RuleSet.GridWave",
       "Advanced.RuleSet.GridWave",
+      "String.RuleSet.GridWave",
 
       "Simple.VerticalRules.GridWave",
       "Advanced.VerticalRules.GridWave",
@@ -383,7 +384,8 @@
       "VariantFieldName": "Type",
       "Variants": {
         "Simple": "Simple.RuleSet.GridWave",
-        "Advanced": "Advanced.RuleSet.GridWave"
+        "Advanced": "Advanced.RuleSet.GridWave",
+        "String": "String.RuleSet.GridWave"
       }
     },
     "TileSet.Variants":{

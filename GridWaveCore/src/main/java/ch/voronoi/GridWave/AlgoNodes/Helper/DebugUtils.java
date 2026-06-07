@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
 import ch.voronoi.GridWave.AlgoNodes.GridWave;
+import ch.voronoi.GridWave.AlgoNodes.PropDistributionAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.DebugFeatureAsset;
 import ch.voronoi.GridWave.FeatureNodes.PathKeyFeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
@@ -10,10 +11,12 @@ import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.protocol.packets.interface_.NotificationStyle;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.permissions.PermissionsModule;
+import com.hypixel.hytale.server.core.permissions.provider.HytalePermissionsProvider;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.util.NotificationUtil;
 import org.joml.Vector3i;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -23,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DebugUtils {
     public static void sendDebugLog(List<GridTile> gridTiles, TileSetAsset.Argument argument, GridWave.WFCResult wfcResult) {
+        if(gridTiles.isEmpty()) return;
         DebugFeatureAsset debugFeatureAsset = argument.algoAsset.getFirstFeatureOf(DebugFeatureAsset.class).orElse(new DebugFeatureAsset());
         List<String> pathKeys = argument.algoAsset.getFeatureAssets().stream().filter(PathKeyFeatureAsset.class::isInstance).map(PathKeyFeatureAsset.class::cast).flatMap(a -> Arrays.stream(a.getPathKeys())).toList();
         String str ="Generated " + gridTiles.size() + " tiles with bounds: " + BoundsStr(argument.bounds);
@@ -39,7 +43,7 @@ public class DebugUtils {
     public static void sendNotification(Message message1, Message message2, String icon, NotificationStyle style) {
         PermissionsModule perms = PermissionsModule.get();
         //It does not seem possible to get the world we are currently generating...
-        List<PlayerRef> playerRefs = Universe.get().getPlayers().stream().filter(playerRef -> perms.getGroupsForUser(playerRef.getUuid()).contains("OP")).toList();
+        List<PlayerRef> playerRefs = Universe.get().getPlayers().stream().filter(playerRef -> perms.getGroupsForUser(playerRef.getUuid()).contains(HytalePermissionsProvider.GROUP_ADMIN)).toList();
         playerRefs.forEach( playerRef -> NotificationUtil.sendNotification(playerRef.getPacketHandler(), message1, message2, icon, style));
     }
 
@@ -47,15 +51,15 @@ public class DebugUtils {
         if (gridTiles.stream().allMatch(Objects::isNull)) return "Failed, everything is empty";
         var list = new ArrayList<>(gridTiles);
         list.removeIf(Objects::isNull);
-        list.sort(Comparator.comparingInt((GridTile gt) -> gt.actualPosition().x()).thenComparingInt(gt -> gt.actualPosition().z()));
+        list.sort(Comparator.comparingInt((GridTile gt) -> gt.gridPosition().x()).thenComparingInt(gt -> gt.gridPosition().z()));
         int maxKeyLenght = getMaxKeyLength(list);
         StringBuilder sb = new StringBuilder();
         StringBuilder[] lines = {new StringBuilder(), new StringBuilder(), new StringBuilder()};
 
-        int lastX = list.getFirst().actualPosition().x();
+        int lastX = list.getFirst().gridPosition().x();
 
         for (GridTile gridTile : list) {
-            if (lastX != gridTile.actualPosition().x()) {
+            if (lastX != gridTile.gridPosition().x()) {
                 sb.insert(0, lines[2].toString() + "\n");
                 sb.insert(0, lines[1].toString() + "\n");
                 sb.insert(0, lines[0].toString() + "\n");
@@ -64,7 +68,7 @@ public class DebugUtils {
                 lines[1].setLength(0);
                 lines[2].setLength(0);
 
-                lastX = gridTile.actualPosition().x();
+                lastX = gridTile.gridPosition().x();
             }
             gridTile.appendLines(lines, pathKeys, maxKeyLenght);
         }
@@ -88,8 +92,8 @@ public class DebugUtils {
                 .max().orElse(1);
     }
 
-    public static String VectorStr(Vector3i position) {
-        return "[x"+position.x +", y"+position.y+", z"+position.z+"]";
+    public static String VectorStr(Vector3ic position) {
+        return "[x"+position.x() +", y"+position.y()+", z"+position.z()+"]";
     }
     public static String BoundsStr(Bounds3i bounds) { return VectorStr(bounds.min)+ "to" + VectorStr(bounds.max);
     }

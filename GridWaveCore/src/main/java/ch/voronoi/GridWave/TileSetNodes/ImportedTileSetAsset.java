@@ -1,6 +1,8 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;

@@ -66,7 +66,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
     @Override
     public Vector3ic getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
     @Override
-    public Bounds3i getFullBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
+    public Bounds3i getGridBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
     @Override
     public int getMaxPositionsCount() { return maxPositionsCount; }
     @Override
@@ -83,7 +83,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
             PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
 
             return new GridWaveUnionProp(
-                    GridWave.getPositions(positionProvider, getFullBounds(), maxPositionsCount),
+                    GridWave.getPositions(positionProvider, getGridBounds(), maxPositionsCount),
                     Arrays.stream(poiTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
                     Arrays.stream(baseTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
                     Arrays.stream(fancyTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),

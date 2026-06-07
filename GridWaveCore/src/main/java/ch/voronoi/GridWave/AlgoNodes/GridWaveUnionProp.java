@@ -2,6 +2,7 @@ package ch.voronoi.GridWave.AlgoNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.DebugUtils;
 import ch.voronoi.GridWave.AlgoNodes.Helper.GridTile;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
@@ -17,8 +18,9 @@ import org.jspecify.annotations.NonNull;
 import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
 import java.util.stream.Stream;
+
+import static ch.voronoi.GridWave.AlgoNodes.Helper.GridTile.getAllPossiblePropVariants;
 
 public class GridWaveUnionProp extends Prop {
     private static final ConcurrentHashMap<String, List<GridTile>> tileListCache = new ConcurrentHashMap<>();
@@ -43,10 +45,9 @@ public class GridWaveUnionProp extends Prop {
 
         List<Prop> props = Stream.of(poiTileEntries, baseTileEntries, fancyTileEntries)
                 .flatMap(Collection::stream)
-                .flatMap(TileSet::getAllTileEntries)
-                .map(TileSet.TileEntry::propFunction)
-                .filter(Objects::nonNull)
-                .map(x -> x.apply(argument))
+                .flatMap(TileSet::getTileEntries)
+                .map(TileEntry::getEntryPropFunction)
+                .flatMap(function -> getAllPossiblePropVariants(function, argument))
                 .toList();
 
         Bounds3i readBounds_voxelGrid = new Bounds3i();
@@ -91,8 +92,14 @@ public class GridWaveUnionProp extends Prop {
         if (tiles == null) return false;
 
         Map<Vector3d, Prop> gridProps = loadPrefabProps(tiles, subArgument);
+        Map<Vector3d, Prop> extraProps = new LinkedHashMap<>();
+        argument.algoAsset.getFeatureAssets().forEach(x -> extraProps.putAll(x.GetExtraProps(subArgument.algoAsset.getGridBounds(), argument)));
+
         List<Prop> props = new ArrayList<>();
         for (var entry : gridProps.entrySet()) {
+            props.add(new OffsetProp(Vector3dUtil.toVector3i(entry.getKey()), entry.getValue()));
+        }
+        for (var entry : extraProps.entrySet()) {
             props.add(new OffsetProp(Vector3dUtil.toVector3i(entry.getKey()), entry.getValue()));
         }
 
@@ -116,12 +123,12 @@ public class GridWaveUnionProp extends Prop {
     }
 
 
-    public static @NonNull Map<Vector3d, Prop> loadPrefabProps(List<GridTile> gridTiles, TileSetAsset.Argument argument) {
+    public static @NonNull Map<Vector3d, Prop> loadPrefabProps(List<GridTile> gridTiles, TileSetAsset.Argument argument) { //Rename
         Map<Vector3d, Prop> gridProps = new LinkedHashMap<>();
         for (var gridTile : gridTiles) {
             if (gridTile == null) continue;
             var result = gridTile.getFullPropFunction();
-            gridProps.put(Vector3iUtil.toVector3d(gridTile.actualPosition()),result.apply(argument));
+            gridProps.put(Vector3iUtil.toVector3d(gridTile.gridPosition()),result.apply(argument));
         }
         return gridProps;
     }

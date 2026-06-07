@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave.FeatureNodes;
 
 import ch.voronoi.GridWave.AlgoNodes.Helper.*;
+import ch.voronoi.GridWave.FeatureNodes.Helper.EarlyExitReason;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.codec.Codec;
@@ -34,7 +35,7 @@ public class PathCellSelectorFeatureAsset extends FeatureAsset {
         if(skip()) return;
         cellSelector.set(new CellSelector() {
             @Override
-            public CellSelectorResult select(Map<Vector3ic, WaveCell> wave, Deque<WaveCellChange> stack, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
+            public CellSelectorResult select(Map<Vector3ic, WaveCell> wave, Stack<List<WaveCellChange>> undoQue, AttemptBehavior attemptBehavior, int backtracksCount, Random random) {
                 Set<WaveCell> subWave = new LinkedHashSet<>();
                 List<WaveCell> notCollapsed = wave.values().stream().filter(waveCell -> !waveCell.isCollapsed()).toList();
                 if (100d / wave.size() * notCollapsed.size() < 100 - stopAfterPercent) { subWave = new LinkedHashSet<>(notCollapsed); }
@@ -51,12 +52,12 @@ public class PathCellSelectorFeatureAsset extends FeatureAsset {
                         }
                     }
                 }
-                if(subWave.isEmpty()) return Backtrack(stack, wave);
+                if(subWave.isEmpty()) return Backtrack(undoQue, wave);
 
                 Optional<WaveCell> lowestEntropyCell = subWave.stream().min(Comparator.comparingInt(WaveCell::getEntropy));
-                if (lowestEntropyCell.isPresent() && lowestEntropyCell.get().getEntropy() == 0) {
+                if (lowestEntropyCell.get().getEntropy() == 0) {
                     if (backtracksCount > attemptBehavior.maxBacktracks) return new CellSelectorResult(null, EarlyExitReason.MAX_BACKTRACKS_HIT);
-                    else return Backtrack(stack, wave);
+                    else return Backtrack(undoQue, wave);
                 }
                 return new CellSelectorResult(lowestEntropyCell.orElse(null), null);
 

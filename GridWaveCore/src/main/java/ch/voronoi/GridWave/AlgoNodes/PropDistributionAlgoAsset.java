@@ -66,7 +66,7 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     @Override
     public Vector3ic getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
     @Override
-    public Bounds3i getFullBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
+    public Bounds3i getGridBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
     @Override
     public int getMaxPositionsCount() { return maxPositionsCount; }
     @Override

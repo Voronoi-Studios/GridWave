@@ -3,19 +3,24 @@ package ch.voronoi.GridWave.FeatureNodes;
 import ch.voronoi.GridWave.AlgoNodes.Helper.AttemptBehavior;
 import ch.voronoi.GridWave.AlgoNodes.Helper.GridTileType;
 import ch.voronoi.GridWave.AlgoNodes.Helper.WaveCell;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
+import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
+import ch.voronoi.GridWave.Utils.CuboidWireframe.WireframeCuboidProp;
+import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial;
 import com.hypixel.hytale.builtin.hytalegenerator.material.Material;
 import com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial;
+import com.hypixel.hytale.builtin.hytalegenerator.materialproviders.ConstantMaterialProvider;
 import com.hypixel.hytale.builtin.hytalegenerator.props.ManualProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.builtin.hytalegenerator.props.UnionProp;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import org.joml.Vector3d;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
+import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -32,6 +37,8 @@ public class DebugFeatureAsset extends FeatureAsset {
             .add()
             .append(new KeyedCodec<>("VisualizeGridPositions", Codec.BOOLEAN), (asset, v) -> asset.visualizeGridPositions = v, asset -> asset.visualizeGridPositions)
             .add()
+            .append(new KeyedCodec<>("VisualizeSectionBounds", Codec.BOOLEAN), (asset, v) -> asset.visualizeSectionBounds = v, asset -> asset.visualizeSectionBounds)
+            .add()
             .append(new KeyedCodec<>("DebugGrid", Codec.BOOLEAN), (asset, v) -> asset.debugGrid = v, asset -> asset.debugGrid)
             .add()
             .append(new KeyedCodec<>("SkipFancyTiles", Codec.BOOLEAN), (asset, v) -> asset.skipFancyTiles = v, asset -> asset.skipFancyTiles)
@@ -45,6 +52,7 @@ public class DebugFeatureAsset extends FeatureAsset {
     private boolean writeToConsole = false;
     private boolean showNotification = false;
     private boolean visualizeGridPositions = false;
+    private boolean visualizeSectionBounds = false;
     private boolean debugGrid;
     private boolean skipFancyTiles = false;
     private boolean limitSteps;
@@ -70,7 +78,7 @@ public class DebugFeatureAsset extends FeatureAsset {
         int counter = 0;
         for(Map.Entry<Vector3ic, WaveCell> entry : baseWave.entrySet()){
             if (entry.getValue().isCollapsed()) continue;
-            List<TileSet.TileEntry> possibles = new ArrayList<>(entry.getValue().possible);
+            List<TileEntry> possibles = new ArrayList<>(entry.getValue().possible);
             if(possibles.isEmpty()) continue;
             entry.getValue().setChosen(possibles.get(counter % possibles.size()), GridTileType.BASIC);
             counter++;
@@ -92,15 +100,24 @@ public class DebugFeatureAsset extends FeatureAsset {
     }
 
     @Override
-    public void AfterPropCreation(AtomicReference<Prop> propReference, TileSet.TileEntry entry, TileSetAsset.Argument argument) {
+    public void AfterPropCreation(AtomicReference<Prop> propReference, TileEntry entry, TileSetAsset.Argument argument) {
         if(skip() || !visualizeGridPositions) return;
         SolidMaterial solid = argument.materialCache.getSolidMaterial("Cloth_Block_Wool_Red");
-        FluidMaterial fluid = argument.materialCache.EMPTY_FLUID;
 
         Prop manualProp = new ManualProp(new ArrayList<>(List.of(new ManualProp.Block(
-            new Material(solid, fluid),new Vector3i(0,propReference.get().getWriteBounds_voxelGrid().max.y() + 1,0).add(entry.getMultiTileOffset())
+            new Material(solid, argument.materialCache.EMPTY_FLUID),new Vector3i(0,propReference.get().getWriteBounds_voxelGrid().max.y() + 1,0).add(entry.getPoiKey()) //Reconstruct this another way!
         ))));
-        propReference.set(new UnionProp( new ArrayList<>(List.of(propReference.get(), manualProp))));
+        propReference.set(new UnionProp(new ArrayList<>(List.of(propReference.get(), manualProp))));
+    }
+
+    @Override
+    public Map<Vector3d, Prop> GetExtraProps(@Nonnull Bounds3i bounds, @Nonnull TileSetAsset.Argument argument) {
+        Map<Vector3d, Prop> extraProps = new LinkedHashMap<>();
+        if(visualizeSectionBounds){
+            SolidMaterial solid = argument.materialCache.getSolidMaterial("Cloth_Block_Wool_Black");
+            extraProps.put(new Vector3d(0,0,0), new WireframeCuboidProp(bounds, new ConstantMaterialProvider<>(new Material(solid, argument.materialCache.EMPTY_FLUID))));
+        }
+        return extraProps;
     }
 
 }

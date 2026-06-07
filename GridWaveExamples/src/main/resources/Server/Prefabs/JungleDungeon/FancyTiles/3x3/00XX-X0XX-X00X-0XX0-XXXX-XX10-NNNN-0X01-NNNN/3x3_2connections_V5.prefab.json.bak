@@ -8127,7 +8127,14 @@
       "x": 0,
       "y": 7,
       "z": -15,
-      "name": "Furniture_Dungeon_Chest_Epic"
+      "name": "Furniture_Dungeon_Chest_Epic",
+      "components": {
+        "Components": {
+          "ItemContainerBlock": {
+            "Capacity": 18
+          }
+        }
+      }
     },
     {
       "x": 0,

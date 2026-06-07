@@ -66,13 +66,17 @@ public class GridGen extends PositionProvider {
     }
 
     public static Bounds3i createBounds(Vector3ic pos, Vector3ic offset, Vector3ic repeat, boolean centeredOnPosition) {
-        Vector3i size = new Vector3i(Math.max(1, offset.x() * repeat.x()), Math.max(1, offset.y() * repeat.y()), Math.max(1, offset.z() * repeat.z()));
+        Vector3i size = new Vector3i(
+                Math.max(1, offset.x() * (repeat.x() - 1) + 1),
+                Math.max(1, offset.y() * (repeat.y() - 1) + 1),
+                Math.max(1, offset.z() * (repeat.z() - 1) + 1));
         Bounds3i bounds = new Bounds3i(pos, new Vector3i(pos).add(size));
         if (centeredOnPosition) {
-            Vector3i half1 = new Vector3i(size.x() / 2, size.y() / 2, size.z() / 2).add(new Vector3i(offset.x() / 2, offset.y() / 2, offset.z() / 2));
+            Vector3i half1 = new Vector3i(size.x() / 2, size.y() / 2, size.z() / 2);
             Vector3i half2 = new Vector3i(size.x() - half1.x(), size.y() - half1.y(), size.z() - half1.z());
             bounds = new Bounds3i(new Vector3i(pos).sub(half1),new Vector3i(pos).add(half2));
         }
+        bounds.offset(new Vector3i(-offset.x() / 2, -offset.y() / 2, -offset.z() / 2).mul((repeat.x() + 1) % 2, (repeat.y() + 1) % 2,(repeat.z() + 1) % 2));
         bounds.correct();
         return bounds;
     }

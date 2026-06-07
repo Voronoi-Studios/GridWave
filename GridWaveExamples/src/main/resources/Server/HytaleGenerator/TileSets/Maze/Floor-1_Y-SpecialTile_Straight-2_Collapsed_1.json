@@ -3,14 +3,6 @@
 	"Type":	"Multi",
 	"ExportAs":	"Floor-1_Y-SpecialTile_Straight-2_Collapsed_1",
 	"RuleSets":	[{
-			"$NodeId":	"Simple.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a",
-			"Type":	"Simple",
-			"HorizontalRules":	{
-				"N":	"0",
-				"S":	"0",
-				"W":	"1"
-			}
-		}, {
 			"$NodeId":	"Simple.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127",
 			"Type":	"Simple",
 			"HorizontalRules":	{
@@ -18,10 +10,20 @@
 				"E":	"1",
 				"S":	"0"
 			}
+		}, {
+			"$NodeId":	"Simple.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a",
+			"Type":	"Simple",
+			"HorizontalRules":	{
+				"N":	"0",
+				"S":	"0",
+				"W":	"1"
+			}
 		}],
 	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-2_Collapsed_1.prefab.json",
+	"SizeX":	2,
 	"SizeZ":	1,
-	"Weight":	1,
+	"Weight":	0.2,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-fc20f88e-ac2e-45c6-9be5-44fcc81bd396":	{
@@ -33,14 +35,14 @@
 			},
 			"Simple.RuleSet.GridWave-4b7762ad-3009-4060-9b18-5ca8b6fb715a":	{
 				"$Position":	{
-					"$x":	1717,
-					"$y":	-48
+					"$x":	1689,
+					"$y":	222
 				}
 			},
 			"Simple.RuleSet.GridWave-f3eca427-4b44-4f42-af7e-0405028f4127":	{
 				"$Position":	{
-					"$x":	2237,
-					"$y":	-32
+					"$x":	1697,
+					"$y":	-85
 				}
 			}
 		},

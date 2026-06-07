@@ -1,25 +1,45 @@
 package ch.voronoi.GridWave.AlgoNodes.Helper;
 
-import ch.voronoi.GridWave.FeatureNodes.OverlapTileFeatureAsset;
-import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
-import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorProp;
-import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.OffsetProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
-import com.hypixel.hytale.builtin.hytalegenerator.props.StaticRotatorProp;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
-import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
-import static ch.voronoi.GridWave.TileSetNodes.TileSet.TileEntry.toRotation;
+public record GridTile(TileEntry tileEntry, GridTileType type, Vector3ic gridPosition, Vector3ic additionalOffset, LinkedHashSet<POIInfo> connectedPOIs) {
+    /** Hierarchy:
+     * <pre> FeatureAsset -> Possibly adds post processes
+     * └─ GridTile -> offset prop with additionalOffset resulting from non-uniform grids
+     *    └─ TileEntry -> apply rotation, mirror, multiTileOffset and anchorOffset.
+     *        └─ TileSet/TileAsset -> supply base PropFunction according to Asset variant</pre>
+     * @return finalized Prop Function */
+    public Function<TileSetAsset.Argument, Prop> getFullPropFunction(){
+        return argument -> {
+            AtomicReference<Prop> propReference = new AtomicReference<>(new OffsetProp(new Vector3i(additionalOffset), tileEntry().getEntryPropFunction().apply(argument)));
+            argument.algoAsset.getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, tileEntry(), argument));
+            tileEntry().getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, tileEntry(), argument));
+            return propReference.get();
+        };
+    }
 
-public record GridTile(TileSet.TileEntry tileEntry, Vector3ic actualPosition, GridTileType type, LinkedHashSet<POIInfo> connectedPOIs) {
+    /** Account for maximum additionalOffset we can have */
+    public static @Nonnull Stream<Prop> getAllPossiblePropVariants(Function<TileSetAsset.Argument, Prop> propFunction, TileSetAsset.Argument argument) {
+        List<Prop> props = new ArrayList<>();
+        //Not sure if the fallowing should be halved?
+        props.add(new OffsetProp(new Vector3i(argument.algoAsset.getGrid()), propFunction.apply(argument)));
+        props.add(new OffsetProp(new Vector3i(argument.algoAsset.getGrid()).negate(), propFunction.apply(argument)));
+        return props.stream();
+    }
+
+    /*===========================================================
+     *                     DEBUG VISUALS
+     * =========================================================== */
     public void appendLines(StringBuilder[] builders, List<String> pathKeys, int width) {
         String[] k = Arrays.stream(tileEntry.getMainRuleSet().toHorizontalStringArray())
                 .map(s -> (s == null || s.isEmpty()) ? "?" : s)
@@ -37,11 +57,10 @@ public record GridTile(TileSet.TileEntry tileEntry, Vector3ic actualPosition, Gr
                 (pathKeys.contains(k[2]) ? 4 : 0) |
                 (pathKeys.contains(k[3]) ? 8 : 0);
 
-        String rot = subscripts[tileEntry.rot()];
         String pois = subscripts[connectedPOIs.size()];
 
         builders[0].append(c[0]).append(" ").append(k[1]).append(" ").append(c[1]).append(" ");
-        builders[1].append(k[0]).append(pois).append(p[m]).append(rot).append(k[2]).append(" ");
+        builders[1].append(k[0]).append(pois).append(p[m]).append(" ").append(k[2]).append(" ");
         builders[2].append(c[2]).append(" ").append(k[3]).append(" ").append(c[3]).append(" ");
     }
 
@@ -86,41 +105,5 @@ public record GridTile(TileSet.TileEntry tileEntry, Vector3ic actualPosition, Gr
         int left = total / 2;
         int right = total - left - 1;
         return " ".repeat(left) + s + " ".repeat(right);
-    }
-
-    public Function<TileSetAsset.Argument, Prop> getFullPropFunction(){
-        return argument -> {
-            TileSet.TileEntry entry = new TileSet.TileEntry(tileEntry());
-            if (entry.propFunction() == null) return EmptyProp.INSTANCE;
-            TileSetAsset.Argument subArgument = new TileSetAsset.Argument(argument); //Might be needed, to stop some cross-referencing
-            Prop prop = entry.propFunction().apply(subArgument);
-            Prop rotatedProp = new StaticRotatorProp(prop, RotationTuple.of(toRotation(entry.rot()), Rotation.None, Rotation.None), subArgument.materialCache);
-            Prop mirroredProp = entry.mirrorDirection().toAxis() == null ? rotatedProp : new StaticMirrorProp(rotatedProp, entry.mirrorDirection().toAxis(), subArgument.materialCache);
-            AtomicReference<Prop> propReference = new AtomicReference<>(new OffsetProp(getOffset(argument, entry),mirroredProp));
-            argument.algoAsset.getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, entry, argument));
-            entry.getFeatureAssets().forEach(feature -> feature.AfterPropCreation(propReference, entry, argument));
-            return propReference.get();
-        };
-    }
-
-    //Is probably not correctly doing Tiles which have an actualPosition that differs
-    private static Vector3i getOffset(TileSetAsset.Argument argument, TileSet.TileEntry entry) {
-        boolean localSwap = entry.hasFeature(OverlapTileFeatureAsset.class);
-        boolean globalSwap = argument.algoAsset.hasFeature(OverlapTileFeatureAsset.class);
-        Vector3ic grid = argument.algoAsset.getGrid();
-        int evenOffsetX = (grid.x() % 2 == 0) ? 1 : 0;
-        int evenOffsetZ = (grid.z() % 2 == 0) ? 1 : 0;
-        if (globalSwap || localSwap){
-            evenOffsetX = 1 - evenOffsetX;
-            evenOffsetZ = 1 - evenOffsetZ;
-        }
-
-        Vector3ic anchorOffset = switch (entry.rot()){ //To-Do: Check if this  is actually offsetting correctly for nonuniform grids
-            case 3 -> new Vector3i(evenOffsetX, 0, 0);
-            case 2 -> new Vector3i(evenOffsetX, 0, evenOffsetZ);
-            case 1 -> new Vector3i(0, 0, evenOffsetZ);
-            default -> new Vector3i(0, 0, 0);
-        };
-        return new Vector3i(entry.getMultiTileOffset()).add(anchorOffset);
     }
 }

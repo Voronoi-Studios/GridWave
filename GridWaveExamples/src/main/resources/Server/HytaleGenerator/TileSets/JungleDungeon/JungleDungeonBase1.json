@@ -15,8 +15,16 @@
 					"W":	"0"
 				}
 			},
-			"Features":	[],
-			"Weight":	50,
+			"Features":	[{
+					"$NodeId":	"ConditionalWeight.Feature.GridWave-a1bd4dd0-9c58-4cfc-b6ab-aaffadce08a6",
+					"Type":	"ConditionalWeight",
+					"Skip":	false,
+					"Value1Source":	"CollapsedPercentage",
+					"ComparisonType":	"Less",
+					"Value2":	30,
+					"WeightIfTrue":	0
+				}],
+			"Weight":	10,
 			"MinimizeVariants":	true
 		}, {
 			"$NodeId":	"Single.TileSet.GridWave-79083782-77cd-4777-8a2d-d92c7f52c4f4",
@@ -42,6 +50,8 @@
 				"$NodeId":	"Simple.RuleSet.GridWave-24b66375-a02a-4909-82b5-695e357202c6",
 				"Type":	"Simple",
 				"HorizontalRules":	{
+					"N":	"0",
+					"E":	"0",
 					"S":	"1",
 					"W":	"1"
 				}
@@ -100,10 +110,10 @@
 			"Features":	[{
 					"$NodeId":	"ConditionalWeight.Feature.GridWave-3aa102e3-0f38-4633-ad8c-1698e66e4951",
 					"Type":	"ConditionalWeight",
-					"Skip":	true,
+					"Skip":	false,
 					"Value1Source":	"CollapsedPercentage",
 					"ComparisonType":	"Less",
-					"Value2":	50,
+					"Value2":	80,
 					"WeightIfTrue":	0
 				}],
 			"PrefabPath":	"JungleDungeon/BaseTiles/DeadEnd",
@@ -126,10 +136,22 @@
 					"$y":	-435
 				}
 			},
+			"Simple.RuleSet.GridWave-9d0d1067-db1b-4e42-a6fe-86fff7b851b3":	{
+				"$Position":	{
+					"$x":	2793,
+					"$y":	-736
+				}
+			},
 			"Single.TileSet.GridWave-79083782-77cd-4777-8a2d-d92c7f52c4f4":	{
 				"$Position":	{
 					"$x":	1893,
 					"$y":	-86
+				}
+			},
+			"Simple.RuleSet.GridWave-592241ce-ad1c-48be-8f71-a1de8ded22b8":	{
+				"$Position":	{
+					"$x":	2797,
+					"$y":	-87
 				}
 			},
 			"Single.TileSet.GridWave-e53a88be-d685-4ec4-96c2-b4e3bf536096":	{
@@ -138,9 +160,21 @@
 					"$y":	231
 				}
 			},
+			"Simple.RuleSet.GridWave-24b66375-a02a-4909-82b5-695e357202c6":	{
+				"$Position":	{
+					"$x":	2797,
+					"$y":	229
+				}
+			},
 			"Single.TileSet.GridWave-74dce045-2ef9-4dfb-a9ee-db28262fd304":	{
 				"$Position":	{
 					"$x":	1910,
+					"$y":	551
+				}
+			},
+			"Simple.RuleSet.GridWave-7fe98a91-624a-4376-ad37-7e8e3298fcbd":	{
+				"$Position":	{
+					"$x":	2790,
 					"$y":	551
 				}
 			},
@@ -150,16 +184,16 @@
 					"$y":	872
 				}
 			},
+			"Simple.RuleSet.GridWave-74ac24c9-1d1e-464d-8999-43b1340e9afe":	{
+				"$Position":	{
+					"$x":	2789,
+					"$y":	873
+				}
+			},
 			"Single.TileSet.GridWave-e8284e31-4c94-42cc-bf70-2626cb660403":	{
 				"$Position":	{
 					"$x":	1909,
 					"$y":	1200
-				}
-			},
-			"ConditionalWeight.Feature.GridWave-3aa102e3-0f38-4633-ad8c-1698e66e4951":	{
-				"$Position":	{
-					"$x":	2784,
-					"$y":	1545
 				}
 			},
 			"Simple.RuleSet.GridWave-60c973ab-6446-42b2-b7f6-22f10b093fc6":	{
@@ -168,34 +202,16 @@
 					"$y":	1203
 				}
 			},
-			"Simple.RuleSet.GridWave-74ac24c9-1d1e-464d-8999-43b1340e9afe":	{
+			"ConditionalWeight.Feature.GridWave-3aa102e3-0f38-4633-ad8c-1698e66e4951":	{
 				"$Position":	{
-					"$x":	2789,
-					"$y":	873
+					"$x":	2784,
+					"$y":	1545
 				}
 			},
-			"Simple.RuleSet.GridWave-7fe98a91-624a-4376-ad37-7e8e3298fcbd":	{
+			"ConditionalWeight.Feature.GridWave-a1bd4dd0-9c58-4cfc-b6ab-aaffadce08a6":	{
 				"$Position":	{
-					"$x":	2790,
-					"$y":	551
-				}
-			},
-			"Simple.RuleSet.GridWave-24b66375-a02a-4909-82b5-695e357202c6":	{
-				"$Position":	{
-					"$x":	2797,
-					"$y":	229
-				}
-			},
-			"Simple.RuleSet.GridWave-592241ce-ad1c-48be-8f71-a1de8ded22b8":	{
-				"$Position":	{
-					"$x":	2797,
-					"$y":	-87
-				}
-			},
-			"Simple.RuleSet.GridWave-9d0d1067-db1b-4e42-a6fe-86fff7b851b3":	{
-				"$Position":	{
-					"$x":	2795,
-					"$y":	-432
+					"$x":	2783,
+					"$y":	-391
 				}
 			}
 		},

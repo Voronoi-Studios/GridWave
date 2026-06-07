@@ -1,12 +1,18 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
+import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,19 +33,28 @@ public class AutoTileSetGroupAsset extends TileSetAsset {
     @Nonnull
     @Override
     public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
-        List<AutoTileSetAsset> autoTileSetAssets = new ArrayList<>();
         Map<Path, Path> map = TileSetAsset.getPackToFullPathsMap(folderPath, false);
+        List<AutoTileSetAsset> autoTileSetAssets = new ArrayList<>();
 
         for (Map.Entry<Path, Path> e : map.entrySet()) {
-            Path packPath = e.getKey(); Path fullFolderPath = e.getValue();
-            Path sub = fullFolderPath.subpath(packPath.getNameCount(), fullFolderPath.getNameCount());
-            autoTileSetAssets.add(new AutoTileSetAsset(sub.toString(), super.tileFeatureAssets));
+            if (!Files.isDirectory(e.getValue())) continue;
+            collectLeafDirs(e.getValue(), e.getKey(), autoTileSetAssets);
         }
 
         List<TileSet> tileSets = new ArrayList<>();
-        for(TileSetAsset tileSetAsset : autoTileSetAssets){
-            tileSets.addAll(tileSetAsset.build(argument,addFeatures));
+        for(AutoTileSetAsset asset : autoTileSetAssets){
+            tileSets.addAll(asset.build(argument,addFeatures));
         }
         return tileSets;
+    }
+
+    private void collectLeafDirs(Path current, Path packPath, List<AutoTileSetAsset> autoTileSetAssets) {
+        File[] subDirs = current.toFile().listFiles(File::isDirectory);
+        if (subDirs == null || subDirs.length == 0) {
+            String relativePath = current.subpath(packPath.getNameCount()+2, current.getNameCount()).toString();
+            autoTileSetAssets.add(new AutoTileSetAsset(relativePath, super.tileFeatureAssets));
+            return;
+        }
+        for (File sub : subDirs) collectLeafDirs(sub.toPath(), packPath, autoTileSetAssets);
     }
 }

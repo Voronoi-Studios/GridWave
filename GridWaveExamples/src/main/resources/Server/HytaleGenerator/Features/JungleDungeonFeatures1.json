@@ -2,44 +2,38 @@
 	"$NodeId":	"Group.Feature.GridWave-30fcda05-1eeb-4f38-9f5a-9016944004cf",
 	"Type":	"Group",
 	"Features":	[{
-			"$NodeId":	"Debug.Feature.GridWave-0ff61b50-9346-4d75-8622-021c987a0440",
+			"$NodeId":	"Debug.Feature.GridWave-6cd7e2d7-3eeb-4da0-aaec-2e5c05ea3687",
 			"Type":	"Debug",
-			"Skip":	true,
+			"Skip":	false,
+			"WriteToConsole":	false,
+			"ShowNotification":	true,
+			"VisualizeGridPositions":	false,
+			"VisualizeSectionBounds":	false,
 			"DebugGrid":	false,
+			"SkipFancyTiles":	false,
 			"LimitSteps":	false,
 			"MaxSteps":	200
 		}, {
-			"$NodeId":	"MultiAttempt.Feature.GridWave-2168eb65-2279-41fa-bc25-84e057507524",
+			"$NodeId":	"MultiAttempt.Feature.GridWave-ef22bf47-6ec9-42f2-b92e-bf327948ff5d",
 			"Type":	"MultiAttempt",
 			"Skip":	false,
-			"MaxBacktracks":	1000,
+			"MaxBacktracks":	3000,
 			"MaxAttempts":	20
 		}, {
-			"$NodeId":	"PathCellSelector.Feature.GridWave-562c02a3-8ea3-4642-bbf9-5f90a7a45af5",
-			"Type":	"PathCellSelector",
-			"Skip":	true,
-			"PathKey":	"1",
-			"StopAfterPercent":	60
-		}, {
-			"$NodeId":	"PathKey.Feature.GridWave-2db61e39-beee-4e93-b3b1-7423c5415548",
-			"Type":	"PathKey",
-			"Skip":	true,
-			"PathKey":	"1",
-			"CleanIsolated":	true
-		}, {
-			"$NodeId":	"Border.Feature.GridWave-ac85bf26-4b67-4215-bfd6-fc257833dcd3",
+			"$NodeId":	"Border.Feature.GridWave-6420f04a-5139-4078-8711-9f65787a4449",
 			"Type":	"Border",
-			"Skip":	true,
-			"BorderRuleSet":	{
-				"$NodeId":	"Simple.RuleSet.GridWave-5689716c-79fe-430a-adb6-1b8bc03af229",
-				"Type":	"Simple",
-				"HorizontalRules":	{
-					"N":	"0",
-					"E":	"0",
-					"S":	"0",
-					"W":	"0"
-				}
-			}
+			"Skip":	false,
+			"BorderType":	"OuterBorder",
+			"BorderRuleSets":	[{
+					"$NodeId":	"Simple.RuleSet.GridWave-a0f1fd9d-7091-4d5d-bd8c-e68dfba31258",
+					"Type":	"Simple",
+					"HorizontalRules":	{
+						"N":	"0",
+						"E":	"0",
+						"S":	"0",
+						"W":	"0"
+					}
+				}]
 		}],
 	"ExportAs":	"JungleDungeonFeatures1",
 	"$NodeEditorMetadata":	{
@@ -51,40 +45,28 @@
 				},
 				"$Title":	"[ROOT] Group Feature"
 			},
-			"Debug.Feature.GridWave-0ff61b50-9346-4d75-8622-021c987a0440":	{
+			"Debug.Feature.GridWave-6cd7e2d7-3eeb-4da0-aaec-2e5c05ea3687":	{
 				"$Position":	{
-					"$x":	3440,
-					"$y":	1740
+					"$x":	3517,
+					"$y":	2012
 				}
 			},
-			"MultiAttempt.Feature.GridWave-2168eb65-2279-41fa-bc25-84e057507524":	{
+			"MultiAttempt.Feature.GridWave-ef22bf47-6ec9-42f2-b92e-bf327948ff5d":	{
 				"$Position":	{
-					"$x":	3417,
-					"$y":	1971
+					"$x":	3508,
+					"$y":	2461
 				}
 			},
-			"PathCellSelector.Feature.GridWave-562c02a3-8ea3-4642-bbf9-5f90a7a45af5":	{
+			"Border.Feature.GridWave-6420f04a-5139-4078-8711-9f65787a4449":	{
 				"$Position":	{
-					"$x":	3333,
-					"$y":	2208
+					"$x":	3510,
+					"$y":	2720
 				}
 			},
-			"PathKey.Feature.GridWave-2db61e39-beee-4e93-b3b1-7423c5415548":	{
+			"Simple.RuleSet.GridWave-a0f1fd9d-7091-4d5d-bd8c-e68dfba31258":	{
 				"$Position":	{
-					"$x":	3335,
-					"$y":	2403
-				}
-			},
-			"Border.Feature.GridWave-ac85bf26-4b67-4215-bfd6-fc257833dcd3":	{
-				"$Position":	{
-					"$x":	3305,
-					"$y":	2601
-				}
-			},
-			"Simple.RuleSet.GridWave-5689716c-79fe-430a-adb6-1b8bc03af229":	{
-				"$Position":	{
-					"$x":	3838,
-					"$y":	2608
+					"$x":	4126,
+					"$y":	2730
 				}
 			}
 		},

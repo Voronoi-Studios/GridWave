@@ -36,22 +36,35 @@
 	"Seed":	{
 		"$NodeId":	"Constant.Seed.GridWave-fc375078-4d5b-45ae-b7d8-21ce0db6a223",
 		"Type":	"Constant",
-		"Seed":	"SomeSeed"
+		"Seed":	"SomeSeedssss"
 	},
 	"Features":	[{
 			"$NodeId":	"Border.Feature.GridWave-2c609713-d2b9-44b9-9b03-4955d3f68ca1",
 			"Type":	"Border",
 			"Skip":	false,
-			"BorderRuleSet":	{
-				"$NodeId":	"Simple.RuleSet.GridWave-28b9d87c-3ad1-4cb7-9289-9e219c34a079",
-				"Type":	"Simple",
-				"HorizontalRules":	{
-					"N":	"0",
-					"E":	"0",
-					"S":	"0",
-					"W":	"0"
-				}
-			}
+			"BorderType":	"OuterBorder",
+			"BorderRuleSets":	[{
+					"$NodeId":	"Simple.RuleSet.GridWave-a5cdafef-787e-42a1-a3c8-552d393de9e4",
+					"Type":	"Simple",
+					"HorizontalRules":	{
+						"N":	"0",
+						"E":	"0",
+						"S":	"0",
+						"W":	"0"
+					}
+				}]
+		}, {
+			"$NodeId":	"Debug.Feature.GridWave-c2a44fd0-645c-4d87-9d9e-e5bbeda5a3bb",
+			"Type":	"Debug",
+			"Skip":	false,
+			"WriteToConsole":	false,
+			"ShowNotification":	true,
+			"VisualizeGridPositions":	true,
+			"VisualizeSectionBounds":	false,
+			"DebugGrid":	false,
+			"SkipFancyTiles":	false,
+			"LimitSteps":	false,
+			"MaxSteps":	20
 		}],
 	"MaxPositionsCount":	10000,
 	"$NodeEditorMetadata":	{
@@ -67,6 +80,12 @@
 				"$Position":	{
 					"$x":	4175,
 					"$y":	-408
+				}
+			},
+			"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7":	{
+				"$Position":	{
+					"$x":	4177,
+					"$y":	-97
 				}
 			},
 			"Imported.TileSet.GridWave-adb41587-8ab6-4de2-aa0f-80b3a3603a8f":	{
@@ -99,16 +118,16 @@
 					"$y":	625
 				}
 			},
-			"Simple.RuleSet.GridWave-28b9d87c-3ad1-4cb7-9289-9e219c34a079":	{
+			"Simple.RuleSet.GridWave-a5cdafef-787e-42a1-a3c8-552d393de9e4":	{
 				"$Position":	{
-					"$x":	4170,
-					"$y":	743
+					"$x":	4161,
+					"$y":	833
 				}
 			},
-			"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7":	{
+			"Debug.Feature.GridWave-c2a44fd0-645c-4d87-9d9e-e5bbeda5a3bb":	{
 				"$Position":	{
-					"$x":	4177,
-					"$y":	-97
+					"$x":	4156,
+					"$y":	1147
 				}
 			}
 		},
@@ -117,6 +136,6 @@
 		},
 		"$Groups":	[],
 		"$Comments":	[],
-		"$WorkspaceID":	"HytaleGenerator - Props"
+		"$WorkspaceID":	"HytaleGenerator - Prop"
 	}
 }

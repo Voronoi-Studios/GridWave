@@ -41,7 +41,7 @@
 				"Seed":	{
 					"$NodeId":	"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d",
 					"Type":	"Constant",
-					"Seed":	"SomeCoolSeed"
+					"Seed":	"SomeCoolSeedss"
 				},
 				"Features":	[{
 						"$NodeId":	"SectionStorage.Feature.GridWave-4cf2bfbb-f986-4fdc-b816-7b33d88832dc",
@@ -131,12 +131,6 @@
 					"$y":	-3682
 				}
 			},
-			"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
-				"$Position":	{
-					"$x":	-2990,
-					"$y":	-3561
-				}
-			},
 			"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d":	{
 				"$Position":	{
 					"$x":	-2990,
@@ -165,6 +159,12 @@
 				"$Position":	{
 					"$x":	-2285,
 					"$y":	-2644
+				}
+			},
+			"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
+				"$Position":	{
+					"$x":	-2990,
+					"$y":	-3561
 				}
 			},
 			"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5":	{

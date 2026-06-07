@@ -5,6 +5,7 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
 
 public class VerticalRules {
     @Nonnull
@@ -35,6 +36,20 @@ public class VerticalRules {
     public static VerticalRules createSimpleFrom(String[] keys) {
         if (keys.length != 2) return new VerticalRules();
         return new VerticalRules(new String[]{keys[0]}, new String[]{keys[1]});
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof VerticalRules other)) return false;
+
+        return Arrays.equals(this.u, other.u)
+            && Arrays.equals(this.d, other.d);
+    }
+
+    @Override
+    public @Nonnull String toString() {
+        return "[u:" + Arrays.toString(this.u) + ", d:" + Arrays.toString(this.d) + "]";
     }
 
     public String[][] getArrays() {

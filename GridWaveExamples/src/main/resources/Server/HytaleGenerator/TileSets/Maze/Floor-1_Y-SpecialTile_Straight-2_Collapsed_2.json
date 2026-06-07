@@ -20,8 +20,10 @@
 			}
 		}],
 	"PrefabPath":	"Maze/FancyTiles/Floor-1_Y-SpecialTile_Straight-2_Collapsed_2.prefab.json",
+	"SizeX":	2,
 	"SizeZ":	1,
-	"Weight":	1,
+	"Weight":	0.2,
+	"MinimizeVariants":	true,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Multi.TileSet.GridWave-63380fdd-121e-41b5-868d-2192c6042a72":	{
