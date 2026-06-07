@@ -7473,12 +7473,6 @@
     },
     {
       "x": -1,
-      "y": 19,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": -1,
       "y": 9,
       "z": -15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -7491,12 +7485,6 @@
     },
     {
       "x": -1,
-      "y": 19,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": -1,
       "y": 9,
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth"
@@ -7506,12 +7494,6 @@
       "y": 15,
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -1,
-      "y": 19,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": -1,
@@ -7720,12 +7702,6 @@
       "y": 2,
       "z": 0,
       "name": "Rock_Stone"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": -1,

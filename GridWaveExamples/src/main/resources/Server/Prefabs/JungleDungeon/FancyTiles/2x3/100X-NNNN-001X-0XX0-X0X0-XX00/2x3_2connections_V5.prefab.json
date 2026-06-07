@@ -8783,12 +8783,6 @@
     },
     {
       "x": 6,
-      "y": 21,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": 6,
       "y": 14,
       "z": -15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -8801,12 +8795,6 @@
     },
     {
       "x": 6,
-      "y": 21,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": 6,
       "y": 14,
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth"
@@ -8816,12 +8804,6 @@
       "y": 20,
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 21,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 6,
@@ -9061,12 +9043,6 @@
     },
     {
       "x": 6,
-      "y": 21,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": 6,
       "y": 14,
       "z": 15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -9076,12 +9052,6 @@
       "y": 20,
       "z": 15,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 21,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 6,
@@ -9110,12 +9080,6 @@
       "z": 16,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 21,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 7,

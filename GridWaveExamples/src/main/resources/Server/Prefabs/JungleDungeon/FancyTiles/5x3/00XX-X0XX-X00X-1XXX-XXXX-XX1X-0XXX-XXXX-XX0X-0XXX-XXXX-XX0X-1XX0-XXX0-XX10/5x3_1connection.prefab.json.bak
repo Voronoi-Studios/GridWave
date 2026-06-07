@@ -6,246 +6,6 @@
   "anchorZ": 0,
   "blocks": [
     {
-      "x": -27,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -27,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -26,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -25,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -25,
       "y": 4,
       "z": -14,
@@ -991,12 +751,6 @@
     },
     {
       "x": -25,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -25,
       "y": 4,
       "z": -5,
       "name": "Rock_Stone_Brick_Decorative"
@@ -1074,12 +828,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -25,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -25,
@@ -1907,12 +1655,6 @@
     },
     {
       "x": -25,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -25,
       "y": 4,
       "z": 6,
       "name": "Rock_Stone_Brick_Decorative"
@@ -1990,12 +1732,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -25,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -25,
@@ -2660,18 +2396,6 @@
       "y": 15,
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -25,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -24,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -24,
@@ -3521,12 +3245,6 @@
       "y": 15,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -24,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -24,
@@ -3613,12 +3331,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -24,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -24,
@@ -4550,12 +4262,6 @@
     },
     {
       "x": -24,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -24,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick"
@@ -4647,12 +4353,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -24,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -24,
@@ -5410,18 +5110,6 @@
       "rotation": 3
     },
     {
-      "x": -24,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -23,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -23,
       "y": 4,
       "z": -14,
@@ -5754,12 +5442,6 @@
     },
     {
       "x": -23,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -23,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -5775,12 +5457,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -23,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -23,
@@ -5970,12 +5646,6 @@
     },
     {
       "x": -23,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -23,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -5991,12 +5661,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -23,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -23,
@@ -6310,18 +5974,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -23,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -22,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -22,
@@ -6656,12 +6308,6 @@
     },
     {
       "x": -22,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -22,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -6677,12 +6323,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -22,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -22,
@@ -6872,12 +6512,6 @@
     },
     {
       "x": -22,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -22,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -6893,12 +6527,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -22,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -22,
@@ -7212,18 +6840,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -22,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -21,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -21,
@@ -7588,12 +7204,6 @@
     },
     {
       "x": -21,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -21,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -7615,12 +7225,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -21,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -21,
@@ -7870,12 +7474,6 @@
     },
     {
       "x": -21,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -21,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -7897,12 +7495,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -21,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -21,
@@ -8234,18 +7826,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -21,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -20,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -20,
@@ -8669,12 +8249,6 @@
       "y": 15,
       "z": -6,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -20,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -20,
@@ -8767,12 +8341,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -20,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -20,
@@ -9150,12 +8718,6 @@
     },
     {
       "x": -20,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -20,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -9177,12 +8739,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -20,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -20,
@@ -9576,18 +9132,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -20,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -19,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -19,
@@ -10015,12 +9559,6 @@
     },
     {
       "x": -19,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -19,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -10068,12 +9606,6 @@
     },
     {
       "x": -19,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -19,
       "y": 2,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -10550,12 +10082,6 @@
     },
     {
       "x": -19,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -19,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -10601,12 +10127,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -19,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -19,
@@ -10982,18 +10502,6 @@
       "rotation": 3
     },
     {
-      "x": -19,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -18,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -18,
       "y": 4,
       "z": -14,
@@ -11352,12 +10860,6 @@
     },
     {
       "x": -18,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -18,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -11377,12 +10879,6 @@
     },
     {
       "x": -18,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -18,
       "y": 2,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -11527,12 +11023,6 @@
     },
     {
       "x": -18,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -18,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -11543,12 +11033,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 33
-    },
-    {
-      "x": -18,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -18,
@@ -11888,24 +11372,6 @@
       "rotation": 3
     },
     {
-      "x": -18,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -17,
       "y": 4,
       "z": -14,
@@ -11996,12 +11462,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12103,12 +11563,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -12130,12 +11584,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -12154,12 +11602,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12187,12 +11629,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12218,12 +11654,6 @@
       "y": 15,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12272,12 +11702,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": -7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12291,12 +11715,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12313,12 +11731,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12340,12 +11752,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12362,12 +11768,6 @@
       "y": 18,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12390,12 +11790,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": -2,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12415,12 +11809,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": -1,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12437,12 +11825,6 @@
       "y": 18,
       "z": -1,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12466,12 +11848,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": 1,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12489,12 +11865,6 @@
       "z": 1,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12518,12 +11888,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": 3,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12544,12 +11908,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": 4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12567,12 +11925,6 @@
       "z": 4,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12596,12 +11948,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12619,12 +11965,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12638,12 +11978,6 @@
       "z": 7,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 34
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12695,12 +12029,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 2,
       "z": 9,
       "name": "Rock_Stone_Brick_Smooth"
@@ -12726,12 +12054,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -12750,12 +12072,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12780,12 +12096,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -12804,12 +12114,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -17,
@@ -12911,12 +12215,6 @@
     },
     {
       "x": -17,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -13006,36 +12304,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -17,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13128,12 +12396,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13228,12 +12490,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -13255,12 +12511,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -13279,12 +12529,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13312,12 +12556,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13415,12 +12653,6 @@
       "z": -9,
       "name": "Rock_Stone_Brick",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13468,12 +12700,6 @@
       "y": 16,
       "z": -8,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13496,12 +12722,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 2,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -13517,12 +12737,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13760,12 +12974,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -13786,12 +12994,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 2,
       "z": 8,
       "name": "Rock_Stone_Brick_Smooth"
@@ -13838,12 +13040,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 2,
       "z": 9,
       "name": "Rock_Stone_Brick_Smooth"
@@ -13941,12 +13137,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -13965,12 +13155,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -13995,12 +13179,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -14019,12 +13197,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -16,
@@ -14119,12 +13291,6 @@
     },
     {
       "x": -16,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -14214,30 +13380,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -16,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -15,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -15,
@@ -14604,12 +13746,6 @@
     },
     {
       "x": -15,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -15,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -14772,12 +13908,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -15,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -15,
@@ -15115,18 +14245,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -15,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -14,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -14,
@@ -15493,12 +14611,6 @@
     },
     {
       "x": -14,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -14,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -15661,12 +14773,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -14,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -14,
@@ -16004,18 +15110,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -14,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -13,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -13,
@@ -16380,12 +15474,6 @@
     },
     {
       "x": -13,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -13,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -16548,12 +15636,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -13,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -13,
@@ -16893,18 +15975,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -13,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -12,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -12,
@@ -17327,12 +16397,6 @@
     },
     {
       "x": -12,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -12,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -17564,12 +16628,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -12,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -12,
@@ -17981,18 +17039,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -12,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -11,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -11,
@@ -18361,12 +17407,6 @@
     },
     {
       "x": -11,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -11,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -18529,12 +17569,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -11,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -11,
@@ -18874,18 +17908,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -11,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -10,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -10,
@@ -19254,12 +18276,6 @@
     },
     {
       "x": -10,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -10,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -19422,12 +18438,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -10,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -10,
@@ -19767,18 +18777,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -10,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -9,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -9,
@@ -20145,12 +19143,6 @@
     },
     {
       "x": -9,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -9,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -20313,12 +19305,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -9,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -9,
@@ -20660,18 +19646,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -9,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -8,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -8,
@@ -21107,12 +20081,6 @@
     },
     {
       "x": -8,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -8,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -21344,12 +20312,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -8,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -8,
@@ -21759,18 +20721,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -8,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -7,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -7,
@@ -22131,12 +21081,6 @@
     },
     {
       "x": -7,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -7,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -22298,12 +21242,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -7,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -7,
@@ -22639,24 +21577,6 @@
       "rotation": 3
     },
     {
-      "x": -7,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -6,
       "y": 4,
       "z": -14,
@@ -22747,12 +21667,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -22855,12 +21769,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -22882,12 +21790,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -22906,12 +21808,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -22939,12 +21835,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -22971,12 +21861,6 @@
       "y": 15,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23016,12 +21900,6 @@
       "y": 16,
       "z": -8,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23038,12 +21916,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 2,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -23060,12 +21932,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23233,12 +22099,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -23249,12 +22109,6 @@
       "z": 7,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 34
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23298,12 +22152,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 2,
       "z": 9,
       "name": "Rock_Stone_Brick_Smooth"
@@ -23330,12 +22178,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -23354,12 +22196,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23384,12 +22220,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -23408,12 +22238,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -6,
@@ -23516,12 +22340,6 @@
     },
     {
       "x": -6,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -23611,36 +22429,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -6,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -23733,12 +22521,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -23841,12 +22623,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -23868,12 +22644,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -23892,12 +22662,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -23925,12 +22689,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -23957,12 +22715,6 @@
       "y": 15,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24005,12 +22757,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 2,
       "z": -7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -24021,12 +22767,6 @@
       "z": -7,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24046,12 +22786,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24219,12 +22953,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -24235,12 +22963,6 @@
       "z": 7,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 34
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24284,12 +23006,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 2,
       "z": 9,
       "name": "Rock_Stone_Brick_Smooth"
@@ -24315,12 +23031,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -24339,12 +23049,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24369,12 +23073,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -24393,12 +23091,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -5,
@@ -24501,12 +23193,6 @@
     },
     {
       "x": -5,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -24596,30 +23282,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -5,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -4,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -4,
@@ -24980,12 +23642,6 @@
     },
     {
       "x": -4,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -4,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -25147,12 +23803,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -4,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -4,
@@ -25486,18 +24136,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": -4,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -3,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -3,
@@ -25933,12 +24571,6 @@
     },
     {
       "x": -3,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -3,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -26169,12 +24801,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -3,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -3,
@@ -26586,18 +25212,6 @@
       "rotation": 3
     },
     {
-      "x": -3,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -2,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": -2,
       "y": 4,
       "z": -14,
@@ -26959,12 +25573,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -2,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -2,
@@ -27132,12 +25740,6 @@
     },
     {
       "x": -2,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -2,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -27476,18 +26078,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -2,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": -1,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -1,
@@ -27853,12 +26443,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": -1,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -1,
@@ -28023,12 +26607,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": -1,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": -1,
@@ -28370,18 +26948,6 @@
       "rotation": 3
     },
     {
-      "x": -1,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 0,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 0,
       "y": 4,
       "z": -14,
@@ -28748,12 +27314,6 @@
     },
     {
       "x": 0,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 0,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -28915,12 +27475,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 0,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 0,
@@ -29261,18 +27815,6 @@
       "rotation": 3
     },
     {
-      "x": 0,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 1,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 1,
       "y": 4,
       "z": -14,
@@ -29693,12 +28235,6 @@
     },
     {
       "x": 1,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 1,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -29929,12 +28465,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 1,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 1,
@@ -30348,18 +28878,6 @@
       "rotation": 2
     },
     {
-      "x": 1,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 2,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 2,
       "y": 4,
       "z": -14,
@@ -30719,12 +29237,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 2,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 2,
@@ -30892,12 +29404,6 @@
     },
     {
       "x": 2,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 2,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -31234,18 +29740,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 2,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 3,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 3,
@@ -31609,12 +30103,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 3,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 3,
@@ -31782,12 +30270,6 @@
     },
     {
       "x": 3,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 3,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -32122,18 +30604,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 3,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 4,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 4,
@@ -32497,12 +30967,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 4,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 4,
@@ -32670,12 +31134,6 @@
     },
     {
       "x": 4,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 4,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -33012,24 +31470,6 @@
       "rotation": 3
     },
     {
-      "x": 4,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 5,
       "y": 4,
       "z": -14,
@@ -33120,12 +31560,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33220,12 +31654,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -33247,12 +31675,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -33271,12 +31693,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33304,12 +31720,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33410,12 +31820,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 2,
       "z": -8,
       "name": "Rock_Stone_Brick_Smooth"
@@ -33463,12 +31867,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 2,
       "z": -7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -33488,12 +31886,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 2,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -33509,12 +31901,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33747,12 +32133,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33773,12 +32153,6 @@
       "z": 7,
       "name": "Rock_Stone_Brick",
       "rotation": 2
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33825,12 +32199,6 @@
       "z": 8,
       "name": "Rock_Stone_Brick",
       "rotation": 2
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33931,12 +32299,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -33955,12 +32317,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -33985,12 +32341,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -34009,12 +32359,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 5,
@@ -34109,12 +32453,6 @@
     },
     {
       "x": 5,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -34204,36 +32542,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 5,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34326,12 +32634,6 @@
       "z": -14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34433,12 +32735,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -34460,12 +32756,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 3,
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
@@ -34484,12 +32774,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34517,12 +32801,6 @@
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34548,12 +32826,6 @@
       "y": 15,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34602,12 +32874,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": -7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34621,12 +32887,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34643,12 +32903,6 @@
       "y": 18,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34670,12 +32924,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34692,12 +32940,6 @@
       "y": 18,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34720,12 +32962,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": -2,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34745,12 +32981,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": -1,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34767,12 +32997,6 @@
       "y": 18,
       "z": -1,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34794,12 +33018,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 1,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34817,12 +33035,6 @@
       "z": 1,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34846,12 +33058,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 3,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34872,12 +33078,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 4,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34895,12 +33095,6 @@
       "z": 4,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -34924,12 +33118,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34950,12 +33138,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 7,
       "name": "Rock_Stone_Brick_Smooth"
@@ -34966,12 +33148,6 @@
       "z": 7,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 34
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -35023,12 +33199,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 2,
       "z": 9,
       "name": "Rock_Stone_Brick_Smooth"
@@ -35054,12 +33224,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 3,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -35078,12 +33242,6 @@
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -35108,12 +33266,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 3,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
@@ -35132,12 +33284,6 @@
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 6,
@@ -35239,12 +33385,6 @@
     },
     {
       "x": 6,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
       "y": 4,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative",
@@ -35334,30 +33474,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 6,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 7,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 7,
@@ -35718,12 +33834,6 @@
     },
     {
       "x": 7,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 7,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -35740,12 +33850,6 @@
       "y": 17,
       "z": -5,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 7,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 7,
@@ -35892,12 +33996,6 @@
     },
     {
       "x": 7,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 7,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -35908,12 +34006,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Stairs",
       "rotation": 35
-    },
-    {
-      "x": 7,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 7,
@@ -36251,18 +34343,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 7,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 8,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 8,
@@ -36688,12 +34768,6 @@
     },
     {
       "x": 8,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 8,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -36738,12 +34812,6 @@
       "y": 16,
       "z": -5,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 8,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 8,
@@ -37222,12 +35290,6 @@
     },
     {
       "x": 8,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 8,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -37273,12 +35335,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 8,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 8,
@@ -37654,12 +35710,6 @@
       "rotation": 3
     },
     {
-      "x": 8,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 9,
       "y": 3,
       "z": -16,
@@ -37700,12 +35750,6 @@
       "y": 9,
       "z": -16,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 9,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 9,
@@ -38184,12 +36228,6 @@
       "y": 15,
       "z": -6,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 9,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 9,
@@ -38282,12 +36320,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 9,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 9,
@@ -38665,12 +36697,6 @@
     },
     {
       "x": 9,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 9,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -38692,12 +36718,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 9,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 9,
@@ -39091,12 +37111,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 9,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 10,
@@ -39146,12 +37160,6 @@
     },
     {
       "x": 10,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 10,
       "y": 3,
       "z": -15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -39452,12 +37460,6 @@
     },
     {
       "x": 10,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 10,
       "y": 2,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -39479,12 +37481,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 10,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 10,
@@ -39734,12 +37730,6 @@
     },
     {
       "x": 10,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 10,
       "y": 2,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -39761,12 +37751,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 10,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 10,
@@ -40098,12 +38082,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 10,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 11,
@@ -40426,12 +38404,6 @@
     },
     {
       "x": 11,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 11,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -40447,12 +38419,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 11,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 11,
@@ -40642,12 +38608,6 @@
     },
     {
       "x": 11,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 11,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -40663,12 +38623,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 11,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 11,
@@ -40982,12 +38936,6 @@
       "z": 14,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 11,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 12,
@@ -41037,12 +38985,6 @@
     },
     {
       "x": 12,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 12,
       "y": 3,
       "z": -15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -41313,12 +39255,6 @@
     },
     {
       "x": 12,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 12,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
@@ -41334,12 +39270,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 12,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 12,
@@ -41529,12 +39459,6 @@
     },
     {
       "x": 12,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 12,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
@@ -41550,12 +39474,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 12,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 12,
@@ -41871,12 +39789,6 @@
       "rotation": 3
     },
     {
-      "x": 12,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 13,
       "y": 3,
       "z": -16,
@@ -41917,12 +39829,6 @@
       "y": 9,
       "z": -16,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 13,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 13,
@@ -42717,12 +40623,6 @@
       "y": 15,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 13,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 13,
@@ -42809,12 +40709,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 13,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 13,
@@ -43746,12 +41640,6 @@
     },
     {
       "x": 13,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 13,
       "y": 3,
       "z": 6,
       "name": "Rock_Stone_Brick"
@@ -43843,12 +41731,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 13,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 13,
@@ -44492,18 +42374,6 @@
       "rotation": 3
     },
     {
-      "x": 13,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 14,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 14,
       "y": 4,
       "z": -13,
@@ -45095,12 +42965,6 @@
     },
     {
       "x": 14,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 14,
       "y": 4,
       "z": -5,
       "name": "Rock_Stone_Brick_Decorative"
@@ -45178,12 +43042,6 @@
       "y": 15,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 14,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 14,
@@ -46016,12 +43874,6 @@
     },
     {
       "x": 14,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 14,
       "y": 4,
       "z": 6,
       "name": "Rock_Stone_Brick_Decorative"
@@ -46099,12 +43951,6 @@
       "y": 15,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 14,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 14,
@@ -46626,18 +44472,6 @@
       "support": 15
     },
     {
-      "x": 14,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 15,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 15,
       "y": 4,
       "z": -13,
@@ -46760,30 +44594,6 @@
       "y": 9,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 15,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 15,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 15,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 15,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 15,
@@ -46916,30 +44726,6 @@
       "name": "Rock_Stone_Brick"
     },
     {
-      "x": 15,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 16,
       "y": 4,
       "z": -13,
@@ -46985,12 +44771,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47000,12 +44780,6 @@
       "y": 9,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47021,12 +44795,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 3,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47036,12 +44804,6 @@
       "y": 9,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47086,30 +44848,6 @@
       "y": 9,
       "z": -9,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47149,36 +44887,6 @@
       "name": "Soil_Gravel",
       "support": 15,
       "rotation": 1
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47237,36 +44945,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 10,
       "z": 5,
       "name": "Rock_Stone_Brick_Decorative",
@@ -47306,30 +44984,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 10,
       "z": 9,
       "name": "Rock_Stone_Brick_Decorative"
@@ -47374,12 +45028,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 9,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47389,12 +45037,6 @@
       "y": 15,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47410,12 +45052,6 @@
     },
     {
       "x": 16,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
       "y": 9,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47425,12 +45061,6 @@
       "y": 15,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 16,
@@ -47475,42 +45105,6 @@
       "y": 15,
       "z": 13,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 16,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47545,12 +45139,6 @@
       "z": -14,
       "name": "Soil_Gravel",
       "support": 15
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47591,12 +45179,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 3,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47606,12 +45188,6 @@
       "y": 9,
       "z": -12,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47627,12 +45203,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 3,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -47642,12 +45212,6 @@
       "y": 9,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47694,12 +45258,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 3,
       "z": -8,
       "name": "Rock_Stone_Brick_Smooth",
@@ -47750,12 +45308,6 @@
       "z": -8,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47811,12 +45363,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 3,
       "z": -6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -47867,12 +45413,6 @@
       "z": -6,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -47925,12 +45465,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 3,
       "z": -4,
       "name": "Rock_Stone_Brick_Smooth",
@@ -47981,12 +45515,6 @@
       "z": -4,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48050,12 +45578,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 4,
       "z": -2,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48116,12 +45638,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 5,
       "z": -1,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48182,12 +45698,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 6,
       "z": 0,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48244,12 +45754,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 7,
       "z": 1,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48310,12 +45814,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 8,
       "z": 2,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48376,12 +45874,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 9,
       "z": 3,
       "name": "Rock_Stone_Brick_Decorative",
@@ -48432,12 +45924,6 @@
       "z": 3,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48491,12 +45977,6 @@
       "z": 4,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48549,12 +46029,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 9,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -48605,12 +46079,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48666,12 +46134,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 9,
       "z": 8,
       "name": "Rock_Stone_Brick_Smooth",
@@ -48722,12 +46184,6 @@
       "z": 8,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48769,12 +46225,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 9,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -48784,12 +46234,6 @@
       "y": 15,
       "z": 10,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48805,12 +46249,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 9,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth"
@@ -48820,12 +46258,6 @@
       "y": 15,
       "z": 12,
       "name": "Rock_Stone_Brick_Smooth"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 17,
@@ -48866,12 +46298,6 @@
     },
     {
       "x": 17,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
       "y": 10,
       "z": 14,
       "name": "Rock_Stone_Brick_Decorative"
@@ -48905,30 +46331,6 @@
       "support": 15
     },
     {
-      "x": 17,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 17,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 18,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 18,
       "y": 4,
       "z": -13,
@@ -49064,12 +46466,6 @@
     },
     {
       "x": 18,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 18,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
@@ -49081,12 +46477,6 @@
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 18,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 18,
@@ -49272,12 +46662,6 @@
     },
     {
       "x": 18,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 18,
       "y": 9,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -49289,12 +46673,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 18,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 18,
@@ -49417,18 +46795,6 @@
       "y": 15,
       "z": 13,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 18,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 19,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 19,
@@ -49565,12 +46931,6 @@
     },
     {
       "x": 19,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 19,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
@@ -49582,12 +46942,6 @@
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 19,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 19,
@@ -49773,12 +47127,6 @@
     },
     {
       "x": 19,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 19,
       "y": 9,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -49790,12 +47138,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 19,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 19,
@@ -49917,18 +47259,6 @@
       "y": 15,
       "z": 13,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 19,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 20,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 20,
@@ -50065,12 +47395,6 @@
     },
     {
       "x": 20,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 20,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
@@ -50082,12 +47406,6 @@
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 20,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 20,
@@ -50273,12 +47591,6 @@
     },
     {
       "x": 20,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 20,
       "y": 9,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -50290,12 +47602,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 1
-    },
-    {
-      "x": 20,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 20,
@@ -50417,18 +47723,6 @@
       "y": 15,
       "z": 13,
       "name": "Rock_Stone_Brick"
-    },
-    {
-      "x": 20,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 21,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 21,
@@ -50830,12 +48124,6 @@
     },
     {
       "x": 21,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 21,
       "y": 3,
       "z": -5,
       "name": "Rock_Stone_Brick_Smooth",
@@ -50882,12 +48170,6 @@
       "z": -5,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 21,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 21,
@@ -51455,12 +48737,6 @@
     },
     {
       "x": 21,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 21,
       "y": 9,
       "z": 6,
       "name": "Rock_Stone_Brick_Smooth",
@@ -51511,12 +48787,6 @@
       "z": 6,
       "name": "Rock_Stone_Brick",
       "rotation": 1
-    },
-    {
-      "x": 21,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 21,
@@ -51865,18 +49135,6 @@
       "support": 15
     },
     {
-      "x": 21,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 22,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
       "x": 22,
       "y": 4,
       "z": -13,
@@ -51943,12 +49201,6 @@
       "z": -9,
       "name": "Soil_Gravel",
       "support": 15
-    },
-    {
-      "x": 22,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 22,
@@ -51988,12 +49240,6 @@
       "name": "Soil_Gravel",
       "support": 15,
       "rotation": 1
-    },
-    {
-      "x": 22,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
     },
     {
       "x": 22,
@@ -52091,18 +49337,6 @@
     },
     {
       "x": 22,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 22,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 22,
       "y": 10,
       "z": 9,
       "name": "Rock_Stone_Brick_Decorative"
@@ -52168,354 +49402,6 @@
       "z": 13,
       "name": "Soil_Gravel",
       "support": 15
-    },
-    {
-      "x": 22,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 23,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 24,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 25,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 26,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -16,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -10,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": -1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 0,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 1,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 2,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 3,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 4,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 5,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 6,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 7,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 8,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 9,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 10,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 11,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 12,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 13,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Green"
-    },
-    {
-      "x": 27,
-      "y": 26,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Green"
     }
   ]
 }

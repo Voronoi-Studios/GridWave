@@ -182,12 +182,6 @@
     },
     {
       "x": -16,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": -16,
       "y": 4,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth",
@@ -460,12 +454,6 @@
     },
     {
       "x": -15,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": -15,
       "y": 4,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -687,12 +675,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth_Half",
       "rotation": 8
-    },
-    {
-      "x": -14,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": -14,
@@ -5321,12 +5303,6 @@
     },
     {
       "x": 0,
-      "y": 11,
-      "z": 14,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": 0,
       "y": 4,
       "z": 15,
       "name": "Rock_Stone_Brick_Smooth"
@@ -5337,12 +5313,6 @@
       "z": 15,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 15,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 0,
@@ -5371,12 +5341,6 @@
       "z": 16,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 2
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 16,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 1,
@@ -9545,12 +9509,6 @@
     },
     {
       "x": 14,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
-    },
-    {
-      "x": 14,
       "y": 4,
       "z": -10,
       "name": "Rock_Stone_Brick_Smooth"
@@ -9770,12 +9728,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 15,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 15,
@@ -10052,12 +10004,6 @@
       "z": -11,
       "name": "Rock_Stone_Brick_Smooth",
       "rotation": 3
-    },
-    {
-      "x": 16,
-      "y": 11,
-      "z": -11,
-      "name": "Cloth_Block_Wool_Cyan_Light"
     },
     {
       "x": 16,

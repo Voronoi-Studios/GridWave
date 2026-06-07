@@ -5,7 +5,7 @@ import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
 import ch.voronoi.GridWave.SeedNodes.SeedAsset;
 import ch.voronoi.GridWave.AlgoNodes.Helper.TileEntry;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
-import com.hypixel.hytale.builtin.hytalegenerator.assets.bounds.IntegerBounds3dAsset;
+import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
@@ -29,7 +29,7 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
             )
             .append(new KeyedCodec<>("Positions", PositionProviderAsset.CODEC, true), (asset, value) -> asset.positionProviderAsset = value, asset -> asset.positionProviderAsset)
             .add()
-            .append(new KeyedCodec<>("Bounds", IntegerBounds3dAsset.CODEC, false), (asset, value) -> asset.integerBounds3dAsset = value, asset -> asset.integerBounds3dAsset)
+            .append(new KeyedCodec<>("Bounds", CustomBoundsAsset.CODEC, false), (asset, value) -> asset.customBoundsAsset = value, asset -> asset.customBoundsAsset)
             .add()
             .append(new KeyedCodec<>("Seed", SeedAsset.CODEC, false), (asset, v) -> asset.seed = v, asset -> asset.seed)
             .add()
@@ -38,7 +38,7 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
             .build();
 
     public PositionProviderAsset positionProviderAsset;
-    public IntegerBounds3dAsset integerBounds3dAsset = null;
+    public CustomBoundsAsset customBoundsAsset = null;
     private SeedAsset seed = new ConstantSeedAsset();
     public Rotation rot = Rotation.None;
 
@@ -49,7 +49,7 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
         TileEntry tileEntry = tileEntries.get(rot%tileEntries.size());
         PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
         Bounds3i bounds3i = new Bounds3i(Vector3iUtil.MIN, Vector3iUtil.MAX);
-        if(integerBounds3dAsset != null) bounds3i = integerBounds3dAsset.build();
+        if(customBoundsAsset != null) bounds3i = customBoundsAsset.build();
         List<Vector3dc> gridPositions = GridWave.getPositions(positionProvider, bounds3i,Integer.MAX_VALUE);
         if (!gridPositions.isEmpty() && seed != null) {
             SeedBox seedBox = argument.parentSeed.child(seed.build(argument.algoAsset));
