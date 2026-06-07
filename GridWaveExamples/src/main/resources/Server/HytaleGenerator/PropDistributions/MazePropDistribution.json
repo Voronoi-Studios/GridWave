@@ -6,17 +6,11 @@
 	"GridPoints":	{
 		"$NodeId":	"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3",
 		"Type":	"GridGen2D",
-		"Position":	{
-			"$NodeId":	"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f",
-			"X":	-8,
-			"Y":	90,
-			"Z":	-8
-		},
 		"OffsetX":	16,
 		"OffsetZ":	16,
 		"RepeatX":	15,
 		"RepeatZ":	15,
-		"Centered":	false
+		"Centered":	true
 	},
 	"POIs":	[{
 			"$NodeId":	"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e",
@@ -45,6 +39,7 @@
 			"WriteToConsole":	false,
 			"ShowNotification":	true,
 			"VisualizeGridPositions":	true,
+			"VisualizeSectionBounds":	false,
 			"DebugGrid":	false,
 			"SkipFancyTiles":	false,
 			"LimitSteps":	false,
@@ -97,12 +92,6 @@
 				"$Position":	{
 					"$x":	2694,
 					"$y":	-265
-				}
-			},
-			"Vector3i-5f3241f0-0b79-452f-8657-e4349dd78b0f":	{
-				"$Position":	{
-					"$x":	2869,
-					"$y":	-458
 				}
 			},
 			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{

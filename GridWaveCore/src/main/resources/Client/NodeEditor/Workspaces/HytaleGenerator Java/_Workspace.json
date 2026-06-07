@@ -92,6 +92,7 @@
     ],
     "GridWave.Utils" : [
       "GridGen2D.GridWave",
+      "WireframeCuboidProp.GridWave",
       "StaticMirrorProp.GridWave",
       "Grid.CBounds.GridWave",
       "Converter.CBounds.GridWave"
@@ -326,7 +327,9 @@
       "Weighted.Cluster.Prop",
       "BoxProp",
       "Column.Prop",
-      "Block.Column.Prop"
+      "Block.Column.Prop",
+      "StaticMirrorProp.GridWave",
+      "WireframeCuboidProp.GridWave"
     ],
     "Pattern": [
       "BlockType.Pattern",

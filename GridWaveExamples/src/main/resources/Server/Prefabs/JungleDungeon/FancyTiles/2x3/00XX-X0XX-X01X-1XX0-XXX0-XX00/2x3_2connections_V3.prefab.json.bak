@@ -12138,7 +12138,7 @@
       "x": 3,
       "y": 20,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -12165,7 +12165,7 @@
       "x": 3,
       "y": 20,
       "z": 10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -12192,7 +12192,7 @@
       "x": 3,
       "y": 20,
       "z": 11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -12219,7 +12219,7 @@
       "x": 3,
       "y": 20,
       "z": 12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -12246,7 +12246,7 @@
       "x": 3,
       "y": 20,
       "z": 13,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {

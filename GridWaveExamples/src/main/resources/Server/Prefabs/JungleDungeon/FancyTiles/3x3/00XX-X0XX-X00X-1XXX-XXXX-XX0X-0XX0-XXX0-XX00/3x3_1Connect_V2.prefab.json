@@ -2906,7 +2906,7 @@
       "x": -10,
       "y": 13,
       "z": -7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3134,7 +3134,7 @@
       "x": -10,
       "y": 13,
       "z": -5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3240,7 +3240,7 @@
       "x": -10,
       "y": 13,
       "z": -4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3346,7 +3346,7 @@
       "x": -10,
       "y": 13,
       "z": -3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3574,7 +3574,7 @@
       "x": -10,
       "y": 13,
       "z": -1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3680,7 +3680,7 @@
       "x": -10,
       "y": 13,
       "z": 0,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3786,7 +3786,7 @@
       "x": -10,
       "y": 13,
       "z": 1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -4014,7 +4014,7 @@
       "x": -10,
       "y": 13,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -4120,7 +4120,7 @@
       "x": -10,
       "y": 13,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -4226,7 +4226,7 @@
       "x": -10,
       "y": 13,
       "z": 5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -4332,7 +4332,7 @@
       "x": -10,
       "y": 13,
       "z": 6,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -5031,7 +5031,7 @@
       "x": -9,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -9,
@@ -5336,7 +5336,7 @@
       "x": -9,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -6156,7 +6156,7 @@
       "x": -8,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -8,
@@ -6445,7 +6445,7 @@
       "x": -8,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -7072,7 +7072,7 @@
       "x": -7,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -7,
@@ -7326,7 +7326,7 @@
       "x": -7,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -9253,7 +9253,7 @@
       "x": -5,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -5,
@@ -9537,7 +9537,7 @@
       "x": -5,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -10068,7 +10068,7 @@
       "x": -4,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -4,
@@ -10352,7 +10352,7 @@
       "x": -4,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -10631,7 +10631,7 @@
       "x": -3,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -3,
@@ -10915,7 +10915,7 @@
       "x": -3,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -11508,7 +11508,7 @@
       "x": -2,
       "y": 13,
       "z": -7,
-      "name": "Custom_Stone_Bricks_Wall6",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -11587,7 +11587,7 @@
       "x": -2,
       "y": 12,
       "z": -6,
-      "name": "Custom_Stone_Bricks_Wall6",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -11693,7 +11693,7 @@
       "x": -2,
       "y": 11,
       "z": -4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -11751,7 +11751,7 @@
       "x": -2,
       "y": 11,
       "z": -3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -11809,7 +11809,7 @@
       "x": -2,
       "y": 11,
       "z": -2,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -11925,7 +11925,7 @@
       "x": -2,
       "y": 11,
       "z": 0,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -11983,7 +11983,7 @@
       "x": -2,
       "y": 11,
       "z": 1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -12041,7 +12041,7 @@
       "x": -2,
       "y": 11,
       "z": 2,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -12160,7 +12160,7 @@
       "x": -2,
       "y": 12,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall6"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -2,
@@ -12226,7 +12226,7 @@
       "x": -2,
       "y": 13,
       "z": 5,
-      "name": "Custom_Stone_Bricks_Wall6"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -2,
@@ -12299,7 +12299,7 @@
       "x": -2,
       "y": 13,
       "z": 6,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -12805,7 +12805,7 @@
       "x": -1,
       "y": 12,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": -1,
@@ -12830,7 +12830,7 @@
       "x": -1,
       "y": 11,
       "z": -6,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": -1,
@@ -13053,7 +13053,7 @@
       "x": -1,
       "y": 11,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -13073,7 +13073,7 @@
       "x": -1,
       "y": 12,
       "z": 5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -13495,7 +13495,7 @@
       "x": 0,
       "y": 12,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 0,
@@ -13520,7 +13520,7 @@
       "x": 0,
       "y": 11,
       "z": -6,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 0,
@@ -13749,7 +13749,7 @@
       "x": 0,
       "y": 11,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -13769,7 +13769,7 @@
       "x": 0,
       "y": 12,
       "z": 5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -14190,7 +14190,7 @@
       "x": 1,
       "y": 12,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 1,
@@ -14215,7 +14215,7 @@
       "x": 1,
       "y": 11,
       "z": -6,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 1,
@@ -14438,7 +14438,7 @@
       "x": 1,
       "y": 11,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -14458,7 +14458,7 @@
       "x": 1,
       "y": 12,
       "z": 5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -15099,7 +15099,7 @@
       "x": 2,
       "y": 13,
       "z": -7,
-      "name": "Custom_Stone_Bricks_Wall6",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -15184,7 +15184,7 @@
       "x": 2,
       "y": 12,
       "z": -6,
-      "name": "Custom_Stone_Bricks_Wall6",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -15302,7 +15302,7 @@
       "x": 2,
       "y": 11,
       "z": -4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15365,7 +15365,7 @@
       "x": 2,
       "y": 11,
       "z": -3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15428,7 +15428,7 @@
       "x": 2,
       "y": 11,
       "z": -2,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15554,7 +15554,7 @@
       "x": 2,
       "y": 11,
       "z": 0,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15617,7 +15617,7 @@
       "x": 2,
       "y": 11,
       "z": 1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15679,7 +15679,7 @@
       "x": 2,
       "y": 11,
       "z": 2,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 3
     },
     {
@@ -15784,7 +15784,7 @@
       "x": 2,
       "y": 12,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall6"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 2,
@@ -15832,7 +15832,7 @@
       "x": 2,
       "y": 13,
       "z": 5,
-      "name": "Custom_Stone_Bricks_Wall6"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 2,
@@ -15887,7 +15887,7 @@
       "x": 2,
       "y": 13,
       "z": 6,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -16293,7 +16293,7 @@
       "x": 3,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -16501,7 +16501,7 @@
       "x": 3,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 3,
@@ -16590,7 +16590,7 @@
       "x": 3,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -17017,7 +17017,7 @@
       "x": 4,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -17225,7 +17225,7 @@
       "x": 4,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 4,
@@ -17314,7 +17314,7 @@
       "x": 4,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -17760,7 +17760,7 @@
       "x": 5,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 5,
@@ -17967,7 +17967,7 @@
       "x": 5,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 5,
@@ -18056,7 +18056,7 @@
       "x": 5,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -18677,7 +18677,7 @@
       "x": 6,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 6,
@@ -19135,7 +19135,7 @@
       "x": 7,
       "y": 18,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -19181,7 +19181,7 @@
       "x": 7,
       "y": 18,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -19227,7 +19227,7 @@
       "x": 7,
       "y": 18,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -19297,7 +19297,7 @@
       "x": 7,
       "y": 13,
       "z": -8,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 7,
@@ -19504,7 +19504,7 @@
       "x": 7,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 7,
@@ -19593,7 +19593,7 @@
       "x": 7,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -19866,14 +19866,14 @@
       "x": 8,
       "y": 13,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 8,
       "y": 19,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -19910,14 +19910,14 @@
       "x": 8,
       "y": 13,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 8,
       "y": 19,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -19954,14 +19954,14 @@
       "x": 8,
       "y": 13,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 8,
       "y": 19,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -20257,7 +20257,7 @@
       "x": 8,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 8,
@@ -20346,7 +20346,7 @@
       "x": 8,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -20538,14 +20538,14 @@
       "x": 9,
       "y": 14,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 9,
       "y": 20,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -20558,14 +20558,14 @@
       "x": 9,
       "y": 14,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 9,
       "y": 20,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -20578,14 +20578,14 @@
       "x": 9,
       "y": 14,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
       "x": 9,
       "y": 20,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 11
     },
     {
@@ -20900,7 +20900,7 @@
       "x": 9,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 9,
@@ -20989,7 +20989,7 @@
       "x": 9,
       "y": 13,
       "z": 7,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 2
     },
     {
@@ -21180,7 +21180,7 @@
       "x": 10,
       "y": 15,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
@@ -21199,7 +21199,7 @@
       "x": 10,
       "y": 15,
       "z": -10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
@@ -21218,7 +21218,7 @@
       "x": 10,
       "y": 15,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 3
     },
     {
@@ -21680,7 +21680,7 @@
       "x": 10,
       "y": 16,
       "z": -5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -21785,7 +21785,7 @@
       "x": 10,
       "y": 16,
       "z": -4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -21890,7 +21890,7 @@
       "x": 10,
       "y": 16,
       "z": -3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -22125,7 +22125,7 @@
       "x": 10,
       "y": 16,
       "z": -1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -22230,7 +22230,7 @@
       "x": 10,
       "y": 16,
       "z": 0,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -22335,7 +22335,7 @@
       "x": 10,
       "y": 16,
       "z": 1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -22519,7 +22519,7 @@
       "x": 10,
       "y": 8,
       "z": 3,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 10,
@@ -23379,7 +23379,7 @@
       "x": 11,
       "y": 16,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -23449,7 +23449,7 @@
       "x": 11,
       "y": 16,
       "z": 5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -23512,7 +23512,7 @@
       "x": 11,
       "y": 16,
       "z": 6,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -26222,7 +26222,7 @@
       "x": 15,
       "y": 16,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -26298,7 +26298,7 @@
       "x": 15,
       "y": 16,
       "z": 5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -26374,7 +26374,7 @@
       "x": 15,
       "y": 16,
       "z": 6,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {

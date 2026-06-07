@@ -3454,7 +3454,7 @@
       "x": -8,
       "y": 10,
       "z": -5,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3479,7 +3479,7 @@
       "x": -8,
       "y": 10,
       "z": -4,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3528,7 +3528,7 @@
       "x": -8,
       "y": 10,
       "z": -3,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3692,7 +3692,7 @@
       "x": -8,
       "y": 10,
       "z": -1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3723,7 +3723,7 @@
       "x": -8,
       "y": 10,
       "z": 0,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -3796,7 +3796,7 @@
       "x": -8,
       "y": 10,
       "z": 1,
-      "name": "Custom_Stone_Bricks_Wall",
+      "name": "Rock_Stone_Brick_Wall",
       "rotation": 1
     },
     {
@@ -5229,7 +5229,7 @@
       "x": -5,
       "y": 9,
       "z": -5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -5255,7 +5255,7 @@
       "x": -5,
       "y": 9,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -5318,7 +5318,7 @@
       "x": -5,
       "y": 7,
       "z": -2,
-      "name": "Custom_Stone_Bricks_Wall2"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -5,
@@ -5442,7 +5442,7 @@
       "x": -5,
       "y": 10,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -5,
@@ -5686,7 +5686,7 @@
       "x": -4,
       "y": 8,
       "z": -5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -5706,7 +5706,7 @@
       "x": -4,
       "y": 8,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -5887,7 +5887,7 @@
       "x": -4,
       "y": 10,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -4,
@@ -6514,7 +6514,7 @@
       "x": -3,
       "y": 7,
       "z": -5,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -6534,7 +6534,7 @@
       "x": -3,
       "y": 7,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 1
     },
     {
@@ -6715,7 +6715,7 @@
       "x": -3,
       "y": 10,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": -3,
@@ -9492,7 +9492,7 @@
       "x": 1,
       "y": 7,
       "z": 8,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -9518,7 +9518,7 @@
       "x": 1,
       "y": 8,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -9550,7 +9550,7 @@
       "x": 1,
       "y": 9,
       "z": 10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -10018,7 +10018,7 @@
       "x": 2,
       "y": 7,
       "z": 8,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -10044,7 +10044,7 @@
       "x": 2,
       "y": 8,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -10076,7 +10076,7 @@
       "x": 2,
       "y": 9,
       "z": 10,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -11922,7 +11922,7 @@
       "x": 6,
       "y": 7,
       "z": -2,
-      "name": "Custom_Stone_Bricks_Wall2"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 6,
@@ -12024,7 +12024,7 @@
       "x": 6,
       "y": 7,
       "z": 4,
-      "name": "Custom_Stone_Bricks_Wall2"
+      "name": "Rock_Stone_Brick_Wall"
     },
     {
       "x": 6,

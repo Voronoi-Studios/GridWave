@@ -34,6 +34,14 @@
         "Label": "VisualizeGridPositions",
         "Default" : false
       }
+    },    
+    {
+      "Id": "VisualizeSectionBounds",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "VisualizeSectionBounds",
+        "Default" : false
+      }
     },
     {
       "Id": "DebugGrid",
@@ -83,6 +91,7 @@
     "WriteToConsole" : "WriteToConsole",
     "ShowNotification" : "ShowNotification",
     "VisualizeGridPositions" : "VisualizeGridPositions",
+    "VisualizeSectionBounds" : "VisualizeSectionBounds",
     "DebugGrid" : "DebugGrid",
     "SkipFancyTiles" : "SkipFancyTiles",
     "LimitSteps" : "LimitSteps",

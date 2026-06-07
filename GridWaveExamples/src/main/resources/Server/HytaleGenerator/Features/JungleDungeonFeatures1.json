@@ -34,6 +34,12 @@
 						"W":	"0"
 					}
 				}]
+		}, {
+			"$NodeId":	"PathKey.Feature.GridWave-c2a819e8-8888-4a99-97de-21b9b5d26f2b",
+			"Type":	"PathKey",
+			"Skip":	false,
+			"PathKey":	"1",
+			"CleanIsolated":	true
 		}],
 	"ExportAs":	"JungleDungeonFeatures1",
 	"$NodeEditorMetadata":	{
@@ -67,6 +73,12 @@
 				"$Position":	{
 					"$x":	4126,
 					"$y":	2730
+				}
+			},
+			"PathKey.Feature.GridWave-c2a819e8-8888-4a99-97de-21b9b5d26f2b":	{
+				"$Position":	{
+					"$x":	3558,
+					"$y":	2956
 				}
 			}
 		},

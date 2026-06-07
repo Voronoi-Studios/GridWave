@@ -7365,14 +7365,14 @@
       "x": -1,
       "y": 18,
       "z": -12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
       "x": -1,
       "y": 12,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": -1,
@@ -7410,7 +7410,7 @@
       "x": -1,
       "y": 17,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
@@ -7442,7 +7442,7 @@
       "x": -1,
       "y": 11,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": -1,
@@ -7481,7 +7481,7 @@
       "x": -1,
       "y": 10,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": -1,
@@ -7595,7 +7595,7 @@
       "x": -1,
       "y": 10,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -7641,7 +7641,7 @@
       "x": -1,
       "y": 11,
       "z": 7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -7680,7 +7680,7 @@
       "x": -1,
       "y": 17,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
@@ -7700,7 +7700,7 @@
       "x": -1,
       "y": 12,
       "z": 11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -7726,7 +7726,7 @@
       "x": -1,
       "y": 18,
       "z": 12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
@@ -7904,14 +7904,14 @@
       "x": 0,
       "y": 18,
       "z": -12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
       "x": 0,
       "y": 12,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 0,
@@ -7949,7 +7949,7 @@
       "x": 0,
       "y": 17,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
@@ -7981,7 +7981,7 @@
       "x": 0,
       "y": 11,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 0,
@@ -8020,7 +8020,7 @@
       "x": 0,
       "y": 10,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 0,
@@ -8134,7 +8134,7 @@
       "x": 0,
       "y": 10,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8180,7 +8180,7 @@
       "x": 0,
       "y": 11,
       "z": 7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8219,7 +8219,7 @@
       "x": 0,
       "y": 17,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
@@ -8239,7 +8239,7 @@
       "x": 0,
       "y": 12,
       "z": 11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8265,7 +8265,7 @@
       "x": 0,
       "y": 18,
       "z": 12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
@@ -8443,14 +8443,14 @@
       "x": 1,
       "y": 18,
       "z": -12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
       "x": 1,
       "y": 12,
       "z": -11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 1,
@@ -8488,7 +8488,7 @@
       "x": 1,
       "y": 17,
       "z": -9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 8
     },
     {
@@ -8520,7 +8520,7 @@
       "x": 1,
       "y": 11,
       "z": -7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 1,
@@ -8559,7 +8559,7 @@
       "x": 1,
       "y": 10,
       "z": -4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs"
+      "name": "Rock_Stone_Brick_Stairs"
     },
     {
       "x": 1,
@@ -8673,7 +8673,7 @@
       "x": 1,
       "y": 10,
       "z": 4,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8719,7 +8719,7 @@
       "x": 1,
       "y": 11,
       "z": 7,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8758,7 +8758,7 @@
       "x": 1,
       "y": 17,
       "z": 9,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
@@ -8778,7 +8778,7 @@
       "x": 1,
       "y": 12,
       "z": 11,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 2
     },
     {
@@ -8804,7 +8804,7 @@
       "x": 1,
       "y": 18,
       "z": 12,
-      "name": "Rock_Stone_Brick_Smooth_Stairs",
+      "name": "Rock_Stone_Brick_Stairs",
       "rotation": 32
     },
     {
