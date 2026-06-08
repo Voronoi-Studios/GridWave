@@ -60,7 +60,7 @@ draft: false
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="gridwave/JungleDungeon" class="button"> ↗ </a>
+            <a href="gridwave/jungle-dungeon" class="button"> ↗ </a>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ draft: false
               <h3>Ruin City</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="gridwave/RuinCity" class="button"> ↗ </a>
+            <a href="gridwave/ruin-city" class="button"> ↗ </a>
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ draft: false
               <h3>Jungle Dungeon</h3>
               <p>by Andy</p>
             </div>
-            <a href="gridwave/JungleDungeon" class="button"> ↗ </a>
+            <a href="gridwave/jungle-dungeon" class="button"> ↗ </a>
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@ draft: false
               <h3>Ruin City</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="gridwave/RuinCity" class="button"> ↗ </a>
+            <a href="gridwave/ruin-city" class="button"> ↗ </a>
           </div>
         </div>
       </div>
