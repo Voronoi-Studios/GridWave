@@ -101,6 +101,7 @@ The strings have the fallowing components:
 
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/ImportedTileSet.png" alt="ImportedTileSet" />
 
-Allows you to import nodes
+Allows you to import nodes.
+Features can be added in this step as well, allowing you to for example save a very big and complex multi tile seperatly and use it multiple times with different restrainer features.
 
 ---
