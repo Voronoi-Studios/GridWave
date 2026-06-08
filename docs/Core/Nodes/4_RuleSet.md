@@ -66,7 +66,7 @@ Pharses the string to Rulesets, same as the [AutoTileSet Node](tileset#automatic
 > [!IMPORTANT]
 > The fallowing nodes are currently non-functional placeholders for some upcoming features!
 
-### Simple Vertical Rules
+### Simple Vertical Rules [PLACEHOLDER]
 
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/SimpleVerticalRules.png" alt="SimpleVerticalRules" />
 
@@ -76,7 +76,7 @@ Multiple keys can be entered by using `,` as a separator
 ---
 
 
-### Advanced Vertical Rules
+### Advanced Vertical Rules [PLACEHOLDER]
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AdvancedVerticalRules.png" alt="AdvancedVerticalRules" />
 
 Use some sort of key to define what the corresponding edge can connect to.
@@ -86,7 +86,7 @@ Multiple keys can be entered by using `,` as a separator
 
 ---
 
-### Elevation Rules
+### Elevation Rules [PLACEHOLDER]
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/ElevationRules.png" alt="ElevationRules" />
 
 Use some sort of key to define what the corresponding edge can connect to.
