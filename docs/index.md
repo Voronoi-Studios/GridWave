@@ -6,7 +6,7 @@ published: true
 draft: false
 ---
 
-<div style="text-align: right"> 
+<div style="text-align: right; color: gray;"> 
   This Documentation is for `v0.9-pre2`
 </div>
 
