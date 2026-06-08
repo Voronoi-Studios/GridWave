@@ -23,7 +23,8 @@ Combines the all TileSet lists that are returned by its child nodes in to a sing
 ### Automatic TileSet Group
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AutomaticTileSetGroup.png" alt="AutomaticTileSetGroup" />
 
-Automatically creates the TileSets based on the sub folders naming, allows for export
+Automatically creates the TileSets based on the sub folders naming according to [Automatic TileSet](tileset#automatic-tileset)'s rules , allows for export.
+Sub folders under the specified folder are allowed.
 
 ---
 
@@ -68,7 +69,20 @@ This can be used for all sorts of shenanigans, like using a union prop to combin
 ### Automatic TileSet
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AutomaticTileSet.png" alt="AutomaticTileSet" />
 
-Automatically creates all TileSets based on the folders naming, allows for export
+Automatically creates all TileSets based on the folders naming, allows for export.
+
+The strings have the fallowing components:
+```
+1x3/10X0-X0X0-X010
+| |   | |
+1 2   3 4
+```
+1: xSize
+2: zSize
+3: 4 or 6 numbers or letters as keys defining `north, east, south, west, up, down` X and N have special functions respectively: 
+- X: blank/any connection is allwed
+- N: Null, same as X but tile wont replace the base tile under it, allows for shapes with "holes". The top right tile cant be one of those as it holds the actual prefabs information. 
+4: divider to seperate rulesets
 
 <details>
 <summary>show cheat sheet</summary>
