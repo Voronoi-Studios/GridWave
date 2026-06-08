@@ -18,7 +18,7 @@ This is an extension to GridWaveCore which is a Hytale plugin that integrates Wa
   - [Maze Multi Floor](maze#maze-multi-floor)
   - [Maze Infinite](maze#maze-infinite)
 - [Island](Island)
-- [Ruin City](RuinCity)
+- [Ruin City](RuinCity) (comming soon)
 - [Jungle Dungeon](JungleDungeon)
 - [Venice](Venice)
 
@@ -37,7 +37,7 @@ This is an extension to GridWaveCore which is a Hytale plugin that integrates Wa
 
 * Extract the jar or copy the files from GitHub
 * Start modifying and changing them.
-* optional: if you wanna use the node editor look at [Nodes Installation](Nodes).
+* optional: if you wanna use the node editor look at [Adding node editor support](https://wiki.hytalemodding.dev/mod/gridwave/core#adding-node-editor-support).
 
 
 ## Roadmap
