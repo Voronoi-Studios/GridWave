@@ -244,3 +244,8 @@ draft: false
         <img alt="Latest Release" height="32" style="margin: 0px;" src="https://shieldcn.dev/github/Voronoi-Studios/GridWave/release.svg?variant=outline">
       </a>
 </div>
+
+
+<div style="text-align: right; color: gray;"> 
+  No AI was involved in the making of this, you might find some spelling errors because of that though.
+</div>
