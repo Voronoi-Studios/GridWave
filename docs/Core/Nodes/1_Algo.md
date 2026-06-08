@@ -36,15 +36,18 @@ You can absolutely supply partial grids or grids with wired shapes, just keep in
 <details open>
 <summary>Grid</summary>
 
-Defines what the spacing is in to every direction, so the Algo knows how to fetch a position of a neighboring cell
+Defines what the spacing in to every direction, so the Algo knows how to fetch a position of a neighboring cell. Can be left empty if [Grid Point Generator](grid-point-generator) is used for GridPositions.
 
 </details>
 
 
 <details open>
-<summary>(Bounds)</summary>
+<summary>Bounds</summary>
 
-Only present on the Prop version, restrains the positions. can be left empty if a finite amount of positions was provided.
+On the Prop version this is required.
+
+Adds some limiting bounds to the grid positions (not the prefabs). Can be left empty if [Grid Point Generator](grid-point-generator) is used for GridPositions.
+
 
 </details>
 
