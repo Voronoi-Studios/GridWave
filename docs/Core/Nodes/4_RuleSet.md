@@ -46,6 +46,21 @@ Multiple keys can be entered by using `,` as a separator
 
 ---
 
+
+### String RuleSet (Horizontal & Vertical Rules)
+
+<img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/StringRuleSet.png" alt="SimpleRuleSet" />
+Pharses the string to Rulesets, same as the [AutoTileSet Node](tileset#automatic-tileset), see its documentation on how the string pharsing works. The size is not needed as its provided by the TileSet this node gets connected to.
+
+<details>
+<summary>show cheat sheet</summary>
+
+<img style="border-radius:10px" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/NodeDefinitionExplainer.png" alt="NodeDefinitionExplainer" />
+
+</details>
+
+---
+
 ## Sub Nodes
 
 > [!IMPORTANT]
