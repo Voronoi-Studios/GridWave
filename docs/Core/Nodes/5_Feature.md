@@ -15,7 +15,7 @@ Allows to add special features to the Algo -> (global) or individual tiles -> (l
 ### Group Feature (global or local)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/GroupFeature.png" alt="GroupFeature"/> 
 
-Combines the all Features that are returned by its child nodes in to a singular flattened list, which allows for visual clarity and exports of multiple Features at once.
+Combines all Features that are returned by its child nodes in to a singular flattened list, which allows for visual clarity and exports of multiple Features at once.
 
 ---
 
@@ -26,7 +26,9 @@ Gives various debug options:
 
 * WriteToConsole: Writes the same info as the Notification plus an ASCII representation of the generated section to the console 
 * ShowNotification: Shows an in game notification after each run of the core algo with some handy information to any OP'ed person. (Currently there is no way to make it world specific)
-* DebugGrid: places every tile with every possible rotation after each other.
+* VisualizeGridPositions: Places a red wool at the cells center
+* VisualizeSectionBounds: Outlines what belongs to a section or what bounds where set on the Algo node.
+* DebugGrid: Places every tile with every possible rotation after each other. [BROCKEN?]
 * LimitSteps & MaxSteps: Allows you to step through the solving process to see where ge might do something wrong.
 
 ---
@@ -34,7 +36,8 @@ Gives various debug options:
 ### Restrainer Feature (local)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/RestrainerFeature.png" alt="RestrainerFeature"/> 
 
-Used to create POI Tiles, fixes the positon and rotation of a tile. The position needs to pe exact and needs to be present for the tile to be spawned.
+Used to create POI Tiles, fixes the positon and rotation of a tile. The position needs to be present for the tile to be spawned.
+Will be seperated in the future in to rotation and position restrainer nodes respectively
 
 ---
 
@@ -52,6 +55,10 @@ Same as RestrainerFeature, but takes a list of Positions as input where it choos
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/MultiAttemptFeature.png" alt="MultiAttemptFeature"/> 
 
 Defines how many attempts (default: 1) he is allowed to make. A fresh attempt is started after the maximum Backtracks (default: 5k) are reached.
+* New Attempts Behavor: [PLACEHOLDER] Behavior when starting a new attempt after reaching the maximum number of backtracking steps.
+  * RETRY will simply start over with the same settings until MaxAttempts is reached.
+  * The SIMPLIFY_X% options will remove a sub percentage of base tiles from the pool after each failed attempt.
+  * The SIMPLIFY_INCRIMENTAL option will increase the percentage unitl it successfully generates a layout or reaches 90% simplification. This is the recommended option if you want to ensure a layout is generated, but don't care about the quality of the layout.
 
 ---
 
@@ -102,7 +109,7 @@ Allows you to overwrite the weight of a tile based on some condition
 ---
 
 
-### Multithreading Feature (global)
+### Multithreading Feature (global) [DEPRECIATED]
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/MultithreadingFeature.png" alt="Multithreading"/> 
 
 Splits the search of a correct solution for the WFC over multiple threads and shares the result with others. Mainly beneficial if any of the prefabs in the tile set are very large and cause many chunks to access the same wfc section.
@@ -115,7 +122,11 @@ Splits the search of a correct solution for the WFC over multiple threads and sh
 ### Section Storage Feature (global)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/SectionStorageFeature.png" alt="SectionStorageFeature"/> 
 
-If not present as a feature the above shown default values are used by the PropDistribution GridWave Algorithm.
+If not present as a feature the above shown default values are used by the [GridWave Algorithm (PropDistribution)]().
 Allows for sectioning of larger or infinite use cases.
+* WriteToWorldFolder: [PLACEHOLDER] Will in the future save generation data so it can be read back later.
+* CacheSize: Defines how many sections will be kept in memory
+* HorizontalSectionSize: Size in cells (not voxles) a sections should be in x and z
+* VerticalSectionSize: [PLACEHOLDER] Size in cells (not vocles) a section should be in y -> leave as is
 
 ---
