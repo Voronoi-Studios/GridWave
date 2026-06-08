@@ -13,7 +13,15 @@ GridWave is a Hytale plugin that integrates Wave Function Collapse (WFC) into th
 
 Check out the [GridWaveExamples](examples) to get an idea an idea how different things can be accieved.
 
-# Features
+## Usage
+
+Check out [Getting Started](getting-started) and [Nodes](nodes).
+
+Aditionally [GridWave.examples](examples) should give an idea how different things can be achieved.
+
+---
+
+## Features
 
 * WFC-based generation for deterministic but varied worlds
 * Seamless integration with Worldgen V2
@@ -22,7 +30,7 @@ Check out the [GridWaveExamples](examples) to get an idea an idea how different 
 * Modular design for easy extension
 
 
-# How It Works
+## How It Works
 
 GridWave applies Wave Function Collapse by:
 
@@ -35,21 +43,21 @@ GridWave applies Wave Function Collapse by:
 5. Assembles a PropDistribution or Prop
 
 
-# Installation
+## Installation
 
-## Default:
+### Default:
 1. Download the latest release
 2. Place the plugin in your global or world's `Mods` folder
 
 ---
 
-## Adding Node Editor support:
+### Adding Node Editor support:
 
-### Automatic
+#### Automatic
 
 Run `/GridWave.core patch` in any world where the mod is loaded. Only works in local worlds not on servers.
 
-### Manual:
+#### Manual:
 
 Copy contents of [HytaleGenerator Java](https://github.com/Voronoi-Studios/GridWave/tree/main/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java) to your corresponding folder in `%Appdata%/Hytale/install\release\package\game\latest\Client\NodeEditor\Workspaces\HytaleGenerator Java`
 
@@ -74,11 +82,6 @@ For convenience some new root spaces where added:
 
 ---
 
-## Usage
-
-Check out [Getting Started](getting-started) and the [GridWave.examples](examples) to get an idea how different things can be achieved.
-
----
 
 ## Roadmap
 
