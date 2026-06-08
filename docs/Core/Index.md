@@ -39,7 +39,7 @@ GridWave applies Wave Function Collapse by:
 2. Places any POI (FixedTiles) on the grid if position exists
 3. Uses BaseTiles to fill the grid using WFC
    1. Backtracks if it encounters impossible situations
-   2. Starts a new attempt if to many backtracks where reached, _Configurable, to give possibility to increase success chance_
+   2. Starts a new attempt if too many backtracks where reached, _Configurable, to give possibility to increase success chance_
 4. Uses pattern matching to try and replace base tiles with FancyTiles to add variety
 5. Assembles a PropDistribution or Prop
 
