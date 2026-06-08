@@ -6,6 +6,10 @@ published: true
 draft: false
 ---
 
+<div style="text-align: right"> 
+  This Documentation is for `v0.9-pre2`
+</div>
+
 <img width="1207" height="130" alt="main" src="https://github.com/user-attachments/assets/b6515917-a7e8-4c48-afcb-09f796a68a09" />
 
 <div>
@@ -210,13 +214,8 @@ draft: false
   </div>
 </div>
 
-
-> [!CAUTION]
-> This Wiki/Dokumentation is for the upcomming v0.9 and not for the currently released v0.7!
-
-
 > [!NOTE]
-> <p>GridWave is in Early Access. Things will break!<br>Join<a href="https://discord.gridwave.voronoi.ch" style="display:inline-flex; verticalRules-align:middle; margin-left:3px; margin-right:3px;"><img alt="discord" height="23px" style="margin:0px;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=outline&amp;size=xs&amp;logoColor=7289da&amp;label=Discord&amp;valueColor=ffffff&amp;labelTextColor=7289da"></a>to report bugs, give suggestions, and shape the future of constraint based procedural generation</p>
+> <p>GridWave is in Early Access. Things will break!<br>Join<a href="https://discord.gridwave.voronoi.ch" style="display:inline-flex; verticalRules-align:middle; margin-left:3px; margin-right:3px;"><img alt="discord" height="23px" style="margin:0px;" src="https://shieldcn.dev/discord/781549207051960370.svg?variant=outline&amp;size=xs&amp;logoColor=7289da&amp;label=Discord&amp;valueColor=ffffff&amp;labelTextColor=7289da"></a>to report bugs, give suggestions, and shape the future of constraint based procedural generation in Hytale</p>
 
 
 <div>
