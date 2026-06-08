@@ -3,9 +3,9 @@ published: true
 draft: true
 ---
 
-![IslandImage](https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Examples/JungleDungeonExample.png)
+![jungleDungeon](https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Examples/JungleDungeonExample.png)
 
-## _*Dungeon*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
+## _*Jungle Dungeon*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
 
 Prefab assets kindly provided by [Andy](https://x.com/andianerjones), from his [Jungle River](https://www.curseforge.com/hytale/mods/jungle-river) mod.
