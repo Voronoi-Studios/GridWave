@@ -24,7 +24,7 @@ draft: true
 
 ## Details
 
-<details>
+<details open>
 <summary>GridPositions</summary>
 
 Takes in a list of positions (currently need to be in a perfect grid). At each position a tile will later be spawned.
@@ -33,7 +33,7 @@ You can absolutely supply partial grids or grids with wired shapes, just keep in
 </details>
 
 
-<details>
+<details open>
 <summary>Grid</summary>
 
 Defines what the spacing is in to every direction, so the Algo knows how to fetch a position of a neighboring cell
@@ -41,7 +41,7 @@ Defines what the spacing is in to every direction, so the Algo knows how to fetc
 </details>
 
 
-<details>
+<details open>
 <summary>(Bounds)</summary>
 
 Only present on the Prop version, restrains the positions. can be left empty if a finite amount of positions was provided.
@@ -49,33 +49,33 @@ Only present on the Prop version, restrains the positions. can be left empty if 
 </details>
 
 
-<details>
-<summary>FixedTiles</summary>
+<details open>
+<summary>POIs (FixedTiles)</summary>
 
 Input for multiple [TileSet Nodes](TileSet).
-These tiles will be placed first, before anything runs. Make sure your stuff is not overlapping. 
+These tiles will be placed first, before anything runs. Make sure your stuff is not overlapping.
 
 > [!IMPORTANT]  
-> All tiles do need a [Restrainer Feature](Feature#restrainer-feature-local) for this to work or else he might place a tile everywhere.
+> All tiles do need a [Restrainer Feature](Feature#restrainer-feature-local) for this to work.
 
 </details>
 
 
-<details>
+<details open>
 <summary>BaseTiles</summary>
 
 Input for multiple [TileSet Nodes](TileSet).
-He will now try to figure out which of the provided tiles should be placed at every cell position.
+The Algo will now try to figure out which of the provided tiles should be placed at every cell position.
 Uses the [Greedy Lowest Entropy Cell Selector](https://github.com/Voronoi-Studios/GridWave/blob/c4c6b195661f1bb5c7742b1e2fa29b1d0086fa5f/GridWaveCore/src/main/java/ch/voronoi/GridWave/AlgoNodes/GridWave.java#L120-L130) by default to choose the next cell to collapse.
 
 </details>
 
 
-<details>
+<details open>
 <summary>FancyTiles</summary>
 
 Input for multiple [TileSet Nodes](TileSet).
-Before the tiles get actually spawned in, we now have the opportunity to use Pattern matching to replace singular or multiple tiles with others. 
+Before the tiles get actually spawned in, we now have the opportunity to use Pattern matching to replace certain tiles with others. 
 
 This is extremely powerful and can be used for many things;
 * Cars on a road
@@ -93,7 +93,7 @@ This is extremely powerful and can be used for many things;
 </details>
 
 
-<details>
+<details open>
 <summary>Seed</summary>
 
 Input for a [Seed](Seed).
@@ -101,7 +101,7 @@ Input for a [Seed](Seed).
 </details>
 
 
-<details>
+<details open>
 <summary>Features</summary>
 
 Input for any global scoped [Feature](Feature), to modify the Algo.
