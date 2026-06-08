@@ -24,7 +24,7 @@ All nodes are also available in the AssetEditor, thus the bellow steps can be fa
 
 ### Create an Instance
 
-Use `/worldgen2 create` to set up a WorldGen V2 asset-pack and starter biome for editing, or fallow the guides on HytaleModding.com on how to create a new world/instance:
+Use `/worldgen2 create` to set up a WorldGen V2 asset-pack and starter biome for editing, or follow the guides on HytaleModding.com on how to create a new world/instance:
 [How to edit and create Biomes](https://hytalemodding.dev/en/docs/official-documentation/worldgen/worldgen-tutorial/README)
 
 ---
