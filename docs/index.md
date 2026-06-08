@@ -6,7 +6,7 @@ published: true
 draft: false
 ---
 
-<div style="text-align: right; color: gray;"> 
+<div style="text-align: right; color: gray; margin-bottom: -30px;"> 
   This Documentation is for `v0.9-pre2`
 </div>
 
