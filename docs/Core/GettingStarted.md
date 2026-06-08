@@ -22,14 +22,14 @@ All nodes are also available in the AssetEditor, thus the bellow steps can be fa
 
 ---
 
-### 0. Create an Instance
+### Create an Instance
 
 Use `/worldgen2 create` to set up a WorldGen V2 asset-pack and starter biome for editing, or fallow the guides on HytaleModding.com on how to create a new world/instance:
 [How to edit and create Biomes](https://hytalemodding.dev/en/docs/official-documentation/worldgen/worldgen-tutorial/README)
 
 ---
 
-### 1. Biome
+### Biome
 
 Navigate to the biome file you want to add GridWave to. You can also use the [Examples](examples) jar (change ending to zip and unpack) as a starting point.
 To Add GridWave you now add a [GridWaveAlgorithm](algo) Node. There are two variatns that can be usefull in different circumstances. The [Prop](algo#gridwave-algorithm-prop) can be handy as it allows for the use of a locator prop or other similar post processors. Its generally recogmended to use this one to start. In the same way a [PropDistribution](algo#gridwave-algorithm-propdistribution) could be used, which is more performant and allows for infinite grids. Reat its decumentation carefully to make sure you understand its strengs and weaknesses. In general the rule of thumb is: if you need sparce occurances use a [Prop](algo#gridwave-algorithm-prop), if you need a singular large generation use a [PropDistribution](algo#gridwave-algorithm-propdistribution).
