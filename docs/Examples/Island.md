@@ -3,6 +3,7 @@ published: true
 draft: true
 ---
 
+![IslandImage](https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Examples/IslandExample.png)
 
 ## _*Island (Kyst)*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
