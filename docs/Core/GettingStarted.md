@@ -45,11 +45,14 @@ Depending on the complexity of your graph, you can also choose to use imports li
 
 ## Algo Node
 
-Shown is an example setup of a [Gridwave Algorithm Prop](algo#gridwave-algorithm-prop)
-featuring directly setup Fixed Props, an imported TileSet Group for the Base tiles and individually imported TileSets for the FancyTiles.
+Shown is an example setup of a [Gridwave Algorithm Prop](algo#gridwave-algorithm-prop) featuring directly setup Fixed Props, an imported TileSet Group for the Base tiles and individually imported TileSets for the FancyTiles.
+Importing TileSetGroups allows for very easy setup of generations that reuse certain parts, see the [Jungle Dungeon](jungle-dungeon) as an example.
 
 > [!TIP]
-> Importing TileSetGroups allows for very easy setup of generations that reuse certain parts, see the [Jungle Dungeon](jungle-dungeon) as an example.
+>  To play around with parameters or weights of the Tiles, set a `/viewport --radius=4` and imput a [Time Seed](seed#time-seed) set to 5 seconds in to your Algo. Now everytime you hit save in the Node Editor it regenerats a new structure.
+
+> [!NOTE]
+>  Currently Hytale seems to only dynamicly refresh one level up when exporting nodes. So if you have your Algo as an export and your Tiles as well, hitting save in the Tile's file wont refresh the top level biome anyome sadly.
 
 > [!NOTE]
 > Outdated picture from v0.7!
