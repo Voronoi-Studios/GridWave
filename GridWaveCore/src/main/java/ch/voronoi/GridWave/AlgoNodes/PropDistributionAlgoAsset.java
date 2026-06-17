@@ -4,6 +4,7 @@ import ch.voronoi.GridWave.AlgoNodes.Helper.IAlgoAsset;
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.SeedNodes.ConstantSeedAsset;
 import ch.voronoi.GridWave.SeedNodes.SeedAsset;
+import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
 import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
@@ -72,6 +73,14 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     @Override
     public List<FeatureAsset> getFeatureAssets() { return Arrays.stream(featureAssets).flatMap(x -> x.build().stream()).toList(); }
 
+    @Override
+    public List<TileSet> getPOITileSets(TileSetAsset.Argument argument) { return Arrays.stream(this.poiTileSetAssets).flatMap((tile) -> tile.build(argument, new FeatureAsset[0]).stream()).toList(); }
+    @Override
+    public List<TileSet> getBaseTileSets(TileSetAsset.Argument argument) { return Arrays.stream(this.baseTileSetAssets).flatMap((tile) -> tile.build(argument, new FeatureAsset[0]).stream()).toList(); }
+    @Override
+    public List<TileSet> getFancyTileSets(TileSetAsset.Argument argument) { return Arrays.stream(this.fancyTileSetAssets).flatMap((tile) -> tile.build(argument, new FeatureAsset[0]).stream()).toList(); }
+
+
     @Nonnull
     @Override
     public PropDistribution build(@Nonnull Argument argument) {
@@ -84,9 +93,9 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
 
             return new GridWavePropDistribution(
                     positionProvider,
-                    Arrays.stream(poiTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
-                    Arrays.stream(baseTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
-                    Arrays.stream(fancyTileSetAssets).flatMap(tile -> tile.build(tileSetArgument).stream()).toList(),
+                    this.getPOITileSets(tileSetArgument),
+                    this.getBaseTileSets(tileSetArgument),
+                    this.getFancyTileSets(tileSetArgument),
                     tileSetArgument
             );
         }

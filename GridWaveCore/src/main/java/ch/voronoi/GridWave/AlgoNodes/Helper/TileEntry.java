@@ -110,9 +110,9 @@ public record TileEntry (Map<Vector3ic, RuleCombo> ruleSets, Vector3ic mainKey,
             case MirrorDirection.X -> new Vector3i(evenOffsetX, 0, 0);
             case MirrorDirection.Z -> new Vector3i(0, 0, evenOffsetZ);
             default -> switch (rot()) {
-                case 3 -> new Vector3i(evenOffsetX, 0, 0);
+                case 3 -> new Vector3i(0, 0, evenOffsetZ);
                 case 2 -> new Vector3i(evenOffsetX, 0, evenOffsetZ);
-                case 1 -> new Vector3i(0, 0, evenOffsetZ);
+                case 1 -> new Vector3i(evenOffsetX, 0, 0);
                 default -> new Vector3i(0, 0, 0);
             };
         };

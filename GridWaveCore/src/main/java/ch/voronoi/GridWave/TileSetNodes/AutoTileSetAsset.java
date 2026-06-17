@@ -63,7 +63,7 @@ public class AutoTileSetAsset extends TileSetAsset {
         Vector3ic size = getSize(parts.get(parts.size()-2));
         if(size == null) return new ArrayList<>();
         RuleCombo[] simpleRuleSets = buildRuleCombo(parts.getLast(),null);
-        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(size, simpleRuleSets, argument);
+        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(argument.algoAsset.getGrid(), size, simpleRuleSets);
 
         return new LinkedList<>(List.of(new TileSet(ruleSets, weight, super.minimizeVariants, this::buildProp, argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toList())));
     }

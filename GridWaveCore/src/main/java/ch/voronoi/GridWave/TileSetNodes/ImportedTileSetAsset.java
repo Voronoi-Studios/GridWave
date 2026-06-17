@@ -29,9 +29,9 @@ public class ImportedTileSetAsset extends TileSetAsset {
     @Override
     public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         if (this.importName != null && !this.importName.isEmpty()) {
-            TileSetAsset.Exported exported = getExportedAsset(this.importName);
-            if(exported != null && exported.asset != null){
-                return exported.asset.build(argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toArray(FeatureAsset[]::new));
+            TileSetAsset exported = getExportedAsset(this.importName);
+            if(exported != null) {
+                return exported.build(argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toArray(FeatureAsset[]::new));
             }
             else {
                 HytaleLogger.getLogger().atWarning().log("An exported TileSet with this name does not exist: " + this.importName);

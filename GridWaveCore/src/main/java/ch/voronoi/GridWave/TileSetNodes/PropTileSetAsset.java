@@ -50,7 +50,7 @@ public class PropTileSetAsset extends TileSetAsset {
     @Override
     public List<TileSet> build(@Nonnull Argument argument, FeatureAsset... addFeatures) {
         Vector3ic size = new Vector3i(xSize, 0 ,zSize);
-        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(size, ruleSetAssets, argument);
+        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(argument.algoAsset.getGrid(), size, ruleSetAssets);
         return new ArrayList<>(List.of(new TileSet(ruleSets, weight, super.minimizeVariants, this::buildProp, argument,Stream.concat(Arrays.stream(this.tileFeatureAssets), Arrays.stream(addFeatures)).toList())));
     }
 

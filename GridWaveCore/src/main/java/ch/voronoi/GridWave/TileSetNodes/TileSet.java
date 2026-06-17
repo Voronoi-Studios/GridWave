@@ -68,12 +68,7 @@ public class TileSet {
     private static RuleCombo rotate(RuleCombo ruleCombo, int r) {
         String[][] horizontalProviderArr = ruleCombo.providerRuleSet().horizontalRules().getArrays();
         String[][] horizontalReceiverArr = ruleCombo.recieverRuleSet().horizontalRules().getArrays();
-        return new RuleCombo(
-                new RuleSet(
-                        new HorizontalRules(rotate(horizontalProviderArr, r)), ruleCombo.providerRuleSet().verticalRules()),
-                new RuleSet(
-                        new HorizontalRules(rotate(horizontalReceiverArr, r)), ruleCombo.recieverRuleSet().verticalRules()),
-                        ruleCombo.elevationRules());
+        return new RuleCombo(new RuleSet(new HorizontalRules(rotate(horizontalProviderArr, r)), ruleCombo.providerRuleSet().verticalRules()), new RuleSet(new HorizontalRules(rotate(horizontalReceiverArr, r)), ruleCombo.recieverRuleSet().verticalRules()), ruleCombo.elevationRules());
     }
 
     private static String[][] rotate(String[][] arr, int r) {
@@ -97,12 +92,7 @@ public class TileSet {
     private static RuleCombo mirror(RuleCombo ruleCombo, MirrorDirection m) {
         String[][] horizontalProviderArr = ruleCombo.providerRuleSet().horizontalRules().getArrays();
         String[][] horizontalReceiverArr = ruleCombo.recieverRuleSet().horizontalRules().getArrays();
-        return new RuleCombo(
-                new RuleSet(
-                        new HorizontalRules(mirror(horizontalProviderArr, m)), ruleCombo.providerRuleSet().verticalRules()),
-                new RuleSet(
-                        new HorizontalRules(mirror(horizontalReceiverArr, m)), ruleCombo.recieverRuleSet().verticalRules()),
-                ruleCombo.elevationRules());
+        return new RuleCombo(new RuleSet(new HorizontalRules(mirror(horizontalProviderArr, m)), ruleCombo.providerRuleSet().verticalRules()), new RuleSet(new HorizontalRules(mirror(horizontalReceiverArr, m)), ruleCombo.recieverRuleSet().verticalRules()), ruleCombo.elevationRules());
     }
 
     private static String[][] mirror(String[][] arr, MirrorDirection m) {
