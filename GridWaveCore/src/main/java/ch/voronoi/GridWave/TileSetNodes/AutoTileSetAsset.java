@@ -12,6 +12,7 @@ import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.validation.Validators;
+import com.hypixel.hytale.common.util.PathUtil;
 import com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
@@ -59,7 +60,7 @@ public class AutoTileSetAsset extends TileSetAsset {
         }
         prefabWeightedMaps.put(argument.workerId.id, prefabWeightedMap);
 
-        List<String> parts = Arrays.stream(Path.of(folderPath).toString().split("\\\\")).toList();
+        List<String> parts = Arrays.stream(PathUtil.toUnixPathString(Path.of(folderPath)).split("/")).toList();
         Vector3ic size = getSize(parts.get(parts.size()-2));
         if(size == null) return new ArrayList<>();
         RuleCombo[] simpleRuleSets = buildRuleCombo(parts.getLast(),null);
