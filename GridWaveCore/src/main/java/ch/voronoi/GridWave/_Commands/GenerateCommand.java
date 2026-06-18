@@ -46,30 +46,26 @@ public class GenerateCommand extends AbstractPlayerCommand {
         Player player = store.getComponent(ref, Player.getComponentType());
         PropAsset.Argument propArgument = new PropAsset.Argument(new SeedBox("command"), new MaterialCache(), new ReferenceBundle(), WorkerIndexer.Id.MAIN);
         PropAsset propAsset = PropAsset.getExportedAsset(propName.get(ctx));
-        if (propAsset == null) { ctx.sendMessage(Message.raw("This Prop Node does not exist")); return; }
-        BuilderToolsPlugin.BuilderState builderState = BuilderToolsPlugin.get().getState(player, playerRef);
-        BlockSelection blockSelection = createSelectionFromPropAsset(propAsset, propArgument);
-        builderState.setSelection(blockSelection);
-        builderState.sendSelectionToClient();
-        //playerRef.getPacketHandler().write(((BlockSelection) java.util.Objects.requireNonNullElseGet(blockSelection, BlockSelection::new)).toPacket());
+        if (propAsset == null) {
+            ctx.sendMessage(Message.raw("This Prop Node does not exist"));
+        }
+        else {
+            BuilderToolsPlugin.BuilderState builderState = BuilderToolsPlugin.getState(player, playerRef);
+            Prop prop = propAsset.build(propArgument);
+            BlockSelection blockSelection = createSelectionFromPropAsset(prop, propArgument);
+            builderState.setSelection(blockSelection);
+            builderState.sendSelectionToClient();
+        }
     }
 
 
-    public BlockSelection createSelectionFromPropAsset(
-            PropAsset propAsset,
+    public static BlockSelection createSelectionFromPropAsset(
+            Prop prop,
             PropAsset.Argument propArgument
     ) {
-        Prop prop = propAsset.build(propArgument);
-
         Bounds3i readBounds = prop.getReadBounds_voxelGrid().clone();
         Bounds3i writeBounds = prop.getWriteBounds_voxelGrid().clone();
-
-        //writeBounds.max.y += 50;
-//        readBounds.correct();
-//        writeBounds.correct();
-
         Bounds3i bounds = writeBounds.clone();
-
         ArrayVoxelSpace<Material> readSpace = new ArrayVoxelSpace<>(readBounds);
         ArrayVoxelSpace<Material> writeSpace = new ArrayVoxelSpace<>(writeBounds);
 
@@ -129,14 +125,12 @@ public class GenerateCommand extends AbstractPlayerCommand {
 
         Vector3ic localMin = Vector3iUtil.ZERO;
         Vector3ic localMax = writeBounds.getSize();
-
         selection.setSelectionArea(localMin, localMax);
         selection.setAnchor(
                 (localMin.x() + localMax.x()) / 2,
                 (localMin.y() + localMax.y()) / 2,
                 (localMin.z() + localMax.z()) / 2
         );
-
         return selection;
     }
 }

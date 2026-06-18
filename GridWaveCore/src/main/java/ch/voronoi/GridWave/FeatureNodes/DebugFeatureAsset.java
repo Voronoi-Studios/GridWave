@@ -17,6 +17,8 @@ import com.hypixel.hytale.builtin.hytalegenerator.props.UnionProp;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.hypixel.hytale.math.vector.Vector3dUtil;
+import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.joml.Vector3d;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
@@ -115,7 +117,7 @@ public class DebugFeatureAsset extends FeatureAsset {
         Map<Vector3d, Prop> extraProps = new LinkedHashMap<>();
         if(visualizeSectionBounds){
             SolidMaterial solid = argument.materialCache.getSolidMaterial("Cloth_Block_Wool_Black");
-            extraProps.put(new Vector3d(0,0,0), new WireframeCuboidProp(bounds, new ConstantMaterialProvider<>(new Material(solid, argument.materialCache.EMPTY_FLUID))));
+            extraProps.put(Vector3iUtil.toVector3d(bounds.min), new WireframeCuboidProp(bounds.clone().offsetOpposite(bounds.min), new ConstantMaterialProvider<>(new Material(solid, argument.materialCache.EMPTY_FLUID))));
         }
         return extraProps;
     }

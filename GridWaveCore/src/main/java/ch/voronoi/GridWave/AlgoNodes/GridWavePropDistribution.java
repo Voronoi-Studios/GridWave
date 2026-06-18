@@ -11,6 +11,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProv
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
+import com.hypixel.hytale.builtin.hytalegenerator.props.UnionProp;
 import com.hypixel.hytale.math.vector.Vector3dUtil;
 import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.joml.Vector3d;
@@ -71,6 +72,7 @@ public class GridWavePropDistribution extends PropDistribution {
     @Override
     public void distribute(@Nonnull PropDistribution.Context context) {
         Control control = new Control();
+        Vector3ic grid = argument.algoAsset.getGrid();
 
         Bounds3i fullBounds = argument.algoAsset.getGridBounds();
         Vector3i boundsMin = Vector3iUtil.max(Vector3dUtil.toVector3i(context.bounds.min), new Vector3i(fullBounds.min));
@@ -78,15 +80,19 @@ public class GridWavePropDistribution extends PropDistribution {
 
         if (boundsMin.x > boundsMax.x || boundsMin.y > boundsMax.y || boundsMin.z > boundsMax.z) return;
 
-        Vector3ic grid = argument.algoAsset.getGrid();
+        Map<Vector3d, Prop> extraProps = new LinkedHashMap<>();
+        argument.algoAsset.getFeatureAssets().forEach(x -> extraProps.putAll(x.GetExtraProps(new Bounds3i(boundsMin, boundsMax), argument)));
 
         for(int x = boundsMin.x; x <= boundsMax.x; x++){
             for(int z = boundsMin.z; z <= boundsMax.z; z++){
                 for(int y = boundsMin.y; y <= boundsMax.y; y++){
                     if (control.stop) break;
-                    if (x % grid.x() != 0 || y % grid.y() != 0 || z % grid.z() != 0) continue;
                     Vector3d pos = new Vector3d(x,y,z);
-                    Prop prop = getActualProp(pos, sectionStorageContext);
+                    Prop prop = extraProps.getOrDefault(pos,EmptyProp.INSTANCE);
+                    if (x % grid.x() == 0 && y % grid.y() == 0 && z % grid.z() == 0) {
+                        if (prop == EmptyProp.INSTANCE) prop = getActualProp(pos, sectionStorageContext);
+                        else prop = new UnionProp(List.of(prop, getActualProp(pos, sectionStorageContext)));
+                    }
                     if(prop == EmptyProp.INSTANCE) continue;
                     context.pipe.accept(pos, prop, control);
                 }

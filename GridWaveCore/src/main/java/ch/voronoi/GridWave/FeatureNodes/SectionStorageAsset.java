@@ -56,14 +56,12 @@ public class SectionStorageAsset extends FeatureAsset {
         @Nonnull
         public Vector3ic getSectionKeyFrom(@Nonnull Vector3d pointer) {
             Vector3i address = Vector3dUtil.toVector3i(pointer);
-            address.x = sectionFloor(address.x, this.voxelSectionSize.x()) / this.voxelSectionSize.x();
-            address.y = sectionFloor(address.y, this.voxelSectionSize.y()) / this.voxelSectionSize.y();
-            address.z = sectionFloor(address.z, this.voxelSectionSize.z()) / this.voxelSectionSize.z();
+            address.x = Math.floorDiv(address.x, this.voxelSectionSize.x());
+            address.y = Math.floorDiv(address.y, this.voxelSectionSize.y());
+            address.z = Math.floorDiv(address.z, this.voxelSectionSize.z());
             return address;
         }
-        public static int sectionFloor(int voxelAddress, int axisSize) {
-            return voxelAddress < 0 ? voxelAddress - voxelAddress % axisSize - axisSize : voxelAddress - voxelAddress % axisSize;
-        }
+
         private @NonNull Vector3ic voxelScale(Vector3ic sectionAddress) {
             return new Vector3i(sectionAddress).mul(voxelSectionSize);
         }

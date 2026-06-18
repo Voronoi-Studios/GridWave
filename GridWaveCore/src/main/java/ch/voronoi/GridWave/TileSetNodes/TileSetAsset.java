@@ -48,7 +48,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     @Nonnull
     public static final AssetCodecMapCodec<String, TileSetAsset> CODEC = new AssetCodecMapCodec<>(Codec.STRING, (t, k) -> t.id = k, t -> t.id, (t, data) -> t.data = data, t -> t.data);
     @Nonnull
-    private static final Map<String, TileSetAsset.Exported> exportedNodes = new ConcurrentHashMap<>();
+    private static final Map<String, TileSetAsset> exportedNodes = new ConcurrentHashMap<>();
     @Nonnull
     public static final Codec<String> CHILD_ASSET_CODEC = new ContainedAssetCodec<>(TileSetAsset.class, CODEC);
     @Nonnull
@@ -62,10 +62,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
                     if (exportedNodes.containsKey(asset.exportName)) {
                         LoggerUtil.getLogger().warning("Duplicate export name for asset: " + asset.exportName);
                     }
-
-                    TileSetAsset.Exported exported = new TileSetAsset.Exported();
-                    exported.asset = asset;
-                    exportedNodes.put(asset.exportName, exported);
+                    exportedNodes.put(asset.exportName, asset);
                     LoggerUtil.getLogger().fine("Registered imported node asset with name '" + asset.exportName + "' with asset id '" + asset.id);
                 }
             })
@@ -89,7 +86,7 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     @Override
     public void cleanUp() {}
 
-    public static TileSetAsset.Exported getExportedAsset(@Nonnull String name) {
+    public static TileSetAsset getExportedAsset(@Nonnull String name) {
         return exportedNodes.get(name);
     }
 
@@ -108,10 +105,6 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
     @Nonnull
     public static PropAsset.Argument argumentFrom(@Nonnull TileSetAsset.Argument argument) {
         return new PropAsset.Argument(argument.parentSeed, argument.materialCache, argument.referenceBundle, argument.workerId);
-    }
-
-    public static class Exported {
-        public TileSetAsset asset;
     }
 
     public static class Argument {
@@ -224,14 +217,14 @@ public abstract class TileSetAsset implements JsonAssetWithMap<String, DefaultAs
         var sizeParts = str.split("x");
         return new Vector3i(Integer.parseInt(sizeParts[0]),0,Integer.parseInt(sizeParts[1]));
     }
-    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(Vector3ic size, RuleSetAsset[] ruleSetAssets, @NonNull Argument argument) {
-        return getRuleComboMap(size,Arrays.stream(ruleSetAssets).flatMap(x -> x.build().stream()).toArray(RuleCombo[]::new), argument);
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(@Nonnull Vector3ic grid, Vector3ic size, RuleSetAsset[] ruleSetAssets) {
+        return getRuleComboMap(grid, size,Arrays.stream(ruleSetAssets).flatMap(x -> x.build().stream()).toArray(RuleCombo[]::new));
     }
-    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(Vector3ic size, RuleCombo[] ruleCombos, @NonNull Argument argument) {
+    public static @NonNull Map<Vector3ic, RuleCombo> getRuleComboMap(@Nonnull Vector3ic grid, Vector3ic size, RuleCombo[] ruleCombos) {
         Map<Vector3ic, RuleCombo> ruleSets = new HashMap<>();
         Vector3i offset = new Vector3i(Vector3iUtil.ZERO);
         for(RuleCombo ruleCombo : ruleCombos){
-            ruleSets.put(new Vector3i(offset).mul(argument.algoAsset.getGrid()), ruleCombo);
+            ruleSets.put(new Vector3i(offset).mul(grid), ruleCombo);
             offset.z++;
             if(offset.z >= size.z()) {
                 offset.z = 0;

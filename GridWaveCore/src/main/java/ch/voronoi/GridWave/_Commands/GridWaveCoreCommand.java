@@ -12,6 +12,7 @@ public class GridWaveCoreCommand extends AbstractCommandCollection {
             this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADVENTURER);
             this.addSubCommand(new PingCoreCommand(pluginName,pluginVersion));
             this.addSubCommand(new GenerateCommand());
+            this.addSubCommand(new GenerateTileCommand());
             this.addSubCommand(new PatchNodeEditorCommand(patchSource,patchTarget));
         }
 
