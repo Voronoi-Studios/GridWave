@@ -7,7 +7,7 @@ import ch.voronoi.GridWave.SeedNodes.SeedAsset;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
-import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
+import ch.voronoi.GridWave.Utils.GridGen.GridGenAsset;
 import ch.voronoi.GridWave.Utils.GridGen.MaxBounds;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.ListPositionProviderAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.PositionProviderAsset;
@@ -65,9 +65,9 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     private FeatureAsset[] featureAssets = new FeatureAsset[0];
 
     @Override
-    public Vector3ic getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
+    public Vector3ic getGrid() { return grid != null ? grid : positionProviderAsset instanceof GridGenAsset asset ? asset.getGrid() : new Vector3i(16,16,16); }
     @Override
-    public Bounds3i getGridBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGen2DAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
+    public Bounds3i getFullBounds() { return boundsAsset != null ? boundsAsset.build() : positionProviderAsset instanceof GridGenAsset asset ? asset.getBounds() : MaxBounds.INSTANCE.build(); }
     @Override
     public int getMaxPositionsCount() { return maxPositionsCount; }
     @Override

@@ -3,6 +3,7 @@ package ch.voronoi.GridWave.AlgoNodes.Helper;
 import ch.voronoi.GridWave.FeatureNodes.ConditionalWeightFeatureAsset;
 import ch.voronoi.GridWave.TileSetNodes.TileSetAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.WeightedMap;
+import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;

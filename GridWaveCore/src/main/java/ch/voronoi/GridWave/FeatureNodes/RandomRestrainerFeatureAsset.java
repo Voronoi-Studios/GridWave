@@ -17,6 +17,7 @@ import com.hypixel.hytale.math.vector.Vector3iUtil;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation;
 import org.joml.Vector3d;
 import org.joml.Vector3dc;
+import org.joml.Vector3ic;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -49,7 +50,8 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
         TileEntry tileEntry = tileEntries.get(rot%tileEntries.size());
         PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
         Bounds3i bounds3i = new Bounds3i(Vector3iUtil.MIN, Vector3iUtil.MAX);
-        if(customBoundsAsset != null) bounds3i = customBoundsAsset.build();
+        Vector3ic grid = argument.algoAsset.getGrid();
+        if(customBoundsAsset != null) bounds3i = customBoundsAsset.build().clone().offset(grid.x(), 0, grid.z());
         List<Vector3dc> gridPositions = GridWave.getPositions(positionProvider, bounds3i,Integer.MAX_VALUE);
         if (!gridPositions.isEmpty() && seed != null) {
             SeedBox seedBox = argument.parentSeed.child(seed.build(argument.algoAsset));

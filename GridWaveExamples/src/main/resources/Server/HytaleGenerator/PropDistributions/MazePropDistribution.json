@@ -4,13 +4,21 @@
 	"ExportAs":	"MazePropDistribution",
 	"Skip":	false,
 	"GridPoints":	{
-		"$NodeId":	"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3",
-		"Type":	"GridGen2D",
-		"OffsetX":	16,
-		"OffsetZ":	16,
-		"RepeatX":	15,
-		"RepeatZ":	15,
-		"Centered":	true
+		"$NodeId":	"GridGen.GridWave-128f485c-e8d5-4200-aed1-011861af036e",
+		"Type":	"GridGen",
+		"Offset":	{
+			"$NodeId":	"Vector3i-d3725337-b36f-4e06-875f-2bb4aa27724f",
+			"X":	16,
+			"Y":	16,
+			"Z":	16
+		},
+		"Repeat":	{
+			"$NodeId":	"Vector3i-c232c608-01ce-48b9-8d33-e2e04fc34c22",
+			"X":	15,
+			"Y":	1,
+			"Z":	15
+		},
+		"CenterHorizontally":	true
 	},
 	"POIs":	[{
 			"$NodeId":	"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e",
@@ -88,12 +96,6 @@
 				},
 				"$Title":	"[ROOT] GridWave Algorithm [WFC]"
 			},
-			"GridGen2D.GridWave-a5d09ab5-35a8-4c54-8540-379d0995a9c3":	{
-				"$Position":	{
-					"$x":	2694,
-					"$y":	-265
-				}
-			},
 			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
 				"$Position":	{
 					"$x":	2685,
@@ -152,6 +154,24 @@
 				"$Position":	{
 					"$x":	2694,
 					"$y":	580
+				}
+			},
+			"GridGen.GridWave-128f485c-e8d5-4200-aed1-011861af036e":	{
+				"$Position":	{
+					"$x":	2691,
+					"$y":	-140
+				}
+			},
+			"Vector3i-d3725337-b36f-4e06-875f-2bb4aa27724f":	{
+				"$Position":	{
+					"$x":	3425,
+					"$y":	-300
+				}
+			},
+			"Vector3i-c232c608-01ce-48b9-8d33-e2e04fc34c22":	{
+				"$Position":	{
+					"$x":	3422,
+					"$y":	-97
 				}
 			}
 		},

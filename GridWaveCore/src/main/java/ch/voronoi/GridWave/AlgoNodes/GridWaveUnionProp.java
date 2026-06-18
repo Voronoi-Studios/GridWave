@@ -93,7 +93,7 @@ public class GridWaveUnionProp extends Prop {
 
         Map<Vector3d, Prop> gridProps = loadPrefabProps(tiles, subArgument);
         Map<Vector3d, Prop> extraProps = new LinkedHashMap<>();
-        argument.algoAsset.getFeatureAssets().forEach(x -> extraProps.putAll(x.GetExtraProps(subArgument.algoAsset.getGridBounds(), argument)));
+        argument.algoAsset.getFeatureAssets().forEach(x -> extraProps.putAll(x.GetExtraProps(subArgument.algoAsset.getFullBounds(), argument)));
 
         List<Prop> props = new ArrayList<>();
         for (var entry : gridProps.entrySet()) {

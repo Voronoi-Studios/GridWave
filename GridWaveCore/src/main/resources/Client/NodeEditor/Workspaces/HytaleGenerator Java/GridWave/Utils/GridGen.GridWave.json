@@ -1,0 +1,72 @@
+{
+  "Id": "GridGen.GridWave",
+  "Title": "Grid Point Generator",
+  "Color": "Blue",
+  "Description" : "",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "CenterHorizontally",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "CenterHorizontally",
+        "Default" : true
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "PointConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Position"
+    },
+    {
+      "Id": "OffsetConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Offset"
+    },
+    {
+      "Id": "RepeatConnection",
+      "Type": "Vector3i.Connection",
+      "Color": "Orange",
+      "Multiple" : false,
+      "Label" : "Repeat"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "PositionsConnection",
+      "Color": "Blue"
+    }
+  ],
+  "Schema": {
+    "Type" : "GridGen",
+    "ExportAs" : "ExportAs",
+    "Position" : {
+      "Node" : "Point3D",
+      "Pin" : "PointConnection"
+    },
+    "Offset" : {
+      "Node" : "Point3D",
+      "Pin" : "OffsetConnection"
+    },
+    "Repeat" : {
+      "Node" : "Point3D",
+      "Pin" : "RepeatConnection"
+    },
+    "CenterHorizontally" : "CenterHorizontally"
+  }
+}

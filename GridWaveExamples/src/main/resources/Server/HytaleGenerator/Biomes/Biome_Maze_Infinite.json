@@ -31,13 +31,21 @@
 					"Y":	16,
 					"Z":	16
 				},
-				"POIs":	[],
+				"POIs":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5",
+						"Type":	"Imported",
+						"Name":	"MazeFixedTiles1"
+					}],
 				"BaseTiles":	[{
 						"$NodeId":	"Imported.TileSet.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad",
 						"Type":	"Imported",
 						"Name":	"MazeBaseTiles1"
 					}],
-				"FancyTiles":	[],
+				"FancyTiles":	[{
+						"$NodeId":	"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06",
+						"Type":	"Imported",
+						"Name":	"MazeFancyTiles1"
+					}],
 				"Seed":	{
 					"$NodeId":	"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d",
 					"Type":	"Constant",
@@ -181,14 +189,6 @@
 			}
 		},
 		"$FloatingNodes":	[{
-				"$NodeId":	"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06",
-				"Type":	"Imported",
-				"Name":	"MazeFancyTiles1"
-			}, {
-				"$NodeId":	"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5",
-				"Type":	"Imported",
-				"Name":	"MazeFixedTiles1"
-			}, {
 				"$NodeId":	"Imported.Feature.GridWave-fbd5555a-49d6-4f41-9f43-a743ff9dc3f8",
 				"Type":	"Imported",
 				"Name":	"MazeGlobalFeatures1"
