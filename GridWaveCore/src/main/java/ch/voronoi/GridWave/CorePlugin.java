@@ -13,10 +13,7 @@ import ch.voronoi.GridWave.SeedNodes.SeedAsset;
 import ch.voronoi.GridWave.SeedNodes.TimeSeedAsset;
 import ch.voronoi.GridWave.TileSetNodes.*;
 import ch.voronoi.GridWave.Utils.CuboidWireframe.WireframeCuboidPropAsset;
-import ch.voronoi.GridWave.Utils.GridGen.BoundsConverterAsset;
-import ch.voronoi.GridWave.Utils.GridGen.CustomBoundsAsset;
-import ch.voronoi.GridWave.Utils.GridGen.GridBoundsAsset;
-import ch.voronoi.GridWave.Utils.GridGen.GridGen2DAsset;
+import ch.voronoi.GridWave.Utils.GridGen.*;
 import ch.voronoi.GridWave.Utils.MirrorNode.StaticMirrorPropAsset;
 import ch.voronoi.GridWave._Commands.GridWaveCoreCommand;
 import com.hypixel.hytale.assetstore.AssetRegistry;
@@ -110,7 +107,7 @@ public class CorePlugin extends JavaPlugin {
         //Util Nodes
         PropAsset.CODEC.register("WireframeCuboid", WireframeCuboidPropAsset.class, WireframeCuboidPropAsset.CODEC);
         PropAsset.CODEC.register("StaticMirror", StaticMirrorPropAsset.class, StaticMirrorPropAsset.CODEC);
-        PositionProviderAsset.CODEC.register("GridGen2D", GridGen2DAsset.class, GridGen2DAsset.CODEC);
+        PositionProviderAsset.CODEC.register("GridGen", GridGenAsset.class, GridGenAsset.CODEC);
         CustomBoundsAsset.CODEC.register("Grid", GridBoundsAsset.class, GridBoundsAsset.CODEC);
         CustomBoundsAsset.CODEC.register("Converter", BoundsConverterAsset.class, BoundsConverterAsset.CODEC);
     }

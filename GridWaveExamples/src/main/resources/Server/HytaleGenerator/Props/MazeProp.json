@@ -4,19 +4,21 @@
 	"ExportAs":	"MazeProp",
 	"Skip":	false,
 	"GridPoints":	{
-		"$NodeId":	"GridGen2D.GridWave-18ee225b-3c4f-4ea0-9a3a-750f6ac640c7",
-		"Type":	"GridGen2D",
-		"OffsetX":	16,
-		"OffsetZ":	16,
-		"RepeatX":	20,
-		"RepeatZ":	20,
-		"Centered":	true
-	},
-	"Grid":	{
-		"$NodeId":	"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7",
-		"X":	16,
-		"Y":	16,
-		"Z":	16
+		"$NodeId":	"GridGen.GridWave-cd20c9bb-0075-49bf-9c6e-0e014b603015",
+		"Type":	"GridGen",
+		"Offset":	{
+			"$NodeId":	"Vector3i-9b323b13-9af5-44d0-9906-7368d989ac88",
+			"X":	16,
+			"Y":	16,
+			"Z":	16
+		},
+		"Repeat":	{
+			"$NodeId":	"Vector3i-f203442b-49c8-4d17-b0c4-70fd884154b3",
+			"X":	20,
+			"Y":	1,
+			"Z":	20
+		},
+		"CenterHorizontally":	true
 	},
 	"POIs":	[{
 			"$NodeId":	"Imported.TileSet.GridWave-adb41587-8ab6-4de2-aa0f-80b3a3603a8f",
@@ -76,16 +78,22 @@
 				},
 				"$Title":	"[ROOT] Wave Function Collapse Algorithm"
 			},
-			"GridGen2D.GridWave-18ee225b-3c4f-4ea0-9a3a-750f6ac640c7":	{
+			"GridGen.GridWave-cd20c9bb-0075-49bf-9c6e-0e014b603015":	{
 				"$Position":	{
-					"$x":	4175,
-					"$y":	-408
+					"$x":	4187,
+					"$y":	-109
 				}
 			},
-			"Vector3i-67f4bedc-4f4f-4f2a-9c48-6b6a71f25ac7":	{
+			"Vector3i-9b323b13-9af5-44d0-9906-7368d989ac88":	{
 				"$Position":	{
-					"$x":	4177,
-					"$y":	-97
+					"$x":	4852,
+					"$y":	-269
+				}
+			},
+			"Vector3i-f203442b-49c8-4d17-b0c4-70fd884154b3":	{
+				"$Position":	{
+					"$x":	4853,
+					"$y":	-79
 				}
 			},
 			"Imported.TileSet.GridWave-adb41587-8ab6-4de2-aa0f-80b3a3603a8f":	{

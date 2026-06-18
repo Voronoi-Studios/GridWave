@@ -91,7 +91,7 @@
       "Imported.Seed.GridWave"
     ],
     "GridWave.Utils" : [
-      "GridGen2D.GridWave",
+      "GridGen.GridWave",
       "WireframeCuboidProp.GridWave",
       "StaticMirrorProp.GridWave",
       "Grid.CBounds.GridWave",

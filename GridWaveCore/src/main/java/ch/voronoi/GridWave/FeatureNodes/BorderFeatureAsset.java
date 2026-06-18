@@ -13,15 +13,12 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.math.util.MathUtil;
-import com.hypixel.hytale.math.vector.Vector3iUtil;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
 import java.util.*;
-
-import static ch.voronoi.GridWave.AlgoNodes.GridWave.toCellPos;
 
 public class BorderFeatureAsset extends FeatureAsset {
     @Nonnull
@@ -41,7 +38,7 @@ public class BorderFeatureAsset extends FeatureAsset {
     @Override
     public void BaseWaveProcessor(@NonNull Map<Vector3ic, WaveCell> baseWave, TileSetAsset.Argument argument) {
         if(skip() || borderRuleSets.length == 0) return;
-        Bounds3i gridBounds = argument.algoAsset.getGridBounds().clone();
+        Bounds3i gridBounds = argument.algoAsset.getFullBounds().clone();
         Vector3ic grid = argument.algoAsset.getGrid();
         //gridBounds.encompass(toCellPos(Vector3iUtil.toVector3d(gridBounds.min), grid));
         //gridBounds.encompass(toCellPos(Vector3iUtil.toVector3d(new Vector3i(gridBounds.max).sub(new Vector3i(grid))), grid));

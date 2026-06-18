@@ -21,12 +21,8 @@ import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
 
 import javax.annotation.Nonnull;
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static ch.voronoi.GridWave.AlgoNodes.Helper.GridTile.getAllPossiblePropVariants;
@@ -74,7 +70,7 @@ public class GridWavePropDistribution extends PropDistribution {
         Control control = new Control();
         Vector3ic grid = argument.algoAsset.getGrid();
 
-        Bounds3i fullBounds = argument.algoAsset.getGridBounds();
+        Bounds3i fullBounds = argument.algoAsset.getFullBounds();
         Vector3i boundsMin = Vector3iUtil.max(Vector3dUtil.toVector3i(context.bounds.min), new Vector3i(fullBounds.min));
         Vector3i boundsMax = Vector3iUtil.min( Vector3dUtil.toVector3i(context.bounds.max), new Vector3i(fullBounds.max));
 
@@ -108,6 +104,7 @@ public class GridWavePropDistribution extends PropDistribution {
 
     private List<GridTile> solveSection(Bounds3i bounds) {
         List<Vector3dc> gridPositions = GridWave.getPositions(this.positionProvider, bounds, this.argument.algoAsset.getMaxPositionsCount());
+        if (gridPositions.isEmpty()) return new ArrayList<>();
         TileSetAsset.Argument subArgument = new TileSetAsset.Argument(this.argument, bounds);
         return GridWave.solve(gridPositions, this.poiTileEntries, this.baseTileEntries, this.fancyTileEntries, subArgument);
     }

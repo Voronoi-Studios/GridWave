@@ -4,13 +4,21 @@
 	"ExportAs":	"Venice",
 	"Skip":	false,
 	"GridPoints":	{
-		"$NodeId":	"GridGen2D.GridWave-b837b252-0a0f-4252-93bc-dd79391e9e31",
-		"Type":	"GridGen2D",
-		"OffsetX":	12,
-		"OffsetZ":	12,
-		"RepeatX":	15,
-		"RepeatZ":	15,
-		"Centered":	true
+		"$NodeId":	"GridGen.GridWave-c28faefe-4037-4f31-b0d1-9a703ebbd015",
+		"Type":	"GridGen",
+		"Offset":	{
+			"$NodeId":	"Vector3i-86636852-8fb9-4045-b876-d12ecd24cced",
+			"X":	12,
+			"Y":	12,
+			"Z":	12
+		},
+		"Repeat":	{
+			"$NodeId":	"Vector3i-61eb1092-4857-45b6-9dc3-46d687316f5a",
+			"X":	15,
+			"Y":	1,
+			"Z":	15
+		},
+		"CenterHorizontally":	true
 	},
 	"BaseTiles":	[{
 			"$NodeId":	"Group.TileSet.GridWave-c09959a7-e192-4a48-bda3-2d844f372225",
@@ -289,12 +297,6 @@
 				},
 				"$Title":	"[ROOT] GridWave Algorithm (Prop)"
 			},
-			"GridGen2D.GridWave-b837b252-0a0f-4252-93bc-dd79391e9e31":	{
-				"$Position":	{
-					"$x":	1514,
-					"$y":	429
-				}
-			},
 			"Group.TileSet.GridWave-c09959a7-e192-4a48-bda3-2d844f372225":	{
 				"$Position":	{
 					"$x":	1511,
@@ -497,6 +499,24 @@
 				"$Position":	{
 					"$x":	1503,
 					"$y":	1570
+				}
+			},
+			"GridGen.GridWave-c28faefe-4037-4f31-b0d1-9a703ebbd015":	{
+				"$Position":	{
+					"$x":	1431,
+					"$y":	225
+				}
+			},
+			"Vector3i-86636852-8fb9-4045-b876-d12ecd24cced":	{
+				"$Position":	{
+					"$x":	1438,
+					"$y":	418
+				}
+			},
+			"Vector3i-61eb1092-4857-45b6-9dc3-46d687316f5a":	{
+				"$Position":	{
+					"$x":	1822,
+					"$y":	422
 				}
 			}
 		},

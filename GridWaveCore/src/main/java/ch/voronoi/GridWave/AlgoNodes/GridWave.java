@@ -83,6 +83,7 @@ public class GridWave {
             for(TileEntry tileEntry : tileSet.getTileEntries().toList()){
                 Vector3ic absolutePos = tileEntry.restrained();
                 if (absolutePos == null) continue;
+                absolutePos = toCellPos(Vector3iUtil.toVector3d(absolutePos), argument.algoAsset.getGrid());
                 for(TileEntry subtileEntry : tileEntry.getSubTiles()){
                     if(subtileEntry.getMainRuleSet().equals(RuleCombo.H_EMPTY)) continue;
                     if(subtileEntry.getMainRuleSet().equals(RuleCombo.H_NULL)) continue;
@@ -261,7 +262,6 @@ public class GridWave {
                 positions.add(new Vector3d(position));
             }
         };
-
         PositionProvider.Context context = new PositionProvider.Context(bounds.toBounds3d(), collectingPipe, null);
         provider.generate(context);
         return positions;
