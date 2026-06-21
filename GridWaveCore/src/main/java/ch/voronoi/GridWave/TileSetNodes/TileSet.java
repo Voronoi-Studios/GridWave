@@ -40,16 +40,16 @@ public class TileSet {
             if (!minimizeVariants || seen.add(getKey(current))) tileEntries.add(tileEntry);
 
         }
-        for (MirrorDirection mirrorDirection : List.of(MirrorDirection.X, MirrorDirection.Z)) {
-            Map<Vector3ic, RuleCombo> current = new HashMap<>();
-            for (Map.Entry<Vector3ic, RuleCombo> e : ruleSets.entrySet()) {
-                Vector3i mirroredKey = mirror(e.getKey(), mirrorDirection);
-                RuleCombo mirroredValue = mirror(e.getValue(), mirrorDirection);
-                current.put(mirroredKey, mirroredValue);
-            }
-            TileEntry tileEntry = new TileEntry(current, new Vector3i(Vector3iUtil.ZERO), weight, 0, mirrorDirection, basePropFunction, null, new ArrayList<>(tileFeatureAssets));
-            if (!minimizeVariants || seen.add(getKey(current))) tileEntries.add(tileEntry);
-        }
+//        for (MirrorDirection mirrorDirection : List.of(MirrorDirection.X, MirrorDirection.Z)) {
+//            Map<Vector3ic, RuleCombo> current = new HashMap<>();
+//            for (Map.Entry<Vector3ic, RuleCombo> e : ruleSets.entrySet()) {
+//                Vector3i mirroredKey = mirror(e.getKey(), mirrorDirection);
+//                RuleCombo mirroredValue = mirror(e.getValue(), mirrorDirection);
+//                current.put(mirroredKey, mirroredValue);
+//            }
+//            TileEntry tileEntry = new TileEntry(current, new Vector3i(Vector3iUtil.ZERO), weight, 0, mirrorDirection, basePropFunction, null, new ArrayList<>(tileFeatureAssets));
+//            if (!minimizeVariants || seen.add(getKey(current))) tileEntries.add(tileEntry);
+//        }
         tileFeatureAssets.forEach(feature -> feature.AfterTileSetCreation(tileEntries, argument));
     }
     private String getKey(Map<Vector3ic, RuleCombo> current) {
