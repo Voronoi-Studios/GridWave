@@ -1,11 +1,13 @@
 package ch.voronoi.GridWave.TileSetNodes;
 
 import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
+import com.hypixel.hytale.builtin.hytalegenerator.LoggerUtil;
 import com.hypixel.hytale.builtin.hytalegenerator.props.EmptyProp;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.hypixel.hytale.server.core.Message;
 
 import javax.annotation.Nonnull;
 import java.io.File;
@@ -49,12 +51,19 @@ public class AutoTileSetGroupAsset extends TileSetAsset {
     }
 
     private void collectLeafDirs(Path current, Path packPath, List<AutoTileSetAsset> autoTileSetAssets) {
-        File[] subDirs = current.toFile().listFiles(File::isDirectory);
-        if (subDirs == null || subDirs.length == 0) {
+        //File[] subDirs = current.toFile().listFiles(File::isDirectory);
+        List<Path> subDirs = new ArrayList<>();
+        try (Stream<Path> stream = Files.list(current)) {
+            subDirs = stream.filter(Files::isDirectory).toList();
+        } catch (Exception e) {
+            LoggerUtil.getLogger().warning(e.getMessage());
+        }
+
+        if (subDirs.isEmpty()) {
             String relativePath = current.subpath(packPath.getNameCount()+2, current.getNameCount()).toString();
             autoTileSetAssets.add(new AutoTileSetAsset(relativePath, super.tileFeatureAssets));
             return;
         }
-        for (File sub : subDirs) collectLeafDirs(sub.toPath(), packPath, autoTileSetAssets);
+        for (Path sub : subDirs) collectLeafDirs(sub, packPath, autoTileSetAssets);
     }
 }
