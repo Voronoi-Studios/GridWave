@@ -19,8 +19,8 @@ This is an extension to GridWaveCore which is a Hytale plugin that integrates Wa
   - [Maze Multi Floor](maze#maze-multi-floor)
   - [Maze Infinite](maze#maze-infinite)
 - [Island](Island)
-- [Ruin City](RuinCity) (comming soon)
-- [Jungle Dungeon](JungleDungeon)
+- [Desert Outpost](desert-outpost)
+- [Jungle Dungeon](jungle-dungeon)
 - [Venice](Venice)
 
 

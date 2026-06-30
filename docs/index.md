@@ -101,14 +101,14 @@ draft: false
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
+        <img class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/DesertOutpostExampleAnim.gif"></img>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Ruin City</h3>
+              <h3>Desert Outpost</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="gridwave/ruin-city" class="button"> ↗ </a>
+            <a href="gridwave/desert-outpost" class="button"> ↗ </a>
           </div>
         </div>
       </div>
@@ -198,14 +198,14 @@ draft: false
         </div>
       </div>
       <div class="card">
-        <video class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/VeniceExample.mp4" autoplay loop></video>
+        <img class="main-image" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/DesertOutpostExampleAnim.gif"></img>
         <div class="overlay">
           <div class="content">
             <div>
-              <h3>Ruin City</h3>
+              <h3>Desert Outpost</h3>
               <p>by Jonas.png</p>
             </div>
-            <a href="gridwave/ruin-city" class="button"> ↗ </a>
+            <a href="gridwave/desert-outpost" class="button"> ↗ </a>
           </div>
         </div>
       </div>
