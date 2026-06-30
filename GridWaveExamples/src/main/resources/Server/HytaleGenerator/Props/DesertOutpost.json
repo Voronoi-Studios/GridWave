@@ -1,0 +1,1065 @@
+{
+	"$NodeId":	"Union.Prop-17ce57e9-a424-4589-a611-7403008909a5",
+	"Type":	"Union",
+	"ExportAs":	"DesertOutpost",
+	"Skip":	false,
+	"Props":	[{
+			"$NodeId":	"Offset.Prop-dfbf709b-166e-4ef3-84b1-40888c3c4925",
+			"Type":	"Offset",
+			"Skip":	false,
+			"Offset":	{
+				"$NodeId":	"Point3D-50488a0a-2da5-4d8e-8d6c-b7cfbebc3773",
+				"X":	0,
+				"Y":	1,
+				"Z":	0
+			},
+			"Prop":	{
+				"$NodeId":	"PropAlgo.GridWave-288b9603-b7a0-40d4-8c5a-a33962042a82",
+				"Type":	"PropAlgo",
+				"Skip":	false,
+				"GridPoints":	{
+					"$NodeId":	"GridGen.GridWave-6297cee9-555a-48ec-90fb-91dac16863ff",
+					"Type":	"GridGen",
+					"Offset":	{
+						"$NodeId":	"Vector3i-b99b7d0e-02af-4be3-bd51-4af42f1bce61",
+						"X":	8,
+						"Y":	8,
+						"Z":	8
+					},
+					"Repeat":	{
+						"$NodeId":	"Vector3i-f78e64d0-b077-47bd-b104-1ddf46e7cd85",
+						"X":	5,
+						"Y":	1,
+						"Z":	6
+					},
+					"CenterHorizontally":	true
+				},
+				"POIs":	[],
+				"BaseTiles":	[{
+						"$NodeId":	"Group.TileSet.GridWave-9d4361b2-a10f-4db7-80de-a4263f926620",
+						"Type":	"Group",
+						"TileSets":	[{
+								"$NodeId":	"Single.TileSet.GridWave-df839a6f-00e9-48d9-b57f-dfda2f4676a0",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-2dd12522-047d-46a0-9b79-928e54266463",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"02",
+										"E":	"20",
+										"S":	"00",
+										"W":	"00"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"20",
+										"E":	"02",
+										"S":	"0",
+										"W":	"0"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/OuterCorner",
+								"Weight":	1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-ece59ddf-3459-4ef5-8392-252e1cc3402b",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-3b0c8173-c427-4285-bf38-fb7b837ddba2",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"02",
+										"E":	"2",
+										"S":	"2",
+										"W":	"20"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"20",
+										"E":	"2",
+										"S":	"2",
+										"W":	"02"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/InnerCorner",
+								"Weight":	1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-4deb86a8-1a7d-48f3-9393-0f6a1f6744ea",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-e8c792b3-bf13-4a3d-bc8e-c591add9462a",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"02",
+										"E":	"2",
+										"S":	"2",
+										"W":	"00"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"20",
+										"E":	"2",
+										"S":	"2",
+										"W":	"0"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/Side",
+								"Weight":	0.1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-d263345b-4eeb-4202-857f-bd9908032924",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-f9516f79-9871-4ed8-adc9-65189fb8ccb5",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"2",
+										"E":	"2",
+										"S":	"2",
+										"W":	"2"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"2",
+										"E":	"2",
+										"S":	"2",
+										"W":	"2"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/Full",
+								"Weight":	10,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-3323891f-32cc-4bef-ae9f-5f9ad32d5fca",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-c61e8e98-faff-443e-b49b-0c23096f0eaa",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"0",
+										"E":	"0",
+										"S":	"0",
+										"W":	"0"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"0,00",
+										"E":	"0,00",
+										"S":	"0,00",
+										"W":	"0,00"
+									}
+								},
+								"Features":	[],
+								"Weight":	0.01,
+								"MinimizeVariants":	true
+							}],
+						"Features":	[]
+					}],
+				"FancyTiles":	[],
+				"Seed":	{
+					"$NodeId":	"Time.Seed.GridWave-b91e0f0d-4bfa-4227-9d3e-68596f8d4d9f",
+					"Type":	"Time",
+					"Interval":	5,
+					"Unit":	"Seconds"
+				},
+				"Features":	[{
+						"$NodeId":	"OverlapTile.Feature.GridWave-e3204efe-c748-4ead-bf3a-9928fdb1db94",
+						"Type":	"OverlapTile",
+						"Skip":	false
+					}, {
+						"$NodeId":	"Border.Feature.GridWave-71e5041f-cbaa-4e2d-bfa6-f29e2e881a4c",
+						"Type":	"Border",
+						"Skip":	false,
+						"BorderType":	"OuterBorder",
+						"BorderRuleSets":	[{
+								"$NodeId":	"Advanced.RuleSet.GridWave-6f69e9c8-ccaf-4efc-9fef-4ac8b617030f",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"0,00",
+									"E":	"0,00",
+									"S":	"0,00",
+									"W":	"0,00"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"0,00",
+									"E":	"0,00",
+									"S":	"0,00",
+									"W":	"0,00"
+								}
+							}]
+					}, {
+						"$NodeId":	"MultiAttempt.Feature.GridWave-22cdd822-8c74-46cc-b115-15f2a372e6bb",
+						"Type":	"MultiAttempt",
+						"Skip":	false,
+						"MaxBacktracks":	2000,
+						"MaxAttempts":	20
+					}],
+				"MaxPositionsCount":	20000
+			}
+		}, {
+			"$NodeId":	"Offset.Prop-69a80db4-e29d-434d-95c7-28c6f89a81a2",
+			"Type":	"Offset",
+			"Skip":	false,
+			"Offset":	{
+				"$NodeId":	"Point3D-7ddb3653-8238-4d1a-9bc1-71c3c2373d82",
+				"X":	0,
+				"Y":	7,
+				"Z":	0
+			},
+			"Prop":	{
+				"$NodeId":	"PropAlgo.GridWave-b6302b99-58a7-400f-8056-6ee8cdfe9e0e",
+				"Type":	"PropAlgo",
+				"Skip":	false,
+				"GridPoints":	{
+					"$NodeId":	"GridGen.GridWave-f7b57f00-b5be-4ec5-aa57-586364c50146",
+					"Type":	"GridGen",
+					"Offset":	{
+						"$NodeId":	"Vector3i-ed88db7c-4e4b-4e58-ac05-a59877619b78",
+						"X":	8,
+						"Y":	8,
+						"Z":	8
+					},
+					"Repeat":	{
+						"$NodeId":	"Vector3i-1bba16cf-b400-48fd-b6f1-cae1960a2315",
+						"X":	3,
+						"Y":	1,
+						"Z":	4
+					},
+					"CenterHorizontally":	true
+				},
+				"POIs":	[],
+				"BaseTiles":	[{
+						"$NodeId":	"Group.TileSet.GridWave-8ef591c3-a7a9-4f01-9d28-bc7d59a51dab",
+						"Type":	"Group",
+						"TileSets":	[{
+								"$NodeId":	"Single.TileSet.GridWave-fece1bfb-a8d4-4937-b908-202c94a25765",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-147566d5-d2a7-40ea-a119-9b9690a14c1b",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"03",
+										"E":	"30",
+										"S":	"00",
+										"W":	"00"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"30",
+										"E":	"03",
+										"S":	"0",
+										"W":	"0"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/OuterCorner",
+								"Weight":	1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-6ecc6e66-fec6-498e-827f-88744e14a125",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-a91f36b2-d23c-47cb-8ba2-54951c79b3c6",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"03",
+										"E":	"3",
+										"S":	"3",
+										"W":	"30"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"30",
+										"E":	"3",
+										"S":	"3",
+										"W":	"03"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/InnerCorner",
+								"Weight":	1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-2dfe9a14-b37e-4645-8957-02bad5c5cf2a",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-66b9eef0-e2ca-4e18-a6db-3a3a7ef20029",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"03",
+										"E":	"3",
+										"S":	"3",
+										"W":	"00"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"30",
+										"E":	"3",
+										"S":	"3",
+										"W":	"0"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/Side",
+								"Weight":	0.1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-9995e222-dd17-4997-a0e9-8d59b96e2a38",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-e6644493-cdaf-4041-a5bc-c5b57967e6fb",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"3",
+										"E":	"3",
+										"S":	"3",
+										"W":	"3"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"3",
+										"E":	"3",
+										"S":	"3",
+										"W":	"3"
+									}
+								},
+								"Features":	[],
+								"PrefabPath":	"Desert/BaseTiles/Layer2/Full",
+								"Weight":	0.1,
+								"MinimizeVariants":	true
+							}, {
+								"$NodeId":	"Single.TileSet.GridWave-99c99721-1791-451a-a3d3-2f9b9c057bd2",
+								"Type":	"Single",
+								"RuleSet":	{
+									"$NodeId":	"Advanced.RuleSet.GridWave-4315503c-7208-4891-a91c-14c3b7dabff9",
+									"Type":	"Advanced",
+									"HorizontalRulesProvider":	{
+										"N":	"0",
+										"E":	"0",
+										"S":	"0",
+										"W":	"0"
+									},
+									"HorizontalRulesReceiver":	{
+										"N":	"0,00",
+										"E":	"0,00",
+										"S":	"0,00",
+										"W":	"0,00"
+									}
+								},
+								"Features":	[],
+								"Weight":	0.01,
+								"MinimizeVariants":	true
+							}],
+						"Features":	[]
+					}],
+				"FancyTiles":	[],
+				"Seed":	{
+					"$NodeId":	"Time.Seed.GridWave-04b9f9dc-1767-4434-a736-75780f1fd855",
+					"Type":	"Time",
+					"Interval":	5,
+					"Unit":	"Seconds"
+				},
+				"Features":	[{
+						"$NodeId":	"OverlapTile.Feature.GridWave-eb8e8fdc-10c5-4e50-979a-5bf728a98a49",
+						"Type":	"OverlapTile",
+						"Skip":	false
+					}, {
+						"$NodeId":	"Border.Feature.GridWave-51d2b574-0ee4-4c0e-a8bc-9293c6b38f19",
+						"Type":	"Border",
+						"Skip":	false,
+						"BorderType":	"OuterBorder",
+						"BorderRuleSets":	[{
+								"$NodeId":	"Advanced.RuleSet.GridWave-89a11f4c-df54-44be-bd4d-c7109c748705",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"0,00",
+									"E":	"0,00",
+									"S":	"0,00",
+									"W":	"0,00"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"0,00",
+									"E":	"0,00",
+									"S":	"0,00",
+									"W":	"0,00"
+								}
+							}]
+					}, {
+						"$NodeId":	"MultiAttempt.Feature.GridWave-c64c0d60-7678-4b0e-88b5-920bb3e4c1da",
+						"Type":	"MultiAttempt",
+						"Skip":	false,
+						"MaxBacktracks":	2000,
+						"MaxAttempts":	20
+					}],
+				"MaxPositionsCount":	20000
+			}
+		}, {
+			"$NodeId":	"PropAlgo.GridWave-24905901-9c59-4489-8eac-097904f728a9",
+			"Type":	"PropAlgo",
+			"Skip":	false,
+			"GridPoints":	{
+				"$NodeId":	"GridGen.GridWave-348a5647-b33d-4102-9769-40f241bf6c98",
+				"Type":	"GridGen",
+				"Offset":	{
+					"$NodeId":	"Vector3i-8447d4a2-cd5b-4aed-a6b4-c57fc3877ebb",
+					"X":	8,
+					"Y":	8,
+					"Z":	8
+				},
+				"Repeat":	{
+					"$NodeId":	"Vector3i-80bff3e2-a541-44c0-9181-f4390b400910",
+					"X":	5,
+					"Y":	1,
+					"Z":	6
+				},
+				"CenterHorizontally":	true
+			},
+			"POIs":	[],
+			"BaseTiles":	[{
+					"$NodeId":	"Group.TileSet.GridWave-9815c4a5-7351-4fbf-90be-26b322063200",
+					"Type":	"Group",
+					"TileSets":	[{
+							"$NodeId":	"Single.TileSet.GridWave-b4898757-5e06-4ba0-bb12-1fea4f17ce60",
+							"Type":	"Single",
+							"RuleSet":	{
+								"$NodeId":	"Advanced.RuleSet.GridWave-97b74255-d5b6-49c8-81a1-f1b867d673e1",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"01",
+									"E":	"10",
+									"S":	"0",
+									"W":	"0"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"10",
+									"E":	"01",
+									"S":	"00",
+									"W":	"00"
+								}
+							},
+							"Features":	[],
+							"PrefabPath":	"Desert/BaseTiles/Layer1/OuterCorner",
+							"Weight":	1,
+							"MinimizeVariants":	true
+						}, {
+							"$NodeId":	"Single.TileSet.GridWave-d10d0d74-c46a-46d0-9b00-3941081deb5d",
+							"Type":	"Single",
+							"RuleSet":	{
+								"$NodeId":	"Advanced.RuleSet.GridWave-5cabba21-ec0b-43ce-a237-b639582e7f77",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"01",
+									"E":	"11",
+									"S":	"11",
+									"W":	"10"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"10",
+									"E":	"1",
+									"S":	"1",
+									"W":	"01"
+								}
+							},
+							"Features":	[],
+							"PrefabPath":	"Desert/BaseTiles/Layer1/InnerCorner",
+							"Weight":	5,
+							"MinimizeVariants":	true
+						}, {
+							"$NodeId":	"Single.TileSet.GridWave-2f2acf06-9c45-4d16-b2ca-dd1b8c990ef1",
+							"Type":	"Single",
+							"RuleSet":	{
+								"$NodeId":	"Advanced.RuleSet.GridWave-1ed306bc-2c6a-4f3e-ba9b-53c5d400e47e",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"01",
+									"E":	"11",
+									"S":	"10",
+									"W":	"0"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"10",
+									"E":	"1",
+									"S":	"01",
+									"W":	"00"
+								}
+							},
+							"Features":	[],
+							"PrefabPath":	"Desert/BaseTiles/Layer1/Side",
+							"Weight":	1,
+							"MinimizeVariants":	true
+						}, {
+							"$NodeId":	"Single.TileSet.GridWave-cf53b44b-1a2a-4b3a-b583-2b52be683da8",
+							"Type":	"Single",
+							"RuleSet":	{
+								"$NodeId":	"Advanced.RuleSet.GridWave-359f6a6c-fb00-4b98-a292-4371c4d3b4d6",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"1",
+									"E":	"1",
+									"S":	"1",
+									"W":	"1"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"1,11",
+									"E":	"1,11",
+									"S":	"1,11",
+									"W":	"1,11"
+								}
+							},
+							"Features":	[],
+							"PrefabPath":	"Desert/BaseTiles/Layer1/Full",
+							"Weight":	1,
+							"MinimizeVariants":	true
+						}, {
+							"$NodeId":	"Single.TileSet.GridWave-3839c82d-aac9-45aa-b047-4bcb663d68e8",
+							"Type":	"Single",
+							"RuleSet":	{
+								"$NodeId":	"Advanced.RuleSet.GridWave-67f9377b-3701-4f54-8c7e-3e8e3c8bf888",
+								"Type":	"Advanced",
+								"HorizontalRulesProvider":	{
+									"N":	"0,00",
+									"E":	"0,00",
+									"S":	"0,00",
+									"W":	"0,00"
+								},
+								"HorizontalRulesReceiver":	{
+									"N":	"0",
+									"E":	"0",
+									"S":	"0",
+									"W":	"0"
+								}
+							},
+							"Features":	[],
+							"Weight":	0.01,
+							"MinimizeVariants":	true
+						}],
+					"Features":	[]
+				}],
+			"FancyTiles":	[{
+					"$NodeId":	"Group.TileSet.GridWave-9166ac45-fb68-48e2-be1f-93fffa2fe383",
+					"Type":	"Group",
+					"TileSets":	[{
+							"$NodeId":	"Multi.TileSet.GridWave-0db7e24a-8862-4816-b0de-c2f145eb8864",
+							"Type":	"Multi",
+							"RuleSets":	[{
+									"$NodeId":	"Simple.RuleSet.GridWave-d56d554d-e3c6-4e74-a816-4179eb28ca18",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"S":	"1,11",
+										"W":	"1,11"
+									}
+								}, {
+									"$NodeId":	"Simple.RuleSet.GridWave-bd95ef1b-8697-48e7-85ea-a2443df57bdf",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1,11",
+										"W":	"1,11"
+									}
+								}, {
+									"$NodeId":	"Simple.RuleSet.GridWave-3c4f9efa-38ed-4141-9637-6f691eaaf669",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"E":	"1,11",
+										"S":	"1,11"
+									}
+								}, {
+									"$NodeId":	"Simple.RuleSet.GridWave-994dbba7-b422-4d18-af52-b33ecdbc659d",
+									"Type":	"Simple",
+									"HorizontalRules":	{
+										"N":	"1,11",
+										"E":	"1,11"
+									}
+								}],
+							"Features":	[],
+							"PrefabPath":	"Desert/FancyTiles/LargeTower1.prefab.json",
+							"SizeX":	2,
+							"SizeZ":	2,
+							"Weight":	1,
+							"MinimizeVariants":	true
+						}],
+					"Features":	[]
+				}],
+			"Seed":	{
+				"$NodeId":	"Time.Seed.GridWave-0b1e12b0-548d-43e3-b8f0-85353dabe427",
+				"Type":	"Time",
+				"Interval":	5,
+				"Unit":	"Seconds"
+			},
+			"Features":	[{
+					"$NodeId":	"OverlapTile.Feature.GridWave-e0a8c096-6b14-42e5-bbca-f6a0e833c40c",
+					"Type":	"OverlapTile",
+					"Skip":	false
+				}, {
+					"$NodeId":	"Border.Feature.GridWave-86c2db7c-5a54-413e-b406-985328f81ee9",
+					"Type":	"Border",
+					"Skip":	false,
+					"BorderType":	"OuterBorder",
+					"BorderRuleSets":	[{
+							"$NodeId":	"Advanced.RuleSet.GridWave-1a1f6708-81f9-4732-a321-ee5f5bc8d28d",
+							"Type":	"Advanced",
+							"HorizontalRulesProvider":	{
+								"N":	"0,00",
+								"E":	"0,00",
+								"S":	"0,00",
+								"W":	"0,00"
+							},
+							"HorizontalRulesReceiver":	{
+								"N":	"0,00",
+								"E":	"0,00",
+								"S":	"0,00",
+								"W":	"0,00"
+							}
+						}]
+				}, {
+					"$NodeId":	"MultiAttempt.Feature.GridWave-db3a6d7c-de3f-468f-a1e9-753a2dab416e",
+					"Type":	"MultiAttempt",
+					"Skip":	false,
+					"MaxBacktracks":	2000,
+					"MaxAttempts":	20
+				}],
+			"MaxPositionsCount":	20000
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Union.Prop-17ce57e9-a424-4589-a611-7403008909a5":	{
+				"$Position":	{
+					"$x":	768,
+					"$y":	-2051
+				},
+				"$Title":	"[ROOT] Union Prop"
+			},
+			"Offset.Prop-dfbf709b-166e-4ef3-84b1-40888c3c4925":	{
+				"$Position":	{
+					"$x":	3960,
+					"$y":	-2051
+				}
+			},
+			"Point3D-50488a0a-2da5-4d8e-8d6c-b7cfbebc3773":	{
+				"$Position":	{
+					"$x":	4633,
+					"$y":	-2270
+				}
+			},
+			"PropAlgo.GridWave-288b9603-b7a0-40d4-8c5a-a33962042a82":	{
+				"$Position":	{
+					"$x":	4623,
+					"$y":	-1661
+				}
+			},
+			"Group.TileSet.GridWave-9d4361b2-a10f-4db7-80de-a4263f926620":	{
+				"$Position":	{
+					"$x":	5388,
+					"$y":	-1484
+				}
+			},
+			"Single.TileSet.GridWave-df839a6f-00e9-48d9-b57f-dfda2f4676a0":	{
+				"$Position":	{
+					"$x":	6222,
+					"$y":	-1463
+				}
+			},
+			"Advanced.RuleSet.GridWave-2dd12522-047d-46a0-9b79-928e54266463":	{
+				"$Position":	{
+					"$x":	7046,
+					"$y":	-1461
+				}
+			},
+			"Single.TileSet.GridWave-ece59ddf-3459-4ef5-8392-252e1cc3402b":	{
+				"$Position":	{
+					"$x":	6230,
+					"$y":	-904
+				}
+			},
+			"Advanced.RuleSet.GridWave-3b0c8173-c427-4285-bf38-fb7b837ddba2":	{
+				"$Position":	{
+					"$x":	7053,
+					"$y":	-902
+				}
+			},
+			"Single.TileSet.GridWave-4deb86a8-1a7d-48f3-9393-0f6a1f6744ea":	{
+				"$Position":	{
+					"$x":	6245,
+					"$y":	-107
+				}
+			},
+			"Advanced.RuleSet.GridWave-e8c792b3-bf13-4a3d-bc8e-c591add9462a":	{
+				"$Position":	{
+					"$x":	7057,
+					"$y":	-107
+				}
+			},
+			"Single.TileSet.GridWave-d263345b-4eeb-4202-857f-bd9908032924":	{
+				"$Position":	{
+					"$x":	6240,
+					"$y":	450
+				}
+			},
+			"Advanced.RuleSet.GridWave-f9516f79-9871-4ed8-adc9-65189fb8ccb5":	{
+				"$Position":	{
+					"$x":	7055,
+					"$y":	453
+				}
+			},
+			"Single.TileSet.GridWave-3323891f-32cc-4bef-ae9f-5f9ad32d5fca":	{
+				"$Position":	{
+					"$x":	6221,
+					"$y":	1170
+				}
+			},
+			"Advanced.RuleSet.GridWave-c61e8e98-faff-443e-b49b-0c23096f0eaa":	{
+				"$Position":	{
+					"$x":	7080,
+					"$y":	1142
+				}
+			},
+			"Time.Seed.GridWave-b91e0f0d-4bfa-4227-9d3e-68596f8d4d9f":	{
+				"$Position":	{
+					"$x":	5404,
+					"$y":	-1307
+				}
+			},
+			"OverlapTile.Feature.GridWave-e3204efe-c748-4ead-bf3a-9928fdb1db94":	{
+				"$Position":	{
+					"$x":	5387,
+					"$y":	-1096
+				}
+			},
+			"Border.Feature.GridWave-71e5041f-cbaa-4e2d-bfa6-f29e2e881a4c":	{
+				"$Position":	{
+					"$x":	5312,
+					"$y":	-853
+				}
+			},
+			"Advanced.RuleSet.GridWave-6f69e9c8-ccaf-4efc-9fef-4ac8b617030f":	{
+				"$Position":	{
+					"$x":	5319,
+					"$y":	-699
+				}
+			},
+			"MultiAttempt.Feature.GridWave-22cdd822-8c74-46cc-b115-15f2a372e6bb":	{
+				"$Position":	{
+					"$x":	5314,
+					"$y":	-148
+				}
+			},
+			"Offset.Prop-69a80db4-e29d-434d-95c7-28c6f89a81a2":	{
+				"$Position":	{
+					"$x":	6994,
+					"$y":	-2046
+				}
+			},
+			"Point3D-7ddb3653-8238-4d1a-9bc1-71c3c2373d82":	{
+				"$Position":	{
+					"$x":	7731,
+					"$y":	-2267
+				}
+			},
+			"PropAlgo.GridWave-b6302b99-58a7-400f-8056-6ee8cdfe9e0e":	{
+				"$Position":	{
+					"$x":	7934,
+					"$y":	-1618
+				}
+			},
+			"Group.TileSet.GridWave-8ef591c3-a7a9-4f01-9d28-bc7d59a51dab":	{
+				"$Position":	{
+					"$x":	8699,
+					"$y":	-1441
+				}
+			},
+			"Single.TileSet.GridWave-fece1bfb-a8d4-4937-b908-202c94a25765":	{
+				"$Position":	{
+					"$x":	9533,
+					"$y":	-1420
+				}
+			},
+			"Advanced.RuleSet.GridWave-147566d5-d2a7-40ea-a119-9b9690a14c1b":	{
+				"$Position":	{
+					"$x":	10357,
+					"$y":	-1418
+				}
+			},
+			"Single.TileSet.GridWave-6ecc6e66-fec6-498e-827f-88744e14a125":	{
+				"$Position":	{
+					"$x":	9541,
+					"$y":	-861
+				}
+			},
+			"Advanced.RuleSet.GridWave-a91f36b2-d23c-47cb-8ba2-54951c79b3c6":	{
+				"$Position":	{
+					"$x":	10364,
+					"$y":	-859
+				}
+			},
+			"Single.TileSet.GridWave-2dfe9a14-b37e-4645-8957-02bad5c5cf2a":	{
+				"$Position":	{
+					"$x":	9556,
+					"$y":	-64
+				}
+			},
+			"Advanced.RuleSet.GridWave-66b9eef0-e2ca-4e18-a6db-3a3a7ef20029":	{
+				"$Position":	{
+					"$x":	10368,
+					"$y":	-64
+				}
+			},
+			"Single.TileSet.GridWave-9995e222-dd17-4997-a0e9-8d59b96e2a38":	{
+				"$Position":	{
+					"$x":	9551,
+					"$y":	493
+				}
+			},
+			"Advanced.RuleSet.GridWave-e6644493-cdaf-4041-a5bc-c5b57967e6fb":	{
+				"$Position":	{
+					"$x":	10366,
+					"$y":	496
+				}
+			},
+			"Single.TileSet.GridWave-99c99721-1791-451a-a3d3-2f9b9c057bd2":	{
+				"$Position":	{
+					"$x":	9532,
+					"$y":	1213
+				}
+			},
+			"Advanced.RuleSet.GridWave-4315503c-7208-4891-a91c-14c3b7dabff9":	{
+				"$Position":	{
+					"$x":	10391,
+					"$y":	1185
+				}
+			},
+			"Time.Seed.GridWave-04b9f9dc-1767-4434-a736-75780f1fd855":	{
+				"$Position":	{
+					"$x":	8703,
+					"$y":	-1266
+				}
+			},
+			"OverlapTile.Feature.GridWave-eb8e8fdc-10c5-4e50-979a-5bf728a98a49":	{
+				"$Position":	{
+					"$x":	8698,
+					"$y":	-1053
+				}
+			},
+			"Border.Feature.GridWave-51d2b574-0ee4-4c0e-a8bc-9293c6b38f19":	{
+				"$Position":	{
+					"$x":	8623,
+					"$y":	-810
+				}
+			},
+			"Advanced.RuleSet.GridWave-89a11f4c-df54-44be-bd4d-c7109c748705":	{
+				"$Position":	{
+					"$x":	8630,
+					"$y":	-656
+				}
+			},
+			"MultiAttempt.Feature.GridWave-c64c0d60-7678-4b0e-88b5-920bb3e4c1da":	{
+				"$Position":	{
+					"$x":	8627,
+					"$y":	-108
+				}
+			},
+			"PropAlgo.GridWave-24905901-9c59-4489-8eac-097904f728a9":	{
+				"$Position":	{
+					"$x":	1447,
+					"$y":	-1543
+				}
+			},
+			"Group.TileSet.GridWave-9815c4a5-7351-4fbf-90be-26b322063200":	{
+				"$Position":	{
+					"$x":	2164,
+					"$y":	-1374
+				}
+			},
+			"Single.TileSet.GridWave-b4898757-5e06-4ba0-bb12-1fea4f17ce60":	{
+				"$Position":	{
+					"$x":	2997,
+					"$y":	-1353
+				}
+			},
+			"Advanced.RuleSet.GridWave-97b74255-d5b6-49c8-81a1-f1b867d673e1":	{
+				"$Position":	{
+					"$x":	3822,
+					"$y":	-1351
+				}
+			},
+			"Single.TileSet.GridWave-d10d0d74-c46a-46d0-9b00-3941081deb5d":	{
+				"$Position":	{
+					"$x":	3005,
+					"$y":	-794
+				}
+			},
+			"Advanced.RuleSet.GridWave-5cabba21-ec0b-43ce-a237-b639582e7f77":	{
+				"$Position":	{
+					"$x":	3829,
+					"$y":	-792
+				}
+			},
+			"Single.TileSet.GridWave-2f2acf06-9c45-4d16-b2ca-dd1b8c990ef1":	{
+				"$Position":	{
+					"$x":	3020,
+					"$y":	2
+				}
+			},
+			"Advanced.RuleSet.GridWave-1ed306bc-2c6a-4f3e-ba9b-53c5d400e47e":	{
+				"$Position":	{
+					"$x":	3833,
+					"$y":	2
+				}
+			},
+			"Single.TileSet.GridWave-cf53b44b-1a2a-4b3a-b583-2b52be683da8":	{
+				"$Position":	{
+					"$x":	3015,
+					"$y":	560
+				}
+			},
+			"Advanced.RuleSet.GridWave-359f6a6c-fb00-4b98-a292-4371c4d3b4d6":	{
+				"$Position":	{
+					"$x":	3831,
+					"$y":	563
+				}
+			},
+			"Single.TileSet.GridWave-3839c82d-aac9-45aa-b047-4bcb663d68e8":	{
+				"$Position":	{
+					"$x":	2996,
+					"$y":	1280
+				}
+			},
+			"Advanced.RuleSet.GridWave-67f9377b-3701-4f54-8c7e-3e8e3c8bf888":	{
+				"$Position":	{
+					"$x":	3841,
+					"$y":	1289
+				}
+			},
+			"Group.TileSet.GridWave-9166ac45-fb68-48e2-be1f-93fffa2fe383":	{
+				"$Position":	{
+					"$x":	2061,
+					"$y":	1849
+				}
+			},
+			"Multi.TileSet.GridWave-0db7e24a-8862-4816-b0de-c2f145eb8864":	{
+				"$Position":	{
+					"$x":	2930,
+					"$y":	1944
+				}
+			},
+			"Simple.RuleSet.GridWave-d56d554d-e3c6-4e74-a816-4179eb28ca18":	{
+				"$Position":	{
+					"$x":	3857,
+					"$y":	2204
+				}
+			},
+			"Simple.RuleSet.GridWave-bd95ef1b-8697-48e7-85ea-a2443df57bdf":	{
+				"$Position":	{
+					"$x":	4524,
+					"$y":	2231
+				}
+			},
+			"Simple.RuleSet.GridWave-3c4f9efa-38ed-4141-9637-6f691eaaf669":	{
+				"$Position":	{
+					"$x":	3866,
+					"$y":	2504
+				}
+			},
+			"Simple.RuleSet.GridWave-994dbba7-b422-4d18-af52-b33ecdbc659d":	{
+				"$Position":	{
+					"$x":	4524,
+					"$y":	2531
+				}
+			},
+			"Time.Seed.GridWave-0b1e12b0-548d-43e3-b8f0-85353dabe427":	{
+				"$Position":	{
+					"$x":	2167,
+					"$y":	-1190
+				}
+			},
+			"OverlapTile.Feature.GridWave-e0a8c096-6b14-42e5-bbca-f6a0e833c40c":	{
+				"$Position":	{
+					"$x":	2163,
+					"$y":	-985
+				}
+			},
+			"Border.Feature.GridWave-86c2db7c-5a54-413e-b406-985328f81ee9":	{
+				"$Position":	{
+					"$x":	2088,
+					"$y":	-742
+				}
+			},
+			"Advanced.RuleSet.GridWave-1a1f6708-81f9-4732-a321-ee5f5bc8d28d":	{
+				"$Position":	{
+					"$x":	2095,
+					"$y":	-588
+				}
+			},
+			"MultiAttempt.Feature.GridWave-db3a6d7c-de3f-468f-a1e9-753a2dab416e":	{
+				"$Position":	{
+					"$x":	2100,
+					"$y":	-36
+				}
+			},
+			"String.RuleSet.GridWave-b8edfb90-77f2-49fd-9d96-e5c269edacf5":	{
+				"$Position":	{
+					"$x":	3873,
+					"$y":	1908
+				}
+			},
+			"GridGen.GridWave-348a5647-b33d-4102-9769-40f241bf6c98":	{
+				"$Position":	{
+					"$x":	2076,
+					"$y":	-1580
+				}
+			},
+			"Vector3i-8447d4a2-cd5b-4aed-a6b4-c57fc3877ebb":	{
+				"$Position":	{
+					"$x":	2778,
+					"$y":	-1753
+				}
+			},
+			"Vector3i-80bff3e2-a541-44c0-9181-f4390b400910":	{
+				"$Position":	{
+					"$x":	2780,
+					"$y":	-1561
+				}
+			},
+			"GridGen.GridWave-6297cee9-555a-48ec-90fb-91dac16863ff":	{
+				"$Position":	{
+					"$x":	5396,
+					"$y":	-1711
+				}
+			},
+			"Vector3i-b99b7d0e-02af-4be3-bd51-4af42f1bce61":	{
+				"$Position":	{
+					"$x":	6098,
+					"$y":	-1884
+				}
+			},
+			"Vector3i-f78e64d0-b077-47bd-b104-1ddf46e7cd85":	{
+				"$Position":	{
+					"$x":	6095,
+					"$y":	-1692
+				}
+			},
+			"GridGen.GridWave-f7b57f00-b5be-4ec5-aa57-586364c50146":	{
+				"$Position":	{
+					"$x":	8677,
+					"$y":	-1688
+				}
+			},
+			"Vector3i-ed88db7c-4e4b-4e58-ac05-a59877619b78":	{
+				"$Position":	{
+					"$x":	9379,
+					"$y":	-1861
+				}
+			},
+			"Vector3i-1bba16cf-b400-48fd-b6f1-cae1960a2315":	{
+				"$Position":	{
+					"$x":	9381,
+					"$y":	-1669
+				}
+			}
+		},
+		"$FloatingNodes":	[{
+				"$NodeId":	"String.RuleSet.GridWave-b8edfb90-77f2-49fd-9d96-e5c269edacf5",
+				"Type":	"String",
+				"Str":	"22XX-X22X-2XX2-XX22-11XX-X11X-1XX1-XX11"
+			}],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Prop"
+	}
+}

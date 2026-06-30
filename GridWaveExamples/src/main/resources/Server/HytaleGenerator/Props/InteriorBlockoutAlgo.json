@@ -1,0 +1,47 @@
+{
+	"$NodeId":	"PropAlgo.GridWave-dcf26ec9-bdb8-4fa7-87cc-5af04bd17bcf",
+	"Type":	"PropAlgo",
+	"ExportAs":	"InteriorBlockoutAlgo",
+	"Skip":	false,
+	"POIs":	[],
+	"BaseTiles":	[{
+			"$NodeId":	"AutoGroup.TileSet.GridWave-f6f3d613-141c-4871-a42a-039b299116e1",
+			"Type":	"AutoGroup",
+			"FolderPath":	"InteriorBlockout/BaseTiles"
+		}],
+	"Features":	[{
+			"$NodeId":	"OverlapTile.Feature.GridWave-8f554cb3-5422-449e-bd0f-f992d98b8f29",
+			"Type":	"OverlapTile",
+			"Skip":	false
+		}],
+	"MaxPositionsCount":	20000,
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"PropAlgo.GridWave-dcf26ec9-bdb8-4fa7-87cc-5af04bd17bcf":	{
+				"$Position":	{
+					"$x":	381,
+					"$y":	117
+				},
+				"$Title":	"[ROOT] GridWave Algorithm (Prop)"
+			},
+			"AutoGroup.TileSet.GridWave-f6f3d613-141c-4871-a42a-039b299116e1":	{
+				"$Position":	{
+					"$x":	1354,
+					"$y":	259
+				}
+			},
+			"OverlapTile.Feature.GridWave-8f554cb3-5422-449e-bd0f-f992d98b8f29":	{
+				"$Position":	{
+					"$x":	1070,
+					"$y":	526
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Prop"
+	}
+}
