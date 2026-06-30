@@ -8,7 +8,6 @@ draft: true
 ## _*Venice*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
 
-Prefab assets kindly provided by [Arrinity](https://www.curseforge.com/members/arrinity)
 
 This example shows how fancy tiles can be used in an interesting way to make the canals more interesting:
 
@@ -25,3 +24,5 @@ This example shows how fancy tiles can be used in an interesting way to make the
 - TileSet Files: -
 - Others: [WorldStructures_Venice.json](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/HytaleGenerator/WorldStructures/WorldStructures_Venice.json), [instance.bson](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/Instances/Venice/instance.bson)
 - **Prefabs:** [Venice](https://github.com/Voronoi-Studios/GridWave/tree/main/GridWaveExamples/src/main/resources/Server/Prefabs/Venice)
+> [!IMPORTANT] 
+> Prefab assets kindly provided by [Arrinity](https://www.curseforge.com/members/arrinity)

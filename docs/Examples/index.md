@@ -20,7 +20,7 @@ This is an extension to GridWaveCore which is a Hytale plugin that integrates Wa
   - [Maze Infinite](maze#maze-infinite)
 - [Island](Island)
 - [Ruin City](RuinCity) (comming soon)
-- [Jungle Dungeon](JungleDungeon)
+- [Jungle Dungeon](jungle-dungeon)
 - [Venice](Venice)
 
 

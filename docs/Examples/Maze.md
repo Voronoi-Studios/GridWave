@@ -6,8 +6,6 @@ draft: true
 
 # _*Maze*_ ![Static Badge](https://img.shields.io/badge/State-Preview-violet)
 
-
-Prefab assets as seen in [Echo of Icarus](https://www.curseforge.com/hytale/mods/echo-of-icarus), kindly provided by the [Icarus Server](https://discord.icarustale.com).
 The fallowing variants shows different ways to build a maze:
 
 # Variants
@@ -65,3 +63,5 @@ The fallowing variants shows different ways to build a maze:
 - PropDistribution Files: [MazePropDistribution.json](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/HytaleGenerator/PropDistributions/MazePropDistribution.json)
 - TileSet Files: [MazeBaseTiles1.json](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/HytaleGenerator/TileSets/Maze/MazeBaseTiles1.json), [MazeFancyTiles1.json](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/HytaleGenerator/TileSets/Maze/MazeFancyTiles1.json)
 - **Prefabs:** [Prefabs/Maze](https://github.com/Voronoi-Studios/GridWave/tree/main/GridWaveExamples/src/main/resources/Server/Prefabs/Maze)
+> [!IMPORTANT] 
+> Prefab assets as seen in [Echo of Icarus](https://www.curseforge.com/hytale/mods/echo-of-icarus), kindly provided by the [Icarus Server](https://discord.icarustale.com).
