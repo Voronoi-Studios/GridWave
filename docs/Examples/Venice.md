@@ -23,6 +23,6 @@ This example shows how fancy tiles can be used in an interesting way to make the
 - PropDistribution Files: -
 - TileSet Files: -
 - Others: [WorldStructures_Venice.json](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/HytaleGenerator/WorldStructures/WorldStructures_Venice.json), [instance.bson](https://github.com/Voronoi-Studios/GridWave/blob/main/GridWaveExamples/src/main/resources/Server/Instances/Venice/instance.bson)
-- **Prefabs:** [Venice](https://github.com/Voronoi-Studios/GridWave/tree/main/GridWaveExamples/src/main/resources/Server/Prefabs/Venice)
+- **Prefabs:** [Prefabs/Venice](https://github.com/Voronoi-Studios/GridWave/tree/main/GridWaveExamples/src/main/resources/Server/Prefabs/Venice)
 > [!IMPORTANT] 
 > Prefab assets kindly provided by [Arrinity](https://www.curseforge.com/members/arrinity)
