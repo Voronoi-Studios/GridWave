@@ -1,0 +1,33 @@
+{
+	"$NodeId":	"Group.TileSet.GridWave-2b4462de-3084-4fb8-803d-744f5d4c6167",
+	"Type":	"Group",
+	"TileSets":	[{
+			"$NodeId":	"AutoGroup.TileSet.GridWave-f6f3d613-141c-4871-a42a-039b299116e1",
+			"Type":	"AutoGroup",
+			"FolderPath":	"InteriorBlockout/BaseTiles"
+		}],
+	"ExportAs":	"InteriorBlockoutBaseTiles",
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Group.TileSet.GridWave-2b4462de-3084-4fb8-803d-744f5d4c6167":	{
+				"$Position":	{
+					"$x":	640,
+					"$y":	253
+				},
+				"$Title":	"[ROOT] Group TileSet"
+			},
+			"AutoGroup.TileSet.GridWave-f6f3d613-141c-4871-a42a-039b299116e1":	{
+				"$Position":	{
+					"$x":	1354,
+					"$y":	259
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"GridWave - TileSets"
+	}
+}

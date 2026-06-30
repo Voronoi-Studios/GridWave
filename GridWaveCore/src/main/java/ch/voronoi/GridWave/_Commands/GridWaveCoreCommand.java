@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class GridWaveCoreCommand extends AbstractCommandCollection {
         public GridWaveCoreCommand(String pluginName, String pluginVersion, Path patchSource, @Nullable Path patchTarget) {
             super("GridWave.core", "Commands related to GridWave.core");
-            this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADVENTURER);
+            this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADMIN);
             this.addSubCommand(new PingCoreCommand(pluginName,pluginVersion));
             this.addSubCommand(new GenerateCommand());
             this.addSubCommand(new GenerateTileCommand());
