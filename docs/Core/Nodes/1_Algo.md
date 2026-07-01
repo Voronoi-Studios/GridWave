@@ -18,6 +18,7 @@ draft: true
 ---
 
 ### GridWave Algorithm (PropDistribution)
+![AlgoPropDistribution](https://voronoi.ch/node.php?src=https://raw.githubusercontent.com/Voronoi-Studios/GridWave/refs/heads/main/GridWaveCore/src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator%20Java/GridWave/PropDistributionAlgo.GridWave.json)
 <img class="node" src="https://github.com/Voronoi-Studios/GridWave/raw/main/docs/Images/Nodes/AlgoPropDistribution.png" alt="AlgoPropDistribution" />
 
 ---
