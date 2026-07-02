@@ -250,3 +250,7 @@ draft: false
 <div style="text-align: right; color: gray; font-size: small;"> 
   No AI was involved in the making of this, you might find some spelling errors because of that though.
 </div>
+
+Iframe test
+
+<iframe src="https://www.w3schools.com/demo_iframe.htm" style="height:200px;width:300px" title="Iframe Example"></iframe>
