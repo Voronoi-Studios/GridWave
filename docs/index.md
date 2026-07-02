@@ -250,3 +250,8 @@ draft: false
 <div style="text-align: right; color: gray; font-size: small;"> 
   No AI was involved in the making of this, you might find some spelling errors because of that though.
 </div>
+
+
+<script>
+  alert("test");
+</script>
