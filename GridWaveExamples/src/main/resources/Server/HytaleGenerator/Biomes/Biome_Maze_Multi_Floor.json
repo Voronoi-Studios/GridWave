@@ -61,6 +61,12 @@
 							"Type":	"Imported",
 							"Name":	"MazeFancyTiles1"
 						}],
+					"Seed":	{
+						"$NodeId":	"Time.Seed.GridWave-e9f31b87-0799-4ed9-b6ee-55df7e5dc0c7",
+						"Type":	"Time",
+						"Interval":	5,
+						"Unit":	"Seconds"
+					},
 					"Features":	[{
 							"$NodeId":	"Imported.Feature.GridWave-6d9b8ab7-8042-4dc7-b7de-38500d85a399",
 							"Type":	"Imported",
@@ -70,6 +76,12 @@
 				}
 			}
 		}],
+	"TintProvider":	{
+		"$NodeId":	"Constant.TintProvider-da2aaab1-c61d-471a-ac31-e8c9b05aabc6",
+		"Type":	"Constant",
+		"Skip":	false,
+		"Color":	"#227522"
+	},
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
@@ -87,8 +99,8 @@
 			},
 			"Constant.PropDistribution-1233b38e-4a65-4bba-80fe-3e0477d8c59a":	{
 				"$Position":	{
-					"$x":	-4349,
-					"$y":	-3377
+					"$x":	-4327,
+					"$y":	-3372
 				}
 			},
 			"ListPositions-1bbfc75e-d133-458e-af48-3a46951a88d5":	{
@@ -121,6 +133,24 @@
 					"$y":	-3336
 				}
 			},
+			"GridGen.GridWave-5d52748e-05e9-44e7-a7a3-89aecab3fcb4":	{
+				"$Position":	{
+					"$x":	-2914,
+					"$y":	-3456
+				}
+			},
+			"Vector3i-afa43235-0368-4d85-9f95-45248f134f97":	{
+				"$Position":	{
+					"$x":	-2265,
+					"$y":	-3559
+				}
+			},
+			"Vector3i-9e4778c4-4082-431e-8506-cc2c2697082c":	{
+				"$Position":	{
+					"$x":	-2264,
+					"$y":	-3370
+				}
+			},
 			"Imported.TileSet.GridWave-fdcb1635-71b4-4327-8fba-5d71cdbda660":	{
 				"$Position":	{
 					"$x":	-2917,
@@ -139,28 +169,22 @@
 					"$y":	-2874
 				}
 			},
+			"Constant.TintProvider-da2aaab1-c61d-471a-ac31-e8c9b05aabc6":	{
+				"$Position":	{
+					"$x":	-4329,
+					"$y":	-3203
+				}
+			},
 			"Imported.TileSet.GridWave-510decf3-981b-46bb-99be-ecabff73f859":	{
 				"$Position":	{
 					"$x":	-2917,
 					"$y":	-3239
 				}
 			},
-			"GridGen.GridWave-5d52748e-05e9-44e7-a7a3-89aecab3fcb4":	{
+			"Time.Seed.GridWave-e9f31b87-0799-4ed9-b6ee-55df7e5dc0c7":	{
 				"$Position":	{
-					"$x":	-2914,
-					"$y":	-3456
-				}
-			},
-			"Vector3i-afa43235-0368-4d85-9f95-45248f134f97":	{
-				"$Position":	{
-					"$x":	-2265,
-					"$y":	-3559
-				}
-			},
-			"Vector3i-9e4778c4-4082-431e-8506-cc2c2697082c":	{
-				"$Position":	{
-					"$x":	-2264,
-					"$y":	-3370
+					"$x":	-2727,
+					"$y":	-2587
 				}
 			}
 		},

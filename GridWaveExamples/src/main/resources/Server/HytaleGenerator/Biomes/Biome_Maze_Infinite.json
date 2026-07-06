@@ -88,6 +88,12 @@
 				"MaxPositionsCount":	200000
 			}
 		}],
+	"TintProvider":	{
+		"$NodeId":	"Constant.TintProvider-5d966d9f-aff1-408e-88d2-f3db64645f88",
+		"Type":	"Constant",
+		"Skip":	false,
+		"Color":	"#227522"
+	},
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
@@ -133,10 +139,22 @@
 					"$y":	-3997
 				}
 			},
+			"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5":	{
+				"$Position":	{
+					"$x":	-2991,
+					"$y":	-3804
+				}
+			},
 			"Imported.TileSet.GridWave-e9167a84-d2d3-44cb-9438-9c2bc0fdc2ad":	{
 				"$Position":	{
 					"$x":	-2991,
 					"$y":	-3682
+				}
+			},
+			"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
+				"$Position":	{
+					"$x":	-2990,
+					"$y":	-3561
 				}
 			},
 			"Constant.Seed.GridWave-58dac572-a905-45f0-938c-42e9e279526d":	{
@@ -169,22 +187,16 @@
 					"$y":	-2644
 				}
 			},
-			"Imported.TileSet.GridWave-fb53d1c9-b788-42ae-b3f4-13a63bbacc06":	{
-				"$Position":	{
-					"$x":	-2990,
-					"$y":	-3561
-				}
-			},
-			"Imported.TileSet.GridWave-e438c67b-bc28-456b-bcfd-ec4ddf45fce5":	{
-				"$Position":	{
-					"$x":	-2991,
-					"$y":	-3804
-				}
-			},
 			"Imported.Feature.GridWave-fbd5555a-49d6-4f41-9f43-a743ff9dc3f8":	{
 				"$Position":	{
 					"$x":	-2984,
 					"$y":	-3265
+				}
+			},
+			"Constant.TintProvider-5d966d9f-aff1-408e-88d2-f3db64645f88":	{
+				"$Position":	{
+					"$x":	-4306,
+					"$y":	-3818
 				}
 			}
 		},

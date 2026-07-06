@@ -11,6 +11,7 @@
 			"$NodeId":	"Border.Feature.GridWave-cda120c3-2f84-424c-90db-281c380399fd",
 			"Type":	"Border",
 			"Skip":	false,
+			"BorderType":	"OuterBorder",
 			"BorderRuleSets":	[{
 					"$NodeId":	"Simple.RuleSet.GridWave-714eec46-75a3-45d9-b7fd-dd516178c965",
 					"Type":	"Simple",

@@ -41,7 +41,6 @@ import static ch.voronoi.GridWave._Commands.GenerateCommand.createSelectionFromP
 
 public class GenerateTileCommand extends AbstractPlayerCommand {
     RequiredArg<String> algoName;
-    RequiredArg<Vector3i> grid;
     RequiredArg<String> size;
     RequiredArg<String> ruleSetString;
 
@@ -49,7 +48,6 @@ public class GenerateTileCommand extends AbstractPlayerCommand {
         super("generate-tile", "generates a (multi)Tile according to a StringRuleSet and a provided RuleSetGroupNode");
         this.setPermissionGroups(HytalePermissionsProvider.GROUP_ADVENTURER); // Allows the command to be used by anyone, not just OP
         this.algoName = this.withRequiredArg("algoName", "the export name of the algo NODE", ArgTypes.STRING);
-        this.grid = this.withRequiredArg("grid", "the grid spacing of the desired tile in a singular string format {xSpacing}x{ySpacing}x{zSpacing}: 1x1x1, 5x1x2 ...", ArgTypes.VECTOR3I);
         this.size = this.withRequiredArg("size", "the size of the desired tile in a singular string format {xSize}x{zSize}: 1x1, 5x2 ...", ArgTypes.STRING);
         this.ruleSetString = this.withRequiredArg("ruleSetString", "the rulesetString of the desired (multi)tile", ArgTypes.STRING);
     }
@@ -75,7 +73,7 @@ public class GenerateTileCommand extends AbstractPlayerCommand {
         Player player = store.getComponent(ref, Player.getComponentType());
         RuleCombo[] simpleRuleSets = buildRuleCombo(ruleSetString.get(ctx),null);
         String[] sizeParts = size.get(ctx).split("x");
-        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(grid.get(ctx), new Vector3i(Integer.parseInt(sizeParts[0]), 0, Integer.parseInt(sizeParts[1])), simpleRuleSets);
+        Map<Vector3ic, RuleCombo> ruleSets = getRuleComboMap(algoAsset.getGrid(), new Vector3i(Integer.parseInt(sizeParts[0]), 0, Integer.parseInt(sizeParts[1])), simpleRuleSets);
 
         List<Prop> props = new ArrayList<>();
 

@@ -26,14 +26,14 @@
 			},
 			"AutoGroup.TileSet.GridWave-f6f3d613-141c-4871-a42a-039b299116e1":	{
 				"$Position":	{
-					"$x":	1354,
-					"$y":	259
+					"$x":	1066,
+					"$y":	262
 				}
 			},
 			"OverlapTile.Feature.GridWave-8f554cb3-5422-449e-bd0f-f992d98b8f29":	{
 				"$Position":	{
-					"$x":	1070,
-					"$y":	526
+					"$x":	1067,
+					"$y":	415
 				}
 			}
 		},

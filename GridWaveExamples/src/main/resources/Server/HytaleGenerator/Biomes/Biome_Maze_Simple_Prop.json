@@ -28,6 +28,12 @@
 				}
 			}
 		}],
+	"TintProvider":	{
+		"$NodeId":	"Constant.TintProvider-fdce13c3-b5dd-4960-823a-78d26825de8e",
+		"Type":	"Constant",
+		"Skip":	false,
+		"Color":	"#227522"
+	},
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
@@ -57,14 +63,20 @@
 			},
 			"Point3D-5c557b09-af09-4a52-98c6-4738f2bf6bfb":	{
 				"$Position":	{
-					"$x":	-3375,
-					"$y":	-4287
+					"$x":	-2905,
+					"$y":	-4097
 				}
 			},
 			"Imported.Prop-73fcbc90-6f39-4e30-b551-0e512fe9b25f":	{
 				"$Position":	{
 					"$x":	-2906,
 					"$y":	-3900
+				}
+			},
+			"Constant.TintProvider-fdce13c3-b5dd-4960-823a-78d26825de8e":	{
+				"$Position":	{
+					"$x":	-4305,
+					"$y":	-3819
 				}
 			}
 		},

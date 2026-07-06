@@ -20,7 +20,6 @@
 		},
 		"CenterHorizontally":	true
 	},
-	"POIs":	[],
 	"BaseTiles":	[{
 			"$NodeId":	"Imported.TileSet.GridWave-bab60641-e541-458d-985b-5bb99b583060",
 			"Type":	"Imported",
@@ -34,10 +33,9 @@
 			"Features":	[]
 		}],
 	"Seed":	{
-		"$NodeId":	"Time.Seed.GridWave-628e6018-ad1e-43f4-a6dd-49f0d8f4ffa8",
-		"Type":	"Time",
-		"Interval":	5,
-		"Unit":	"Seconds"
+		"$NodeId":	"Constant.Seed.GridWave-57aaf16b-9ca5-4aac-832d-3ba8874940a2",
+		"Type":	"Constant",
+		"Seed":	"SomeSeeds"
 	},
 	"Features":	[{
 			"$NodeId":	"Debug.Feature.GridWave-ceb743d3-812d-4357-87eb-daaeb80ad927",
@@ -76,12 +74,23 @@
 	"MaxPositionsCount":	20000,
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
-			"PropAlgo.GridWave-1f64103e-37d1-444a-87b0-8d9c1c6bb66c":	{
+			"GridGen.GridWave-97281c6c-5c2b-40e3-9d46-19384e5fb98d":	{
 				"$Position":	{
-					"$x":	-6358,
-					"$y":	-3804
-				},
-				"$Title":	"[ROOT] GridWave Algorithm (Prop)"
+					"$x":	-5612,
+					"$y":	-3873
+				}
+			},
+			"Vector3i-6eff3f71-b41e-477c-a687-f51109cbbd70":	{
+				"$Position":	{
+					"$x":	-4896,
+					"$y":	-3888
+				}
+			},
+			"Vector3i-4db424d6-fff2-41a0-8f99-6be425c08345":	{
+				"$Position":	{
+					"$x":	-4898,
+					"$y":	-3702
+				}
 			},
 			"Imported.TileSet.GridWave-bab60641-e541-458d-985b-5bb99b583060":	{
 				"$Position":	{
@@ -93,12 +102,6 @@
 				"$Position":	{
 					"$x":	-5615,
 					"$y":	-3526
-				}
-			},
-			"Time.Seed.GridWave-628e6018-ad1e-43f4-a6dd-49f0d8f4ffa8":	{
-				"$Position":	{
-					"$x":	-5124,
-					"$y":	-3378
 				}
 			},
 			"Debug.Feature.GridWave-ceb743d3-812d-4357-87eb-daaeb80ad927":	{
@@ -131,30 +134,15 @@
 					"$y":	-3369
 				}
 			},
-			"GridGen.GridWave-97281c6c-5c2b-40e3-9d46-19384e5fb98d":	{
+			"PropAlgo.GridWave-1f64103e-37d1-444a-87b0-8d9c1c6bb66c":	{
 				"$Position":	{
-					"$x":	-5612,
-					"$y":	-3873
-				}
-			},
-			"Vector3i-6eff3f71-b41e-477c-a687-f51109cbbd70":	{
-				"$Position":	{
-					"$x":	-4896,
-					"$y":	-3888
-				}
-			},
-			"Vector3i-4db424d6-fff2-41a0-8f99-6be425c08345":	{
-				"$Position":	{
-					"$x":	-4898,
-					"$y":	-3702
-				}
+					"$x":	-6358,
+					"$y":	-3816
+				},
+				"$Title":	"[ROOT] GridWave Algorithm (Prop)"
 			}
 		},
-		"$FloatingNodes":	[{
-				"$NodeId":	"Constant.Seed.GridWave-57aaf16b-9ca5-4aac-832d-3ba8874940a2",
-				"Type":	"Constant",
-				"Seed":	"SomeSeeds"
-			}],
+		"$FloatingNodes":	[],
 		"$Links":	{
 		},
 		"$Groups":	[],

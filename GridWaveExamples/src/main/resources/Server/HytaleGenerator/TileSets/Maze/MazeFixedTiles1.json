@@ -16,7 +16,7 @@
 					"Skip":	false,
 					"Rot":	"None"
 				}],
-			"PrefabPath":	"Maze/Fixed/Floor-1_Z-POI_Room2x2_1.prefab.json",
+			"PrefabPath":	"Maze/Biome_1/Fixed/Floor-1_Z-POI_Room2x2_1.prefab.json",
 			"SizeX":	2,
 			"SizeZ":	2,
 			"Weight":	1,

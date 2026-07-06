@@ -253,40 +253,16 @@
 				},
 				"$Title":	"[ROOT] Group TileSet"
 			},
-			"Single.TileSet.GridWave-d8f9e34d-4fad-454f-8071-739e5d1ca5ee":	{
+			"Single.TileSet.GridWave-ec327124-ff17-4a0a-9bea-e213d612b31e":	{
 				"$Position":	{
-					"$x":	-3829,
-					"$y":	-4282
+					"$x":	-3742,
+					"$y":	-6066
 				}
 			},
-			"Simple.RuleSet.GridWave-86888ff1-2c96-4533-969e-d578bfbd6495":	{
+			"Advanced.RuleSet.GridWave-da7c0401-1bf1-4990-b256-252c6ca8a45c":	{
 				"$Position":	{
-					"$x":	-3028,
-					"$y":	-4281
-				}
-			},
-			"Single.TileSet.GridWave-274a59ef-cefc-4089-8581-154656cbb220":	{
-				"$Position":	{
-					"$x":	-3950,
-					"$y":	-674
-				}
-			},
-			"Advanced.RuleSet.GridWave-c33530aa-4794-4a5b-afdb-89c69bff00c2":	{
-				"$Position":	{
-					"$x":	-3147,
-					"$y":	-672
-				}
-			},
-			"Single.TileSet.GridWave-d431cb96-71a1-40de-a47b-4c19c659f3e7":	{
-				"$Position":	{
-					"$x":	-3882,
-					"$y":	-3870
-				}
-			},
-			"Advanced.RuleSet.GridWave-e8b519b0-3905-4f82-94c3-a70c394dc4f7":	{
-				"$Position":	{
-					"$x":	-3092,
-					"$y":	-3867
+					"$x":	-2972,
+					"$y":	-6077
 				}
 			},
 			"Single.TileSet.GridWave-f3b4e44d-d0a9-42e5-9c49-d30fdd2120cb":	{
@@ -295,34 +271,22 @@
 					"$y":	-5545
 				}
 			},
+			"Advanced.RuleSet.GridWave-95c14062-bd96-41b9-93e0-dd59650e23a2":	{
+				"$Position":	{
+					"$x":	-2975,
+					"$y":	-5537
+				}
+			},
 			"Single.TileSet.GridWave-284fbcc5-6f7b-4558-9b4e-3c78f9dcca26":	{
 				"$Position":	{
 					"$x":	-3785,
 					"$y":	-4992
 				}
 			},
-			"Single.TileSet.GridWave-e054ccfb-ead5-41d3-a227-481c6b5f0494":	{
+			"Advanced.RuleSet.GridWave-6154afea-bdeb-48c6-9188-69289edb10c5":	{
 				"$Position":	{
-					"$x":	-3931,
-					"$y":	-2142
-				}
-			},
-			"Advanced.RuleSet.GridWave-306f0112-0f4e-4707-a07a-dfe7e5122930":	{
-				"$Position":	{
-					"$x":	-3119,
-					"$y":	-2133
-				}
-			},
-			"Single.TileSet.GridWave-26623115-dcb5-4794-a8ce-6eee82e23d71":	{
-				"$Position":	{
-					"$x":	-3878,
-					"$y":	-3332
-				}
-			},
-			"Advanced.RuleSet.GridWave-6f09c291-ae83-4eb4-9d67-7c1ab75db33a":	{
-				"$Position":	{
-					"$x":	-3098,
-					"$y":	-3338
+					"$x":	-2290,
+					"$y":	-4973
 				}
 			},
 			"Single.TileSet.GridWave-7a805881-2770-41c0-b6f0-8bb5bfc089d0":	{
@@ -337,10 +301,28 @@
 					"$y":	-4683
 				}
 			},
-			"Single.TileSet.GridWave-bc1a42ae-9de1-4fdf-a487-589bb818b81d":	{
+			"Single.TileSet.GridWave-d431cb96-71a1-40de-a47b-4c19c659f3e7":	{
 				"$Position":	{
-					"$x":	-3931,
-					"$y":	-1584
+					"$x":	-3882,
+					"$y":	-3870
+				}
+			},
+			"Advanced.RuleSet.GridWave-e8b519b0-3905-4f82-94c3-a70c394dc4f7":	{
+				"$Position":	{
+					"$x":	-3092,
+					"$y":	-3867
+				}
+			},
+			"Single.TileSet.GridWave-26623115-dcb5-4794-a8ce-6eee82e23d71":	{
+				"$Position":	{
+					"$x":	-3878,
+					"$y":	-3332
+				}
+			},
+			"Advanced.RuleSet.GridWave-6f09c291-ae83-4eb4-9d67-7c1ab75db33a":	{
+				"$Position":	{
+					"$x":	-3098,
+					"$y":	-3338
 				}
 			},
 			"Single.TileSet.GridWave-5d7218db-6a43-4b6b-a075-d18abf9a8830":	{
@@ -355,16 +337,28 @@
 					"$y":	-2806
 				}
 			},
-			"Single.TileSet.GridWave-ec327124-ff17-4a0a-9bea-e213d612b31e":	{
+			"Single.TileSet.GridWave-e054ccfb-ead5-41d3-a227-481c6b5f0494":	{
 				"$Position":	{
-					"$x":	-3742,
-					"$y":	-6066
+					"$x":	-3931,
+					"$y":	-2142
 				}
 			},
-			"Advanced.RuleSet.GridWave-da7c0401-1bf1-4990-b256-252c6ca8a45c":	{
+			"Advanced.RuleSet.GridWave-306f0112-0f4e-4707-a07a-dfe7e5122930":	{
 				"$Position":	{
-					"$x":	-2972,
-					"$y":	-6077
+					"$x":	-3119,
+					"$y":	-2133
+				}
+			},
+			"Single.TileSet.GridWave-bc1a42ae-9de1-4fdf-a487-589bb818b81d":	{
+				"$Position":	{
+					"$x":	-3931,
+					"$y":	-1584
+				}
+			},
+			"Simple.RuleSet.GridWave-17bed532-f117-4ded-a621-a4650e9c49f9":	{
+				"$Position":	{
+					"$x":	-3129,
+					"$y":	-1575
 				}
 			},
 			"Single.TileSet.GridWave-8567faed-0277-42da-8a60-bfaf499ea3f6":	{
@@ -379,22 +373,28 @@
 					"$y":	-1237
 				}
 			},
-			"Simple.RuleSet.GridWave-17bed532-f117-4ded-a621-a4650e9c49f9":	{
+			"Single.TileSet.GridWave-274a59ef-cefc-4089-8581-154656cbb220":	{
 				"$Position":	{
-					"$x":	-3129,
-					"$y":	-1575
+					"$x":	-3950,
+					"$y":	-674
 				}
 			},
-			"Advanced.RuleSet.GridWave-95c14062-bd96-41b9-93e0-dd59650e23a2":	{
+			"Advanced.RuleSet.GridWave-c33530aa-4794-4a5b-afdb-89c69bff00c2":	{
 				"$Position":	{
-					"$x":	-2975,
-					"$y":	-5537
+					"$x":	-3147,
+					"$y":	-672
 				}
 			},
-			"Advanced.RuleSet.GridWave-6154afea-bdeb-48c6-9188-69289edb10c5":	{
+			"Single.TileSet.GridWave-d8f9e34d-4fad-454f-8071-739e5d1ca5ee":	{
 				"$Position":	{
-					"$x":	-2290,
-					"$y":	-4973
+					"$x":	-3829,
+					"$y":	-4282
+				}
+			},
+			"Simple.RuleSet.GridWave-86888ff1-2c96-4533-969e-d578bfbd6495":	{
+				"$Position":	{
+					"$x":	-3028,
+					"$y":	-4281
 				}
 			},
 			"ConditionalWeight.Feature.GridWave-aade32b6-1427-4922-a649-69a8086fd1f0":	{
