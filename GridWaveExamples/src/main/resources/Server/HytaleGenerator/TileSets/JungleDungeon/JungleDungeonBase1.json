@@ -142,6 +142,12 @@
 					"$y":	-736
 				}
 			},
+			"ConditionalWeight.Feature.GridWave-a1bd4dd0-9c58-4cfc-b6ab-aaffadce08a6":	{
+				"$Position":	{
+					"$x":	2783,
+					"$y":	-391
+				}
+			},
 			"Single.TileSet.GridWave-79083782-77cd-4777-8a2d-d92c7f52c4f4":	{
 				"$Position":	{
 					"$x":	1893,
@@ -206,12 +212,6 @@
 				"$Position":	{
 					"$x":	2784,
 					"$y":	1545
-				}
-			},
-			"ConditionalWeight.Feature.GridWave-a1bd4dd0-9c58-4cfc-b6ab-aaffadce08a6":	{
-				"$Position":	{
-					"$x":	2783,
-					"$y":	-391
 				}
 			}
 		},

@@ -24,14 +24,14 @@
 				"$NodeId":	"Simple.RuleSet.GridWave-3a26ee77-cccc-4c13-adfa-c5dd301ee31c",
 				"Type":	"Simple",
 				"HorizontalRules":	{
-					"N":	"0",
+					"N":	"1",
 					"E":	"0",
-					"S":	"1",
+					"S":	"0",
 					"W":	"1"
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Maze/BaseTiles/Corner",
+			"PrefabPath":	"Maze/Biome_1/BaseTiles/Corner",
 			"Weight":	0.8,
 			"MinimizeVariants":	true
 		}, {
@@ -48,7 +48,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Maze/BaseTiles/Straight",
+			"PrefabPath":	"Maze/Biome_1/BaseTiles/Straight",
 			"Weight":	3,
 			"MinimizeVariants":	true
 		}, {
@@ -65,7 +65,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Maze/BaseTiles/Junction",
+			"PrefabPath":	"Maze/Biome_1/BaseTiles/Junction",
 			"Weight":	0.4,
 			"MinimizeVariants":	true
 		}, {
@@ -82,7 +82,7 @@
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Maze/BaseTiles/Cross",
+			"PrefabPath":	"Maze/Biome_1/BaseTiles/Cross",
 			"Weight":	1,
 			"MinimizeVariants":	true
 		}, {
@@ -92,14 +92,14 @@
 				"$NodeId":	"Simple.RuleSet.GridWave-4b3a57ec-2396-442d-9322-8fca506693d2",
 				"Type":	"Simple",
 				"HorizontalRules":	{
-					"N":	"1",
+					"N":	"0",
 					"E":	"0",
-					"S":	"0",
+					"S":	"1",
 					"W":	"0"
 				}
 			},
 			"Features":	[],
-			"PrefabPath":	"Maze/BaseTiles/DeadEnd",
+			"PrefabPath":	"Maze/Biome_1/BaseTiles/DeadEnd",
 			"Weight":	0.2,
 			"MinimizeVariants":	true
 		}],

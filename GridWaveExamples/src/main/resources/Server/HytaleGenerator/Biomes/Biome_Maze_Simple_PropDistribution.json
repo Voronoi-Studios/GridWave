@@ -12,6 +12,12 @@
 				"Name":	"MazePropDistribution"
 			}
 		}],
+	"TintProvider":	{
+		"$NodeId":	"Constant.TintProvider-87a8ee92-f9c1-4766-bceb-b0fc4b1655d0",
+		"Type":	"Constant",
+		"Skip":	false,
+		"Color":	"#227522"
+	},
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{
 			"Biome-8ed95326-1e58-4740-9216-17f675eaa806":	{
@@ -31,6 +37,12 @@
 				"$Position":	{
 					"$x":	-3603,
 					"$y":	-3944
+				}
+			},
+			"Constant.TintProvider-87a8ee92-f9c1-4766-bceb-b0fc4b1655d0":	{
+				"$Position":	{
+					"$x":	-4264,
+					"$y":	-3819
 				}
 			}
 		},

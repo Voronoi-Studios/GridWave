@@ -96,6 +96,24 @@
 				},
 				"$Title":	"[ROOT] GridWave Algorithm [WFC]"
 			},
+			"GridGen.GridWave-128f485c-e8d5-4200-aed1-011861af036e":	{
+				"$Position":	{
+					"$x":	2691,
+					"$y":	-140
+				}
+			},
+			"Vector3i-d3725337-b36f-4e06-875f-2bb4aa27724f":	{
+				"$Position":	{
+					"$x":	3425,
+					"$y":	-300
+				}
+			},
+			"Vector3i-c232c608-01ce-48b9-8d33-e2e04fc34c22":	{
+				"$Position":	{
+					"$x":	3422,
+					"$y":	-97
+				}
+			},
 			"Imported.TileSet.GridWave-b43e77f0-d0be-4b41-a79c-f1355a65039e":	{
 				"$Position":	{
 					"$x":	2685,
@@ -154,24 +172,6 @@
 				"$Position":	{
 					"$x":	2694,
 					"$y":	580
-				}
-			},
-			"GridGen.GridWave-128f485c-e8d5-4200-aed1-011861af036e":	{
-				"$Position":	{
-					"$x":	2691,
-					"$y":	-140
-				}
-			},
-			"Vector3i-d3725337-b36f-4e06-875f-2bb4aa27724f":	{
-				"$Position":	{
-					"$x":	3425,
-					"$y":	-300
-				}
-			},
-			"Vector3i-c232c608-01ce-48b9-8d33-e2e04fc34c22":	{
-				"$Position":	{
-					"$x":	3422,
-					"$y":	-97
 				}
 			}
 		},
