@@ -262,7 +262,8 @@ public class GridWave {
                 positions.add(new Vector3d(position));
             }
         };
-        PositionProvider.Context context = new PositionProvider.Context(bounds.toBounds3d(), collectingPipe, null);
+        //TO-DO: investigate Anchor
+        PositionProvider.Context context = new PositionProvider.Context(bounds.toBounds3d(), collectingPipe,new Vector3d(Vector3dUtil.ZERO), null);
         provider.generate(context);
         return positions;
     }

@@ -79,6 +79,7 @@ public class GridWaveUnionProp extends Prop {
                 argument.materialCache,
                 argument.referenceBundle,
                 argument.workerId,
+                argument.threadBridge,
                 argument.seedBox.child(DebugUtils.VectorStr(context.position)),
                 getWriteBounds_voxelGrid(),
                 argument.algoAsset

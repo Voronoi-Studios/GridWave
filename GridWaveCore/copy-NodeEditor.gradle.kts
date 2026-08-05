@@ -1,6 +1,6 @@
 tasks.register("copyNodeEditor") {
     val targetDir = file("src/main/resources/Client/NodeEditor/Workspaces/HytaleGenerator Java")
-    val sourceBase = file(System.getenv("APPDATA") + "/Hytale/install/release/package/game/latest/Client/NodeEditor/Workspaces/HytaleGenerator Java")
+    val sourceBase = file(System.getenv("APPDATA") + "/Hytale/install/pre-release/package/game/latest/Client/NodeEditor/Workspaces/HytaleGenerator Java")
     val itemsToCopy = listOf("_Workspace.json", "GridWave")
 
     doFirst {

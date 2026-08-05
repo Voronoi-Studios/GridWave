@@ -88,7 +88,7 @@ public class PropAlgoAsset extends PropAsset implements IAlgoAsset {
         } else {
             SeedBox seedBox = argument.parentSeed.child(seed.build(this));
             TileSetAsset.Argument tileSetArgument = TileSetAsset.argumentFrom(argument, seedBox, new Bounds3i(), this);
-            PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
+            PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId, argument.threadBridge));
             Vector3ic grid = getGrid();
 
             return new GridWaveUnionProp(

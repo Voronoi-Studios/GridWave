@@ -48,7 +48,7 @@ public class RandomRestrainerFeatureAsset extends FeatureAsset {
         if(skip()) return;
         int rot = this.rot.getDegrees() / 90;
         TileEntry tileEntry = tileEntries.get(rot%tileEntries.size());
-        PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
+        PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId, argument.threadBridge));
         Bounds3i bounds3i = new Bounds3i(Vector3iUtil.MIN, Vector3iUtil.MAX);
         Vector3ic grid = argument.algoAsset.getGrid();
         if(customBoundsAsset != null) bounds3i = customBoundsAsset.build().clone().offset(grid.x(), 0, grid.z());

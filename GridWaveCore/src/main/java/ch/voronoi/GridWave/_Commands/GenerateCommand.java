@@ -1,6 +1,7 @@
 package ch.voronoi.GridWave._Commands;
 
 import com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge;
 import com.hypixel.hytale.builtin.hytalegenerator.assets.props.PropAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.engine.entityfunnel.EntityFunnel;
@@ -27,6 +28,7 @@ import com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import org.joml.Vector3d;
 import org.joml.Vector3i;
 import org.joml.Vector3ic;
 import org.jspecify.annotations.NonNull;
@@ -44,7 +46,7 @@ public class GenerateCommand extends AbstractPlayerCommand {
     @Override
     protected void execute(@NonNull CommandContext ctx, @NonNull Store<EntityStore> store, @NonNull Ref<EntityStore> ref, @NonNull PlayerRef playerRef, @NonNull World world) {
         Player player = store.getComponent(ref, Player.getComponentType());
-        PropAsset.Argument propArgument = new PropAsset.Argument(new SeedBox("command"), new MaterialCache(), new ReferenceBundle(), WorkerIndexer.Id.MAIN);
+        PropAsset.Argument propArgument = new PropAsset.Argument(new SeedBox("command"), new MaterialCache(), new ReferenceBundle(), WorkerIndexer.Id.MAIN, new ThreadBridge());
         PropAsset propAsset = PropAsset.getExportedAsset(propName.get(ctx));
         if (propAsset == null) {
             ctx.sendMessage(Message.raw("This Prop Node does not exist"));
@@ -74,7 +76,9 @@ public class GenerateCommand extends AbstractPlayerCommand {
                 readSpace,
                 writeSpace,
                 EntityFunnel.NULL,
-                0.0
+                0.0,
+                null,
+                null
         );
 
         prop.generate(context);

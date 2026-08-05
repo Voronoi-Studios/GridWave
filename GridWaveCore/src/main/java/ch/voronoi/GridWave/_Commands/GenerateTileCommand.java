@@ -7,6 +7,7 @@ import ch.voronoi.GridWave.FeatureNodes.FeatureAsset;
 import ch.voronoi.GridWave.RuleSetNodes.Components.RuleCombo;
 import ch.voronoi.GridWave.TileSetNodes.TileSet;
 import com.hypixel.hytale.builtin.buildertools.BuilderToolsPlugin;
+import com.hypixel.hytale.builtin.hytalegenerator.assets.ThreadBridge;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache;
 import com.hypixel.hytale.builtin.hytalegenerator.props.Prop;
@@ -67,7 +68,7 @@ public class GenerateTileCommand extends AbstractPlayerCommand {
 
         if (algoAsset == null) { ctx.sendMessage(Message.raw("This Algo Node does not exist")); return; }
         var seedBox = new SeedBox(LocalTime.now().toString());
-        Argument argument = new Argument(seedBox, new MaterialCache(), new ReferenceBundle(), WorkerIndexer.Id.MAIN, seedBox, new Bounds3i(), algoAsset);
+        Argument argument = new Argument(seedBox, new MaterialCache(), new ReferenceBundle(), WorkerIndexer.Id.MAIN, new ThreadBridge(), seedBox, new Bounds3i(), algoAsset);
         List<TileEntry> tileSets = algoAsset.getBaseTileSets(argument).stream().flatMap(TileSet::getTileEntries).toList();
 
         Player player = store.getComponent(ref, Player.getComponentType());

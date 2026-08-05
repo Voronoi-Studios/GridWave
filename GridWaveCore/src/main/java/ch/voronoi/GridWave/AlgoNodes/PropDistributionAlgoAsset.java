@@ -14,7 +14,7 @@ import com.hypixel.hytale.builtin.hytalegenerator.assets.positionproviders.Posit
 import com.hypixel.hytale.builtin.hytalegenerator.assets.propdistribution.PropDistributionAsset;
 import com.hypixel.hytale.builtin.hytalegenerator.bounds.Bounds3i;
 import com.hypixel.hytale.builtin.hytalegenerator.positionproviders.PositionProvider;
-import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.NoPropDistribution;
+import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.EmptyPropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.propdistributions.PropDistribution;
 import com.hypixel.hytale.builtin.hytalegenerator.rng.SeedBox;
 import com.hypixel.hytale.codec.Codec;
@@ -85,11 +85,11 @@ public class PropDistributionAlgoAsset extends PropDistributionAsset implements 
     @Override
     public PropDistribution build(@Nonnull Argument argument) {
         if (super.isSkipped()) {
-            return NoPropDistribution.INSTANCE;
+            return EmptyPropDistribution.INSTANCE;
         } else {
             SeedBox seedBox = argument.parentSeed.child(seed.build(this));
             TileSetAsset.Argument tileSetArgument = TileSetAsset.argumentFrom(argument, seedBox, new Bounds3i(), this);
-            PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId));
+            PositionProvider positionProvider = positionProviderAsset.build(new PositionProviderAsset.Argument(argument.parentSeed, argument.referenceBundle, argument.workerId, argument.threadBridge));
 
             return new GridWavePropDistribution(
                     positionProvider,

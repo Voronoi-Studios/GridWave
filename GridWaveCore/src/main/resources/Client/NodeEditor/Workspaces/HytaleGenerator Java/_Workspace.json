@@ -4,31 +4,47 @@
   "Roots": {
     "Biome": {
       "RootNodeType": "Biome",
-      "MenuName" : "HytaleGenerator - Biome"
+      "MenuName": "HytaleGenerator - Biome"
     },
     "Density": {
-      "RootNodeType": "DensityNodeVariants",
-      "MenuName" : "HytaleGenerator - Density"
+      "RootNodeType": "Density.Variants",
+      "MenuName": "HytaleGenerator - Density"
     },
     "BlockMask": {
       "RootNodeType": "BlockMask",
-      "MenuName" : "HytaleGenerator - BlockMask"
+      "MenuName": "HytaleGenerator - BlockMask"
     },
     "Assignments": {
-      "RootNodeType": "AssignmentsVariants",
-      "MenuName" : "HytaleGenerator - Assignments"
+      "RootNodeType": "Assignments.Variants",
+      "MenuName": "HytaleGenerator - Assignments"
     },
     "Prop": {
-      "RootNodeType": "PropVariants",
-      "MenuName" : "HytaleGenerator - Prop"
+      "RootNodeType": "Prop.Variants",
+      "MenuName": "HytaleGenerator - Prop"
     },
     "PropDistribution": {
       "RootNodeType": "PropDistribution.Variants",
-      "MenuName" : "HytaleGenerator - PropDistribution"
+      "MenuName": "HytaleGenerator - PropDistribution"
     },
     "Positions": {
-      "RootNodeType": "PositionsVariants",
-      "MenuName" : "HytaleGenerator - Positions"
+      "RootNodeType": "Positions.Variants",
+      "MenuName": "HytaleGenerator - Positions"
+    },
+    "GraphGenerator": {
+      "RootNodeType": "GraphGenerator",
+      "MenuName": "HytaleGenerator - GraphGenerator"
+    },
+    "GraphPass": {
+      "RootNodeType": "GraphPass.Variants",
+      "MenuName": "HytaleGenerator - GraphPass"
+    },
+    "ContentPredicate": {
+      "RootNodeType": "ContentPredicate.Variants",
+      "MenuName": "HytaleGenerator - ContentPredicate"
+    },
+    "ContentSupplier": {
+      "RootNodeType": "ContentSupplier.Variants",
+      "MenuName": "HytaleGenerator - ContentSupplier"
     },
 
 
@@ -44,8 +60,6 @@
 
   },
   "NodeCategories": {
-
-
     "GridWave" : [
       "PropDistributionAlgo.GridWave",
 	    "PropAlgo.GridWave"
@@ -99,30 +113,32 @@
     ],
 
 
-    "Material" : [
+    "Material": [
       "Material",
-      "OrthogonalRotation"
+      "OrthogonalRotation.Rotation"
     ],
     "Density": [
-      "ConstantDensityNode",
-      "SimplexNoise2DDensityNode",
-      "SimplexNoise3DDensityNode",
-      "CellNoise2DDensityNode",
-      "CellNoise3DDensityNode",
-      "MultiplierDensityNode",
-      "MaxDensityNode",
-      "MinDensityNode",
-      "SumDensityNode",
-      "SmoothMaxDensityNode",
-      "SmoothMinDensityNode",
-      "ClampDensityNode",
-      "SmoothClampDensityNode",
-      "AbsDensityNode",
-      "SqrtDensityNode",
-      "PowDensityNode",
-      "NormalizerDensityNode",
-      "PositionsCellNoiseDensityNode",
-      "InverterDensityNode",
+      "Graph.Density",
+      "Constant.Density",
+      "SimplexNoise2D.Density",
+      "SimplexNoise3D.Density",
+      "CellNoise2D.Density",
+      "CellNoise3D.Density",
+      "WhiteNoise.Density",
+      "Multiplier.Density",
+      "Max.Density",
+      "Min.Density",
+      "Sum.Density",
+      "SmoothMax.Density",
+      "SmoothMin.Density",
+      "Clamp.Density",
+      "SmoothClamp.Density",
+      "Abs.Density",
+      "Sqrt.Density",
+      "Pow.Density",
+      "Normalizer.Density",
+      "PositionsCellNoise.Density",
+      "Inverter.Density",
       "Scale.Density",
       "Slider.Density",
       "GradientWarp.Density",
@@ -160,48 +176,134 @@
       "DistanceToBiomeEdge.Density",
       "YSampled.Density",
       "Terrain.Density",
-      "ImportedDensityNode",
+      "Imported.Density",
       "Exported.Density",
-      "OffsetConstantDensityNode",
-      "OffsetDensityNode",
-      "AmplitudeConstantDensityNode",
-      "AmplitudeDensityNode",
-      "CeilingDensityNode",
-      "FloorDensityNode",
-      "SmoothCeilingDensityNode",
-      "SmoothFloorDensityNode",
-      "Gradient.Density"
+      "OffsetConstant.Density",
+      "Offset.Density",
+      "AmplitudeConstant.Density",
+      "Amplitude.Density",
+      "Ceiling.Density",
+      "Floor.Density",
+      "SmoothCeiling.Density",
+      "SmoothFloor.Density",
+      "Gradient.Density",
+      "DistanceToGraphEdge.Density"
     ],
-    "VectorProviders" : [
+    "Graph": [
+      "GraphGenerator",
+      "Positions.GraphPass",
+      "EdgeAction.GraphPass",
+      "NodeAction.GraphPass",
+      "Manual.GraphPass",
+      "Imported.GraphPass",
+      "Empty.NodeAction",
+      "Content.NodeAction",
+      "ContentCopy.NodeAction",
+      "ProximityConnector.NodeAction",
+      "Delete.NodeAction",
+      "Weighted.NodeAction",
+      "Jitter2d.NodeAction",
+      "Jitter3d.NodeAction",
+      "Move.NodeAction",
+      "Selector.NodeAction",
+      "ConnectedEdges.NodeAction",
+      "ConnectedNodes.NodeAction",
+      "Imported.NodeAction",
+      "Spawner.NodeAction",
+      "All.NodeSelector",
+      "Random.NodeSelector",
+      "Content.NodeSelector",
+      "DensityDelimited.NodeSelector",
+      "NeighborNodes.NodeSelector",
+      "NeighborEdges.NodeSelector",
+      "ConnectionCount.NodeSelector",
+      "And.NodeSelector",
+      "Or.NodeSelector",
+      "Not.NodeSelector",
+      "Imported.NodeSelector",
+      "Empty.EdgeAction",
+      "Delete.EdgeAction",
+      "Selector.EdgeAction",
+      "Nodes.EdgeAction",
+      "Proxy.EdgeAction",
+      "Splitter.EdgeAction",
+      "Imported.EdgeAction",
+      "All.EdgeSelector",
+      "Random.EdgeSelector",
+      "Length.EdgeSelector",
+      "Angle.EdgeSelector",
+      "Nodes.EdgeSelector",
+      "And.EdgeSelector",
+      "Or.EdgeSelector",
+      "Not.EdgeSelector",
+      "Imported.EdgeSelector",
+      "Density.NodeContent",
+      "Material.NodeContent",
+      "PropDistribution.NodeContent",
+      "Positions.NodeContent",
+      "NodeContent.Graph",
+      "Node.Manual.GraphPass",
+      "Entry.Weighted.NodeAction",
+      "Entry.Weighted.ContentSupplier"
+    ],
+    "VectorProviders": [
       "Constant.VectorProvider",
+      "Random.VectorProvider",
       "DensityGradient.VectorProvider",
+      "OpposedToGraphEdges.VectorProvider",
+      "SetX.VectorProvider",
+      "SetY.VectorProvider",
+      "SetZ.VectorProvider",
+      "Normalizer.VectorProvider",
+      "ScalarMultiplier.VectorProvider",
+      "Multiplier.VectorProvider",
+      "Adder.VectorProvider",
+      "Subtracter.VectorProvider",
+      "Cross.VectorProvider",
+      "PlaneProjector.VectorProvider",
+      "VectorProjector.VectorProvider",
       "Cache.VectorProvider",
       "Exported.VectorProvider",
       "Imported.VectorProvider"
     ],
-    "Prop Distribution" : [
+    "Prop Distribution": [
       "Constant.PropDistribution",
       "Positions.PropDistribution",
       "Assigned.PropDistribution",
       "Union.PropDistribution",
+      "Anchor.PropDistribution",
+      "Graph.PropDistribution",
       "Imported.PropDistribution"
     ],
-    "Vectors" : [
-      "Vector3i",
-      "Point3D"
+    "ContentPredicate": [
+      "Constant.ContentPredicate",
+      "And.ContentPredicate",
+      "Or.ContentPredicate",
+      "Not.ContentPredicate",
+      "Set.ContentPredicate",
+      "Imported.ContentPredicate"
     ],
-    "Bounds" : [
-      "DecimalBounds3d",
-      "Bounds3i"
+    "ContentSupplier": [
+      "Constant.ContentSupplier",
+      "Weighted.ContentSupplier",
+      "Imported.ContentSupplier"
     ],
-    "Range" : [
+    "Vectors": [
+      "Integer.Vector3d",
+      "Decimal.Vector3d"
+    ],
+    "Bounds": [
+      "Decimal.Bounds3d",
+      "Integer.Bounds3d"
+    ],
+    "Range": [
       "Decimal.Range",
       "Integer.Range"
     ],
     "Curve": [
       "Constant.Curve",
-      "ManualCurve",
-      "CurvePoint",
+      "Manual.Curve",
+      "CurvePoint.Curve",
       "Inverter.Curve",
       "Multiplier.Curve",
       "Sum.Curve",
@@ -216,80 +318,87 @@
       "SmoothClamp.Curve",
       "SmoothMax.Curve",
       "SmoothMin.Curve",
-      "DistanceExponentialCurve",
-      "DistanceSCurve",
-      "ImportedCurve"
+      "DistanceExponential.Curve",
+      "DistanceS.Curve",
+      "Imported.Curve"
     ],
     "Positions": [
-      "ListPositions",
+      "List.Positions",
       "TriangularGrid2d.Positions",
       "SquareGrid2d.Positions",
       "SquareGrid3d.Positions",
       "Scaler.Positions",
       "Jitter2d.Positions",
       "Jitter3d.Positions",
+      "VectorOffset.Positions",
+      "DirectionalJitter.Positions",
       "Bound.Positions",
-      "FieldFunctionPositions",
-      "OccurrencePositions",
-      "OffsetPositions",
-      "UnionPositions",
+      "FieldFunction.Positions",
+      "Occurrence.Positions",
+      "Offset.Positions",
+      "Union.Positions",
       "SimpleHorizontal.Positions",
       "Clusters.Positions",
       "BaseHeight.Positions",
       "Anchor.Positions",
-      "Framework",
-      "CachePositions",
-      "ImportedPositions",
-      "Mesh2DPositions",
-      "Mesh3DPositions"
+      "Framework.Positions",
+      "Cache.Positions",
+      "Graph.Positions",
+      "Imported.Positions",
+      "Mesh2D.Positions",
+      "Mesh3D.Positions",
+      "Delimiter.Positions"
     ],
     "PositionsCellNoise": [
-      "PositionsCellNoiseDensityNode",
-      "PCNDistanceFunction",
-      "CellValuePCNReturnType",
-      "DensityPCNReturnType",
-      "CurvePCNReturnType",
-      "DistancePCNReturnType",
-      "Distance2PCNReturnType",
-      "Distance2AddPCNReturnType",
-      "Distance2SubPCNReturnType",
-      "Distance2MulPCNReturnType",
-      "Distance2DivPCNReturnType"
+      "PositionsCellNoise.Density",
+      "DistanceFunction.PositionsCellNoise.Density",
+      "CellValue.ReturnType.PositionsCellNoise.Density",
+      "Density.ReturnType.PositionsCellNoise.Density",
+      "Curve.ReturnType.PositionsCellNoise.Density",
+      "Distance.ReturnType.PositionsCellNoise.Density",
+      "Distance2.ReturnType.PositionsCellNoise.Density",
+      "Distance2Add.ReturnType.PositionsCellNoise.Density",
+      "Distance2Sub.ReturnType.PositionsCellNoise.Density",
+      "Distance2Mul.ReturnType.PositionsCellNoise.Density",
+      "Distance2Div.ReturnType.PositionsCellNoise.Density"
     ],
     "PointGenerator": [
-      "MeshPointGenerator"
+      "Mesh.PointGenerator"
     ],
     "Biome": [
-      "Biome"
+      "Biome",
+      "Terrain.Biome"
     ],
     "MaterialProvider": [
-      "ConstantMaterialProvider",
-      "SolidityMaterialProvider",
-      "QueueMaterialProvider",
-      "SimpleHorizontalMaterialProvider",
-      "StripedMaterialProvider",
-      "StripeStripedMP",
-      "WeightedMaterialProvider",
-      "WeightedMaterial",
-      "FieldFunctionMaterialProvider",
-      "DelimiterFieldFunctionMP",
-      "SpaceAndDepthMaterialProvider",
-      "ImportedMaterialProvider"
+      "Transparent.MaterialProvider",
+      "Constant.MaterialProvider",
+      "Solidity.MaterialProvider",
+      "Queue.MaterialProvider",
+      "SimpleHorizontal.MaterialProvider",
+      "Striped.MaterialProvider",
+      "Stripe.Striped.MaterialProvider",
+      "Weighted.MaterialProvider",
+      "Entry.Weighted.MaterialProvider",
+      "FieldFunction.MaterialProvider",
+      "Delimiter.FieldFunction.MaterialProvider",
+      "SpaceAndDepth.MaterialProvider",
+      "Graph.MaterialProvider",
+      "Imported.MaterialProvider"
     ],
     "SpaceAndDepth MaterialProvider": [
-      "SpaceAndDepthMaterialProvider",
-      "AlwaysTrueConditionSADMP",
-      "EqualsConditionSADMP",
-      "GreaterThanConditionSADMP",
-      "SmallerThanConditionSADMP",
-      "AndConditionSADMP",
-      "OrConditionSADMP",
-      "NotConditionSADMP",
-      "ConstantThicknessLayerSADMP",
-      "RangeThicknessLayerSADMP",
-      "WeightedThicknessLayerSADMP",
-      "WeightedThicknessSADMP",
-      "NoiseThicknessLayerSADMP"
+      "SpaceAndDepth.MaterialProvider",
+      "AlwaysTrue.Condition.SpaceAndDepth.MaterialProvider",
+      "Equals.Condition.SpaceAndDepth.MaterialProvider",
+      "GreaterThan.Condition.SpaceAndDepth.MaterialProvider",
+      "SmallerThan.Condition.SpaceAndDepth.MaterialProvider",
+      "And.Condition.SpaceAndDepth.MaterialProvider",
+      "Or.Condition.SpaceAndDepth.MaterialProvider",
+      "Not.Condition.SpaceAndDepth.MaterialProvider",
+      "ConstantThickness.Layer.SpaceAndDepth.MaterialProvider",
+      "RangeThickness.Layer.SpaceAndDepth.MaterialProvider",
+      "WeightedThickness.Layer.SpaceAndDepth.MaterialProvider",
+      "Entry.WeightedThickness.Layer.SpaceAndDepth.MaterialProvider",
+      "NoiseThickness.Layer.SpaceAndDepth.MaterialProvider"
     ],
     "Assignments": [
       "Constant.Assignments",
@@ -325,15 +434,14 @@
       "Imported.Prop",
       "Cluster.Prop",
       "Weighted.Cluster.Prop",
-      "BoxProp",
+      "Box.Prop",
       "Column.Prop",
-      "Block.Column.Prop",
-      "StaticMirrorProp.GridWave",
-      "WireframeCuboidProp.GridWave"
+      "Block.Column.Prop"
     ],
     "Pattern": [
       "BlockType.Pattern",
       "BlockSet.Pattern",
+      "Constant.Pattern",
       "Offset.Pattern",
       "Rotator.Pattern",
       "Cuboid.Pattern",
@@ -346,8 +454,7 @@
       "Not.Pattern",
       "FieldFunction.Pattern",
       "Delimiter.FieldFunction.Pattern",
-      "Imported.Pattern",
-      "Gap.Pattern"
+      "Imported.Pattern"
     ],
     "Scanner": [
       "Origin.Scanner",
@@ -371,18 +478,21 @@
       "Pattern.Directionality",
       "Imported.Directionality"
     ],
-    "EnvironmentProvider" : [
+    "EnvironmentProvider": [
       "Constant.EnvironmentProvider",
       "DensityDelimited.EnvironmentProvider",
       "Delimiter.DensityDelimited.EnvironmentProvider"
     ],
-    "TintProvider" : [
+    "TintProvider": [
       "Constant.TintProvider",
+      "Mix.TintProvider",
       "DensityDelimited.TintProvider",
       "Delimiter.DensityDelimited.TintProvider"
     ]
   },
   "Variants": {
+
+    
     "RuleSet.Variants":{
       "VariantFieldName": "Type",
       "Variants": {
@@ -438,39 +548,42 @@
         "Converter": "BoundsConverter.GridWave"
       }
     },
-    "DensityNodeVariants": {
+
+
+    "Density.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant": "ConstantDensityNode",
-        "SimplexNoise2D": "SimplexNoise2DDensityNode",
-        "SimplexNoise3D": "SimplexNoise3DDensityNode",
-        "CellNoise2D": "CellNoise2DDensityNode",
-        "CellNoise3D": "CellNoise3DDensityNode",
-        "OffsetConstant": "OffsetConstantDensityNode",
-        "Offset": "OffsetDensityNode",
-        "AmplitudeConstant": "AmplitudeConstantDensityNode",
-        "Amplitude": "AmplitudeDensityNode",
-        "Multiplier": "MultiplierDensityNode",
-        "Max": "MaxDensityNode",
-        "Min": "MinDensityNode",
-        "Sum": "SumDensityNode",
-        "SmoothMax": "SmoothMaxDensityNode",
-        "SmoothMin": "SmoothMinDensityNode",
-        "Ceiling": "CeilingDensityNode",
-        "Floor": "FloorDensityNode",
-        "SmoothCeiling": "SmoothCeilingDensityNode",
-        "SmoothFloor": "SmoothFloorDensityNode",
-        "Clamp": "ClampDensityNode",
-        "SmoothClamp": "SmoothClampDensityNode",
-        "Abs": "AbsDensityNode",
+        "Graph": "Graph.Density",
+        "Constant": "Constant.Density",
+        "SimplexNoise2D": "SimplexNoise2D.Density",
+        "SimplexNoise3D": "SimplexNoise3D.Density",
+        "CellNoise2D": "CellNoise2D.Density",
+        "CellNoise3D": "CellNoise3D.Density",
+        "WhiteNoise": "WhiteNoise.Density",
+        "OffsetConstant": "OffsetConstant.Density",
+        "Offset": "Offset.Density",
+        "AmplitudeConstant": "AmplitudeConstant.Density",
+        "Amplitude": "Amplitude.Density",
+        "Multiplier": "Multiplier.Density",
+        "Max": "Max.Density",
+        "Min": "Min.Density",
+        "Sum": "Sum.Density",
+        "SmoothMax": "SmoothMax.Density",
+        "SmoothMin": "SmoothMin.Density",
+        "Ceiling": "Ceiling.Density",
+        "Floor": "Floor.Density",
+        "SmoothCeiling": "SmoothCeiling.Density",
+        "SmoothFloor": "SmoothFloor.Density",
+        "Clamp": "Clamp.Density",
+        "SmoothClamp": "SmoothClamp.Density",
+        "Abs": "Abs.Density",
         "Gradient": "Gradient.Density",
-        "Sqrt": "SqrtDensityNode",
-        "Pow": "PowDensityNode",
-        "Normalizer": "NormalizerDensityNode",
-        "Positions3D": "Positions3DDensityNode",
-        "PositionsCellNoise": "PositionsCellNoiseDensityNode",
-        "Inverter": "InverterDensityNode",
-        "Imported": "ImportedDensityNode",
+        "Sqrt": "Sqrt.Density",
+        "Pow": "Pow.Density",
+        "Normalizer": "Normalizer.Density",
+        "PositionsCellNoise": "PositionsCellNoise.Density",
+        "Inverter": "Inverter.Density",
+        "Imported": "Imported.Density",
         "Scale": "Scale.Density",
         "Slider": "Slider.Density",
         "GradientWarp": "GradientWarp.Density",
@@ -478,164 +591,279 @@
         "Rotator": "Rotator.Density",
         "PositionsPinch": "PositionsPinch.Density",
         "PositionsTwist": "PositionsTwist.Density",
-        "CurveMapper" : "CurveMapper.Density",
-        "BaseHeight" : "BaseHeight.Density",
-        "Anchor" : "Anchor.Density",
-        "Distance" : "Distance.Density",
-        "Ellipsoid" : "Ellipsoid.Density",
-        "Cube" : "Cube.Density",
-        "Cuboid" : "Cuboid.Density",
-        "Shell" : "Shell.Density",
-        "Axis" : "Axis.Density",
-        "Plane" : "Plane.Density",
-        "Switch" : "Switch.Density",
-        "SwitchState" : "SwitchState.Density",
-        "Cylinder" : "Cylinder.Density",
-        "CellWallDistance" : "CellWallDistance.Density",
-        "FastGradientWarp" : "FastGradientWarp.Density",
-        "Mix" : "Mix.Density",
-        "MultiMix" : "MultiMix.Density",
-        "XValue" : "XValue.Density",
-        "YValue" : "YValue.Density",
-        "ZValue" : "ZValue.Density",
-        "XOverride" : "XOverride.Density",
-        "YOverride" : "YOverride.Density",
-        "ZOverride" : "ZOverride.Density",
-        "Cache" : "Cache.Density",
-        "Angle" : "Angle.Density",
-        "Exported" : "Exported.Density",
-        "Terrain" : "Terrain.Density",
-        "DistanceToBiomeEdge" : "DistanceToBiomeEdge.Density",
-        "YSampled" : "YSampled.Density"
+        "CurveMapper": "CurveMapper.Density",
+        "BaseHeight": "BaseHeight.Density",
+        "Anchor": "Anchor.Density",
+        "Distance": "Distance.Density",
+        "Ellipsoid": "Ellipsoid.Density",
+        "Cube": "Cube.Density",
+        "Cuboid": "Cuboid.Density",
+        "Shell": "Shell.Density",
+        "Axis": "Axis.Density",
+        "Plane": "Plane.Density",
+        "Switch": "Switch.Density",
+        "SwitchState": "SwitchState.Density",
+        "Cylinder": "Cylinder.Density",
+        "CellWallDistance": "CellWallDistance.Density",
+        "FastGradientWarp": "FastGradientWarp.Density",
+        "Mix": "Mix.Density",
+        "MultiMix": "MultiMix.Density",
+        "XValue": "XValue.Density",
+        "YValue": "YValue.Density",
+        "ZValue": "ZValue.Density",
+        "XOverride": "XOverride.Density",
+        "YOverride": "YOverride.Density",
+        "ZOverride": "ZOverride.Density",
+        "Cache": "Cache.Density",
+        "Angle": "Angle.Density",
+        "Exported": "Exported.Density",
+        "Terrain": "Terrain.Density",
+        "DistanceToBiomeEdge": "DistanceToBiomeEdge.Density",
+        "YSampled": "YSampled.Density",
+        "DistanceToGraphEdge": "DistanceToGraphEdge.Density"
+      }
+    },
+    "GraphPass.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Manual": "Manual.GraphPass",
+        "EdgeAction": "EdgeAction.GraphPass",
+        "NodeAction": "NodeAction.GraphPass",
+        "Positions": "Positions.GraphPass",
+        "Imported": "Imported.GraphPass"
+      }
+    },
+    "EdgeAction.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Delete": "Delete.EdgeAction",
+        "Empty": "Empty.EdgeAction",
+        "Selector": "Selector.EdgeAction",
+        "Nodes": "Nodes.EdgeAction",
+        "Imported": "Imported.EdgeAction",
+        "Proxy": "Proxy.EdgeAction",
+        "Splitter": "Splitter.EdgeAction"
+      }
+    },
+    "EdgeSelector.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "All": "All.EdgeSelector",
+        "Random": "Random.EdgeSelector",
+        "Nodes": "Nodes.EdgeSelector",
+        "And": "And.EdgeSelector",
+        "Or": "Or.EdgeSelector",
+        "Not": "Not.EdgeSelector",
+        "Imported": "Imported.EdgeSelector",
+        "Angle": "Angle.EdgeSelector",
+        "Length": "Length.EdgeSelector"
+      }
+    },
+    "NodeAction.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Delete": "Delete.NodeAction",
+        "ConnectedEdges": "ConnectedEdges.NodeAction",
+        "ConnectedNodes": "ConnectedNodes.NodeAction",
+        "Content": "Content.NodeAction",
+        "ContentCopy": "ContentCopy.NodeAction",
+        "Empty": "Empty.NodeAction",
+        "Jitter2d": "Jitter2d.NodeAction",
+        "Jitter3d": "Jitter3d.NodeAction",
+        "Move": "Move.NodeAction",
+        "ProximityConnector": "ProximityConnector.NodeAction",
+        "Selector": "Selector.NodeAction",
+        "Weighted": "Weighted.NodeAction",
+        "Imported": "Imported.NodeAction",
+        "Spawner": "Spawner.NodeAction"
+      }
+    },
+    "NodeSelector.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "All": "All.NodeSelector",
+        "ConnectionCount": "ConnectionCount.NodeSelector",
+        "NeighborNodes": "NeighborNodes.NodeSelector",
+        "NeighborEdges": "NeighborEdges.NodeSelector",
+        "Random": "Random.NodeSelector",
+        "DensityDelimited": "DensityDelimited.NodeSelector",
+        "Content": "Content.NodeSelector",
+        "And": "And.NodeSelector",
+        "Or": "Or.NodeSelector",
+        "Not": "Not.NodeSelector",
+        "Imported": "Imported.NodeSelector"
       }
     },
     "VectorProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant" : "Constant.VectorProvider",
-        "Imported" : "Imported.VectorProvider",
-        "DensityGradient" : "DensityGradient.VectorProvider",
-        "Cache" : "Cache.VectorProvider",
-        "Exported" : "Exported.VectorProvider"
+        "Constant": "Constant.VectorProvider",
+        "Imported": "Imported.VectorProvider",
+        "DensityGradient": "DensityGradient.VectorProvider",
+        "Cache": "Cache.VectorProvider",
+        "Exported": "Exported.VectorProvider",
+        "ScalarMultiplier": "ScalarMultiplier.VectorProvider",
+        "Random": "Random.VectorProvider",
+        "Normalizer": "Normalizer.VectorProvider",
+        "Adder": "Adder.VectorProvider",
+        "Subtracter": "Subtracter.VectorProvider",
+        "Multiplier": "Multiplier.VectorProvider",
+        "Cross": "Cross.VectorProvider",
+        "SetX": "SetX.VectorProvider",
+        "SetY": "SetY.VectorProvider",
+        "SetZ": "SetZ.VectorProvider",
+        "PlaneProjector": "PlaneProjector.VectorProvider",
+        "VectorProjector": "VectorProjector.VectorProvider",
+        "OpposedToGraphEdges": "OpposedToGraphEdges.VectorProvider"
       }
     },
     "PropDistribution.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
+
+
         "PropDistributionAlgo" :"PropDistributionAlgo.GridWave",
-        "Constant" : "Constant.PropDistribution",
-        "Positions" : "Positions.PropDistribution",
-        "Assigned" : "Assigned.PropDistribution",
-        "Union" : "Union.PropDistribution",
-        "Imported" : "Imported.PropDistribution"
+
+
+        "Constant": "Constant.PropDistribution",
+        "Positions": "Positions.PropDistribution",
+        "Assigned": "Assigned.PropDistribution",
+        "Union": "Union.PropDistribution",
+        "Graph": "Graph.PropDistribution",
+        "Imported": "Imported.PropDistribution",
+        "Anchor": "Anchor.PropDistribution"
       }
     },
-    "CurveVariants": {
+    "ContentPredicate.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "DistanceExponential": "DistanceExponentialCurve",
-        "DistanceS": "DistanceSCurve",
-        "Imported": "ImportedCurve",
-        "Manual": "ManualCurve",
-        "Ceiling" : "Ceiling.Curve",
-        "Floor" : "Floor.Curve",
-        "Clamp" : "Clamp.Curve",
-        "Inverter" : "Inverter.Curve",
-        "Max" : "Max.Curve",
-        "Min" : "Min.Curve",
-        "Multiplier" : "Multiplier.Curve",
-        "Not" : "Not.Curve",
-        "SmoothCeiling" : "SmoothCeiling.Curve",
-        "SmoothFloor" : "SmoothFloor.Curve",
-        "SmoothClamp" : "SmoothClamp.Curve",
-        "SmoothMax" : "SmoothMax.Curve",
-        "SmoothMin" : "SmoothMin.Curve",
-        "Sum" : "Sum.Curve",
-        "Constant" : "Constant.Curve"
+        "Constant": "Constant.ContentPredicate",
+        "And": "And.ContentPredicate",
+        "Or": "Or.ContentPredicate",
+        "Not": "Not.ContentPredicate",
+        "Set": "Set.ContentPredicate",
+        "Imported": "Imported.ContentPredicate"
       }
     },
-    "PositionsVariants": {
+    "ContentSupplier.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "Constant": "Constant.ContentSupplier",
+        "Weighted": "Weighted.ContentSupplier",
+        "Imported": "Imported.ContentSupplier"
+      }
+    },
+    "Curve.Variants": {
+      "VariantFieldName": "Type",
+      "Variants": {
+        "DistanceExponential": "DistanceExponential.Curve",
+        "DistanceS": "DistanceS.Curve",
+        "Imported": "Imported.Curve",
+        "Manual": "Manual.Curve",
+        "Ceiling": "Ceiling.Curve",
+        "Floor": "Floor.Curve",
+        "Clamp": "Clamp.Curve",
+        "Inverter": "Inverter.Curve",
+        "Max": "Max.Curve",
+        "Min": "Min.Curve",
+        "Multiplier": "Multiplier.Curve",
+        "Not": "Not.Curve",
+        "SmoothCeiling": "SmoothCeiling.Curve",
+        "SmoothFloor": "SmoothFloor.Curve",
+        "SmoothClamp": "SmoothClamp.Curve",
+        "SmoothMax": "SmoothMax.Curve",
+        "SmoothMin": "SmoothMin.Curve",
+        "Sum": "Sum.Curve",
+        "Constant": "Constant.Curve"
+      }
+    },
+    "Positions.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
         "TriangularGrid2d": "TriangularGrid2d.Positions",
         "SquareGrid2d": "SquareGrid2d.Positions",
         "SquareGrid3d": "SquareGrid3d.Positions",
-        "Scaler" : "Scaler.Positions",
+        "Scaler": "Scaler.Positions",
         "Jitter2d": "Jitter2d.Positions",
         "Jitter3d": "Jitter3d.Positions",
+        "DirectionalJitter": "DirectionalJitter.Positions",
         "Clusters": "Clusters.Positions",
-        "Mesh2D": "Mesh2DPositions",
-        "Mesh3D": "Mesh3DPositions",
-        "List": "ListPositions",
-        "FieldFunction": "FieldFunctionPositions",
-        "Occurrence": "OccurrencePositions",
-        "Offset": "OffsetPositions",
-        "Union": "UnionPositions",
+        "Mesh2D": "Mesh2D.Positions",
+        "Mesh3D": "Mesh3D.Positions",
+        "List": "List.Positions",
+        "FieldFunction": "FieldFunction.Positions",
+        "Occurrence": "Occurrence.Positions",
+        "Offset": "Offset.Positions",
+        "Union": "Union.Positions",
         "SimpleHorizontal": "SimpleHorizontal.Positions",
-        "Cache": "CachePositions",
-        "BaseHeight" : "BaseHeight.Positions",
-        "Imported": "ImportedPositions",
-        "Anchor" : "Anchor.Positions",
-        "Bound" : "Bound.Positions",
-        "Framework" : "Framework.Positions"
+        "Cache": "Cache.Positions",
+        "BaseHeight": "BaseHeight.Positions",
+        "Imported": "Imported.Positions",
+        "Anchor": "Anchor.Positions",
+        "Bound": "Bound.Positions",
+        "Framework": "Framework.Positions",
+        "VectorOffset": "VectorOffset.Positions",
+        "Graph": "Graph.Positions"
       }
     },
-    "PointGeneratorVariants": {
+    "PointGenerator.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Mesh": "MeshPointGenerator"
+        "Mesh": "Mesh.PointGenerator"
       }
     },
-    "PCNReturnTypeVariants": {
+    "ReturnType.PositionsCellNoise.Density.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Distance": "DistancePCNReturnType",
-        "Distance2": "Distance2PCNReturnType",
-        "Distance2Add": "Distance2AddPCNReturnType",
-        "Distance2Sub": "Distance2SubPCNReturnType",
-        "Distance2Mul": "Distance2MulPCNReturnType",
-        "Distance2Div": "Distance2DivPCNReturnType",
-        "Curve": "CurvePCNReturnType",
-        "CellValue": "CellValuePCNReturnType",
-        "Density": "DensityPCNReturnType"
+        "Distance": "Distance.ReturnType.PositionsCellNoise.Density",
+        "Distance2": "Distance2.ReturnType.PositionsCellNoise.Density",
+        "Distance2Add": "Distance2Add.ReturnType.PositionsCellNoise.Density",
+        "Distance2Sub": "Distance2Sub.ReturnType.PositionsCellNoise.Density",
+        "Distance2Mul": "Distance2Mul.ReturnType.PositionsCellNoise.Density",
+        "Distance2Div": "Distance2Div.ReturnType.PositionsCellNoise.Density",
+        "Curve": "Curve.ReturnType.PositionsCellNoise.Density",
+        "CellValue": "CellValue.ReturnType.PositionsCellNoise.Density",
+        "Density": "Density.ReturnType.PositionsCellNoise.Density"
       }
     },
-    "MaterialProviderVariants": {
+    "MaterialProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant": "ConstantMaterialProvider",
-        "Solidity": "SolidityMaterialProvider",
-        "Queue": "QueueMaterialProvider",
-        "SimpleHorizontal": "SimpleHorizontalMaterialProvider",
-        "Striped": "StripedMaterialProvider",
-        "Weighted": "WeightedMaterialProvider",
-        "FieldFunction": "FieldFunctionMaterialProvider",
-        "SpaceAndDepth": "SpaceAndDepthMaterialProvider",
-        "Imported": "ImportedMaterialProvider"
+        "Constant": "Constant.MaterialProvider",
+        "Solidity": "Solidity.MaterialProvider",
+        "Queue": "Queue.MaterialProvider",
+        "SimpleHorizontal": "SimpleHorizontal.MaterialProvider",
+        "Striped": "Striped.MaterialProvider",
+        "Weighted": "Weighted.MaterialProvider",
+        "FieldFunction": "FieldFunction.MaterialProvider",
+        "SpaceAndDepth": "SpaceAndDepth.MaterialProvider",
+        "Graph": "Graph.MaterialProvider",
+        "Imported": "Imported.MaterialProvider",
+        "Transparent": "Transparent.MaterialProvider"
       }
     },
-    "ConditionSADMPVariants": {
+    "Condition.SpaceAndDepth.MaterialProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "AlwaysTrueCondition": "AlwaysTrueConditionSADMP",
-        "AndCondition": "AndConditionSADMP",
-        "OrCondition": "OrConditionSADMP",
-        "EqualsCondition": "EqualsConditionSADMP",
-        "GreaterThanCondition": "GreaterThanConditionSADMP",
-        "NotCondition": "NotConditionSADMP",
-        "SmallerThanCondition": "SmallerThanConditionSADMP"
+        "AlwaysTrueCondition": "AlwaysTrue.Condition.SpaceAndDepth.MaterialProvider",
+        "AndCondition": "And.Condition.SpaceAndDepth.MaterialProvider",
+        "OrCondition": "Or.Condition.SpaceAndDepth.MaterialProvider",
+        "EqualsCondition": "Equals.Condition.SpaceAndDepth.MaterialProvider",
+        "GreaterThanCondition": "GreaterThan.Condition.SpaceAndDepth.MaterialProvider",
+        "NotCondition": "Not.Condition.SpaceAndDepth.MaterialProvider",
+        "SmallerThanCondition": "SmallerThan.Condition.SpaceAndDepth.MaterialProvider"
       }
     },
-    "LayerSADMPVariants": {
+    "Layer.SpaceAndDepth.MaterialProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "ConstantThickness": "ConstantThicknessLayerSADMP",
-        "RangeThickness": "RangeThicknessLayerSADMP",
-        "WeightedThickness": "WeightedThicknessLayerSADMP",
-        "NoiseThickness": "NoiseThicknessLayerSADMP"
+        "ConstantThickness": "ConstantThickness.Layer.SpaceAndDepth.MaterialProvider",
+        "RangeThickness": "RangeThickness.Layer.SpaceAndDepth.MaterialProvider",
+        "WeightedThickness": "WeightedThickness.Layer.SpaceAndDepth.MaterialProvider",
+        "NoiseThickness": "NoiseThickness.Layer.SpaceAndDepth.MaterialProvider"
       }
     },
-    "AssignmentsVariants": {
+    "Assignments.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
         "Constant": "Constant.Assignments",
@@ -645,30 +873,34 @@
         "Imported": "Imported.Assignments"
       }
     },
-    "PropVariants": {
+    "Prop.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
+
+
         "PropAlgo": "PropAlgo.GridWave",
         "StaticMirror" : "StaticMirrorProp.GridWave",
-        "Box": "BoxProp",
+
+
+        "Box": "Box.Prop",
         "Union": "Union.Prop",
         "Cluster": "Cluster.Prop",
         "Column": "Column.Prop",
         "Prefab": "Prefab.Prop",
-        "PondFiller" : "PondFiller.Prop",
-        "Density" : "Density.Prop",
+        "PondFiller": "PondFiller.Prop",
+        "Density": "Density.Prop",
         "Imported": "Imported.Prop",
-        "Offset" : "Offset.Prop",
-        "Weighted" : "Weighted.Prop",
-        "Cuboid" : "Cuboid.Prop",
-        "Manual" : "Manual.Prop",
-        "Locator" : "Locator.Prop",
-        "Queue" : "Queue.Prop",
-        "Mask" : "Mask.Prop",
-        "StaticRotator" : "StaticRotator.Prop",
-        "RandomRotator" : "RandomRotator.Prop",
-        "Orienter" : "Orienter.Prop",
-        "DensitySelector" : "DensitySelector.Prop"
+        "Offset": "Offset.Prop",
+        "Weighted": "Weighted.Prop",
+        "Cuboid": "Cuboid.Prop",
+        "Manual": "Manual.Prop",
+        "Locator": "Locator.Prop",
+        "Queue": "Queue.Prop",
+        "Mask": "Mask.Prop",
+        "StaticRotator": "StaticRotator.Prop",
+        "RandomRotator": "RandomRotator.Prop",
+        "Orienter": "Orienter.Prop",
+        "DensitySelector": "DensitySelector.Prop"
       }
     },
     "Pattern.Variants": {
@@ -676,29 +908,29 @@
       "Variants": {
         "BlockType": "BlockType.Pattern",
         "BlockSet": "BlockSet.Pattern",
+        "Constant": "Constant.Pattern",
         "Offset": "Offset.Pattern",
         "Floor": "Floor.Pattern",
         "Ceiling": "Ceiling.Pattern",
         "Wall": "Wall.Pattern",
         "Surface": "Surface.Pattern",
-        "Gap": "Gap.Pattern",
         "Cuboid": "Cuboid.Pattern",
         "And": "And.Pattern",
         "Or": "Or.Pattern",
         "Not": "Not.Pattern",
         "FieldFunction": "FieldFunction.Pattern",
         "Imported": "Imported.Pattern",
-        "Rotator" : "Rotator.Pattern"
+        "Rotator": "Rotator.Pattern"
       }
     },
     "Scanner.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
         "Origin": "Origin.Scanner",
-        "Linear" : "Linear.Scanner",
-        "Random" : "Random.Scanner",
-        "Radial" : "Radial.Scanner",
-        "Queue" : "Queue.Scanner",
+        "Linear": "Linear.Scanner",
+        "Random": "Random.Scanner",
+        "Radial": "Radial.Scanner",
+        "Queue": "Queue.Scanner",
         "ColumnLinear": "ColumnLinear.Scanner",
         "ColumnRandom": "ColumnRandom.Scanner",
         "Area": "Area.Scanner",
@@ -717,15 +949,16 @@
     "EnvironmentProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant" : "Constant.EnvironmentProvider",
-        "DensityDelimited" : "DensityDelimited.EnvironmentProvider"
+        "Constant": "Constant.EnvironmentProvider",
+        "DensityDelimited": "DensityDelimited.EnvironmentProvider"
       }
     },
     "TintProvider.Variants": {
       "VariantFieldName": "Type",
       "Variants": {
-        "Constant" : "Constant.TintProvider",
-        "DensityDelimited" : "DensityDelimited.TintProvider"
+        "Constant": "Constant.TintProvider",
+        "Mix": "Mix.TintProvider",
+        "DensityDelimited": "DensityDelimited.TintProvider"
       }
     }
   }
