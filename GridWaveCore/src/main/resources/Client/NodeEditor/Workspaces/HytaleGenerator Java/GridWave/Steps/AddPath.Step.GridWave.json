@@ -1,0 +1,85 @@
+{
+  "Id": "AddPath.Step.GridWave",
+  "Title": "Add Path Step",
+  "Color": "195,168,244",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "Count",
+      "Type": "SmallString",
+      "Options": {
+        "Label": "Count",
+        "Default" : "1-3",
+        "Description" : "Leave empty for infite, specify <int> for fixed number or <int min >= 0>-<int max> for a range"
+      }
+    },
+    {
+      "Id" : "PlaceType",
+      "Type" : "Enum",
+      "Options" : {
+        "Label" : "Place Type",
+        "Default" : "Connect",
+        "Values" : [
+          "Connect",
+          "Replace",
+          "Add"
+        ],
+        "Description" : "Replace & Add => Patternmatch Fancy Tiles / Connect: Place tiles if they fit (Base Tiles)"
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "NextSteps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244",
+      "Label": "Next Step(s)",
+      "Multiple" : true
+    },
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244"
+    }
+  ],
+  "Schema": {
+    "Type" : "AddPath",
+    "ExportAs" : "ExportAs",
+    "Skip" : "Skip",
+    "Count" : "Count",
+    "PlaceType" : "PlaceType",
+    "NextSteps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "NextSteps"
+    },
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    }
+  }
+}

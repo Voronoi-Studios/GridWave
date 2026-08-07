@@ -57,34 +57,11 @@
       "Description" : "Limits the size if the generated grid"
     },
     {
-      "Id": "POIs",
-      "Type": "TileSet.GridWave.Connection",
-      "Color": "0,70,40",
+      "Id": "Steps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244",
       "Multiple" : true,
-      "Label" : "POIs",
-      "Description" : "MUST HAVE A RESTRAINER FEATURE. Points of Interest that will be placed on the grid before the algorithm starts. This is useful to force certain tiles to be placed on the grid, such as entrances, exits, or special rooms."
-    },
-    {
-      "Id": "BaseTiles",
-      "Type": "TileSet.GridWave.Connection",
-      "Color": "0,70,40",
-      "Multiple" : true,
-      "Label" : "Base Tiles",
-      "Description" : "Main TilesetCollection used for generation. The algorithm will try to place these tiles after the POIs have been placed."
-    },
-    {
-      "Id": "FancyTiles",
-      "Type": "TileSet.GridWave.Connection",
-      "Color": "0,70,40",
-      "Multiple" : true,
-      "Label" : "Fancy Tiles",
-      "Description" : "Additional TilesetCollection that can be used to add variety to the generated layout. The algorithm will pattern match with the fully generated grid to see if any of these tiles can replace some base tiles. This is useful to add details to the generated layout without affecting the overall structure."
-    },
-    {
-      "Id": "Seed",
-      "Type": "Seed.GridWave.Connection",
-      "Color": "152,152,129",
-      "Label": "Seed"
+      "Label" : "Step(s)"
     },
     {
       "Id": "Features",
@@ -117,9 +94,9 @@
       "Node" : "CBounds.Variants",
       "Pin" : "Bounds"
     },
-    "POIs" : {
-      "Node" : "TileSet.Variants",
-      "Pin" : "POIs"
+    "Steps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "Steps"
     },
     "BaseTiles" : {
       "Node" : "TileSet.Variants",
@@ -128,10 +105,6 @@
     "FancyTiles" : {
       "Node" : "TileSet.Variants",
       "Pin" : "FancyTiles"
-    },
-    "Seed" : {
-      "Node" : "Seed.Variants",
-      "Pin" : "Seed"
     },
     "Features" : {
       "Node" : "Feature.Variants",

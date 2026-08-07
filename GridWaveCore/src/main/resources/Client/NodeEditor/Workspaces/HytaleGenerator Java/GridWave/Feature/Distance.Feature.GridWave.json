@@ -1,0 +1,53 @@
+{
+  "Id": "Distance.Feature.GridWave",
+  "Title": "Distance Feature",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id" : "DistanceType",
+      "Type" : "Enum",
+      "Options" : {
+        "Label" : "Distance Type",
+        "Default" : "Min",
+        "Values" : [
+          "Min",
+          "Max",
+          "Exact"
+        ]
+      }
+    },
+    {
+      "Id": "Value",
+      "Type": "Int",
+      "Options": {
+        "Label": "Value",
+        "Default" : 2,
+        "SmallChange": 1,
+        "LargeChange": 5
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Distance",
+    "Skip" : "Skip",
+    "DistanceType" : "DistanceType",
+    "Value" : "Value"
+  }
+}

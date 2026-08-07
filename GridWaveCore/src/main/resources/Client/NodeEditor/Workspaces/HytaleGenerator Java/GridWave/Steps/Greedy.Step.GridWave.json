@@ -1,0 +1,81 @@
+{
+  "Id": "Greedy.Step.GridWave",
+  "Title": "Greedy Collapse Step",
+  "Color": "195,168,244",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id": "MaxPositionsCount",
+      "Type": "Int",
+      "Options": {
+        "Label": "MaxGridPositionsCount",
+        "Default" : 20000,
+        "SmallChange": 10,
+        "LargeChange": 50
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "NextSteps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244",
+      "Label": "Next Step(s)",
+      "Multiple" : true
+    },
+    {
+      "Id": "Seed",
+      "Type": "Seed.GridWave.Connection",
+      "Color": "152,152,129",
+      "Label": "Seed"
+    },
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244"
+    }
+  ],
+  "Schema": {
+    "Type" : "Greedy",
+    "ExportAs" : "ExportAs",
+    "Skip" : "Skip",
+    "MaxPositionsCount" : "MaxPositionsCount",
+    "NextSteps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "NextSteps"
+    },
+    "Seed" : {
+      "Node" : "Seed.Variants",
+      "Pin" : "Seed"
+    },
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    }
+  }
+}

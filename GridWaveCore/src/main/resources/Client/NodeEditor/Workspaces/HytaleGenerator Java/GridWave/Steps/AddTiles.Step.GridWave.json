@@ -1,0 +1,75 @@
+{
+  "Id": "AddTiles.Step.GridWave",
+  "Title": "Add Tiles Step",
+  "Color": "195,168,244",
+  "Content" : [
+    {
+      "Id" : "ExportAs",
+      "Type" : "SmallString",
+      "Options" : {
+        "Label" : "ExportAs",
+        "Default" : "",
+        "Width" : 200
+      }
+    },
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default" : false
+      }
+    },
+    {
+      "Id" : "PlaceType",
+      "Type" : "Enum",
+      "Options" : {
+        "Label" : "Place Type",
+        "Default" : "Connect",
+        "Values" : [
+          "Connect",
+          "Replace",
+          "Add"
+        ],
+        "Description" : "Replace & Add => Patternmatch Fancy Tiles / Connect: Place tiles if they fit (Base Tiles)"
+      }
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "NextSteps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244",
+      "Label": "Next Step(s)",
+      "Multiple" : true
+    },
+    {
+      "Id": "Features",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129",
+      "Multiple" : true,
+      "Label" : "Features"
+    }
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Step.GridWave.Connection",
+      "Color": "195,168,244"
+    }
+  ],
+  "Schema": {
+    "Type" : "AddTiles",
+    "ExportAs" : "ExportAs",
+    "Skip" : "Skip",
+    "PlaceType" : "PlaceType",
+    "NextSteps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "NextSteps"
+    },
+    "Features" : {
+      "Node" : "Feature.Local.Variants",
+      "Pin" : "Features"
+    }
+  }
+}
