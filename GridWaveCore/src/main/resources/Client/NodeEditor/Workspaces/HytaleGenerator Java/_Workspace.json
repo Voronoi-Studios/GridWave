@@ -16,9 +16,13 @@
 	    "PropAlgo.GridWave"
     ],
     "GridWave.Steps" : [
+      "Imported.Step.GridWave",
       "AddPath.Step.GridWave",
       "AddTiles.Step.GridWave",
-      "Greedy.Step.GridWave"
+      "Greedy.Step.GridWave",
+      "Group.Step.GridWave",
+      "Repeat.Step.GridWave",
+      "ModifyProp.Step.GridWave"
     ],
     "GridWave.RuleSet" : [
       "Simple.RuleSet.GridWave",
@@ -49,13 +53,16 @@
       "Multithreading.Feature.GridWave",
       "OverlapTile.Feature.GridWave",
       "PathKey.Feature.GridWave",
-      "Restrainer.Feature.GridWave",
-      "RandomRestrainer.Feature.GridWave",
+      "PositionRestrainer.Feature.GridWave",
+      "RotationRestrainer.Feature.GridWave",
+      "RandomPositionRestrainer.Feature.GridWave",
       "PathCellSelector.Feature.GridWave",
       "ConditionalWeight.Feature.GridWave",
+      "ConstantWeight.Feature.GridWave",
       "SectionStorage.Feature.GridWave",
       "Distance.Feature.GridWave",
-      "SetPathKey.Feature.GridWave"
+      "SetPathKey.Feature.GridWave",
+      "Tags.Feature.GridWave"
     ],
     "GridWave.Seed" : [
       "Constant.Seed.GridWave",
@@ -81,10 +88,14 @@
     },
     "Step.Variants":{
       "VariantFieldName": "Type",
-      "Variants": {
+      "Variants": {        
+        "Imported": "Imported.Step.GridWave",
         "AddPath": "AddPath.Step.GridWave",
         "AddTiles": "AddTiles.Step.GridWave",
-        "Greedy": "Greedy.Step.GridWave"
+        "Greedy": "Greedy.Step.GridWave",
+        "Group" : "Group.Step.GridWave",
+        "Repeat" : "Repeat.Step.GridWave",
+        "ModifyProp" : "ModifyProp.Step.GridWave"
       }
     },
     "TileSet.Variants":{
@@ -112,13 +123,16 @@
         "Multithreading": "Multithreading.Feature.GridWave",
         "OverlapTile": "OverlapTile.Feature.GridWave",
         "PathKey": "PathKey.Feature.GridWave",
-        "Restrainer": "Restrainer.Feature.GridWave",
-        "RandomRestrainer": "RandomRestrainer.Feature.GridWave",
+        "PositionRestrainer": "PositionRestrainer.Feature.GridWave",
+        "RotationRestrainer" : "RotationRestrainer.Feature.GridWave",
+        "RandomPositionRestrainer": "RandomPositionRestrainer.Feature.GridWave",
         "PathCellSelector": "PathCellSelector.Feature.GridWave",
         "ConditionalWeight": "ConditionalWeight.Feature.GridWave",
+        "ConstantWeight" : "ConstantWeight.Feature.GridWave",
         "SectionStorage": "SectionStorage.Feature.GridWave",
         "Distance": "Distance.Feature.GridWave",
-        "SetPathKey": "SetPathKey.Feature.GridWave"
+        "SetPathKey": "SetPathKey.Feature.GridWave",
+        "Tags" : "Tags.Feature.GridWave"
       }
     },
     "Seed.Variants":{
