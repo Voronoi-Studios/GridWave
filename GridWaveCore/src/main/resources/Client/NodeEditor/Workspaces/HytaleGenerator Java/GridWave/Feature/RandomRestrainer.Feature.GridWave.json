@@ -1,6 +1,6 @@
 {
-  "Id": "RandomRestrainer.Feature.GridWave",
-  "Title": "Random Restrainer Feature",
+  "Id": "RandomPositionRestrainer.Feature.GridWave",
+  "Title": "Random PositionRestrainer Feature",
   "Color": "150,180,129",
   "Content" : [
     {
@@ -57,7 +57,7 @@
     }
   ],
   "Schema": {
-    "Type" : "RandomRestrainer",
+    "Type" : "RandomPositionRestrainer",
     "Skip" : "Skip",
     "Positions" : {
       "Node" : "PositionsVariants",

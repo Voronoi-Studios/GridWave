@@ -1,0 +1,37 @@
+{
+  "Id": "ConstantWeight.Feature.GridWave",
+  "Title": "Constant Weight Feature",
+  "Description": "A feature that applies a weight to a node, compatible with TileSets and Steps",
+  "Color": "150,180,129",
+  "Content": [
+    {
+      "Id": "Skip",
+      "Type": "Checkbox",
+      "Options": {
+        "Label": "Skip",
+        "Default": false
+      }
+    },
+    {
+      "Id": "Weight",
+      "Type": "Float",
+      "Options": {
+        "Label": "Weight",
+        "Default": 1.0
+      }
+    }
+  ],
+  "Outputs": [],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type": "ConstantWeight",
+    "Skip": "Skip",
+    "Weight": "Weight"
+  }
+}

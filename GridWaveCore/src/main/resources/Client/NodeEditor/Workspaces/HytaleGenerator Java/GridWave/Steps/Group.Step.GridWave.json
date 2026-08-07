@@ -1,19 +1,26 @@
 {
-  "Id": "Imported.Step.GridWave",
-  "Title": "Imported Step",
+  "Id": "Group.Step.GridWave",
+  "Title": "Group Step",
   "Color": "96,69,144",
   "Content": [
     {
-      "Id" : "Name",
+      "Id" : "ExportAs",
       "Type" : "SmallString",
       "Options" : {
-        "Label" : "Name",
+        "Label" : "ExportAs",
         "Default" : "",
-        "Width" : 250
+        "Width" : 200
       }
     }
   ],
   "Outputs": [
+    {
+      "Id": "SubSteps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "96,69,144",
+      "Label": "Sub Step(s)",
+      "Multiple" : true
+    },
     {
       "Id": "Features",
       "Type": "Feature.GridWave.Connection",
@@ -31,7 +38,11 @@
   ],
   "Schema": {
     "Type" : "Imported",
-    "Name" : "Name",
+    "ExportAs" : "ExportAs",
+    "SubSteps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "SubSteps"
+    },
     "Features" : {
       "Node" : "Feature.Local.Variants",
       "Pin" : "Features"

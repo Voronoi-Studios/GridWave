@@ -1,6 +1,6 @@
 {
-  "Id": "AddTiles.Step.GridWave",
-  "Title": "Add Tiles Step",
+  "Id": "ModifyProp.Step.GridWave",
+  "Title": "Modify Prefabs Step",
   "Color": "96,69,144",
   "Content" : [
     {
@@ -19,29 +19,15 @@
         "Label": "Skip",
         "Default" : false
       }
-    },
-    {
-      "Id" : "PlaceType",
-      "Type" : "Enum",
-      "Options" : {
-        "Label" : "Place Type",
-        "Default" : "Connect",
-        "Values" : [
-          "Connect",
-          "Replace",
-          "Add"
-        ],
-        "Description" : "Replace & Add => Patternmatch Fancy Tiles / Connect: Place tiles if they fit (Base Tiles)"
-      }
     }
   ],
   "Outputs": [
     {
-      "Id": "Tiles",
-      "Type": "TileSet.GridWave.Connection",
-      "Color": "0,70,40",
+      "Id": "Modifications",
+      "Type": "Modification.GridWave.Connection",
+      "Color": "43,17,88",
       "Multiple" : true,
-      "Label" : "Tiles"
+      "Label" : "Modifications"
     },
     {
       "Id": "Features",
@@ -59,13 +45,12 @@
     }
   ],
   "Schema": {
-    "Type" : "AddTiles",
+    "Type" : "ModifyProp",
     "ExportAs" : "ExportAs",
     "Skip" : "Skip",
-    "PlaceType" : "PlaceType",
-    "Tiles" : {
-      "Node" : "TileSet.Variants",
-      "Pin" : "Tiles"
+    "Modifications" : {
+      "Node" : "Modification.Variants",
+      "Pin" : "Modifications"
     },
     "Features" : {
       "Node" : "Feature.Local.Variants",

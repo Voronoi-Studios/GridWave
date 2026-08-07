@@ -16,21 +16,21 @@
   "Outputs": [
     {
       "Id": "PointConnection",
-      "Type": "Vector3i.Connection",
+      "Type": "Integer.Vector3d.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Position"
     },
     {
       "Id": "OffsetConnection",
-      "Type": "Vector3i.Connection",
+      "Type": "Integer.Vector3d.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Offset"
     },
     {
       "Id": "RepeatConnection",
-      "Type": "Vector3i.Connection",
+      "Type": "Integer.Vector3d.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Repeat"
@@ -46,15 +46,15 @@
   "Schema": {
     "Type" : "Grid",
     "Position" : {
-      "Node" : "Point3D",
+      "Node" : "Vectors",
       "Pin" : "PointConnection"
     },
     "Offset" : {
-      "Node" : "Point3D",
+      "Node" : "Vectors",
       "Pin" : "OffsetConnection"
     },
     "Repeat" : {
-      "Node" : "Point3D",
+      "Node" : "Vectors",
       "Pin" : "RepeatConnection"
     },
     "Centered" : "Centered"

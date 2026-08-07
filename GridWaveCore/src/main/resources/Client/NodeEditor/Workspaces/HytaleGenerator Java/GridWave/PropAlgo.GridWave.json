@@ -42,7 +42,7 @@
     },
     {
       "Id": "Grid",
-      "Type": "Vector3i.Connection",
+      "Type": "Integer.Vector3d.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Grid",
@@ -59,7 +59,7 @@
     {
       "Id": "Steps",
       "Type": "Step.GridWave.Connection",
-      "Color": "195,168,244",
+      "Color": "96,69,144",
       "Multiple" : true,
       "Label" : "Step(s)"
     },
@@ -87,7 +87,7 @@
       "Pin" : "GridPoints"
     },
     "Grid": {
-      "Node" : "Point3D",
+      "Node" : "Vectors",
       "Pin" : "Grid"
     },
     "Bounds" : {
@@ -97,14 +97,6 @@
     "Steps" : {
       "Node" : "Step.Variants",
       "Pin" : "Steps"
-    },
-    "BaseTiles" : {
-      "Node" : "TileSet.Variants",
-      "Pin" : "BaseTiles"
-    },
-    "FancyTiles" : {
-      "Node" : "TileSet.Variants",
-      "Pin" : "FancyTiles"
     },
     "Features" : {
       "Node" : "Feature.Variants",

@@ -1,7 +1,7 @@
 {
   "Id": "Greedy.Step.GridWave",
   "Title": "Greedy Collapse Step",
-  "Color": "195,168,244",
+  "Color": "96,69,144",
   "Content" : [
     {
       "Id" : "ExportAs",
@@ -33,11 +33,11 @@
   ],
   "Outputs": [
     {
-      "Id": "NextSteps",
-      "Type": "Step.GridWave.Connection",
-      "Color": "195,168,244",
-      "Label": "Next Step(s)",
-      "Multiple" : true
+      "Id": "Tiles",
+      "Type": "TileSet.GridWave.Connection",
+      "Color": "0,70,40",
+      "Multiple" : true,
+      "Label" : "Tiles"
     },
     {
       "Id": "Seed",
@@ -57,7 +57,7 @@
     {
       "Id": "Output",
       "Type": "Step.GridWave.Connection",
-      "Color": "195,168,244"
+      "Color": "96,69,144"
     }
   ],
   "Schema": {
@@ -65,9 +65,9 @@
     "ExportAs" : "ExportAs",
     "Skip" : "Skip",
     "MaxPositionsCount" : "MaxPositionsCount",
-    "NextSteps" : {
-      "Node" : "Step.Variants",
-      "Pin" : "NextSteps"
+    "Tiles" : {
+      "Node" : "TileSet.Variants",
+      "Pin" : "Tiles"
     },
     "Seed" : {
       "Node" : "Seed.Variants",

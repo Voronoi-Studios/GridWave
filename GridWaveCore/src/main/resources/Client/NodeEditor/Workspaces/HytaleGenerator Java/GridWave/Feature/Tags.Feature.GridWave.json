@@ -1,0 +1,30 @@
+{
+  "Id": "Tags.Feature.GridWave",
+  "Title": "Tags Feature",
+  "Description": "Sets the key(s) which are considered \"walkable\"",
+  "Color": "150,180,129",
+  "Content" : [
+    {
+      "Id": "Tags",
+      "Type": "List",
+      "Options": {
+        "Label": "Tags",
+        "Type": "String",
+        "Width": 350
+      }
+    }
+  ],
+  "Outputs": [
+  ],
+  "Inputs": [
+    {
+      "Id": "Output",
+      "Type": "Feature.GridWave.Connection",
+      "Color": "150,180,129"
+    }
+  ],
+  "Schema": {
+    "Type" : "Tags",
+    "Tags" : "Tags"
+  }
+}

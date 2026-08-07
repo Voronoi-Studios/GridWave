@@ -42,7 +42,7 @@
     },
     {
       "Id": "Grid",
-      "Type": "Vector3i.Connection",
+      "Type": "Integer.Vector3d.Connection",
       "Color": "Orange",
       "Multiple" : false,
       "Label" : "Grid",
@@ -62,7 +62,7 @@
       "Color": "0,70,40",
       "Multiple" : true,
       "Label" : "POIs",
-      "Description" : "MUST HAVE A RESTRAINER FEATURE. Points of Interest that will be placed on the grid before the algorithm starts. This is useful to force certain tiles to be placed on the grid, such as entrances, exits, or special rooms."
+      "Description" : "MUST HAVE A PositionRestrainer FEATURE. Points of Interest that will be placed on the grid before the algorithm starts. This is useful to force certain tiles to be placed on the grid, such as entrances, exits, or special rooms."
     },
     {
       "Id": "BaseTiles",
@@ -110,7 +110,7 @@
       "Pin" : "GridPoints"
     },
     "Grid": {
-      "Node" : "Point3D",
+      "Node" : "Vectors",
       "Pin" : "Grid"
     },
     "Bounds" : {

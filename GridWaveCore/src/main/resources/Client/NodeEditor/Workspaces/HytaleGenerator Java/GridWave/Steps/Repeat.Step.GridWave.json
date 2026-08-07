@@ -1,6 +1,6 @@
 {
-  "Id": "AddTiles.Step.GridWave",
-  "Title": "Add Tiles Step",
+  "Id": "Repeat.Step.GridWave",
+  "Title": "Repeat Step",
   "Color": "96,69,144",
   "Content" : [
     {
@@ -21,27 +21,28 @@
       }
     },
     {
-      "Id" : "PlaceType",
-      "Type" : "Enum",
+      "Id" : "Repeat",
+      "Type" : "SmallString",
       "Options" : {
-        "Label" : "Place Type",
-        "Default" : "Connect",
-        "Values" : [
-          "Connect",
-          "Replace",
-          "Add"
-        ],
-        "Description" : "Replace & Add => Patternmatch Fancy Tiles / Connect: Place tiles if they fit (Base Tiles)"
+        "Label" : "Repeat",
+        "Default" : "1-3",
+        "Description" : "Can not be 0, specify <int> for fixed number or <int min >= 0>-<int max> for a range"
       }
     }
   ],
   "Outputs": [
     {
-      "Id": "Tiles",
-      "Type": "TileSet.GridWave.Connection",
-      "Color": "0,70,40",
-      "Multiple" : true,
-      "Label" : "Tiles"
+      "Id": "SubSteps",
+      "Type": "Step.GridWave.Connection",
+      "Color": "96,69,144",
+      "Label": "Sub Step(s)",
+      "Multiple" : true
+    },
+    {
+      "Id": "Seed",
+      "Type": "Seed.GridWave.Connection",
+      "Color": "152,152,129",
+      "Label": "Seed"
     },
     {
       "Id": "Features",
@@ -59,13 +60,16 @@
     }
   ],
   "Schema": {
-    "Type" : "AddTiles",
+    "Type" : "Repeat",
     "ExportAs" : "ExportAs",
     "Skip" : "Skip",
-    "PlaceType" : "PlaceType",
-    "Tiles" : {
-      "Node" : "TileSet.Variants",
-      "Pin" : "Tiles"
+    "SubSteps" : {
+      "Node" : "Step.Variants",
+      "Pin" : "SubSteps"
+    },
+    "Seed" : {
+      "Node" : "Seed.Variants",
+      "Pin" : "Seed"
     },
     "Features" : {
       "Node" : "Feature.Local.Variants",
